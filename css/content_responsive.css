@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* *******************************************************
+ * filename : content_responsive.css
+ * description : 서브페이지 컨텐츠 반응형 CSS
+ * date : 2019-02-01
+******************************************************** */
+
+
+/* ******************  서브공통 ********************** */
+/* -------- 공통 스크롤바  -------- */
+@media all and (max-width:1220px){
+	.custom-scrollbar-wrapper .scroll-object{max-width:100%;}
+}
+@media all and (max-width:800px){
+	.custom-scrollbar-wrapper{position:relative;margin-right:-15px; cursor:move}
+	.custom-scrollbar-wrapper .scroll-object{max-width:none; width:800px; }
+	.custom-scrollbar-cover{display:block; position:absolute; top:0px; left:0px; right:0px; bottom:0px; background-color:rgba(0,0,0,0.5)}
+	.custom-scrollbar-cover .scroll-cover-txt{position:absolute; top:50%; left:0; width:100%; text-align:center; color:#fff; font-size:300; font-size:15px;}
+	.custom-scrollbar-cover .scroll-cover-txt i{font-size:30px; display:block; margin-bottom:20px; }
+}
+
+
+/* ******************  회사소개 ********************** */
+@media all and (max-width:1220px){
+	
+}
