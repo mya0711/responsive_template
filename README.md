@@ -3,7 +3,7 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* Date : 2019/08/29
+* UpDate : 2019/08/29
 
 
   
