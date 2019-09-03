@@ -1,13 +1,9 @@
-
-
 <!doctype html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title><?=$site_head_title?><? if($page_info){ ?> - <?=$page_info?><? } ?><? if($sub_info){ ?> - <?=$sub_info?><? } ?></title>
-<!-- <link rel="Shortcut Icon" href="<?=$site_host?>/favicon.ico">
-<link rel="apple-touch-icon-precomposed" href="<?=$site_host?>/apple-touch-icon.png"> -->	<!-- 파비콘 사용시 주석해제 -->
 <meta name="Title" content="<?=$site_title?>">
 <meta name="Subject" content="<?=$site_subject?>">
 <meta name="Author" content="<?=$site_author?>">
@@ -59,7 +55,7 @@
 <!-- 아이콘폰트 -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
 
-<!-- 메인비주얼 플러그인 -->
+<!-- 슬라이드 플러그인 -->
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/slick.css">
 <script src="<?=$site_host?>/js/plugin/slick.js"></script>
 

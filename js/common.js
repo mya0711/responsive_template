@@ -120,4 +120,10 @@ jQuery(function($){
 	$(".custom-scrollbar-wrapper").on("touchmove click",function  () {
 		$(this).find(".custom-scrollbar-cover").fadeOut(200);
 	});
+
+	/* *********************** 에디터 테이블 스크롤넣기 ************************ */
+	$(".editor table").each(function  () {
+		$(this).wrap("<div class='editor-table-box'></div>");
+	});
+	
 });

@@ -9,7 +9,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
 include "../lib/config.php";
 $sub_description = ""; // 페이지 설명(서브페이지) *필요시 사용
 include "../lib/sub.php";
-include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd_ver2.php";
+include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 ?>
 <style>
 /* css */

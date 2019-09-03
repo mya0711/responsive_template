@@ -65,11 +65,11 @@
 
 /* 메인 비주얼 :: active효과 */
 .main-visual-item.active-item .main-visual-pc-img{
-	-ms-transform: scale(1.0,1.0) rotate(0.0001deg);
-    -o-transform: scale(1.0,1.0) rotate(0.0001deg);
-    -moz-transform: scale(1.0,1.0) rotate(0.0001deg);
-    -webkit-transform: scale(1.0,1.0) rotate(0.0001deg);
-     transform: scale(1.0,1.0) rotate(0.0001deg);
+	-ms-transform: scale(1.0,1.0) rotate(0.002deg);
+    -o-transform: scale(1.0,1.0) rotate(0.002deg);
+    -moz-transform: scale(1.0,1.0) rotate(0.002deg);
+    -webkit-transform: scale(1.0,1.0) rotate(0.002deg);
+     transform: scale(1.0,1.0) rotate(0.002deg);
 }
 .main-visual-item.active-item .main-visual-txt1,
 .main-visual-item.active-item .main-visual-txt2,

@@ -20,7 +20,7 @@ jQuery(function($){
 	// 모바일
 	var $menuBtn = $("#header .nav-open-btn");
 	var $gnbM = $("#gnbM");
-	var $gnbMList = $gnbM.children("#navigation").children("li");
+	var $gnbMList = $gnbM.find("#navigation").children("li");
 	var $gnbMBg = $('.gnb-overlay-bg-m');
 	var menuState = false;
 	
@@ -70,16 +70,17 @@ jQuery(function($){
 	// gnb 각각메뉴
 	function gnb_each_on () {
 		$gnbList.children("li").children("a").on("mouseenter focus",function  () {
-			$gnbList.children("li").removeClass("on").children(".gnb-2dep").hide();
-			$(this).parent("li").addClass("on").children(".gnb-2dep").stop().slideDown(500);
+			$gnbList.children("li").removeClass("on").children(".gnb-2dep").removeClass("open"); //.hide();
+			$(this).parent("li").addClass("on").children(".gnb-2dep").stop().addClass("open"); //.slideDown(500);
 		})
+
 		
 		$gnbList.on("mouseleave",gnb_return);
 		$gnbList.find("a").last().on("focusout",gnb_return);
 		
 		function gnb_return () {
 			// if (!$gnb.find('*').is(':animated')) {
-				$gnbList.children("li").removeClass("on").children(".gnb-2dep").hide();
+				$gnbList.children("li").removeClass("on").children(".gnb-2dep").removeClass("open"); //.hide();
 			// }
 			if ( dep1 > 0 && dep2 ) {
 				$gnbList.children("li").eq(dep1-1).addClass("active");
@@ -137,13 +138,13 @@ jQuery(function($){
 	}
 	
 	/* GNB MOBILE 2DEPTH 클래스 붙이기  */ 
-	$("#gnbM > ul > li:has('.gnb-2dep')").addClass("has-2dep");
-	$("#gnbM > ul > li:has('.gnb-2dep')").each(function  () {
+	$("#navigation > li:has('.gnb-2dep')").addClass("has-2dep");
+	$("#navigation > li:has('.gnb-2dep')").each(function  () {
 		$(this).children("a").append("<span class='gnb-icon close-icon'><i class='material-icons'>&#xE145;</i></span><span class='gnb-icon open-icon' style='display:none;'><i class='material-icons'>&#xE15B;</i></span>");
 	});
 
 	/* GNB MOBILE 2DEPTH 오픈 */ 
-	$("#gnbM > ul > li:has('.gnb-2dep')").children("a").click(function(event){
+	$("#navigation > li:has('.gnb-2dep')").children("a").click(function(event){
 		/* 2dep가 열려있을때 */		
 		if ( $(this).parent("li").hasClass("active") ){
 			$(this).parent("li").removeClass("active");
@@ -153,7 +154,7 @@ jQuery(function($){
 		}
 		/* 2dep가 닫혀있을때 */ 
 		else{	  
-			$("#gnbM > ul > li").has(".gnb-2dep").each(function() {
+			$("#navigation > li").has(".gnb-2dep").each(function() {
 				if ( $(this).hasClass("active") ){
 					$(this).removeClass("active");
 					$(this).find(".open-icon").hide();
@@ -171,9 +172,16 @@ jQuery(function($){
 	
 	/* 해당페이지의 GNB 모바일 2depth 열기 & ON  */
 	if ( dep1> 0 && dep2> 0 ) {
-		$gnbM.children("ul").children("li").eq(dep1-1).addClass("active").children(".gnb-2dep").show().children("li").eq(dep2-1).addClass("on");
-		$gnbM.children("ul").children("li").eq(dep1-1).find(".close-icon").hide();
-		$gnbM.children("ul").children("li").eq(dep1-1).find(".open-icon").show(); // 모바일 네비 on
+		$("#navigation > li").eq(dep1-1).addClass("active").children(".gnb-2dep").show().children("li").eq(dep2-1).addClass("on");
+		$("#navigation > li").eq(dep1-1).find(".close-icon").hide();
+		$("#navigation > li").eq(dep1-1).find(".open-icon").show(); // 모바일 네비 on
+	}
+	
+	
+	/* *********************** Full Navgation ************************ */
+	/* 회원메뉴가 있는 full style  메뉴 */ 
+	if ( ( $(".gnb-style-full").length > 0 ) && ( $(".member-menu-box").length > 0 ) ) {
+		$(".gnb-style-full").addClass("gnb-style-full-member");
 	}
 
 	/* *********************** PC, 모바일 공통 ************************ */

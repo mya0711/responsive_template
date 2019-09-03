@@ -77,7 +77,8 @@ jQuery(function($){
 		infinite:true,
 		autoplaySpeed: 4000,
 		easing: 'easeInOutQuint',
-		pauseOnHover:false
+		pauseOnHover:false,
+		zIndex:1
 	});
 	
 	// 스크롤 아이콘 모션

@@ -46,13 +46,14 @@
 	<!-- container -->
 	<div id="container">
 		<!-- visual -->
-		<section id="visual" style="background:#eee url(<?=$site_host?>/images/layout/sub_visual_<?=$page_section?>.jpg) no-repeat 50% 0%">
+		<section id="visual" class="sub-visual-<?=$page_section?>">
+			<div class="visual-img-con" style="background:#eee url(<?=$site_host?>/images/layout/sub_visual_<?=$page_section?>.jpg) no-repeat 50% 0%"></div>
 			<div class="area visual-txt-con">
 				<div class="table-cell-layout">
 					<h2 class="visual-tit trans400">
 						<?=$page_info?>
 					</h2>
-					<p class="visual-sub-txt"><?=$page_section?></p>
+					<p class="visual-sub-txt"><?=$page_section?> / 서브텍스트가 들어갑니다.</p>
 					<a href="#" class="sub-page-controls-btn sub-prev-page-btn"><span><i class="material-icons">&#xE15B;</i></span><strong class="sub-page-name"></strong></a>
 					<a href="#" class="sub-page-controls-btn sub-next-page-btn"><strong class="sub-page-name"></strong><span><i class="material-icons">&#xE15B;</i></span></a>
 				</div>
@@ -62,52 +63,64 @@
 		<!-- middleArea -->
 		<div id="middleArea">
 			<?if($page_section != "search" ){?>
-			<!-- 서브메뉴1 ( 메뉴나열(PC) + 모바일메뉴  )-->
-			<aside id="sideMenu">
-				<div class="side-menu-inner area">
-					<ul class="snb">
-						<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_".$page_section.".php"; ?>
-					</ul>
+			<!-- 서브메뉴1 -->
+			<aside id="topMenu01" class=""><!--  서브메뉴가 fixed될때 fixed-sub-menu 추가 -->
+				<div class="side-menu-inner">
+					<div class="area">
+						<ul class="snb sub-menu-<?=$page_section?> clearfix">
+							<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_".$page_section.".php"; ?>
+						</ul>
+					</div>
 				</div>
 			</aside>
-			<aside id="sideMenuList">
-				<div class="side-menu-inner area">
-					<ul class="snb">
-						<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_".$page_section.".php"; ?>
-					</ul>
-				</div>
-			</aside>
-			<aside id="sideMenuM" class="cm-top-menu clearfix">
-				<a href="<?=$site_url?>/" class="location-to-home-btn" title="메인으로"><i class="material-icons">&#xE88A;</i></a>
-				<!-- 1차메뉴 -->
-				<div class="menu-location location1">
-					<a href="javascript:;" class="cur-location">
-						<span><?=$page_info?></span>
-						<i class="material-icons arrow">&#xE313;</i>
-					</a>
-					<ul class="location-menu-con">
-						<li><a href="<?=$site_url?>/">대메뉴1</a></li>
-						<li><a href="<?=$site_url?>/">대메뉴2</a></li>
-						<li><a href="<?=$site_url?>/">대메뉴3</a></li>
-					</ul>
-				</div>
-				<!-- 2차메뉴 -->
-				<div class="menu-location  location2">
-					<a href="javascript:;" class="cur-location">
-						<span><?=$sub_info?></span>
-						<i class="material-icons arrow">&#xE313;</i>
-					</a>
-					<ul class="location-menu-con">
-						<?  include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_".$page_section.".php"; ?>
-					</ul>
+			<!-- // -->
+			<!-- 서브메뉴 2 -->
+			<aside id="topMenu02" class=""><!--  서브메뉴가 fixed될때 fixed-sub-menu 추가 -->
+				<div class="side-menu-inner">
+					<div class="area">
+						<ul class="snb sub-menu-<?=$page_section?> clearfix">
+							<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_".$page_section.".php"; ?>
+						</ul>
+					</div>
 				</div>
 			</aside>
 			<!-- // -->
 
-			<!-- 서브메뉴 2 -->
-			<aside id="topMenuCon">
-				<div id="topMenu" class="cm-top-menu area">
+			<!-- 서브메뉴 3(PC,모바일 모두사용가능) -->
+			<aside id="topMenu03" class=""><!--  서브메뉴가 fixed될때 fixed-sub-menu 추가 -->
+				<div class="side-menu-inner">
+					<div class="cm-top-menu area clearfix">
+						<a href="<?=$site_url?>/" class="location-to-home-btn" title="메인으로"><i class="material-icons">&#xE88A;</i></a>
+						<div class="menu-location location1">
+							<a href="javascript:;" class="cur-location">
+								<span><?=$page_info?></span>
+								<i class="material-icons arrow">&#xE313;</i>
+							</a>
+							<ul class="location-menu-con">
+								<li><a href="<?=$site_url?>/">대메뉴1</a></li>
+								<li><a href="<?=$site_url?>/">대메뉴2</a></li>
+								<li><a href="<?=$site_url?>/">대메뉴3</a></li>
+							</ul>
+						</div>
+						<div class="menu-location location2">
+							<a href="javascript:;" class="cur-location">
+								<span><?=$sub_info?></span>
+								<i class="material-icons arrow">&#xE313;</i>
+							</a>
+							<ul class="location-menu-con">
+								<?  include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_".$page_section.".php"; ?>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</aside>
+			<!-- // -->
+
+			<!-- 모바일 서브메뉴 1 -->
+			<aside id="topMenuM01" class="cm-top-menu clearfix">
+				<div class="side-menu-inner clearfix">
 					<a href="<?=$site_url?>/" class="location-to-home-btn" title="메인으로"><i class="material-icons">&#xE88A;</i></a>
+					<!-- 1차메뉴 -->
 					<div class="menu-location location1">
 						<a href="javascript:;" class="cur-location">
 							<span><?=$page_info?></span>
@@ -119,16 +132,33 @@
 							<li><a href="<?=$site_url?>/">대메뉴3</a></li>
 						</ul>
 					</div>
-					<div class="menu-location location2">
+					<!-- 2차메뉴 -->
+					<div class="menu-location  location2">
 						<a href="javascript:;" class="cur-location">
-							<span></span>
+							<span><?=$sub_info?></span>
 							<i class="material-icons arrow">&#xE313;</i>
 						</a>
 						<ul class="location-menu-con">
 							<?  include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_".$page_section.".php"; ?>
 						</ul>
 					</div>
-					<a href="" class="sub-link-btn"><i class="material-icons">&#xE157;</i>menu_b01</a>
+				</div>
+			</aside>
+			<!-- // -->
+			<!-- 모바일 서브메뉴 2 -->
+			<aside id="topMenuM02" class="cm-top-menu clearfix">
+				<div class="side-menu-inner clearfix">
+					<a href="<?=$site_url?>/" class="location-to-home-btn" title="메인으로"><i class="material-icons">&#xE88A;</i></a>
+					<!-- 2차메뉴 -->
+					<div class="menu-location  location2">
+						<a href="javascript:;" class="cur-location">
+							<span><?=$sub_info?></span>
+							<i class="material-icons arrow">&#xE313;</i>
+						</a>
+						<ul class="location-menu-con">
+							<?  include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_".$page_section.".php"; ?>
+						</ul>
+					</div>
 				</div>
 			</aside>
 			<!-- // -->

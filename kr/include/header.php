@@ -1,5 +1,4 @@
 	
-	<!-- header가 fixed가 아닌경우는 클래스 fixed-header 삭제해주세요 -->
 	<header id="header" class="">
 		<div class="gnb-overlay-bg"></div>
 		<div id="headerInnerWrap">
@@ -42,16 +41,16 @@
 			</div>
 			<!-- ****************** GNB ********************** -->
 			<!-- GNB PC ( ### 메뉴 4개이하 ### ) -->
-			<nav id="gnb" class="each-menu">
+			<nav id="gnb" class="total-menu">
 				<h2 class="blind">주메뉴</h2>
 				<!-- 
 					- 전체메뉴 : class="total-menu"
 					- 각각메뉴 : class="each-menu" + <div id="gnbBg"></div> 삭제
 				-->
-				<!-- <div id="gnbBg"></div> -->
+				<div id="gnbBg"></div>
 				<ul class="clearfix menu5 area">
 					<li class="gnb1">
-						<a href="<?=$site_url?>/company/ceo.php">menu1</a>
+						<a href="<?=$site_url?>/company/ceo.php">Menu1</a>
 						<div class="gnb-2dep">
 							<ul>
 								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
@@ -59,7 +58,7 @@
 						</div>
 					</li>
 					<li class="gnb2">
-						<a href="">menu2</a>
+						<a href="">Menu2</a>
 						<div class="gnb-2dep">
 							<ul>
 								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
@@ -67,7 +66,7 @@
 						</div>
 					</li>
 					<li class="gnb3">
-						<a href="">menu3</a>
+						<a href="">Menu3</a>
 						<div class="gnb-2dep">
 							<ul>
 								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
@@ -75,7 +74,7 @@
 						</div>
 					</li>
 					<li class="gnb4">
-						<a href="">menu4</a>
+						<a href="">Menu4</a>
 						<div class="gnb-2dep">
 							<ul>
 								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
@@ -83,7 +82,7 @@
 						</div>
 					</li>
 					<li class="gnb5">
-						<a href="">menu5</a>
+						<a href="">Menu5</a>
 						<div class="gnb-2dep">
 							<ul>
 								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
@@ -98,33 +97,60 @@
 			<span class="line line1"></span><span class="line line2"></span><span class="line line3"></span>
 		</button>
 		<div class="gnb-overlay-bg-m"></div>
-		<nav id="gnbM">
+		<nav id="gnbM" class="gnb-style-full">
+			<!-- 
+				기본스타일 : .gnb-style-basic
+				Full 스타일 : .gnb-style-full
+			-->
 			<h2 class="blind">주메뉴</h2>
-			<ul id="navigation">
-				<li>
-					<a href="javascript:;">menu1</a>
-					<ul class="gnb-2dep">
-						<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
+			<!-- 언어 선택 or 회원메뉴 사용안할시 삭제 -->
+			<div class="header-util-menu-box">
+				<!-- 언어 선택 리스트 -->
+				<!-- <ul class="clearfix lang-select">
+					<li class="cur"><a href="<?=$site_host?>/kr/">KR</a></li>
+					<li><a href="<?=$site_host?>/en/">EN</a></li>
+					<li><a href="<?=$site_host?>/jp/">JP</a></li>
+					<li><a href="<?=$site_host?>/ch/">CH</a></li>
+				</ul> -->
+				<!-- // -->
+				<!-- 회원메뉴 -->
+				<ul class="clearfix member-menu-box">
+					<li><a href="<?=$site_url?>/member/login.php"><i class="material-icons">&#xe7ff;</i><strong>로그인</strong></a></li>
+					<li><a href="<?=$site_url?>/member/join_01.php"><i class="material-icons">&#xe7fe;</i><strong>회원가입</strong></a></li>
+					<li style="display:none;"><a href="<?=$site_url?>/member/modify_01.php"><i class="material-icons">&#xe853;</i><strong>마이페이지</strong></a></li>
+					<li style="display:none;"><a href="<?=$site_url?>/member/join_01.php"><i class="material-icons">&#xe890;</i><strong>로그아웃</strong></a></li>
+				</ul>
+			</div>
+			<!-- // -->
+			<div class="gnb-navigation-wrapper">
+				<div class="gnb-navigation-inner">
+					<ul id="navigation">
+						<li>
+							<a href="javascript:;">Menu1</a>
+							<ul class="gnb-2dep">
+								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:;">Menu2</a>
+							<ul class="gnb-2dep">
+								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:;">Menu3</a>
+							<ul class="gnb-2dep">
+								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:;">Menu4</a>
+							<ul class="gnb-2dep">
+								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
+							</ul>
+						</li>
 					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">menu2</a>
-					<ul class="gnb-2dep">
-						<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">menu3</a>
-					<ul class="gnb-2dep">
-						<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">menu4</a>
-					<ul class="gnb-2dep">
-						<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
-					</ul>
-				</li>
-			</ul>
+				</div>
+			</div>
 		</nav>
 	</header>
