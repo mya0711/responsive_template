@@ -3,13 +3,30 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate : 2019/08/29
+* UpDate : 2019/09/10
 
 
   
 
 ## 업데이트 내역
 
+- #### 2019/09/10
+
+  #### * php 파일
+  <code> <b>1. /kr/include/dtd_ver2.php</b></code>
+  <code> <b>2. /kr/include/header_ver2.php</b></code>
+    * 삭제
+    
+  #### * css 파일
+  <code> <b>1. /css/layout_menu2.css</b></code>
+    * 삭제
+    
+  <code> <b>2. /css/reset.css</b></code>
+  	* table에  table-layout:fixed 추가
+	
+	<code> <b>3. /css/layout_responsive.css</b></code>
+  	* 헤더 검색영역 fixed 시작지점 변경
+  
 - #### 2019/09/04
 
   #### * php 파일
@@ -70,3 +87,5 @@ Responsive Website Template
   <code> <b>1. /kr/include/dtd.php</b></code>  
     * doctype 선언 상단에 빈 영역 삭제    
     * 파비콘 주석처리 시 크롬에서 오류메세지 출력 -> 삭제
+    
+    =>  <code>```<link rel="Shortcut Icon" href="<?=$site_host?>/favicon.ico">```</code>  
