@@ -75,7 +75,7 @@ jQuery(function($){
 		})
 
 		
-		$gnbList.on("mouseleave",gnb_return);
+		$gnbList.children("li").on("mouseleave",gnb_return);
 		$gnbList.find("a").last().on("focusout",gnb_return);
 		
 		function gnb_return () {

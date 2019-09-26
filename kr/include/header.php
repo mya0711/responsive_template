@@ -41,13 +41,13 @@
 			</div>
 			<!-- ****************** GNB ********************** -->
 			<!-- GNB PC ( ### 메뉴 4개이하 ### ) -->
-			<nav id="gnb" class="total-menu">
+			<nav id="gnb" class="each-menu">
 				<h2 class="blind">주메뉴</h2>
 				<!-- 
 					- 전체메뉴 : class="total-menu"
 					- 각각메뉴 : class="each-menu" + <div id="gnbBg"></div> 삭제
 				-->
-				<div id="gnbBg"></div>
+				<!-- <div id="gnbBg"></div> -->
 				<ul class="clearfix menu5 area">
 					<li class="gnb1">
 						<a href="<?=$site_url?>/company/ceo.php">Menu1</a>

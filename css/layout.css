@@ -92,7 +92,7 @@ a:hover .over-img img{
 .header-search-inner .header-search-inner-box{
 	overflow:hidden; height:100%; background-color:#333;  padding-right:60px; 
 	-webkit-border-radius:30px;-moz-border-radius:30px;-o-border-radius:30px;border-radius:30px; 
-	-webkit-transition:all 0.5s;	-moz-transition:all 0.5s;-o-transition:all 0.5s;-ms-transition:all 0.5s;transition:all 0.5s
+	-webkit-transition:all 0.2s;	-moz-transition:all 0.2s;-o-transition:all 0.2s;-ms-transition:all 0.2s;transition:all 0.2s
 }
 .header-search-inner .header-search-word{height:30px; width:100%; vertical-align:top; background-color:transparent; border:0; color:#fff; font-size:13px; font-weight:300; text-indent:20px;}
 .header-search-inner .header-search-word::placeholder{color:#fff;}
@@ -100,7 +100,7 @@ a:hover .over-img img{
 .header-search-inner .header-search-close-btn{position:absolute; top:0px; right:0; width:32px; height:32px; background-color:#555; color:#fff; -webkit-border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%;border-radius:50%; }
 .header-search-box.open .header-search-inner{display:block;}
 /* 검색 open */
-.header-search-box.open .header-search-inner{visibility:visible; opacity:1.0;filter:Alpha(opacity=100);}
+.header-search-box.open .header-search-inner{visibility:visible; opacity:1.0;filter:Alpha(opacity=100); -webkit-transition:all 0.5s;	-moz-transition:all 0.5s;-o-transition:all 0.5s;-ms-transition:all 0.5s;transition:all 0.5s}
 @media all and ( min-width: 801px ){
 	.header-search-box.open .header-search-inner .header-search-inner-box{
 		-ms-transform: translateX(-38px);

@@ -103,6 +103,8 @@
 	/* 게시판 :: 쓰기, 문의폼 :: 기타 */
 	.bbs-write-tbl .input-check{padding:5px 0;}
 	.bbs-write-tbl .input-check span{margin-right:15px;}
+	.phone-fieldset .write-input,
+    .phone-fieldset .write-select{width:calc(33.33% - 18px) !important;}
 	.email-fieldset .write-input{width:calc(50% - 14px) !important;}
 	.email-fieldset .write-select{width:100% !important; margin-top:5px;}
 	.bbs-write-tbl .address-btn{min-width:auto; font-size:12px; margin-left:5px; -webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;border-radius:5px;}

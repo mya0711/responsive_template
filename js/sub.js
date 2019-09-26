@@ -13,15 +13,16 @@ jQuery(function($){
 	/* *********************** 서브 메뉴 FIXED ************************ */
 	if ( $(".fixed-sub-menu").length > 0 ) {
 		var $fixedSubMenu = $(".fixed-sub-menu");
-	}
-	$(window).scroll(function  () {
-		var scrollHeight = $(window).scrollTop();
-		var topMenuStart =  $fixedSubMenu.offset().top;
+	
+		$(window).scroll(function  () {
+			var scrollHeight = $(window).scrollTop();
+			var topMenuStart =  $fixedSubMenu.offset().top;
 
-		if ( scrollHeight > topMenuStart ) {
-			$fixedSubMenu.addClass("fixed");
-		}else {
-			$fixedSubMenu.removeClass("fixed");
-		}
-	});
+			if ( scrollHeight > topMenuStart ) {
+				$fixedSubMenu.addClass("fixed");
+			}else {
+				$fixedSubMenu.removeClass("fixed");
+			}
+		});
+	}
 });
