@@ -16,7 +16,7 @@ Responsive Website Template
 	<code> <b>1. /kr/include/dtd.php</b></code>
 	* SEO최적화로 <link rel="canonical" href="<?=$site_host?>"> 추가
 
-
+***************************
 
 - #### 2019/09/26
     
@@ -45,6 +45,8 @@ Responsive Website Template
   	* gnb_each_on() 마우스때는지점 수정
 	
 
+***************************
+
 - #### 2019/09/10
 
   #### * php 파일
@@ -61,6 +63,8 @@ Responsive Website Template
 	
 	<code> <b>3. /css/layout_responsive.css</b></code>
   	* 헤더 검색영역 fixed 시작지점 변경
+
+***************************
   
 - #### 2019/09/04
 
