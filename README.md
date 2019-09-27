@@ -3,12 +3,47 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate : 2019/09/10
+* UpDate : 2019/09/27
 
 
   
 
 ## 업데이트 내역
+
+- #### 2019/09/27
+    
+  #### * php 파일
+	<code> <b>1. /kr/include/dtd.php</b></code>
+	* SEO최적화로 <link rel="canonical" href="<?=$site_host?>"> 추가
+
+
+
+- #### 2019/09/26
+    
+  #### * css 파일
+	<code> <b>1. /css/reset.css</b></code>
+	* table-layout :fixed 넣었더니 반응형에서 테이블속성을 깨는게 힘들어 다시삭제하였습니다.
+    
+	<code> <b>2. /css/board_resopinsive.css</b></code>
+  	* 문의폼/쓰기폼에 phone-fieldset 추가(전화번호 반응형일때 양쪽정렬맞게)
+	
+	<code> <b>3. /css/layout.css</b></code>
+  	* 검색바 transition 속도 
+
+	<code> <b>4. /css/layout_responsive.css</b></code>
+  	* 사이트맵 반응형일때 틀어지는부분 수정
+
+	
+	<code> <b>5. /css/plugin/jquery.mCustomScrollbar.css</b></code>
+  	* 모바일에서 전체스크롤이 안되는 이슈 => 27번째 주석처리 
+  
+  #### * js 파일
+	<code> <b>1. /js/sub.js</b></code>
+	* fixed-sub-menu => $(window).scroll() if문 안에 들어가게 변경
+    
+	<code> <b>2.  /js/nav.js</b></code>
+  	* gnb_each_on() 마우스때는지점 수정
+	
 
 - #### 2019/09/10
 
