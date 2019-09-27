@@ -24,6 +24,7 @@
 <meta name="naver-site-verification" content="<?=$naver_verification?>">
 <meta name="viewport" content="width=device-width, initial-scale=1"><!-- 모바일사이트, 반응형사이트 제작시 사용 -->
 <meta name="format-detection" content="telephone=no"/><!-- ios 자동전화걸기 방지 -->
+<link rel="canonical" href="<?=$site_host?>">
 <link rel="stylesheet" href="<?=$site_host?>/css/reset.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/common.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/editor.css">
