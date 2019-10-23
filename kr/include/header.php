@@ -110,7 +110,7 @@
 					<li class="cur"><a href="<?=$site_host?>/kr/">KR</a></li>
 					<li><a href="<?=$site_host?>/en/">EN</a></li>
 					<li><a href="<?=$site_host?>/jp/">JP</a></li>
-					<li><a href="<?=$site_host?>/ch/">CH</a></li>
+					<li><a href="<?=$site_host?>/cn/">CH</a></li>
 				</ul> -->
 				<!-- // -->
 				<!-- 회원메뉴 -->
