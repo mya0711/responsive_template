@@ -88,5 +88,4 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						</div>
 					</div>
 				</div>
-						
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/bottom.php"; ?>
