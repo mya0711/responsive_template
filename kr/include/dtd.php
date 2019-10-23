@@ -81,7 +81,7 @@
 <script src="<?=$site_host?>/js/plugin/jquery.magnific-popup.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
-	$('#image-popups').magnificPopup({
+	$('.popup-gallery').magnificPopup({
 		delegate: 'a',
 		type: 'image',
 		closeOnContentClick: true,
