@@ -33,20 +33,20 @@ Responsive Website Template
   #### * css 파일
 
 	<code> <b>1. css 삭제</b></code>
-	* - board.css / board_responsive.css 삭제
-	   - member.css / member_responsive.css삭제
-	   - reset.css / editor.css / font.css / common.css 삭제 => 통합
+	* board.css / board_responsive.css 삭제
+	* member.css / member_responsive.css삭제
+	* reset.css / editor.css / font.css / common.css 삭제 => 통합
 
 	<code> <b>2. /css/default.css 생성</b></code>
-	* - reset.css / editor.css / font.css / common.css 삭제 => 통합
-	- reset : a:hover{color:#333; } 삭제, input 스타일초기화, table-layout:fixed 삭제
-	- editor : iframe 반응형 css추가
-	- layout공통클래스 : default로 이동
-	- kakao map border, padding 이슈 초기화
+	*  reset.css / editor.css / font.css / common.css 삭제 => 통합
+	* reset : a:hover{color:#333; } 삭제, input 스타일초기화, table-layout:fixed 삭제
+	* editor : iframe 반응형 css추가
+	* layout공통클래스 : default로 이동
+	* kakao map border, padding 이슈 초기화
 	
 	<code> <b>3. /css/cm_bbs_common.css, /css/cm_board.css 생성</b></code>
-	* - cm_bbs_common.css : 검색, paging, 버튼 등 게시판에 공통적으로 쓰이는 css
-	- cm_board.css : 일반게시판 skin
+	* cm_bbs_common.css : 검색, paging, 버튼 등 게시판에 공통적으로 쓰이는 css
+        * cm_board.css : 일반게시판 skin
 
 	<code> <b>4. /css/layout.css, /css/layout_responsive.css</b></code>
 	* z-index변경(헤더,서브메뉴)
