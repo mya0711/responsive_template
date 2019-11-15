@@ -147,7 +147,7 @@
 
 	/* -------- Header :: 네비게이션 오픈 버튼 -------- */
 	.nav-open-btn{
-		display:block; position:fixed; top:24px;  right:15px; z-index:9998; 
+		display:block; position:fixed; top:24px;  right:15px; z-index:10000; 
 		height:30px;
 		transition:all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715); 
 		-webkit-transition:all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);  
