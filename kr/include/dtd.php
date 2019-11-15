@@ -25,20 +25,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"><!-- 모바일사이트, 반응형사이트 제작시 사용 -->
 <meta name="format-detection" content="telephone=no"/><!-- ios 자동전화걸기 방지 -->
 <link rel="canonical" href="<?=$site_host?>">
-<link rel="stylesheet" href="<?=$site_host?>/css/reset.css">
-<link rel="stylesheet" href="<?=$site_host?>/css/common.css">
-<link rel="stylesheet" href="<?=$site_host?>/css/editor.css">
+<link rel="stylesheet" href="<?=$site_host?>/css/default.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/layout.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/content.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/main.css" />
-<link rel="stylesheet" href="<?=$site_url?>/css/language.css" />
+<link rel="stylesheet" href="<?=$site_url?>/css/language.css" /><!-- 해당언어에서만 사용하는 css -->
 <link rel="stylesheet" href="<?=$site_host?>/css/layout_responsive.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/content_responsive.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/main_responsive.css" />
-<link rel="stylesheet" href="<?=$site_host?>/css/board.css"> <!-- 게시판 제작시 사용 -->
-<link rel="stylesheet" href="<?=$site_host?>/css/board_responsive.css"> <!-- 게시판(반응형, 모바일) 제작시 사용 -->
-<!-- <link rel="stylesheet" href="<?=$site_host?>/css/member.css"> --><!-- 회원관련 폼 제작시 사용 -->
-<!-- <link rel="stylesheet" href="<?=$site_host?>/css/member_responsive.css"> --><!-- 회원관련 폼(반응형, 모바일) 제작시 사용 -->
+<!-- Board Skin -->
+<link rel="stylesheet" href="<?=$site_host?>/css/cm_bbs_common.css">
+<link rel="stylesheet" href="<?=$site_host?>/css/cm_board.css">
+<!-- // -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="<?=$site_host?>/js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
@@ -54,8 +52,8 @@
 <script src="<?=$site_host?>/js/layer_popup.js"></script>
 
 <!-- 아이콘폰트 -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet"><!-- google -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"><!-- naver -->
 
 <!-- 슬라이드 플러그인 -->
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/slick.css">

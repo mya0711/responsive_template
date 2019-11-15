@@ -46,7 +46,7 @@
 	.gnb-overlay-bg{display:none}
 
 	/* -------- Header :: GNB(Mobile/기본스타일) -------- */
-	.gnb-overlay-bg-m{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:101;}	
+	.gnb-overlay-bg-m{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9998;}	
 	#gnbM{ 
 		display:block; 
 		position:fixed; 
@@ -56,7 +56,7 @@
 		height:100%;  
 		max-width:280px; 
 		background-color:#fff; 
-		z-index:999; 
+		z-index:9999; 
 		transition:all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715); 
 		-webkit-transition:all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);  
 		-oz-transition:all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715); 
