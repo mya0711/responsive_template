@@ -46,7 +46,7 @@ Responsive Website Template
 	
 	<code> <b>3. /css/cm_bbs_common.css, /css/cm_board.css 생성</b></code>
 	* cm_bbs_common.css : 검색, paging, 버튼 등 게시판에 공통적으로 쓰이는 css
-        * cm_board.css : 일반게시판 skin
+	* cm_board.css : 일반게시판 skin
 
 	<code> <b>4. /css/layout.css, /css/layout_responsive.css</b></code>
 	* z-index변경(헤더,서브메뉴)
