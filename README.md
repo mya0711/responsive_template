@@ -21,7 +21,7 @@ Responsive Website Template
 	<code> <b>2. main.css / main_responsive.css </b></code>
 	* #mainContent > article{padding:65px 0;} 삭제
 
-#### * js 파일
+  #### * js 파일
 
 	<code> <b>1. common폴더생성후 cm_~ 관련된  js 추가</b></code>
 
