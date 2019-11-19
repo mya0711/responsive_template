@@ -34,8 +34,11 @@
 <link rel="stylesheet" href="<?=$site_host?>/css/content_responsive.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/main_responsive.css" />
 <!-- Board Skin -->
-<link rel="stylesheet" href="<?=$site_host?>/css/cm_bbs_common.css">
-<link rel="stylesheet" href="<?=$site_host?>/css/cm_board.css">
+<link rel="stylesheet" href="<?=$site_host?>/css/common/cm_bbs_common.css">
+<link rel="stylesheet" href="<?=$site_host?>/css/common/cm_board.css">
+<link rel="stylesheet" href="<?=$site_host?>/css/common/cm_gallery.css" />
+<link rel="stylesheet" href="<?=$site_host?>/css/common/cm_faq.css" />
+<link rel="stylesheet" href="<?=$site_host?>/css/common/cm_online.css" />
 <!-- // -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -97,6 +100,10 @@ $(document).ready(function() {
 		closeOnContentClick: true,
 		midClick: true, // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
 	});
-	
 });
 </script>
+
+
+<!-- Board Skin -->
+
+<!-- // -->
