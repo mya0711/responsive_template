@@ -3,10 +3,48 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate : 2019-11-21
+* UpDate : 2019-12-02
   
 
 ## 업데이트 내역
+
+- #### 2019/12/02
+    
+  #### * php 파일
+	<code> <b>1. /kr/include/top.php </b></code>
+	* 비주얼영역 location 추가
+	* <aside id="contentInfoCon"></aside> 위치이동(컨텐츠안으로)
+
+	<code> <b>2. /kr/company/ceo.php </b></code>
+	* 컨텐츠가 wide형태로 들어갈경우 상단 style추가
+
+  #### * js 파일
+	<code> <b>1. main.js</b></code>
+	* fullheight 계산 함수 resize 변경
+
+  #### * css 파일
+	<code> <b>1. /css/default.css</b></code>
+	* input스타일초기화로 checkbox, radio 스타일 없어지는 문제점 보완
+
+	<code> <b>2. /css/layout.css</b></code>
+	* 비주얼영역 위치표시(location) 추가로 인한 스타일변경
+	* 상단타이틀영역(contentInfoCon)에 padding->margin변경
+	* content영역에 padding추가
+
+	<code> <b>3. /css/layout_responsive.css</b></code>
+	* 비주얼영역 위치표시(location) 추가로 인한 반응형 스타일추가
+	* 상단타이틀영역(contentInfoCon)에 padding->margin변경
+	* content영역에 padding수정
+	
+	<code> <b>4. /css/common/cm_gallery.css</b></code>
+	* 10번갤러리 border영역추가
+
+	<code> <b>5. /css/common/cm_member.css</b></code>
+	* SNS로그인 추가 및 css일부수정
+
+
+***************************
+
 
 - #### 2019/11/21
     

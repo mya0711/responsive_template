@@ -277,6 +277,8 @@
 	#visual .visual-txt-con{padding:0}
 	/*  SUB LAYOUT :: 서브메뉴(스타일3) */
 	#topMenu03 .area{padding:0;}
+	/*  SUB LAYOUT :: 컨텐츠 레이아웃 */
+	#content{padding:70px 15px}
 }
 
 @media all and (max-width:800px){
@@ -284,6 +286,10 @@
 	#visual{height:240px;}
 	#visual .visual-tit{font-size:28px; }
 	#visual .visual-sub-txt{font-size:13px; line-height:18px; padding-top:15px}
+	/* SUB LAYOUT :: 위치정보(location) */
+	.location li{font-size:12px;}
+	.location li:before{margin:0 6px 0 4px; top:0px;}
+	.location li i{margin-top:0px; font-size:16px;}
 	/*  SUB LAYOUT :: 이전페이지,다음페이지 버튼 */
 	.sub-page-controls-btn .sub-page-name{display:none}
 	/*  SUB LAYOUT ::  서브메뉴(스타일1,2) */
@@ -338,7 +344,7 @@
 
 
 	/*  SUB LAYOUT :: 상단정보 (공통) */
-	#contentInfoCon{padding:30px 15px; }
+	#contentInfoCon{margin:30px 0; }
 	#contentInfoCon .content-tit{font-size:24px}
 	#contentInfoCon .content-sub-tit{font-size:13px; line-height:18px;}
 	/*  SUB LAYOUT :: 상단정보(스타일02) */
@@ -350,7 +356,7 @@
 	#contentInfoCon.content-info-style03 .location{float:none; text-align:center; padding-top:23px;}
 
 	/*  SUB LAYOUT :: 컨텐츠 레이아웃 */
-	#content{padding-bottom:50px}
+	#content{padding:50px 15px}
 }
 @media all and ( max-width: 480px ){
 	/*  SUB LAYOUT :: 비주얼 */

@@ -55,6 +55,13 @@
 							<?=$page_info?>
 						</h2>
 						<p class="visual-sub-txt"><?=$page_section?> / 서브텍스트가 들어갑니다.</p>
+						<div class="location">
+							<ul>
+								<li><a href="<?=$site_url?>/index.php" title="HOME"><i class="material-icons">&#xE88A;</i></a></li>
+								<li><?=$page_info?></li>
+								<?if($sub_info){?><li><?=$sub_info?></li><?}?>
+							</ul>
+						</div>
 						<a href="#" class="sub-page-controls-btn sub-prev-page-btn"><span><i class="material-icons">&#xE15B;</i></span><strong class="sub-page-name"></strong></a>
 						<a href="#" class="sub-page-controls-btn sub-next-page-btn"><strong class="sub-page-name"></strong><span><i class="material-icons">&#xE15B;</i></span></a>
 					</div>
@@ -64,6 +71,7 @@
 		<!-- //visual -->
 		<!-- middleArea -->
 		<div id="middleArea">
+			<!-- ****************** 서브메뉴 ********************** -->
 			<?if($page_section != "search" ){?>
 			<!-- 서브메뉴1 -->
 			<aside id="topMenu01" class="fixed-sub-menu"><!--  서브메뉴가 fixed될때 fixed-sub-menu 추가 -->
@@ -166,28 +174,27 @@
 			<!-- // -->
 			<?}?>
 			
-			<!-- 상단정보 (센터정렬) -->
-			<aside id="contentInfoCon" class="content-info-style01">
-				<h3 class="content-tit"><?if($sub_info){?><?=$sub_info?><?}else{?><?=$page_info?><?}?></h3>
-				<p class="content-sub-tit">언제나 처음 시작하였던 다짐과 포부로 미래를 열어가겠습니다. </p>
-			</aside>
-			<!-- 상단정보 (왼쪽정렬) -->
-			<aside id="contentInfoCon" class="content-info-style02 area">
-				<h3 class="content-tit"><?if($sub_info){?><?=$sub_info?><?}else{?><?=$page_info?><?}?></h3>
-				<p class="content-sub-tit">언제나 처음 시작하였던 다짐과 포부로 미래를 열어가겠습니다. </p>
-			</aside>
-			<!-- 상단정보 (왼쪽타이틀 +오른쪽 location) -->
-			<aside id="contentInfoCon" class="content-info-style03 clearfix area">
-				<h3 class="content-tit"><?if($sub_info){?><?=$sub_info?><?}else{?><?=$page_info?><?}?></h3>
-				<div class="location">
-					<ul>
-						<li><a href="<?=$site_url?>/index.php" title="HOME"><i class="material-icons">&#xE88A;</i></a></li>
-						<li><?=$page_info?></li>
-						<?if($sub_info){?><li><?=$sub_info?></li><?}?>
-					</ul>
-				</div>
-			</aside>
-			
 			<!-- content -->
 			<section id="content" class="area">
-				
+				<!-- ****************** 상단정보 ********************** -->
+				<!-- 상단정보 (센터정렬) -->
+				<aside id="contentInfoCon" class="content-info-style01">
+					<h3 class="content-tit"><?if($sub_info){?><?=$sub_info?><?}else{?><?=$page_info?><?}?></h3>
+					<p class="content-sub-tit">언제나 처음 시작하였던 다짐과 포부로 미래를 열어가겠습니다. </p>
+				</aside>
+				<!-- 상단정보 (왼쪽정렬) -->
+				<aside id="contentInfoCon" class="content-info-style02 area">
+					<h3 class="content-tit"><?if($sub_info){?><?=$sub_info?><?}else{?><?=$page_info?><?}?></h3>
+					<p class="content-sub-tit">언제나 처음 시작하였던 다짐과 포부로 미래를 열어가겠습니다. </p>
+				</aside>
+				<!-- 상단정보 (왼쪽타이틀 +오른쪽 location) -->
+				<aside id="contentInfoCon" class="content-info-style03 clearfix area">
+					<h3 class="content-tit"><?if($sub_info){?><?=$sub_info?><?}else{?><?=$page_info?><?}?></h3>
+					<div class="location">
+						<ul>
+							<li><a href="<?=$site_url?>/index.php" title="HOME"><i class="material-icons">&#xE88A;</i></a></li>
+							<li><?=$page_info?></li>
+							<?if($sub_info){?><li><?=$sub_info?></li><?}?>
+						</ul>
+					</div>
+				</aside>

@@ -35,9 +35,7 @@ jQuery(function($){
 				$("#mainVisual").css("height","auto");
 			}
 		}
-		$(window).resize(function  () {
-			mainVisualHeight();
-		});
+		$(window).on('resize', mainVisualHeight);
 	}
 	
 	// 메인 비주얼 zoom-out 효과
