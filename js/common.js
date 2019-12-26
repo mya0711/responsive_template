@@ -166,5 +166,4 @@ jQuery(function($){
 		  $(this).wrap("<div class='editor-iframe-box'></div>");
 		}
 	});
-	
 });
