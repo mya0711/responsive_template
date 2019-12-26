@@ -32,19 +32,8 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 				<!-- //컨텐츠 내용 -->
 				
 				<article class="area">
-					<!-- 스크롤 템플릿 -->
-					<div class="custom-scrollbar-wrapper">
-						<div class="scroll-object-box">
-							<img src="/images/content/ie8_popup.png" alt="" class="scroll-object" /><!-- 이미지에 scroll-object -->
-						</div>
-						<div class="custom-scrollbar-cover">
-							<div class="scroll-cover-txt">
-								<i class="material-icons">&#xe913;</i>
-								<p>좌우로 드래그 해보세요</p>
-							</div>
-						</div>
-					</div>
 					<!-- 테이블 스크롤 템플릿 -->
+					<p style="line-height:30px; font-size:16px; color:#222;">테이블 모바일로 줄었을때 스크롤붙는 샘플입니다</p>
 					<div class="custom-scrollbar-wrapper">
 						<div class="scroll-object-box">
 							<table class="test-table scroll-object"><!-- 테이블 scroll-object -->
@@ -96,5 +85,35 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							</div>
 						</div>
 					</div>
+				</article>
+
+				<article class="area">
+					<!-- 해당영역으로 영역움직이기 -->
+					<br><br>
+					<p style="line-height:30px; font-size:16px; color:#222;">메뉴가 fixed되고 누르면 해당영역으로 가는 샘플입니다.</p>
+					<article class="fixed-tab-container">
+						<aside class="fixed-move-tab-list-wrapper">
+							<div class="fixed-move-tab-list">
+								<div class="fixed-move-tab-inner">
+									<ul class="clearfix">
+										<li class="selected"><a href="#fixedContent1">내용1</a></li>
+										<li><a href="#fixedContent2">내용2</a></li>
+										<li><a href="#fixedContent3">내용3</a></li>
+									</ul>
+								</div>
+							</div>
+						</aside>
+						<div class="fixed-move-content-wrapper">
+							<div class="fixed-tab-content" id="fixedContent1">
+								내용1
+							</div>
+							<div class="fixed-tab-content" id="fixedContent2">
+								내용2
+							</div>
+							<div class="fixed-tab-content" id="fixedContent3">
+								내용3
+							</div>
+						</div>
+					</article>
 				</article>
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/bottom.php"; ?>

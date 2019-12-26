@@ -72,9 +72,38 @@ jQuery(function($){
 			return false;
 		});
 	});
+	
+	/* *********************** 하단 파트너사 리스트 ************************ */
+	$('.footer-partner-list').slick({
+		slidesToShow: 7,
+		slidesToScroll: 1,
+		arrows: true,
+		fade: false,
+		dots:false,
+		autoplay: true,
+		speed:500,
+		infinite:true,
+		autoplaySpeed: 3000,
+		easing: 'easeInOutQuint',
+		pauseOnHover:false,
+		prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Prev" tabindex="0" role="button"><i class="xi-angle-left-min"></i></button>',
+		nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="xi-angle-right-min"></i></button>',
+		responsive: [
+					{
+					  breakpoint: 1367,
+					  settings: {
+						slidesToShow: 5
+					  }
+					},
+					{
+					  breakpoint: 1025,
+					  settings: {
+						slidesToShow: 3
+					  }
+					}
+				  ]
+	});
 
-	
-	
 	/* *********************** 패밀리사이트 ************************ */
 	$(".family-site-box").each(function  () {
 		var $familyBox = $(this);

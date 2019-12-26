@@ -238,7 +238,17 @@
 	/* Footer :: 패밀리사이트 */
 	.family-site-box{position:static; position:relative; top:0px; margin:15px auto 0;}
 }
+
 @media all and (max-width:800px){
+	/* -------- FOOTER :: 파트너리스트 -------- */
+	#footerPartnerListContent{padding:10px 0;}
+	#footerPartnerListContent .area-box{padding:0}
+	.footer-partner-list{padding:0 30px;}
+	.footer-partner-list .partner-item-inner{height:35px; padding:0 5px;}
+	.footer-partner-list .slick-arrow{width:28px; height:28px; font-size:28px; margin-top:-14px}
+	.footer-partner-list .slick-arrow i{line-height:28px;}
+
+	/* -------- FOOTER :: 레이아웃 -------- */
 	#footerTop, #footerBottom{text-align:center;}
 	.footer-left-con,.footer-right-con{float:none; }
 

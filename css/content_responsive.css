@@ -19,7 +19,16 @@
 	.custom-scrollbar-cover .scroll-cover-txt i{font-size:30px; display:block; margin-bottom:20px; }
 }
 
-
+/* -------- 공통 Fixed Move Tab -------- */
+@media all and (max-width:1220px){
+	.fixed-move-tab-list.fixed{top:80px;}
+}
+@media all and (max-width:800px){
+	.fixed-move-tab-list ul li a{height:40px; line-height:40px; font-size:14px;}
+}
+@media all and (max-width:480px){
+	.fixed-move-tab-list.fixed{top:60px;}
+}
 /* ******************  회사소개 ********************** */
 @media all and (max-width:1220px){
 	
