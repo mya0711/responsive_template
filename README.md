@@ -15,11 +15,12 @@ Responsive Website Template
 	* 메인비주얼 2번까지만 사용(3번이미지 삭제)
 	* 스크롤이미지 삭제
 	
-	<code> <b>1. /kr/company/ceo.php => sample.php로 변경 </b></code>
+	<code> <b>2. /kr/company/ceo.php => sample.php로 변경 </b></code>
 
-	<code> <b>1. /kr/include/header.php, 1. /kr/include/menu_company.php </b></code>
+	<code> <b>3. /kr/include/header.php, /kr/include/menu_company.php </b></code>
 	* 링크변경
-	<code> <b>1. /kr/include/fooer.php </b></code>
+
+	<code> <b>4. /kr/include/fooer.php </b></code>
 	* 하단 SNS 아이콘으로 변경
 
   #### * css 파일
@@ -29,7 +30,7 @@ Responsive Website Template
 	<code> <b>2. /css/main.css ,/css/main_responsive.css </b></code>
 	* 일부분삭제(1번섹션이미지사용, 7번섹션중복코드 삭제)
 
-	<code> <b>2. /css/layout.css ,/css/layout_responsive.css </b></code>
+	<code> <b>3. /css/layout.css ,/css/layout_responsive.css </b></code>
 	* 푸터 SNS 아이콘변경으로 인한 css수정
 
   #### * images 파일
