@@ -61,22 +61,9 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						</div>
 					</div>
 				</div>
-				<div class="main-visual-item">
-					<div class="main-visual-pc-img" style="background:#fff url(/images/main/main_visual_03.jpg) no-repeat 50% 50%;"></div>
-					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_03_m.jpg" alt="" /></div>	<!-- 모바일이미지 -->
-					<div class="main-visual-txt-con">
-						<div class="main-visual-txt-inner area-box">
-							<strong class="main-visual-txt1">giantsoft Stand in the world 33</strong>
-							<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
-							<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
-							<a href="" class="main-visual-more-btn">COMPANY VIEW</a>
-						</div>
-					</div>
-				</div>
 			</div>
 			<div class="main-scroll-icon">
 				<span>SCROLL DOWN</span>
-				<img src="<?=$site_host?>/images/icon/main_scroll_icon.png" alt="스크롤다운" />
 			</div>
 		</section>
 
@@ -323,7 +310,6 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 								<a href="" class="main-slide-btn">자세히보기</a>
 							</div>
 						</div>
-					
 					</div>
 				</div>
 			</article>
@@ -357,68 +343,6 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 									<p class="banner-tit">giantsoft Stand in the world</p>
 									<strong class="banner-sub-tit">거인소프트 베너</strong>
 									<span class="banner-sub-txt">오버시 이미지 확대</span>
-								</div>
-							</a>
-						</li>
-					</ul>
-					<ul class="custom-gallery-list-con04 clearfix">
-						<li>
-							<a href="" class="circle-item">
-								<span class="circle-thumb"><img src="http://design.giantsoft.co.kr/images/test/thum/test14.jpg" alt=""></span>
-								<div class="circle-info">
-									<strong class="circle-cate">카테고리</strong>
-									<p class="off-txt circle-tit">
-										제목이 들어갑니다
-									</p>
-									<div class="on-txt">
-										<p class="circle-tit">제목 or 서브타이틀이 들어갑니다</p>
-									</div>
-									<span class="more-btn"><i class="material-icons"></i></span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="" class="circle-item">
-								<span class="circle-thumb"><img src="http://design.giantsoft.co.kr/images/test/thum/test5.jpg" alt=""></span>
-								<div class="circle-info">
-									<strong class="circle-cate">카테고리</strong>
-									<p class="off-txt circle-tit">
-										제목이 들어갑니다
-									</p>
-									<div class="on-txt">
-										<p class="circle-tit">제목 or 서브타이틀이 들어갑니다</p>
-									</div>
-									<span class="more-btn"><i class="material-icons"></i></span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="" class="circle-item">
-								<span class="circle-thumb"><img src="http://design.giantsoft.co.kr/images/test/thum/test12.jpg" alt=""></span>
-								<div class="circle-info">
-									<strong class="circle-cate">카테고리</strong>
-									<p class="off-txt circle-tit">
-										제목이 들어갑니다
-									</p>
-									<div class="on-txt">
-										<p class="circle-tit">제목 or 서브타이틀이 들어갑니다</p>
-									</div>
-									<span class="more-btn"><i class="material-icons"></i></span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="" class="circle-item">
-								<span class="circle-thumb"><img src="http://design.giantsoft.co.kr/images/test/thum/test1.jpg" alt=""></span>
-								<div class="circle-info">
-									<strong class="circle-cate">카테고리</strong>
-									<p class="off-txt circle-tit">
-										제목이 들어갑니다
-									</p>
-									<div class="on-txt">
-										<p class="circle-tit">제목 or 서브타이틀이 들어갑니다</p>
-									</div>
-									<span class="more-btn"><i class="material-icons"></i></span>
 								</div>
 							</a>
 						</li>

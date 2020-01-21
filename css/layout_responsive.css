@@ -267,6 +267,8 @@
 	.foot-sns-menu li,
 	.foot-sns-menu li:first-child{margin:0 3px}
 	.foot-sns-menu li img{width:25px}
+	.foot-sns-menu li a{width:25px; height:25px; line-height:25px;}
+	.foot-sns-menu li a i{font-size:15px; line-height:25px;}
 	
 	/* -------- Footer :: 하단 -------- */
 	/* Footer :: 하단정보 */

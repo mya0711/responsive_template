@@ -3,10 +3,40 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate : 2020-01-20
+* UpDate : 2020-01-21
   
 
 ## 업데이트 내역
+
+- #### 2020/01/21
+    
+  #### * php 파일
+	<code> <b>1. /kr/index.php </b></code>
+	* 메인비주얼 2번까지만 사용(3번이미지 삭제)
+	* 스크롤이미지 삭제
+	
+	<code> <b>1. /kr/company/ceo.php => sample.php로 변경 </b></code>
+
+	<code> <b>1. /kr/include/header.php, 1. /kr/include/menu_company.php </b></code>
+	* 링크변경
+	<code> <b>1. /kr/include/fooer.php </b></code>
+	* 하단 SNS 아이콘으로 변경
+
+#### * css 파일
+	<code> <b>1. /css/defulat.css </b></code>
+	* line587  : over-bg클래스 추가(마우스오버시 bg커지는 효과)
+
+	<code> <b>2. /css/main.css ,/css/main_responsive.css </b></code>
+	* 일부분삭제(1번섹션이미지사용, 7번섹션중복코드 삭제)
+
+	<code> <b>2. /css/layout.css ,/css/layout_responsive.css </b></code>
+	* 푸터 SNS 아이콘변경으로 인한 css수정
+
+#### * images 파일
+	<code> <b>1. /images/content/~ </b></code>
+	* 이미지 경로 정리 및 삭제 / 준비중이미지 변경
+
+***************************
 
 - #### 2020/01/20
     

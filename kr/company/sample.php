@@ -26,7 +26,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 				<section class="company-wrapper" style="background-color:#eee;">
 					<div class="company-inner area">
 						<p style="line-height:30px; font-size:16px; color:#222;">Wide컨텐츠가 들어갔을때는 #content{max-width:none; } 사용<br>테스트입니다</p>
-						<img src="/images/content/content_ready_img.jpg" alt="현재 페이지는 준비중입니다." style="display:block; margin:0 auto; max-width:100%;" />
+						<img src="<?=$site_url?>/images/content/content_ready_img.png" alt="서비스 준비중입니다." style="display:block; margin:0 auto; max-width:100%;" />
 					</div>
 					<div class="company-inner area">
 						<p style="line-height:30px; font-size:16px; color:#222;">국문이미지는 <pre>&lt;?=$site_url?></pre> 사용</p>

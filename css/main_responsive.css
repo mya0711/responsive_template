@@ -102,23 +102,6 @@
 	.main-banner-list-con li{float:none; width:100%; margin:0; margin-bottom:15px;}
 }
 
-/* 배너 :: 원배너 */
-@media (max-width:1220px) {
-    .circle-info .circle-cate{padding:20% 0}
-    .circle-info .off-txt{height:72px; font-size:18px; line-height:24px;}
-}
- 
-@media (max-width:800px) {
-    .custom-gallery-list-con04 li{width:47%; margin-top:10px;}
-    .circle-info .off-txt{height:76px; font-size:18px; line-height:26px;}
-}
-@media (max-width:640px) {
-    .circle-info .circle-cate{font-size:12px;}
-    .circle-info .off-txt{height:48px; font-size:15px; line-height:16px;}
-    .circle-info .on-txt{display:none;}
-    .circle-info .more-btn{bottom:10px;}
-    .custom-gallery-list-con04 li .circle-item:hover .circle-info .more-btn{bottom:20px;}
-}
 
 /* -------- 메인 컨텐츠 :: 컨텐츠7(100% 풀배너) -------- */
 @media (max-width:1220px) {
