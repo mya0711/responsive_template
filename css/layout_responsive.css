@@ -232,7 +232,7 @@
 /* ****************** FOOTER ********************** */
 @media all and (max-width:1220px){
 	/* Footer :: 푸터로고 */
-	.foot-logo{float:none; display:block; padding-right:0; margin-bottom:15px;}
+	.foot-logo{float:none; display:block; padding-right:0; padding-bottom:15px;}
 	/* Footer :: 푸터메뉴 */
 	.foot-menu{float:none; display:inline-block;}
 	/* Footer :: 패밀리사이트 */
@@ -256,6 +256,7 @@
 	#footerTop{background-color:#fff;}
 	/* Footer :: 푸터로고 */
 	.foot-logo img{height:14px;}
+	.footer-right-con .foot-logo{text-align:center; padding-top:15px;}
 	/* Footer :: 푸터메뉴 */
 	.foot-menu li {padding-left:25px}
 	.foot-menu li:before{left:12px}
@@ -271,12 +272,14 @@
 	.foot-sns-menu li a i{font-size:15px; line-height:25px;}
 	
 	/* -------- Footer :: 하단 -------- */
-	/* Footer :: 하단정보 */
-	.footer-address p{font-size:12px; line-height:18px;}
-	.footer-address span{display:inline-block;}
-	.footer-address a{display:block;}
-	.footer-address .footer-caution-txt{font-size:11px; word-break:keep-all}
-	.footer-address .copyright, .footer-copyright{font-size:11px;}
+	/* Footer :: 왼쪽정보 */
+	.footer-address{}
+	.footer-address .footer-address-txt{font-size:12px;}
+	.footer-address p:before{display:none;}
+/* Footer :: 왼쪽정보 style02 */
+	.footer-address-list dl{font-size:12px;}
+	/* Footer :: Copyright */
+	.footer-copyright{font-size:11px;}
 	/* Footer :: 패밀리사이트 */
 	.family-site-box{width:150px;	}
 	.family-site-box .family-site-open-btn{height:34px; line-height:34px; font-size:13px;}
