@@ -67,7 +67,6 @@
 .main-visual-item.active-item .main-visual-more-btn{
 	-webkit-animation: text-active-animation 1.5s cubic-bezier(0.4, 0, 0.2, 1) both;
 	animation: text-active-animation 1.5s cubic-bezier(0.4, 0, 0.2, 1) both;
-	animation-delay:0.3s;
 }
 .main-visual-item.active-item .main-visual-txt-con .main-visual-txt1{ -webkit-animation-delay:0.1s; animation-delay:0.1s;}
 .main-visual-item.active-item .main-visual-txt-con .main-visual-txt2{ -webkit-animation-delay:0.3s; animation-delay:0.3s;}
