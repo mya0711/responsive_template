@@ -67,6 +67,7 @@ Responsive Website Template
 
 	<code> <b>5. /js/ie8_popup.js</b></code>
 	* 파일갯수 줄이기위해 삭제 => index.php에 직접선언
+
 	```winPopupOpen("<?=$site_url?>/service/ie8_popup.php","","width=800, height=600, left=0, top=0, resizable=no, scrollbars=no, status=no;");```
 
 	
