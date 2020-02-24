@@ -1,7 +1,7 @@
 /* *******************************************************
  * filename : nav.js
  * description : 네비게이션 및 사이드바 on 등 메뉴에 관련된 JS
- * date : 2018-01-16
+ * date : 2020-02-24
 ******************************************************** */
 
 var dep1;
@@ -26,9 +26,8 @@ jQuery(function($){
 	
 	// 모바일 gnb열린 후 창 크게했을때 스크롤바 생성
 	$(window).resize(function  () {
-		var win_width = $(window).outerWidth(); 
 		if ( menuState  ) {
-			if ( win_width > 1200 ) {
+			if ( getWindowWidth() > 1200 ) {
 				$("body").css({'height':'auto', 'overflow':'auto'});
 			}
 		}
@@ -74,7 +73,6 @@ jQuery(function($){
 			$(this).parent("li").addClass("on").children(".gnb-2dep").stop().addClass("open"); //.slideDown(500);
 		})
 
-		
 		$gnbList.children("li").on("mouseleave",gnb_return);
 		$gnbList.find("a").last().on("focusout",gnb_return);
 		
