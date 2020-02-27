@@ -2,32 +2,38 @@
 /* *******************************************************
  * filename : layout_responsive.css
  * description : 전체 레이아웃 반응형 CSS
- * date : 2019-09-03
+ * date : 2020-02-27
 ******************************************************** */
 
-/* ****************** 공통클래스 ********************** */
-@media all and (max-width:1620px){
-	.area-box{padding:0 15px;}
+/* ****************** 공통레이아웃 ********************** */
+@media all and (max-width:1620px){	/* max-width : (area-box width) + 20px */
+	.area-box{padding:0 30px;}
 }
 @media all and (max-width:1220px){
-	.area{padding:0 15px;}
+	.area{padding:0 30px;}
 }
+@media all and (max-width:1024px){
+	.area-box,
+	.area{padding:0 15px}
+}
+
 /* ****************** HEADER ********************** */
 @media all and ( max-width: 1366px ){
 	/* -------- Header :: Layout -------- */
-	#headerInner{padding:0 15px}
+	#headerInner{padding:0 30px}
 	/* -------- Header :: GNB(PC) -------- */
 	#gnb > ul > li > a{font-size:18px; padding:0 40px}
 	#gnb > ul > li .gnb-2dep ul li a{font-size:14px; }
 }
-@media all and ( max-width: 1220px ){
+@media all and ( max-width: 1024px ){	/* 1024까지 레이아웃유지가 안될시 max-width: 컨텐츠너비+20px */
 	#header,#headerInnerWrap{height:80px;}
 	#headerInnerWrap{position:fixed; z-index:99;}
+	#headerInner{padding:0 15px;}
 	#header .logo{padding:21px 0;}	/* padding값 적절히 바꿔주세요 */
 	#header.fixed #headerInnerWrap{background-color:#fff; border-bottom:1px solid #eee;}
 	
 	/* -------- Header :: UTIL BOX -------- */
-	.header-util-box{padding-right:45px;}
+	.header-util-box{padding-right:43px;}
 	/* Header :: 사이트맵 버튼 */
 	.sitemap-line-btn, .sitemap-custom-btn{display:none;}
 	
@@ -177,6 +183,7 @@
 	
 	#header.fixed-header .nav-open-btn .line{background-color:#fff}
 }
+
 @media all and ( max-width: 480px ){
 	#header,#headerInnerWrap{height:60px;}
 	#header .logo{padding:15px 0;}	/* padding값 적절히 바꿔주세요 */

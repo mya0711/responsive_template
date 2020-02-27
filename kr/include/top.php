@@ -74,7 +74,7 @@
 			<!-- ****************** 서브메뉴 ********************** -->
 			<?if($page_section != "search" ){?>
 			<!-- 서브메뉴1 -->
-			<aside id="topMenu01" class="fixed-sub-menu"><!--  서브메뉴가 fixed될때 fixed-sub-menu 추가 -->
+			<aside id="topMenu01" class=""><!--  서브메뉴가 fixed될때 fixed-sub-menu 추가 -->
 				<div class="side-menu-inner">
 					<div class="area">
 						<ul class="snb sub-menu-<?=$page_section?> clearfix">
