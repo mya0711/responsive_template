@@ -19,29 +19,29 @@ Responsive Website Template
 	<code> <b>1. /css/defulat.css </b></code>
 	* 이미지 가운데정렬(.img-center) / 이미지 Cover채우기 (.img-cover) / position 모든방향 0px (.pos-full) 추가
 	``` .img-center{
-	position:absolute;
-	top:0px;
-	left:0px;
-	right:0px;
-	bottom:0px;
-	max-width:100%;
-	max-height:100%;
-	margin:auto;
-}
-.img-cover{
-	position:absolute;
-	top:0px;
-	left:0px;
-	width:100%;
-	height:100%;
-}
-.pos-full{
-	position:absolute; 
-	top:0px; 
-	left:0px; 
-	bottom:0px; 
-	right:0px;
-} ```
+		position:absolute;
+		top:0px;
+		left:0px;
+		right:0px;
+		bottom:0px;
+		max-width:100%;
+		max-height:100%;
+		margin:auto;
+		}
+		.img-cover{
+			position:absolute;
+			top:0px;
+			left:0px;
+			width:100%;
+			height:100%;
+		}
+		.pos-full{
+			position:absolute; 
+			top:0px; 
+			left:0px; 
+			bottom:0px; 
+			right:0px;
+		} ```
 	
 	<code> <b>2. /css/layout_responsive.css </b></code>
 	* min-width:1025px => .area-box / .area 양옆간격 15px 에서 30px조정
