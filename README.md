@@ -41,7 +41,8 @@ Responsive Website Template
 			left:0px; 
 			bottom:0px; 
 			right:0px;
-		} ```
+		} 
+	```
 	
 	<code> <b>2. /css/layout_responsive.css </b></code>
 	* min-width:1025px => .area-box / .area 양옆간격 15px 에서 30px조정
