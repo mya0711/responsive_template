@@ -18,15 +18,16 @@ Responsive Website Template
   #### * css 파일
 	<code> <b>1. /css/defulat.css </b></code>
 	* 이미지 가운데정렬(.img-center) / 이미지 Cover채우기 (.img-cover) / position 모든방향 0px (.pos-full) 추가
-	``` .img-center{
-		position:absolute;
-		top:0px;
-		left:0px;
-		right:0px;
-		bottom:0px;
-		max-width:100%;
-		max-height:100%;
-		margin:auto;
+	``` 
+		.img-center{
+			position:absolute;
+			top:0px;
+			left:0px;
+			right:0px;
+			bottom:0px;
+			max-width:100%;
+			max-height:100%;
+			margin:auto;
 		}
 		.img-cover{
 			position:absolute;
