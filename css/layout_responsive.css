@@ -405,16 +405,18 @@
 	.footer-inner{padding:10px; height:250px;}
 	/* 사이트맵  */
 	.sitemap-wrapper{padding:15px}
-	.sitemap-wrapper > ul > li{float:none; width:auto; margin-bottom:15px;}
+	.sitemap-wrapper > ul{display:block;}
+	.sitemap-wrapper > ul > li{float:none; display:block; width:auto; margin-bottom:15px;}
 	.sitemap-wrapper > ul > li > h2{font-size:16px; margin:0; margin-bottom:5px;}
 	.sitemap-wrapper > ul > li .sitemap-2dep{overflow:hidden; margin:0 -1%; padding:0;}
 	.sitemap-wrapper > ul > li .sitemap-2dep li{float:left; position:relative; width:31.33%; margin:1%; word-break:keep-all;}
-	.sitemap-wrapper > ul > li .sitemap-2dep li:before{position:absolute; top:0px; left:0; bottom:0px; width:1px; background-color:#eee; content:"";}
+	.sitemap-wrapper > ul > li .sitemap-2dep li:before{position:absolute; top:0px; left:0; bottom:0px; width:1px; background-color:#eee; content:""; display:none;}
 	.sitemap-wrapper > ul > li .sitemap-2dep li:nth-child(3n+1){clear:both;}
-	.sitemap-wrapper > ul > li .sitemap-2dep a{padding:7px; border:1px solid #eee; font-weight:300; }
-
+	.sitemap-wrapper > ul > li .sitemap-2dep a{padding:7px; font-weight:300; }
 }
 @media all and ( max-width: 480px ){
 	/* 사이트맵  */
 	.sitemap-wrapper > ul > li .sitemap-2dep li{width:48%;}
+	.sitemap-wrapper > ul > li .sitemap-2dep li:nth-child(3n+1){clear:none;}
+	.sitemap-wrapper > ul > li .sitemap-2dep li:nth-child(odd){clear:both;}
 }

@@ -22,9 +22,11 @@ Responsive Website Template
 	<code> <b>1. /css/layout.css </b></code>
 	* .header-util-box{right:30px} 변경
 	* 검색창 디자인변경 및 탑메뉴03 추가
+	* 사이트맵 table-cell로 변경
 	
 	<code> <b>2. /css/layout_responsive.css </b></code>
 	* 검색창 디자인변경 및 탑메뉴03 추가
+	* 사이트맵 일부오류수정
 
 
 ***************************
