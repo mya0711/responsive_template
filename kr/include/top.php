@@ -46,6 +46,7 @@
 	<!-- container -->
 	<div id="container">
 		<!-- visual -->
+		<?if($page_section != "search" ){?>
 		<section id="visual" class="sub-visual-<?=$page_section?>">
 			<div class="visual-img-con" style="background:#eee url(<?=$site_host?>/images/layout/sub_visual_<?=$page_section?>.jpg) no-repeat 50% 0%"></div>
 			<div class="area visual-txt-con">
@@ -68,6 +69,7 @@
 				</div>
 			</div>
 		</section>
+		<?}?>
 		<!-- //visual -->
 		<!-- middleArea -->
 		<div id="middleArea">
@@ -95,9 +97,21 @@
 				</div>
 			</aside>
 			<!-- // -->
-
-			<!-- 서브메뉴 3(PC,모바일 모두사용가능) -->
+			
+			<!-- 서브메뉴 3 -->
 			<aside id="topMenu03" class=""><!--  서브메뉴가 fixed될때 fixed-sub-menu 추가 -->
+				<div class="side-menu-inner">
+					<div class="area">
+						<ul class="snb sub-menu-<?=$page_section?>">
+							<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_".$page_section.".php"; ?>
+						</ul>
+					</div>
+				</div>
+			</aside>
+			<!-- // -->
+
+			<!-- 서브메뉴 4(PC,모바일 모두사용가능) -->
+			<aside id="topMenu04" class="fixed-sub-menu"><!--  서브메뉴가 fixed될때 fixed-sub-menu 추가 -->
 				<div class="side-menu-inner">
 					<div class="cm-top-menu area clearfix">
 						<a href="<?=$site_url?>/" class="location-to-home-btn" title="메인으로"><i class="material-icons">&#xE88A;</i></a>

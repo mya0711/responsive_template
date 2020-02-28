@@ -8,21 +8,21 @@
 				<div class="header-util-box">
 					<!-- 통합검색 -->
 					<div class="header-search-box">
-						<button class="header-search-open-btn" title="검색창열기"><i class="material-icons">&#xE8B6;</i></button>
+						<button class="header-search-open-btn" title="검색창열기"><i class="xi-search"></i></button>
 						<div class="header-search-inner">
 							<!-- <form action=""> -->
 								<div class="header-search-inner-box">
 									<label for="headerSearch" class="blind">검색</label>
 									<input type="text" class="header-search-word" id="headerSearch" placeholder="검색어를 입력하세요" />
-									<button class="header-search-btn" type="submit" title="검색" onclick="location.href='<?=$site_url?>/search/'"><i class="material-icons">&#xE8B6;</i></button>
+									<button class="header-search-btn" type="submit" title="검색" onclick="location.href='<?=$site_url?>/search/'"><i class="xi-search"></i></button>
 								</div>
 							<!-- </form> -->
-							<button class="header-search-close-btn" title="검색창닫기"><i class="material-icons">&#xE14C;</i></button>
+							<button class="header-search-close-btn" title="검색창닫기"><i class="xi-close-min"></i></button>
 						</div>
 					</div>
 					<!-- 외국어선택 -->
 					<div class="header-lang">
-						<a href="javascript:;" class="lang-open-btn"><i class="material-icons">&#xE894;</i><strong>LANGUAGE</strong><span class="arrow"><i class="material-icons">&#xE313;</i></span></a>
+						<a href="javascript:;" class="lang-open-btn"><i class="xi-globus"></i><strong>LANGUAGE</strong><span class="arrow"><i class="material-icons">&#xE313;</i></span></a>
 						<ul>
 							<li><a href="<?=$site_host?>/en/">ENGLISH</a></li>
 							<li><a href="<?=$site_host?>/jp/">JAPANESE</a></li>
