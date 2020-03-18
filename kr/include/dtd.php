@@ -41,9 +41,8 @@
 <link rel="stylesheet" href="<?=$site_host?>/css/common/cm_online.css" />
 <!-- // -->
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="<?=$site_host?>/js/vendor/jquery-1.8.3.min.js"></script>
 <script src="<?=$site_host?>/js/vendor/jquery.easing.1.3.js"></script>
-<script>window.jQuery || document.write('<script src="<?=$site_host?>/js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
 
 <!--[if lt IE 9]>
 	<script src="<?=$site_host?>/js/vendor/html5shiv.js"></script>
@@ -57,7 +56,7 @@
 <script src="<?=$site_host?>/js/layer_popup.js"></script>
 
 <!-- Icon Font -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet"><!-- google -->
+<link href="//fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet"><!-- google -->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"><!-- naver -->
 
 <!-- Slick Plugin -->
@@ -75,9 +74,3 @@
 <!-- Aos Plugin -->
 <link rel="stylesheet" href="<?=$site_host?>/css/plugin/aos.css" />
 <script src="<?=$site_host?>/js/plugin/aos.js"></script>
-<script>
-	$(window).load(function() {
-		/* AOS Plugin */ 
-		aosInit ();
-	});
-</script>
