@@ -52,7 +52,7 @@ Responsive Website Template
 	<code> <b>2. /css/common/cm_history.css </b></code>
 	* 연혁 수정
 
- #### * js 파일
+  #### * js 파일
 	<code> <b>1. /js/common.js </b></code>
 	* AOS 호출 추가
 
