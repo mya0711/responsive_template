@@ -27,7 +27,7 @@ Responsive Website Template
 	* GNB Total Menu transition으로 over 되도록 수정
 	
 
- #### * js 파일
+  #### * js 파일
 	<code> <b>1. /js/common.js </b></code>
 	* Top버튼 fullpage 사용할때 사용가능하게 수정
 
