@@ -58,6 +58,7 @@ Responsive Website Template
 	* 공통 tab js 모바일버튼 추가
 
 	<code> <b>2. /js/main.js </b></code>
+	* fullpage js 추가
 	* 메인비주얼 화살표 추가
 
 	<code> <b>3. /js/sub.js </b></code>
