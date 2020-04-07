@@ -6,6 +6,11 @@
 ******************************************************** */
 
 /* ******************  메인 비주얼 ********************** */
+@media all and ( max-width: 1024px ){
+	/* 공통 :: 레이아웃 */
+	#fullpage .section{height:auto !important;}
+	#fullpage .fp-section .fp-tableCell{padding-top:0; height:0 !important;}
+}
 @media all and ( max-width: 800px ){
 	/* 메인 비주얼 :: 이미지 */
 	.main-visual-item .main-visual-pc-img{display:none;}
@@ -147,4 +152,11 @@
 @media all and ( max-width: 1440px ){
 	#rightBar{right:-56px;}
 	#rightBar.fixed{visibility:hidden;opacity:0;filter:Alpha(opacity=0);}
+}
+/* ******************  메인 오른쪽 퀵메뉴 (Fullpage) ********************** */
+@media all and (max-width:1366px){
+	#fp-nav{right:10px;}
+}
+@media all and (max-width:1024px){
+	#fp-nav{display:none;}
 }

@@ -27,6 +27,7 @@
 }
 @media all and ( max-width: 1024px ){	/* 1024까지 레이아웃유지가 안될시 max-width: 컨텐츠너비+20px */
 	#header,#headerInnerWrap{height:80px;}
+	.fullpage-wrapper #header{position:relative;}
 	#headerInnerWrap{position:fixed; z-index:99;}
 	#headerInner{padding:0 15px;}
 	#header .logo{padding:21px 0;}	/* padding값 적절히 바꿔주세요 */
@@ -399,7 +400,9 @@
 /* ****************** MODAL LAYERPOPUP ********************** */
 @media all and ( max-width: 800px ){
 	/* modal layer content */
-	.footer-modal-content h1{height:46px; line-height:46px; font-size:18px; text-align:left; padding:0 15px}
+	.footer-modal-content{width:auto; margin:50px 15px}
+	.footer-modal-content h1{font-size:18px; text-align:left; padding:0 30px 15px 0}
+	.modal-close-btn{right:-3px; top:-3px;}
 	.modal-close-btn i{font-size:24px}
 	.footer-inner-box{padding:15px}
 	.footer-inner{padding:10px; height:250px;}

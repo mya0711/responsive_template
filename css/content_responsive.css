@@ -29,6 +29,21 @@
 @media all and (max-width:480px){
 	.fixed-move-tab-list.fixed{top:60px;}
 }
+
+/* -------- 공통 :: 탭 -------- */
+@media all and ( max-width: 800px ){
+	.sub-cm-tab-list{position:relative; font-size:15px; margin-bottom:30px;}
+	.sub-cm-tab-list .cm-tab-m-btn{position:relative; display:block; padding:0 15px; height:40px; line-height:40px; background-color:#333;}
+	.sub-cm-tab-list .cm-tab-m-btn span{color:#fff; }
+	.sub-cm-tab-list .cm-tab-m-btn .arrow{color:#fff; position:absolute; top:50%; right:15px; margin-top:-7px}
+	.sub-cm-tab-list .cm-tab-m-btn.open .arrow{transform:rotate(180deg)}
+	.sub-cm-tab-list ul{display:none; position:absolute; top:40px; left:0px; right:0px;background-color:#fff; border:1px solid #ddd; z-index:11;}
+	.sub-cm-tab-list ul li{border-top:1px solid #eee; width:100%;}
+	.sub-cm-tab-list ul li:first-child{border-top:0}
+	.sub-cm-tab-list ul li a{display:block; padding:10px 15px; color:#888; letter-spacing:-0.5px;}
+	.sub-cm-tab-list ul li.selected a{color:#f57f20; font-weight:600}
+}
+
 /* ******************  회사소개 ********************** */
 @media all and (max-width:1220px){
 	
