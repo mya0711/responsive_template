@@ -20,7 +20,7 @@ Responsive Website Template
 	<code> <b>1. /css/plugin/swiper.css</b></code>
 	* 5.3.1 버전 => 5.3.7 버전으로 변경
 	
- #### * php 파일
+  #### * php 파일
 	<code> <b>1. /kr/index.php, /kr/index_fullpage.php </b></code>
 	* 타이틀영역 수정
 
