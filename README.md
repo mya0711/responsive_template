@@ -27,6 +27,10 @@ Responsive Website Template
 	<code> <b>1. /kr/service/sitemap.php, /kr/service/sitemap_html.php</b></code>
 	* 사이트맵 자동으로 삽입되게 수정
 
+  #### * php 파일
+	<code> <b>1. /js/plugin/swiper.min.js</b></code>
+	* 5.3.1 버전 => 5.3.7 버전으로 변경
+
 ***************************
 
 - #### 2020/04/07
