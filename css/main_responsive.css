@@ -32,9 +32,11 @@
 /* -------- 메인 컨텐츠 :: 공통 -------- */
 @media all and ( max-width: 800px ){
 	/* 공통 :: 타이틀 */
-	.main-tit{margin-bottom:30px;}
-	.main-tit strong{font-size:24px;}
-	.main-tit .main-sub-tit{font-size:12px; line-height:18px;}
+	.main-tit-box{margin-bottom:30px;}
+	.main-tit-box .main-tit{font-size:24px;}
+	.main-tit-box .main-sub-tit{font-size:13px;}
+	.main-tit-box .main-sub-tit span{display:block;}
+
 }
 
 /* -------- 메인 컨텐츠 :: 컨텐츠1(퀵메뉴) -------- */

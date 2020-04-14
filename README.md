@@ -3,17 +3,29 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2020-04-08
+* UpDate :  2020-04-14
   
 
 ## 업데이트 내역
 
-- #### 2020/04/08
+- #### 2020/04/14
 
   #### * css 파일
-	<code> <b>1. /css/layout.css</b></code>
-	* gnb.open{height:350px; } 삭제
-  
+	<code> <b>1. /css/main.css , /css/main_responsive.css</b></code>
+	* 메인 컨텐츠 타이틀영역 수정
+
+	<code> <b>2. /css/common/cm_history.php</b></code>
+	* history 3번 템플릿 추가
+
+	<code> <b>1. /css/plugin/swiper.css</b></code>
+	* 5.3.1 버전 => 5.3.7 버전으로 변경
+	
+ #### * php 파일
+	<code> <b>1. /kr/index.php, /kr/index_fullpage.php </b></code>
+	* 타이틀영역 수정
+
+	<code> <b>1. /kr/service/sitemap.php, /kr/service/sitemap_html.php</b></code>
+	* 사이트맵 자동으로 삽입되게 수정
 
 ***************************
 
