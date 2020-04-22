@@ -3,10 +3,43 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2020-04-14
+* UpDate :  2020-04-22
   
 
 ## 업데이트 내역
+
+- #### 2020/04/22
+
+  #### * css 파일
+	<code> <b>1. /css/layout.css </b></code>
+	* 서브비주얼 효과 ↑ => ↓ 로 변경 
+
+	<code> <b>2. /css/content.css, /css/content_responsive.css</b></code>
+	* Fixed Tab 일부변경
+
+	<code> <b>3. /css/plugin/swiper.css</b></code>
+	* 5.3.1 버전 => 5.3.7 버전으로 변경
+	
+  #### * php 파일
+	<code> <b>1. /kr/include/dtd.php</b></code>
+	* SEO 이슈로 상단에 들어간 구문 config.php로 이동
+	* 벤더프리픽스 자동 삽입가능 플러그인 삭제 -> 파이어폭스에서 css로딩이 느려지는 이슈
+
+	<code> <b>1. /kr/include/top.php </b></code>
+	*  기본으로 들어가있는 Fixed 서브메뉴 제거
+	
+	<code> <b>2. /kr/lib/config.php , /kr/lib/sub.php </b></code>
+	*  SEO 이슈 수정 후 메타태그에 title이 제대로 삽입되지않는 오류 수정
+
+
+  #### * js 파일
+	<code> <b>1. /js/sub.js</b></code>
+	* Fixed Tab 수정
+
+	<code> <b>2. /js/vendor/prefixfree.min.js</b></code>
+	* 삭제
+
+***************************
 
 - #### 2020/04/14
 

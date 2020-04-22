@@ -111,7 +111,7 @@
 			<!-- // -->
 
 			<!-- 서브메뉴 4(PC,모바일 모두사용가능) -->
-			<aside id="topMenu04" class="fixed-sub-menu"><!--  서브메뉴가 fixed될때 fixed-sub-menu 추가 -->
+			<aside id="topMenu04" class=""><!--  서브메뉴가 fixed될때 fixed-sub-menu 추가 -->
 				<div class="side-menu-inner">
 					<div class="cm-top-menu area clearfix">
 						<a href="<?=$site_url?>/" class="location-to-home-btn" title="메인으로"><i class="material-icons">&#xE88A;</i></a>

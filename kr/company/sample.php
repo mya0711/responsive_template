@@ -169,10 +169,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 				<article class="area">
 					<br><br>
 					<p style="line-height:30px; font-size:16px; color:#222; padding:10px; background-color:#f2f2f2; border:1px solid #aaa; margin:30px auto 15px"><i class="xi-message-o" style="font-size:20px; position:relative; top:3px; margin-right:5px; color:red;"></i>메뉴가 fixed되고 누르면 해당영역으로 가는 샘플입니다.</p>
+					<!-- Start -->
 					<article class="fixed-tab-container">
 						<aside class="fixed-move-tab-list-wrapper">
 							<div class="fixed-move-tab-list">
-								<div class="fixed-move-tab-inner">
+								<div class="area">
 									<ul class="clearfix">
 										<li class="selected"><a href="#fixedContent1">내용1</a></li>
 										<li><a href="#fixedContent2">내용2</a></li>
@@ -193,6 +194,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							</div>
 						</div>
 					</article>
+					<!-- // -->
 				</article>
 				<!-- // -->
 

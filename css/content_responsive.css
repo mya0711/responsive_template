@@ -21,6 +21,9 @@
 
 /* -------- 공통 Fixed Move Tab -------- */
 @media all and (max-width:1220px){
+	.fixed-move-tab-list .area{padding:0}
+}
+@media all and (max-width:1024px){
 	.fixed-move-tab-list.fixed{top:80px;}
 }
 @media all and (max-width:800px){
