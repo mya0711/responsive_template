@@ -93,11 +93,13 @@ jQuery(function($){
 		// 일시정지, 재생버튼
 		$(document).on("click",".slick-pause-btn",function  () {
 			$mainVisualItem.slick("slickPause");
-			$(this).hide().sibiling().show();
+			$(this).hide();
+			$(".slick-play-btn").show();
 		});
 		$(document).on("click",".slick-play-btn",function  () {
 			$mainVisualItem.slick("slickPlay");
-			$(this).hide().sibiling().show();
+			$(this).hide();
+			$(".slick-pause-btn").show();
 		});
 	}
 
