@@ -28,12 +28,7 @@ jQuery(function($){
 	
 		$(window).scroll(function  () {
 			var topMenuStart =  $fixedSubMenu.offset().top;
-
-			if ( getScrollTop() > topMenuStart ) {
-				$fixedSubMenu.addClass("fixed");
-			}else {
-				$fixedSubMenu.removeClass("fixed");
-			}
+			objectFixed($fixedSubMenu, topMenuStart);
 		});
 	}
 
@@ -65,11 +60,7 @@ jQuery(function($){
 
 		$(window).scroll(function  () {
 			// 메뉴fixed
-			if ( getScrollTop() > fixedStartPoint ) {
-				$fixedMoveTab.addClass("fixed");
-			}else {
-				$fixedMoveTab.removeClass("fixed");
-			}
+			objectFixed($fixedMoveTab, fixedStartPoint);
 			 
 			$moveTabItem.each(function  (idx) {
 				if( getScrollTop() >= nav[idx] ){

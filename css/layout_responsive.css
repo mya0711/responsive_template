@@ -116,6 +116,7 @@
 	.gnb-style-full.open #navigation > li:nth-child(3){-webkit-transition-delay: 0.6s;-moz-transition-delay: 0.6s;-o-transition-delay: 0.6s;-ms-transition-delay: 0.6s;transition-delay:0.6s;}
 	.gnb-style-full.open #navigation > li:nth-child(4){-webkit-transition-delay: 0.7s;-moz-transition-delay: 0.7s;-o-transition-delay: 0.7s;-ms-transition-delay: 0.7s;transition-delay:0.7s;}
 	.gnb-style-full.open #navigation > li:nth-child(5){-webkit-transition-delay: 0.9s;-moz-transition-delay: 0.9s;-o-transition-delay: 0.9s;-ms-transition-delay: 0.9s;transition-delay:0.9s;}
+	.gnb-style-full.open #navigation > li:nth-child(6){-webkit-transition-delay: 0.9s;-moz-transition-delay: 0.9s;-o-transition-delay: 0.9s;-ms-transition-delay: 0.9s;transition-delay:0.9s;}
 	
 	/* -------- GNB Mobile :: 언어선택 및 회원메뉴 -------- */
 	.header-util-menu-box{height:80px;}
@@ -157,7 +158,7 @@
 	  -o-transition: all 0.3s ease-in-out;
 	  transition: all 0.3s ease-in-out;
 	}
-	/* .nav-open-btn.active .line{background-color:#fff;} */
+	.nav-open-btn.active .line{background-color:#333;}
 	.nav-open-btn.active .line:nth-child(2), .nav-open-btn.active .line:nth-child(4){opacity: 0;}
 	.nav-open-btn.active .line:nth-child(1){
 		 -webkit-transform: translateY(7px) rotate(45deg);
@@ -172,7 +173,7 @@
 		  transform: translateY(-7px) rotate(-45deg);
 	}
 	
-	#header.fixed-header .nav-open-btn .line{background-color:#fff}
+	#header.fixed .nav-open-btn .line{background-color:#333}
 }
 
 @media all and ( max-width: 800px ){
@@ -266,7 +267,7 @@
 	/* -------- Footer :: 상단 -------- */
 	#footerTop{background-color:#fff;}
 	/* Footer :: 푸터로고 */
-	.foot-logo img{height:14px;}
+	.foot-logo img{height:30px;}
 	.footer-right-con .foot-logo{text-align:center; padding-top:15px;}
 	/* Footer :: 푸터메뉴 */
 	.foot-menu li {padding-left:25px}
@@ -287,7 +288,7 @@
 	.footer-address{}
 	.footer-address .footer-address-txt{font-size:12px;}
 	.footer-address p:before{display:none;}
-/* Footer :: 왼쪽정보 style02 */
+	/* Footer :: 왼쪽정보 style02 */
 	.footer-address-list dl{font-size:12px;}
 	/* Footer :: Copyright */
 	.footer-copyright{font-size:11px;}

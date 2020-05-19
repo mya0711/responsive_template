@@ -22,8 +22,10 @@
 	.main-visual-item .main-visual-txt-con .main-visual-txt2{font-size:20px; margin-bottom:14px}
 	.main-visual-item .main-visual-txt-con .main-visual-txt3{display:none; font-size:13px; line-height:18px; margin-bottom:20px; }
 	.main-visual-item .main-visual-txt-con .main-visual-more-btn{font-size:12px; padding:8px 15px;}
+	/* 메인 비주얼 :: Dots */
+	.main-visual-con .slick-dots-wrapper{text-align:center; bottom:10px;}
 	/* 메인 비주얼 :: 화살표 */
-	#mainVisual .slick-arrow{display:none !important; width:47px; height:40px; margin-top:-20px; background-size:47px auto !important; } /* 화살표사용시 display:none 삭제 */ 
+	.main-visual-con .slick-arrow{display:none !important;}
 	/* 메인 비주얼 :: 스크롤아이콘 */
 	.main-scroll-icon{display:none}
 }
