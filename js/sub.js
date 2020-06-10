@@ -6,7 +6,9 @@
 
 jQuery(function($){
 	/* 서브 Visual Active */ 
-	setTimeout(addActive($("#visual")));
+	setTimeout(function  () {
+		addActive($("#visual"));
+	});
 
 	/* 서브 MagnificPopup */
 	magnificPopup($(".popup-gallery"));
@@ -39,7 +41,6 @@ jQuery(function($){
 		}else {
 			var menuFunc = "moveTab";	// 영역이동일때
 		}
-		alert(menuFunc);
 		var $fixedMoveTab = $(".cm-fixed-move-tab-list");
 		var $moveTabItem = $fixedMoveTab.find("li");
 		var menuCount= $moveTabItem.size();

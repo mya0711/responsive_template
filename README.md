@@ -16,13 +16,18 @@ Responsive Website Template
 	* (★) input/select/textarea -> 기본스타일 수정 ( margin:0, padding:0 등 )
 	* line-clamp3 수정 / line-clamp4 추가
 	
-	<code> <b>2. /css/layout.css </b></code>
-
-	* 탑버튼 아이콘변경	
+	<code> <b>2. /css/layout.css , /css/layout_responsive.css </b></code>
+	* 전체적으로 프리픽스 -ms-,-o-,-moz- 삭제
+	* default수정으로 검색영역 수정
+	* 헤더 언어선택 버튼, 푸터 패밀리사이트 버튼 css수정
+	* 탑버튼 아이콘변경
 
 	<code> <b>3. /css/content.css, /css/content_responsive.css</b></code>
 
 	* 서브 탭 스타일 공통으로 수정
+
+	<code> <b>2. /css/main.css </b></code>
+	* 전체적으로 프리픽스 -ms-,-o-,-moz- 삭제
 	
 	<code> <b>4. /css/common/ ~~.css </b></code>
 
@@ -54,7 +59,7 @@ Responsive Website Template
 	* (★) GNB Mobile 메뉴 <a href="javascript:;"> 삭제하고 링크삽입
 
 	<code> <b>3. /kr/include/footer.php</b></code>
-
+	* 패밀리사이트 오픈버튼 a태그 -> button태그로 변경
 	* (★) 네이버웹마스터도구 링크관리 -> 링크 구조 개선필요 요망으로 떠 전체적으로 <a href="javascript:;" onclick="함수"></a> 사용을 지양함
 	* 개인정보처리방침/이용약관 수정 
 		```
@@ -107,11 +112,11 @@ Responsive Website Template
 	* (★) Fullpage AOS 효과 추가
 
 	<code> <b>4. /js/sub.js</b></code>
-
+	* addActive 수정
 	* 메뉴 Fixed 탭 링크이동일때 추가
 
 
-***************************ㅣ
+***************************
 
 
 - #### 2020/05/19
