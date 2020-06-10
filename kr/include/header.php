@@ -22,21 +22,17 @@
 					</div>
 					<!-- 외국어선택 -->
 					<div class="header-lang cm-drop-menu-box">
-						<a href="javascript:;" class="lang-open-btn cm-drop-open-btn"><i class="xi-globus"></i><strong>LANGUAGE</strong><span class="arrow"><i class="material-icons">&#xE313;</i></span></a>
-						<ul class="cm-drop-list">
+						<a href="#headerLangList" class="lang-open-btn cm-drop-open-btn"><i class="xi-globus"></i><strong>LANGUAGE</strong><span class="arrow"><i class="material-icons">&#xE313;</i></span></a>
+						<ul id="headerLangList" class="cm-drop-list">
 							<li><a href="<?=$site_host?>/en/">ENGLISH</a></li>
 							<li><a href="<?=$site_host?>/jp/">JAPANESE</a></li>
 							<li><a href="<?=$site_host?>/cn/">CHINESE</a></li>
 						</ul>
 					</div>
 					<!-- 사이트맵 버튼 ( 기본 라인 三 ) -->
-					<button  onclick="javascript:layerLoad('<?=$site_url?>/etc/sitemap.php'); return false;" class="sitemap-line-btn sitemap-open-btn" title="사이트맵 열기">
+					<button data-url="<?=$site_url?>/etc/sitemap.php" class="sitemap-line-btn cm-modal-open-btn" title="사이트맵 열기">
 						<span class="line line1"></span><span class="line line2"></span><span class="line line3"></span><!-- <span class="line line4"></span> -->
 					</button>
-					<!-- 사이트맵 버튼 2 ( 커스텀 버튼 ) -->
-					<!-- <button  onclick="javascript:layerLoad('<?=$site_url?>/service/sitemap.php'); return false;" class="sitemap-custom-btn sitemap-open-btn" title="사이트맵 열기">
-						<i class="material-icons">&#xE8DE;</i>
-					</button> -->
 				</div>
 			</div>
 			<!-- ****************** GNB ********************** -->
@@ -126,25 +122,25 @@
 				<div class="gnb-navigation-inner">
 					<ul id="navigation">
 						<li>
-							<a href="javascript:;">Menu1</a>
+							<a href="<?=$site_url?>/company/sample.php">Menu1</a>
 							<ul class="gnb-2dep">
 								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
 							</ul>
 						</li>
 						<li>
-							<a href="javascript:;">Menu2</a>
+							<a href="<?=$site_url?>/">Menu2</a>
 							<ul class="gnb-2dep">
 								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
 							</ul>
 						</li>
 						<li>
-							<a href="javascript:;">Menu3</a>
+							<a href="<?=$site_url?>/">Menu3</a>
 							<ul class="gnb-2dep">
 								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
 							</ul>
 						</li>
 						<li>
-							<a href="javascript:;">Menu4</a>
+							<a href="<?=$site_url?>/">Menu4</a>
 							<ul class="gnb-2dep">
 								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
 							</ul>

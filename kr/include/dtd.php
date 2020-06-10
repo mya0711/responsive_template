@@ -6,10 +6,8 @@
 <title><?=$site_head_title?><? if($page_info){ ?> - <?=$page_info?><? } ?><? if($sub_info){ ?> - <?=$sub_info?><? } ?><? if($bbs_title){ ?> - <?=$bbs_title?><? } ?></title>
 <meta name="Title" content="<?=$site_title?>">
 <meta name="Subject" content="<?=$site_subject?>">
-<meta name="Author" content="<?=$site_author?>">
 <meta name="Keywords" content="<?=$site_keywords?>">
 <meta name="Description" content="<?=$site_description?>">
-<meta name="Robots" content="<?=$site_robots?>">
 <meta property="og:type" content="<?=$og_type?>">
 <meta property="og:title" content="<?=$og_title?>">
 <meta property="og:description" content="<?=$og_description?>">
@@ -24,6 +22,13 @@
 <meta name="naver-site-verification" content="<?=$naver_verification?>">
 <meta name="viewport" content="width=device-width, initial-scale=1"><!-- 모바일사이트, 반응형사이트 제작시 사용 -->
 <meta name="format-detection" content="telephone=no"/><!-- ios 자동전화걸기 방지 -->
+<meta name="NaverBot" content="All"/>
+<meta name="NaverBot" content="<?=$site_robots?>"/>
+<meta name="Yeti" content="All"/>
+<meta name="Yeti" content="<?=$site_robots?>"/>
+<meta name="Googlebot" content="All" />
+<meta name="Googlebot" content="<?=$site_robots?>" />
+<meta name="Robots" content="<?=$site_robots?>">
 <link rel="canonical" href="<?=$site_host?>">
 <link rel="stylesheet" href="<?=$site_host?>/css/default.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/layout.css">
