@@ -13,7 +13,7 @@ Responsive Website Template
   #### * css 파일
 	<code> <b>1. /css/default.css </b></code>
 
-	*(★) input/select/textarea -> 기본스타일 수정 ( margin:0, padding:0 등 )
+	* (★) input/select/textarea -> 기본스타일 수정 ( margin:0, padding:0 등 )
 	* line-clamp3 수정 / line-clamp4 추가
 	
 	<code> <b>2. /css/layout.css </b></code>
@@ -51,11 +51,11 @@ Responsive Website Template
 
 	* 언어선택 오픈버튼 a태그 -> button태그
 	* 사이트맵 커스텀버튼 사용안해서 삭제
-	*(★) GNB Mobile 메뉴 <a href="javascript:;"> 삭제하고 링크삽입
+	* (★) GNB Mobile 메뉴 <a href="javascript:;"> 삭제하고 링크삽입
 
 	<code> <b>3. /kr/include/footer.php</b></code>
 
-	*(★) 네이버웹마스터도구 링크관리 -> 링크 구조 개선필요 요망으로 떠 전체적으로 <a href="javascript:;" onclick="함수"></a> 사용을 지양함
+	* (★) 네이버웹마스터도구 링크관리 -> 링크 구조 개선필요 요망으로 떠 전체적으로 <a href="javascript:;" onclick="함수"></a> 사용을 지양함
 	* 개인정보처리방침/이용약관 수정 
 		```
 		<a href="<?=$site_url?>/etc/privacy.php" class="cm-modal-open-btn">개인정보처리방침</a>
@@ -63,7 +63,7 @@ Responsive Website Template
 
 	<code> <b>4. /kr/index.php</b></code>
 
-	*Skip 네비게이션 링크 수정 ( #mainContainer -> #mainVisual )
+	* Skip 네비게이션 링크 수정 ( #mainContainer -> #mainVisual )
 	* 메인비주얼 배경이미지 경로 수정 
 
 	<code> <b>5. /kr/index_fullpage.php</b></code>
@@ -79,16 +79,14 @@ Responsive Website Template
   #### * js 파일
 	<code> <b>1. /js/common.js</b></code>
 
-	*(★) detectOS() 함수추가 -> ios와 android 구분을 위해
-	*(★) 탭 공통 js 일부수정
-		```
-		var $cmTabList = $(this).children(".cm-tab-list"); 
-		-> var $cmTabList = $(this).find(".cm-tab-list");
-		```
+	* (★) detectOS() 함수추가 -> ios와 android 구분을 위해
+
+	* (★) 탭 공통 js 일부수정
+		
 
 	<code> <b>2. /js/layer_popup.js</b></code>
 
-	*(★) modal open 이벤트 추가
+	* (★) modal open 이벤트 추가
 
 		```
 		// Modal Open
@@ -105,10 +103,12 @@ Responsive Website Template
 		```
 
 	<code> <b>3. /js/main.js</b></code>
-	*(★) Fullpage AOS 효과 추가
+
+	* (★) Fullpage AOS 효과 추가
 
 	<code> <b>4. /js/sub.js</b></code>
-	*메뉴 Fixed 탭 링크이동일때 추가
+
+	* 메뉴 Fixed 탭 링크이동일때 추가
 
 
 ***************************ㅣ
