@@ -41,7 +41,7 @@ Responsive Website Template
   #### * php 파일
 	<code> <b>1. /kr/include/dtd.php</b></code>
 
-	* <meta name="Author"> 삭제 
+	* meta name="Author" 삭제 
 	* (★) SEO를 위한 <meta>태그 추가 
 		```
 		<meta name="NaverBot" content="All"/>
