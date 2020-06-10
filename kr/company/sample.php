@@ -27,6 +27,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 				<img src="<?=$site_url?>/images/content/content_ready_img.png" alt="서비스 준비중입니다." style="display:block; margin:0 auto; max-width:100%;" />
 				<!-- // 준비중 -->
 
+				<!-- 관리자 셋팅 준비중 -->
+				<p style="line-height:30px; font-size:16px; color:#222; padding:10px; background-color:#f2f2f2; border:1px solid #aaa; margin:30px auto 15px" class="area"><i class="xi-message-o" style="font-size:20px; position:relative; top:3px; margin-right:5px; color:red;"></i>관리자 연동이 안된 상태에서 검수요청할때 사용바랍니다.</p>
+				<img src="<?=$site_url?>/images/content/board_ready_img.png" alt="프로그램 개발중입니다." style="display:block; margin:0 auto; max-width:100%;" />
+				<!-- // 준비중 -->
+
 				<div class="company-inner area">
 					<p style="line-height:30px; font-size:16px; color:#222; padding:10px; background-color:#f2f2f2; border:1px solid #aaa; margin:30px auto 15px"><i class="xi-message-o" style="font-size:20px; position:relative; top:3px; margin-right:5px; color:red;"></i>국문이미지는 $site_url 사용 부탁드립니다!</p>
 					<img src="<?=$site_url?>/images/content/temp_img.jpg" alt="" style="display:block; margin:0 auto; max-width:100%;" />
