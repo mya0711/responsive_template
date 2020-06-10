@@ -75,6 +75,7 @@ Responsive Website Template
 	```
 
 	<code> <b>2. /js/layer_popup.js</b></code>
+
 	*(★) modal open 이벤트 추가
 	```
 	// Modal Open
