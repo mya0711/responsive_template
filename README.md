@@ -22,6 +22,7 @@ Responsive Website Template
 	* 헤더 언어선택 버튼, 푸터 패밀리사이트 버튼 css수정
 	* 탑버튼 아이콘변경
 	* 사이트맵 ver2 추가
+	* 서브메뉴 a태그-> button수정
 
 	<code> <b>3. /css/content.css, /css/content_responsive.css</b></code>
 
@@ -58,6 +59,7 @@ Responsive Website Template
 	* 사이트맵 커스텀버튼 사용안해서 삭제
 	* (★) GNB Mobile 메뉴 <a href="javascript:;"> 삭제하고 링크삽입
 	* (★) 사이트맵 ver2 추가
+	* (★) cm-drop-menu-box 에 data-drop-event 수정 ( click / hover )
 
 	<code> <b>3. /kr/include/footer.php</b></code>
 	* 패밀리사이트 오픈버튼 a태그 -> button태그로 변경
@@ -67,17 +69,20 @@ Responsive Website Template
 		<a href="<?=$site_url?>/etc/privacy.php" class="cm-modal-open-btn">개인정보처리방침</a>
 		```
 
-	<code> <b>4. /kr/index.php</b></code>
+	<code> <b>4. /kr/include/top.php</b></code>
+	* 서브메뉴 2차메뉴 오픈버튼 a태그 -> button태그
+
+	<code> <b>5. /kr/index.php</b></code>
 
 	* Skip 네비게이션 링크 수정 ( #mainContainer -> #mainVisual )
 	* 메인비주얼 배경이미지 경로 수정 
 
-	<code> <b>5. /kr/index_fullpage.php</b></code>
+	<code> <b>6. /kr/index_fullpage.php</b></code>
 
 	* Skip 네비게이션 링크 수정 ( #mainContainer -> #mainVisual )
 	* AOS 예시 추가
 
-	<code> <b>6. /kr/lib/config.php</b></code>
+	<code> <b>7. /kr/lib/config.php</b></code>
 
 	* $site_author = $seo->author; 삭제
 
@@ -88,6 +93,7 @@ Responsive Website Template
 	* (★) detectOS() 함수추가 -> ios와 android 구분을 위해
 
 	* (★) 탭 공통 js 일부수정
+	* 드롭메뉴 공통 제이쿼리 수정
 		
 
 	<code> <b>2. /js/layer_popup.js</b></code>
@@ -115,6 +121,9 @@ Responsive Website Template
 	<code> <b>4. /js/sub.js</b></code>
 	* addActive 수정
 	* 메뉴 Fixed 탭 링크이동일때 추가
+
+	<code> <b>5. /js/nav.js</b></code>
+	* 서브메뉴 open 삭제 / 일부수정
 
 
 ***************************

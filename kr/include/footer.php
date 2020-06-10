@@ -134,8 +134,8 @@
 					<!-- 푸터 하단 오른쪽 -->
 					<article class="footer-right-con">
 						<span class="foot-logo"><img src="<?=$site_host?>/images/common/footer_logo.jpg" alt="<?=$site_head_title?>" /></span>
-						<div class="family-site-box cm-drop-menu-box">
-							<a href="#footerFamilyList" class="family-site-open-btn cm-drop-open-btn">FAMILY SITE <span class="arrow"><i class="material-icons">&#xE313;</i></span></a>
+						<div class="family-site-box cm-drop-menu-box" data-drop-event="click">
+							<button class="family-site-open-btn cm-drop-open-btn">FAMILY SITE <span class="arrow"><i class="material-icons">&#xE313;</i></span></button>
 							<ul id="footerFamilyList" class="family-site-list cm-drop-list">
 								<li><a href="">FAMILY SITE1</a></li>
 								<li><a href="">FAMILY SITE2</a></li>
