@@ -83,9 +83,21 @@ body { background-color:#fff; }
 .header-lang > ul > li > a:hover{background-color:#f2f2f2; }
 .header-lang.open .lang-open-btn .arrow i{transform:rotate(180deg); margin-top:-3px;}
 
-/* Header :: 사이트맵(기본형 or 커스텀) */
+/* Header :: 사이트맵버튼 */
 .sitemap-line-btn{float:left; width:32px; height:32px; margin-left:10px}
-.sitemap-line-btn .line{display:block; width:18px; height:2px; background-color:#333; border-radius:5px; margin: 3px auto;}
+.sitemap-line-btn .line{display:block; width:18px; height:2px; background-color:#333; border-radius:5px; margin: 3px auto; -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out;}
+/* active */
+.sitemap-open-btn.active{position:relative; z-index:100000;}
+.sitemap-open-btn.active .line:nth-child(2), 
+.sitemap-open-btn.active .line:nth-child(4){opacity: 0;}
+.sitemap-open-btn.active .line:nth-child(1){
+	 -webkit-transform: translateY(5px) rotate(45deg);
+	  transform: translateY(5px) rotate(45deg);
+}
+.sitemap-open-btn.active .line:nth-child(3){
+	 -webkit-transform: translateY(-5px) rotate(-45deg);
+	  transform: translateY(-5px) rotate(-45deg);
+}
 
 /* -------- Header :: GNB(PC) -------- */
 .gnb-overlay-bg{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9997;}	/* gnb overlay BG */
@@ -549,7 +561,9 @@ body { background-color:#fff; }
 .footer-inner-box{padding:30px; background-color:#fff; }
 .footer-inner{padding:20px; height:400px; overflow-y:auto; overflow-x:hidden; border:1px solid #ddd; }
 
-/* 사이트맵 */
+/* ****************** 사이트맵 ********************** */
+/* -------- 사이트맵 01 -------- */
+/* 사이트맵 01 */
 .sitemap-wrapper{padding:30px; background-color:#fff;}
 .sitemap-wrapper > ul{display:table; width:100%; table-layout:fixed;}
 .sitemap-wrapper > ul > li{display:table-cell; vertical-align:top; text-align:center;}
@@ -557,3 +571,78 @@ body { background-color:#fff; }
 .sitemap-wrapper > ul > li .sitemap-2dep {padding:0 5% 20px;}
 .sitemap-wrapper > ul > li .sitemap-2dep a{display:block; padding:10px 0; color:#666; font-size:14px; font-weight:400; line-height:1.2em;}
 .sitemap-wrapper > ul > li .sitemap-2dep a:hover{color:#000; }
+
+/* -------- 사이트맵 02 -------- */
+/* 사이트맵 02 :: Layout */
+#sitemapContent{	
+	position:fixed; 
+	top:0; left:0; right:0; bottom:0; 
+	opacity:0;filter:Alpha(opacity=0); 
+	visibility:hidden;   
+	z-index:-1;
+	-webkit-transition:all 0.3s  0.5s;
+	transition:all 0.3s  0.5s;
+}
+#sitemapInnerCon{position:absolute; top:0; left:0; bottom:0; right:100px; border-right:1px solid #ddd; }
+#sitemapContent .sitemap-bg-box{position:absolute; top:0px; left:0px; width:100%; height:100%;}
+#sitemapContent .visual-intro-item{float:left; position:relative; height:100%;}
+#sitemapContent .visual-intro-item:before{
+	position:absolute;  left:0; top:0px; width:1px; height:0; content:""; background-color:#ddd; z-index:1; 
+}
+#sitemapContent .visual-intro-item:first-child:before{display:none}
+#sitemapContent .visual-intro-item:after{	
+	content:""; 
+	position:absolute; right:0; top:0px; 
+	width:100%; height:100%; 
+	background: #333; 
+	-webkit-transition: width .6s cubic-bezier(0.47, 0, 0.31, 1.04) 0.2s;
+	transition: width .6s cubic-bezier(0.47, 0, 0.31, 1.04) 0.2s ;
+}
+
+/* 사이트맵 02 :: 메뉴리스트 */
+.sitemap-wrapper-style02{height:100%; }
+.sitemap-wrapper-style02 > ul{overflow:hidden; position:relative; z-index:1; height:100%;}
+.sitemap-wrapper-style02 > ul > li{overflow:hidden; float:left; width:20%;height:100%;}
+.sitemap-wrapper-style02 > ul > li > h2{overflow:hidden; color:#191919; font-size:18px; letter-spacing:-1.0px; margin:30% 15% 40px; font-weight:600; }
+.sitemap-wrapper-style02 > ul > li:hover > h2{color:#f57f20;}
+.sitemap-wrapper-style02 > ul > li .sitemap-2dep a{
+	overflow:hidden; position:relative; display:block;  padding:20px 15%; color:#777; font-size:15px; letter-spacing:-0.15px; font-weight:400; line-height:1.2;
+	-webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;-ms-transition:all 0.3s;transition:all 0.3s
+}
+.sitemap-wrapper-style02 > ul > li .sitemap-2dep a:after{
+	position:absolute; top:0; left:0; width:0; content:""; height:100%; background:#f57f20;
+	-webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;-ms-transition:all 0.3s;transition:all 0.3s
+}
+.sitemap-wrapper-style02 > ul > li .sitemap-2dep a span{position:relative; z-index:1;}
+.sitemap-wrapper-style02 > ul > li .sitemap-2dep a .gnb-icon{display:none;}
+.sitemap-wrapper-style02 > ul > li .sitemap-2dep a:hover{color:#fff; }
+.sitemap-wrapper-style02 > ul > li .sitemap-2dep a:hover:after{width:100%; }
+.sitemap-wrapper-style02 ul li span{
+	display:block; opacity:0;filter:Alpha(opacity=50);
+	-webkit-transform:translateX(-5%);
+	transform:translateX(-50%);
+	transition: transform .8s cubic-bezier(0.47, 0, 0.31, 1.04) 0s, opacity .8s cubic-bezier(0.47, 0, 0.31, 1.04) 0s; 
+}
+/* 사이트맵 open */
+#sitemapContent.open{
+	opacity:1.0;filter:Alpha(opacity=100); 
+	visibility:visible; 
+	z-index:99999; 
+	background-color:#fff;
+	-webkit-transition:all 0.3s  0s; 
+	transition:all 0.3s 0s;
+}
+#sitemapContent.open .visual-intro-item:before{height:100%;}
+#sitemapContent.open .visual-intro-item:after {width:0;}
+#sitemapContent.open .visual-intro-item {
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1); 
+	transform-origin:right top; 
+	transition-property: transform;
+}
+#sitemapContent.open .sitemap-wrapper-style02 ul li span{
+	opacity:1.0;filter:Alpha(opacity=100);
+	-webkit-transform:translateX(0);
+	transform:translateX(0);
+	transition: transform .8s cubic-bezier(0.47, 0, 0.31, 1.04), opacity .8s cubic-bezier(0.47, 0, 0.31, 1.04); 
+}

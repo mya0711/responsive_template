@@ -29,10 +29,15 @@
 							<li><a href="<?=$site_host?>/cn/">CHINESE</a></li>
 						</ul>
 					</div>
-					<!-- 사이트맵 버튼 ( 기본 라인 三 ) -->
+					<!-- 사이트맵 버튼 ( 기본 ) -->
 					<button data-url="<?=$site_url?>/etc/sitemap.php" class="sitemap-line-btn cm-modal-open-btn" title="사이트맵 열기">
 						<span class="line line1"></span><span class="line line2"></span><span class="line line3"></span><!-- <span class="line line4"></span> -->
 					</button>
+					<!-- 사이트맵 style 02 -->
+					<!-- <button class="sitemap-line-btn sitemap-open-btn" title="사이트맵 열기">
+						<span class="line line1"></span><span class="line line2"></span><span class="line line3"></span>
+					</button>
+					<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/etc/sitemap_02.php"; ?> -->
 				</div>
 			</div>
 			<!-- ****************** GNB ********************** -->

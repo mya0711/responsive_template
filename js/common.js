@@ -374,6 +374,31 @@ jQuery(function($){
 		});
 	});
 
+	/* *********************** 상단 :: 사이트맵 스타일 02************************ */
+	if ($.exists('.sitemap-open-btn')) {
+		var sitemapState = false;
+		$(".sitemap-open-btn").click(function  () {
+			if ( sitemapState ) {
+				$("#sitemapContent").removeClass("open");
+				$(".sitemap-open-btn").removeClass("active");
+				$("body").css({'height':'auto', 'overflow':'auto'});
+				if ($.exists('#fullpage')) {
+					$.fn.fullpage.setAllowScrolling(true);
+					$.fn.fullpage.setKeyboardScrolling(true);
+				}
+			}else {
+				$("#sitemapContent").addClass("open");
+				$(".sitemap-open-btn").addClass("active");
+				$("body").css({'height':$(window).height(), 'overflow':'hidden'});
+				if ($.exists('#fullpage')) {
+					$.fn.fullpage.setAllowScrolling(false);
+					$.fn.fullpage.setKeyboardScrolling(false);
+				}
+			}
+			sitemapState = !sitemapState;
+		});
+	}
+
 	/* *********************** 하단 :: top버튼 ************************ */
 	$(".to-top-btn").each(function  () {
 		// top버튼 나오게 (필요한 경우에만 넣으세요)

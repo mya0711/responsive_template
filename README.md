@@ -21,6 +21,7 @@ Responsive Website Template
 	* default수정으로 검색영역 수정
 	* 헤더 언어선택 버튼, 푸터 패밀리사이트 버튼 css수정
 	* 탑버튼 아이콘변경
+	* 사이트맵 ver2 추가
 
 	<code> <b>3. /css/content.css, /css/content_responsive.css</b></code>
 
@@ -53,10 +54,10 @@ Responsive Website Template
 		```
 
 	<code> <b>2. /kr/include/header.php</b></code>
-
 	* 언어선택 오픈버튼 a태그 -> button태그
 	* 사이트맵 커스텀버튼 사용안해서 삭제
 	* (★) GNB Mobile 메뉴 <a href="javascript:;"> 삭제하고 링크삽입
+	* (★) 사이트맵 ver2 추가
 
 	<code> <b>3. /kr/include/footer.php</b></code>
 	* 패밀리사이트 오픈버튼 a태그 -> button태그로 변경
