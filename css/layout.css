@@ -84,7 +84,7 @@ body { background-color:#fff; }
 .header-lang.open .lang-open-btn .arrow i{transform:rotate(180deg); margin-top:-3px;}
 
 /* Header :: 사이트맵버튼 */
-.sitemap-line-btn{float:left; width:32px; height:32px; margin-left:10px}
+.sitemap-line-btn{float:left; width:32px; height:32px; margin-left:10px; box-sizing:border-box; padding-top:6px;}
 .sitemap-line-btn .line{display:block; width:18px; height:2px; background-color:#333; border-radius:5px; margin: 3px auto; -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out;}
 /* active */
 .sitemap-open-btn.active{position:relative; z-index:100000;}
