@@ -26,8 +26,11 @@ Responsive Website Template
 
 	<code> <b>3. /kr/etc/sitemap_02.php</b></code>
 	* 사이트맵 toggle기능 사용하지 않을시 닫기버튼 
+	
+	<code> <b>4. /kr/index.php, /kr/index_fullpage.php</b></code>
+	* 크로스브라우징기준 변경으로 ie9이하부터 팝업창뜨게 변경
 
-	<code> <b>4. /kr/company/sample.php</b></code>
+	<code> <b>5. /kr/company/sample.php</b></code>
 	* 웹접근성에 맞게 수정 (table scope속성)
 	
 
