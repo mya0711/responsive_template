@@ -137,9 +137,9 @@
 						<div class="family-site-box cm-drop-menu-box" data-drop-event="click">
 							<button class="family-site-open-btn cm-drop-open-btn">FAMILY SITE <span class="arrow"><i class="material-icons">&#xE313;</i></span></button>
 							<ul id="footerFamilyList" class="family-site-list cm-drop-list">
-								<li><a href="">FAMILY SITE1</a></li>
-								<li><a href="">FAMILY SITE2</a></li>
-								<li><a href="">FAMILY SITE3</a></li>
+								<li><a href="" target="_blank" title="새창으로열기">FAMILY SITE1</a></li>
+								<li><a href="" target="_blank" title="새창으로열기">FAMILY SITE2</a></li>
+								<li><a href="" target="_blank" title="새창으로열기">FAMILY SITE3</a></li>
 							</ul>
 						</div>	
 					</article>
