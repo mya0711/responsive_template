@@ -4,6 +4,8 @@
 			<div class="sitemap-bg-box"></div>
 			<article class="sitemap-wrapper-style02"></article>
 		</article>
+		<!-- 닫기버튼 필요없을시 삭제 -->
+		<button class="sitemap-close-btn" title="닫기"><i class="xi-close"></i></button>
 	</section>
 
 	<script type="text/javascript">

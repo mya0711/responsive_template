@@ -3,10 +3,42 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2020-06-10
+* UpDate :  2020-06-17
   
 
 ## 업데이트 내역
+
+- #### 2020/06/17
+
+  #### * css 파일
+	<code> <b>1. /css/layout.css </b></code>
+	* modal 로딩모션 spin 애니메이션 익스에서 작동안하는 이슈로 수정
+
+  #### * php 파일
+	<code> <b>1. /kr/include/header.php</b></code>
+	* logo 영역에 적절한 링크텍스트 추가
+	* 사이트맵스타일2번 열릴때 방식변경 -> data-event="toggle" 넣으면 사이트맵버튼이 toggle기능을 하게됩니다.
+
+	<code> <b>2. /kr/include/footer.php</b></code>
+	* 파트너사 로고에 alt 추가
+	* Top버튼에 적절한 링크텍스트 추가
+	* family site 다른계열사 홈페이지 이동할때 title="새창으로 열기" 추가
+
+	<code> <b>3. /kr/etc/sitemap_02.php</b></code>
+	* 사이트맵 toggle기능 사용하지 않을시 닫기버튼 
+
+	<code> <b>4. /kr/company/sample.php</b></code>
+	* 웹접근성에 맞게 수정 (table scope속성)
+	
+
+  #### * js 파일
+	<code> <b>1. /js/common.js</b></code>
+
+	* (★) detectBrowser() 함수수정 -> ie 버전별 구분을 통합하여 ie로 변경
+	* 사이트맵 toggle기능일때/ 아닐때 추가
+
+
+***************************
 
 - #### 2020/06/10
 

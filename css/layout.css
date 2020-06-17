@@ -547,10 +547,10 @@ body { background-color:#fff; }
   -webkit-animation: spin 1s ease-in-out infinite;
 }
 @keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
 }
 @-webkit-keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg);  }
 }
 /* modal layer content */
 .footer-modal-content{position:relative; width:96%; max-width:1000px; margin:20px auto; }
@@ -598,6 +598,8 @@ body { background-color:#fff; }
 	-webkit-transition: width .6s cubic-bezier(0.47, 0, 0.31, 1.04) 0.2s;
 	transition: width .6s cubic-bezier(0.47, 0, 0.31, 1.04) 0.2s ;
 }
+#sitemapContent .sitemap-close-btn{position:absolute; top:40px; right:40px;}
+#sitemapContent .sitemap-close-btn i{font-size:20px; color:#222;}
 
 /* 사이트맵 02 :: 메뉴리스트 */
 .sitemap-wrapper-style02{height:100%; }

@@ -52,6 +52,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					<div class="custom-scrollbar-wrapper">
 						<div class="scroll-object-box">
 							<table class="test-table scroll-object"><!-- 테이블 scroll-object -->
+								<caption>테이블 샘플입니다. 테이블 목적을 입력해주세요</caption>
 								<tbody>
 									<colgroup>
 										<col style="width:10%;"/>
@@ -67,16 +68,16 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 										<col style="width:10%;"/>
 									</colgroup>
 									<tr>
-										<th>1</th>
-										<th>2</th>
-										<th>3</th>
-										<th>4</th>
-										<th>5</th>
-										<th>6</th>
-										<th>7</th>
-										<th>8</th>
-										<th>9</th>
-										<th>10</th>
+										<th scope="col">1</th>
+										<th scope="col">2</th>
+										<th scope="col">3</th>
+										<th scope="col">4</th>
+										<th scope="col">5</th>
+										<th scope="col">6</th>
+										<th scope="col">7</th>
+										<th scope="col">8</th>
+										<th scope="col">9</th>
+										<th scope="col">10</th>
 									</tr>
 									<tr>
 										<td>복잡한</td>
@@ -111,10 +112,10 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					<p style="line-height:30px; font-size:16px; color:#222; padding:10px; background-color:#f2f2f2; border:1px solid #aaa; margin:30px auto 15px">MagnificPopup 플러그인 Sample입니다. 모달 팝업 필요시 사용부탁드립니다.</p>
 					<div class="popup-gallery">
 						MagnificPopup Sample<br><br>
-						<a href="/images/main/main_visual_01.jpg"><img src="/images/main/main_visual_01.jpg" alt="" width="100" /></a>
-						<a href="/images/main/main_visual_02.jpg"><img src="/images/main/main_visual_02.jpg" alt="" width="100" /></a>
-						<a href="/images/main/main_visual_01.jpg"><img src="/images/main/main_visual_01.jpg" alt="" width="100" /></a>
-						<a href="/images/main/main_visual_02.jpg"><img src="/images/main/main_visual_02.jpg" alt="" width="100" /></a>
+						<a href="/images/main/main_visual_01.jpg" title="내용1"><img src="/images/main/main_visual_01.jpg" alt="" width="100" />내용1</a>
+						<a href="/images/main/main_visual_02.jpg" title="내용2"><img src="/images/main/main_visual_02.jpg" alt="" width="100" />내용2</a>
+						<a href="/images/main/main_visual_01.jpg" title="내용3"><img src="/images/main/main_visual_01.jpg" alt="" width="100" />내용3</a>
+						<a href="/images/main/main_visual_02.jpg" title="내용4"><img src="/images/main/main_visual_02.jpg" alt="" width="100" />내용4</a>
 					</div>
 				</article>
 				<!-- // -->
