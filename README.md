@@ -3,10 +3,18 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2020-06-17
+* UpDate :  2020-06-18
   
 
 ## 업데이트 내역
+
+- #### 2020/06/18
+
+  #### * css 파일
+	<code> <b>1. /css/layout.css, 1. /css/layout_responsive.css  </b></code>
+	* 서브메뉴 드롭될때 화살표 rotate안되는부분 수정
+
+***************************
 
 - #### 2020/06/17
 

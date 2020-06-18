@@ -356,7 +356,7 @@
 	#topMenuM01 .menu-location > .cur-location{position:relative; display:block; width:100%; text-align:left; height:44px; padding:0 30px 0 10px; border-left:1px solid #ddd;}
 	#topMenuM01 .menu-location > .cur-location span{display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; line-height:44px; color:#222; font-weight:400; font-size:15px;}
 	#topMenuM01 .menu-location > .cur-location .arrow{position:absolute; top:50%; right:10px; width:20px; height:20px;margin-top:-10px; font-size:20px;}
-	#topMenuM01 .menu-location > .cur-location.open .arrow{transform:rotate(-180deg); margin-top:-10px;}
+	#topMenuM01 .menu-location.open > .cur-location .arrow{transform:rotate(-180deg); margin-top:-10px;}
 	#topMenuM01 .menu-location .location-menu-con{display:none; position:absolute; top:44px; left:0px; width:calc(100% - 2px); border:1px solid #ddd; border-top:0; background-color:#fff; z-index:11; }
 	#topMenuM01 .menu-location.location1 .location-menu-con{width:calc(100% - 1px)}
 	#topMenuM01 .menu-location .location-menu-con li a{display:block; padding:7px 10px; font-size:14px; line-height:1.5; word-break:keep-all;}
@@ -376,7 +376,7 @@
 	#topMenuM02 .menu-location > .cur-location{position:relative; display:block; width:100%; text-align:left; height:44px; padding:0 30px 0 15px; border-left:1px solid #ddd;}
 	#topMenuM02 .menu-location > .cur-location span{display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; line-height:44px; color:#222; font-weight:400; font-size:15px;}
 	#topMenuM02 .menu-location > .cur-location .arrow{position:absolute; top:50%; right:10px; width:20px; height:20px;margin-top:-10px; font-size:20px;}
-	#topMenuM02 .menu-location > .cur-location.open .arrow{transform:rotate(-180deg); margin-top:-10px;}
+	#topMenuM02 .menu-location.open > .cur-location .arrow{transform:rotate(-180deg); margin-top:-10px;}
 	#topMenuM02 .menu-location .location-menu-con{display:none; position:absolute; top:44px; left:0px; width:calc(100% - 2px); border:1px solid #ddd; border-top:0; background-color:#fff; z-index:11; }
 	#topMenuM02 .menu-location.location1 .location-menu-con{width:calc(100% - 1px)}
 	#topMenuM02 .menu-location .location-menu-con li a{display:block; padding:7px 15px; font-size:14px; line-height:1.5; word-break:keep-all;}
