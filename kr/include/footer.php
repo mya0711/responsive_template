@@ -148,12 +148,12 @@
 		</div>
 	</footer>
 
-	<!-- 모달 레이어팝업 (common.js로 이동/ 필요시 사용) -->
-	<!-- <article class="modal-fixed-pop-wrapper">
+	<!-- 모달 레이어팝업  -->
+	<article class="modal-fixed-pop-wrapper">
 		<div class="modal-fixed-pop-inner">
 			<div class="modal-loading"><span class="loading"></span></div>
 			<div class="modal-inner-box">
 				<div class="modal-inner-content"></div>
 			</div>
 		</div>
-	</article> -->
+	</article>

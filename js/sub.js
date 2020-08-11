@@ -7,11 +7,13 @@
 jQuery(function($){
 	/* 서브 Visual Active */ 
 	setTimeout(function  () {
-		addActive($("#visual"));
+		addClassName($("#visual"), "active");
 	});
 
 	/* 서브 MagnificPopup */
-	magnificPopup($(".popup-gallery"));
+	if ($.exists(".popup-gallery")) {
+		magnificPopup($(".popup-gallery"));
+	}
 
 	/* 서브 Scrollbar Table  */ 
 	$(".custom-scrollbar-wrapper").each(function  () {

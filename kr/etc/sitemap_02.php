@@ -1,4 +1,7 @@
-
+<?
+include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
+include "../lib/config.php";
+?>
 	<section id="sitemapContent">
 		<article id="sitemapInnerCon">
 			<div class="sitemap-bg-box"></div>

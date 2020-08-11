@@ -1,8 +1,10 @@
-<script type="text/javascript" src="/js/layer_popup.js"></script>
-
+<?
+include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
+include "../lib/config.php";
+?>
 
 <section class="footer-modal-content">
-	<a href="javascript:;" class="modal-close-btn" title="팝업 닫기"><i class="xi-close-thin"></i></a>
+	<button onclick="ajaxUnLoad();" title="팝업 닫기" class="modal-close-btn"><i class="xi-close-thin"></i></button>
 	<h1>개인정보처리방침</h1>
 	<div class="footer-inner-box">
 		<div class="footer-inner editor">

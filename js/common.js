@@ -1,10 +1,14 @@
 /* *******************************************************
  * filename : common.js
  * description : 전체적으로 사용되는 JS
- * date : 2020-06-16
+ * date : 2020-08-10
 ******************************************************** */
 
-/* 브라우저 체크 */
+
+/* ************************
+  * 브라우저를 체크할때 사용하는 함수
+  * return browser(브라우저name)
+  ************************ */
 function detectBrowser () {
 	var agent = navigator.userAgent.toLowerCase(); 
 	var browser; 
@@ -24,7 +28,10 @@ function detectBrowser () {
 	return browser;
 }
 
-/* IE 버전체크 */ 
+ /* ************************
+  * IE 버전을 체크할때 사용하는 함수
+  * return : IE 아닐때 false / IE 일때 9,10,11,"edge"
+  ************************ */
 function ieVersionCheck () {
 	var word; 
 	var version = "N/A"; 
@@ -44,43 +51,86 @@ function ieVersionCheck () {
 	
 	if ( version !="NaN" && version < 12 ) {
 		return parseInt (version)
+	}else if ( word === "edge/" ) {
+		return	 "edge";
 	}else {
 		return false;
 	}
 }
 
-/* OS 체크 */ 
+ /* ************************
+  * OS 체크 함수
+  * android/ios 체크할때 사용
+  ************************ */
 function detectOS(){
     var agent = navigator.userAgent.toLowerCase(); 
-	var browser; 
- 
+	var osCheck; 
+
     if ( agent.indexOf('android') > -1) {
         return "android";
-    } else if ( agent.indexOf("iphone") > -1|| agent.indexOf("ipad") > -1|| agent.indexOf("ipod") > -1 ) {
+    } else if ( agent.indexOf("iphone") > -1|| agent.indexOf("ipad") > -1|| agent.indexOf("ipod") > -1 || agent.indexOf("macintosh") > -1 ) {
         return "ios";
     } else {
         return "other";
     }
 
-	return browser;
+	return osCheck;
 }
 
-/* 모바일/PC 체크 */ 
+ /* ************************
+  * 모바일 체크 함수
+  * return : 모바일 true / PC false
+  * Ipad Safari userAgent 변경으로 인해 if문 추가 (2020-07-17)
+  ************************ */
 function isMobile(){
 	var UserAgent = navigator.userAgent;
-	if (UserAgent.match(/iPhone|iPad|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null)
+	if (UserAgent.match(/iPhone|iPad|iPad|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null)
 	{
 		return true;
 	}else{
-		return false;
+		// Ipad Safari Browser
+		if ( detectIpad() ) {
+			return true;
+		}else {
+			return false;
+		} 
 	}
 }
+function detectIpad() {
+	var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+	// Lying iOS13 iPad
+	if (userAgent.match(/Macintosh/i) !== null) {
+		// need to distinguish between Macbook and iPad
+		var canvas = document.createElement("canvas");
+		if (canvas !== null) {
+			var context = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+			if (context) {
+				var info = context.getExtension("WEBGL_debug_renderer_info");
+				if (info) {
+					var renderer = context.getParameter(info.UNMASKED_RENDERER_WEBGL);
+					if (renderer.indexOf("Apple") !== -1)
+					return true;
+				}
+			}
+		}
+	}
+	return false;
+}
 
-/* Window Popup Open */ 
+/* ************************
+  * window 팝업 오픈 함수
+  * @param src : "팝업 페이지 주소"
+  * @param title : "팝업 페이지 타이틀"
+  * @param option : "width=너비, height=높이, left=x축 위치, top=y축 위치, resizable=리사이즈 여부, scrollbars=스크롤바 여부, status=상태 표시줄 여부"
+  ************************ */
 function winPopupOpen(src,title,option){
 	window.open(src,title,option);
 }
 
+ /* ************************
+  * 브라우저의 가로값, 세로값 측정 함수
+  * return 가로값/세로값
+  ************************ */
 /* 임의의 영역을 만들어 스크롤바 크기 측정 */ 
 function getScrollBarWidth(){
 	if($(document).height() > $(window).height()){
@@ -95,7 +145,6 @@ function getScrollBarWidth(){
 	}
 	return 0;
 }
-
 /* 브라우저 가로, 세로크기 측정 */ 
 function getWindowWidth () {
 	return $(window).outerWidth() + getScrollBarWidth() ;
@@ -104,26 +153,50 @@ function getWindowHeight () {
 	return $(window).height() ;
 }
 
-/* 브라우저 스크롤위치 측정 */
+ /* ************************
+  * 브라우저의 스크롤바의 수직 위치 측정 함수
+  * return 스크롤바 위치 값
+  ************************ */
 function getScrollTop () {
 	return $(window).scrollTop();
 }
 
-/* 브라우저 스크롤 위치 이동 */
-function moveScrollTop (top) {
-	$("html, body").animate({scrollTop:top},500,"easeInOutExpo");
+ /* ************************
+  * 브라우저의 스크롤을 이동시키는 함수
+  * @param top : 이동지점
+  * @param speed : 이동속도
+  ************************ */
+function moveScrollTop (top, speed) {
+	$("html, body").animate({scrollTop:top}, speed ,"easeInOutExpo");
 }
 
+ /* ************************
+  * object toggleClass 함수
+  * @param object : 적용되야할 선택자
+  * @param className : toggleClass Name
+  ************************ */
 /* addClass Active */
-function addActive (activeItem) {
-	$(activeItem).addClass("active");
+function addClassName (object, className) {
+	$(object).addClass(className);
+}
+function removeClassName (object, className) {
+	$(object).removeClass(className);
 }
 
-/* selector length */
+/* ************************
+  * 갯수체크 함수
+  * @param selector : 선택자
+  * 1개이상 있으면 return true
+  ************************ */
 $.exists = function(selector) {
 	return ($(selector).length > 0);
 }
 
+/* ************************
+  * AOS Plugin 
+  * aos.js 필요
+  * ieVersionCheck() 함수 필요 - IE 10부터 적용
+  ************************ */
 /* AOS Plugin */
 function aosInit () {
 	var browserVer = ieVersionCheck();
@@ -152,7 +225,10 @@ function aosInit () {
 	}
 }
 
-/* magnificPopup Plugin */
+/* ************************
+  * magnificPopup Plugin ( 모달팝업갤러리 )
+  * jquery.magnific-popup.js 필요
+  ************************ */
 function magnificPopup (popupGallery) {
 	$(popupGallery).magnificPopup({
 		delegate: 'a',
@@ -174,6 +250,12 @@ function magnificPopup (popupGallery) {
 	});
 }
 
+
+/* ************************
+  * mCustomScrollbar Plugin ( 스크롤바 커스텀 )
+  * jquery.mCustomScrollbar.concat.min.js 필요
+  * @param selector : 선택자
+  ************************ */
 /* Custom Scrollbar Plugin (x,y) */
 function customScrollX (scrollObject) {
 	$(scrollObject).mCustomScrollbar({
@@ -188,6 +270,10 @@ function customScrollY (scrollObject) {
 	});
 }
 
+/* ************************
+  * PHP 주소 Parameter
+  * @param strParamName : 가져올 파라미터값
+  ************************ */
 /* PHP Get Parameter  */
 function getParameter(strParamName){
 	var arrResult = null;
@@ -200,11 +286,14 @@ function toAnchorParameter (anchor) {
 	if ( getParameter(anchor) ) {
 		var anchorConTop = $("#"+getParameter(anchor)+"").offset().top;
 		var headerHeight = $("#header").height();
-		moveScrollTop(anchorConTop-headerHeight);
+		moveScrollTop(anchorConTop-headerHeight, 500);
 	}
 }
 
-
+/* ************************
+  * 순차적으로 active클래스가 붙는 함수
+  * @param activeList : 선택자
+  ************************ */
 /* Active cycle */ 
 function rollingActive (activeList) {
 	$(activeList).each(function  (index) {
@@ -236,15 +325,22 @@ function rollingActive (activeList) {
 	});
 }
 
+/* ************************
+  * 스크롤값에 따라 클래스가 붙는 함수
+  * @param object : 선택자
+  * @param fixedStartTop : 클래스가 붙는 시작되는지점
+  * @param className : 붙여야하는 클래스이름
+  * getScrollTop() 함수 필요
+  ************************ */
 /* Fixed Object */ 
-function objectFixed ( object, fixedStartTop ) {		// $(클래스이름), 시작되는지점
+function objectFixed ( object, fixedStartTop, className ) {
 	if ( getScrollTop() >  fixedStartTop ) {
-		if (!($(object).hasClass("fixed"))) {	
-			$(object).addClass("fixed");
+		if (!($(object).hasClass(className))) {	
+			$(object).addClass(className);
 		}
 	}else {
-		if ($(object).hasClass("fixed")) {
-			$(object).removeClass("fixed");
+		if ($(object).hasClass(className)) {
+			$(object).removeClass(className);
 		}
 	}
 }
@@ -256,9 +352,6 @@ jQuery(function($){
 	}else {
 		$("body").addClass("is-pc").addClass(detectBrowser()+"-browser");
 	}
-
-	/* *********************** 모달영역 붙이기 ************************ */
-	$("body").append(" <article class='modal-fixed-pop-wrapper'><div class='modal-fixed-pop-inner'><div class='modal-loading'><span class='loading'></span></div><div class='modal-inner-box'><div class='modal-inner-content'></div></div></div></article>");
 
 	/* *********************** 드롭메뉴 공통 ************************ */
 	$(".cm-drop-menu-box").each(function  () {
@@ -373,7 +466,7 @@ jQuery(function($){
 	if ($.exists('#header')) {
 		$(window).scroll(function  () {
 			var startTop = $("#header").height();
-			objectFixed($("#header"), startTop);
+			objectFixed($("#header"), startTop, "fixed");
 		});
 	}
 
@@ -440,7 +533,7 @@ jQuery(function($){
 		// top버튼 나오게 (필요한 경우에만 넣으세요)
 		if ( $(this).length > 0 ) {
 			$(window).scroll(function  () {
-				objectFixed($(".to-top-btn"), 0);
+				objectFixed($(".to-top-btn"), 0, "fixed");
 			});
 		}
 		// top버튼 클릭
@@ -448,7 +541,7 @@ jQuery(function($){
 			if ($.exists('#fullpage')) {
 				$.fn.fullpage.moveTo(1);
 			}else {
-				moveScrollTop(0);
+				moveScrollTop(0, 300);
 			}
             
 			return false;
@@ -490,7 +583,6 @@ jQuery(function($){
 $(window).load(function  () {
 	/* *********************** 한페이지 내에서의 주소 이동 ************************ */
 	toAnchorParameter("anchor");	/* 주소~?anchor=content */ 
-
 	/* *********************** AOS Plugin ************************ */
 	aosInit ();
 });

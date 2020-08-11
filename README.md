@@ -3,10 +3,46 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2020-07-02
+* UpDate :  2020-08-11
   
 
 ## 업데이트 내역
+
+- #### 2020-08-11
+
+  #### * php 파일
+	<code> <b>1. /index.php</b></code>
+	* header("HTTP/1.1 301 Moved Permanently"); 추가
+
+	<code> <b>2. /kr/etc/agreement.php, /kr/etc/privacy.php, /kr/etc/sitemap.php, /kr/etc/sitemap_02.php</b></code>
+	* 상단수정
+
+	<code> <b>3. /kr/include/footer.php</b></code>
+	* 모달레이어팝업 주석해제(로딩속도를위해 js에서 html로 이동)
+
+
+	
+  #### * css 파일
+	<code> <b>1. /css/layout.css </b></code>
+	* 탑버튼 공통으로 쓰기위해 색상변경
+
+	<code> <b>2. /common/css/cm_bbs_common.css </b></code>
+	* 게시판 리스트 : 검색영역 수정, 게시판뷰 : 이전글/다음글 추가, 게시판쓰기폼 반응형 최적화 작업
+
+	<code> <b>3. /common/css/cm_online.css </b></code>
+	* 주석추가
+
+ #### * js 파일
+	<code> <b>1. /js/common.js </b></code>
+	* 전체적으로 주석추가 및 정리
+
+	<code> <b>2. /js/layer_popup.js </b></code>
+	* 전체적으로 수정 및 함수추가 ★
+
+	<code> <b>1. /js/sub.js </b></code>
+	* common.js수정에 따른 수정
+
+***************************
 
 - #### 2020/07/02
 

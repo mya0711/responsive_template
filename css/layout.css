@@ -211,7 +211,9 @@ body { background-color:#fff; }
 #footerTop{background-color:#f2f2f2; border-top:1px solid #ddd; border-bottom:1px solid #ddd; padding:15px 0; }
 /* Footer :: TOP버튼 */
 .to-top-btn{
-	position:fixed; bottom:-100px; right:15px; display:block; width:46px; height:46px; background-color:#f57f20; text-align:center; color:#fff; z-index:99;
+	position:fixed; bottom:-100px; right:15px; display:block; width:46px; height:46px; background-color:#fff; text-align:center; color:#333; z-index:99;
+	border:1px solid #eee;
+	box-sizing:border-box;
 	opacity:0;filter:Alpha(opacity=0);
 	-webkit-transition:all 0.6s;-moz-transition:all 0.6s;-o-transition:all 0.6s;-ms-transition:all 0.6s;transition:all 0.6s
 	-webkit-border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%;border-radius:50%;
