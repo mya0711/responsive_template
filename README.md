@@ -32,7 +32,7 @@ Responsive Website Template
 	<code> <b>3. /common/css/cm_online.css </b></code>
 	* 주석추가
 
- #### * js 파일
+  #### * js 파일
 	<code> <b>1. /js/common.js </b></code>
 	* 전체적으로 주석추가 및 정리
 
