@@ -1,6 +1,7 @@
 <? include $_SERVER["DOCUMENT_ROOT"]."/common.php"; ?>
 <? $admin_stat = $db->object("cs_seo", ""); ?>
 <?
+$lang="1";	// 국문 1, 영문 2, 중문 3, 일문 4
 $site_directory = "/kr";
 $site_url = $site_host.$site_directory;
 $site_head_title = $admin_stat->title;

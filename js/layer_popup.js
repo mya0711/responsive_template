@@ -1,21 +1,20 @@
 /* *******************************************************
  * filename : layer_popup.js
  * description : 모달레이어를 띄울때 사용되는 ajax JS
- * date : 2020-08-10
+ * date : 2020-10-28
 ******************************************************** */
 
 
 // Modal Open
-$(document).ready(function  () {
-	$(".cm-modal-open-btn").click(function  () {
-		ajaxLoad($(this).attr("href"));
-		return false;
-	});
+$(document).on("click",".cm-modal-open-btn",function  () {
+	ajaxLoad($(this).attr("href"));
+	return false;
 });
 
  /* ************************
   * html Scroll Controls
   * return true( 스크롤막을때 ) / false( 스크롤사용할때 )
+  * $.exists 함수 필요
   ************************ */
 function htmlScrollControl (toggle) {
 	if (toggle) {
@@ -42,11 +41,31 @@ function htmlScrollControl (toggle) {
 }
 
  /* ************************
+  * Modal 영역 생성
+  ************************ */
+function addModalLayer () {
+	var modalHtml = '';
+    modalHtml += '<article class="modal-fixed-pop-wrapper">';
+    modalHtml += '<div class="modal-loading"><span class="loading"></span></div>';
+    modalHtml += '<div class="modal-fixed-pop-inner">';
+    modalHtml += '<div class="modal-inner-box">';
+    modalHtml += '<div class="modal-inner-content">';
+    modalHtml += '</div>';
+    modalHtml += '</div>';
+    modalHtml += '</div>';
+    modalHtml += '</div>';
+    modalHtml += '</article>';
+
+    $('body').append(modalHtml);
+}
+
+ /* ************************
   * Ajax Load
   * @param strUrl : 모달레이어팝업 주소
   ************************ */
 // Ajax Load
 function ajaxLoad(strUrl){
+	addModalLayer();
 	var $modalWrap = $(".modal-fixed-pop-wrapper");
 	$modalWrap.fadeIn();
 	htmlScrollControl (true);
@@ -75,15 +94,19 @@ function ajaxLoad(strUrl){
 		}
 	});
 }
+// 변경전 함수명(오류를 막기위해 사용)
+function layerLoad (strUrl) {
+	ajaxLoad(strUrl);
+}
 
  /* ************************
   * Ajax UnLoad
   * Modal Layer Popup Close
+  * 닫기버튼, 취소버튼 등에 onclick="ajaxUnLoad();"
   ************************ */
 function ajaxUnLoad () {
 	htmlScrollControl (false);
 	$(".modal-fixed-pop-wrapper").fadeOut(100, function  () {
-		$(this).find(".modal-inner-content").empty();
+		$(this).remove();
 	});
 }
-

@@ -3,28 +3,6 @@ include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
 include "./lib/config.php";
 include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 ?>
-<!--[if lte IE 9]>
-	<script type="text/javascript">
-		$(document).ready(function  () {
-			/* 하위브라우저 popup */
-			winPopupOpen("<?=$site_url?>/service/ie8_popup.php","","width=800, height=600, left=0, top=0, resizable=no, scrollbars=no, status=no;");
-		});
-	</script>
-<![endif]-->
-
-<script>
-	$(function  () {
-		dep1 = 0,
-		dep2 = 0;
-	})
-</script>
-<!-- Fullpage JS  -->
-<link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/jquery.fullPage.css" />
-<script type="text/javascript" src="<?=$site_host?>/js/plugin/scrolloverflow.min.js"></script>
-<script type="text/javascript" src="<?=$site_host?>/js/plugin/jquery.fullPage.js"></script>
-<!-- // -->
-<script type="text/javascript" src="<?=$site_host?>/js/nav.js"></script>
-<script type="text/javascript" src="<?=$site_host?>/js/main.js"></script>
 </head>
 
 <body>
@@ -45,14 +23,14 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 	<!-- container -->
 	<div id="fullpage">
 		<!-- ****************** 메인비주얼 ********************** -->
-		<section id="mainVisual" class="section">
+		<section id="mainVisual" class="section" style="background:#fff url(<?=$site_host?>/images/main/main_visual_01.jpg) no-repeat 50% 50%; background-size:cover;">
 			<div class="main-visual-con">
 				<div class="main-visual-item">
-					<div class="main-visual-pc-img" style="background:#fff url(/images/main/main_visual_01.jpg) no-repeat 50% 50%;"></div>
+					<div class="main-visual-pc-img" style="background:#fff url(<?=$site_host?>/images/main/main_visual_01.jpg) no-repeat 50% 50%;"></div>
 					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_01_m.jpg" alt="메인비주얼 모바일 이미지 1" /></div>	<!-- 모바일이미지 -->
 					<div class="main-visual-txt-con">
 						<div class="main-visual-txt-inner area-box">
-							<strong class="main-visual-txt1">giantsoft Stand in the world 11</strong>
+							<strong class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3">giantsoft Stand in the world giantsoft Stand in the world  11</strong>
 							<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
 							<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
 							<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
@@ -60,11 +38,23 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					</div>
 				</div>
 				<div class="main-visual-item">
-					<div class="main-visual-pc-img" style="background:#fff url(/images/main/main_visual_02.jpg) no-repeat 50% 50%;"></div>
+					<div class="main-visual-pc-img" style="background:#fff url(<?=$site_host?>/images/main/main_visual_02.jpg) no-repeat 50% 50%;"></div>
 					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_02_m.jpg" alt="메인비주얼 모바일 이미지 2" /></div>	<!-- 모바일이미지 -->
 					<div class="main-visual-txt-con">
 						<div class="main-visual-txt-inner area-box">
-							<strong class="main-visual-txt1">giantsoft Stand in the world 22</strong>
+							<strong class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3">giantsoft Stand in the world giantsoft Stand in the world  22</strong>
+							<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
+							<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
+							<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
+						</div>
+					</div>
+				</div>
+				<div class="main-visual-item">
+					<div class="main-visual-pc-img" style="background:#fff url(<?=$site_host?>/images/main/main_visual_02.jpg) no-repeat 50% 50%;"></div>
+					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_02_m.jpg" alt="메인비주얼 모바일 이미지 2" /></div>	<!-- 모바일이미지 -->
+					<div class="main-visual-txt-con">
+						<div class="main-visual-txt-inner area-box">
+							<strong class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3">giantsoft Stand in the world giantsoft Stand in the world  33</strong>
 							<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
 							<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
 							<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
@@ -77,10 +67,10 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 			</div>
 		</section>
 		<!-- ****************** 메인 컨텐츠1 ********************** -->
-		<section id="mainContent1" class="section">
+		<section id="mainContent1" class="section" style="background:#fff url(<?=$site_host?>/images/main/main_visual_02.jpg) no-repeat 50% 50%; background-size:cover;">
 			<div class="area-box">
 				<div class="main-tit-box" data-aos="fade-up" data-aos-duration="1000">
-					<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
+					<h3 class="main-tit cm-word-split-JS" data-splitting data-css-property="transition" data-speed="0.03" data-speed-delay="0"><strong>메인</strong> 컨텐츠 타이틀</h3>
 					<p class="main-sub-tit"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span>타이틀 서브 텍스트가 들어갑니다</span></p>
 				</div>
 				<ul class="main-quick-menu-list clearfix" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
@@ -88,7 +78,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						<a href="">
 							<div class="quick-menu-item-inner">
 								<p class="item-txt-box">
-									<strong class="item-tit">Giantsoft Business</strong>
+									<strong class="item-tit counter">1,234,567</strong>
 									<span class="item-sub-tit">Giantsoft Stand in the world</span>
 									<span class="item-sub-txt">1200이하 800이상 에서는 비율대로 줄어든다</span>
 								</p>
@@ -136,7 +126,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 			</div>
 		</section>
 		<!-- ****************** 메인 컨텐츠2  ********************** -->
-		<section id="mainContent2" class="section" style="background:#f2f2f2;">
+		<section id="mainContent2" class="section" style="background:#fff url(<?=$site_host?>/images/main/main_visual_01.jpg) no-repeat 50% 50%; background-size:cover;">
 			<div class="area">
 				<div class="main-tit-box" data-aos="fade-up" data-aos-duration="1000">
 					<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
@@ -183,7 +173,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 			</div>
 		</section>
 		<!-- ****************** 메인 컨텐츠3  ********************** -->
-		<section id="mainContent3" class="section">
+		<section id="mainContent3" class="section"style="background:#fff url(<?=$site_host?>/images/main/main_visual_02.jpg) no-repeat 50% 50%; background-size:cover;">
 			<div class="area">
 				<div class="main-tit-box" data-aos="fade-up" data-aos-duration="1000">
 					<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
@@ -282,8 +272,24 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 		</section>
 	</div>
 	<!-- //container -->
-	
 </div>
-<!-- //code -->
+<!-- //wrap -->
+<script>
+	dep1 = 0,
+	dep2 = 0;
+</script>
+<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/scripts.php"; ?>
+<!-- Fullpage JS  -->
+<script type="text/javascript" src="<?=$site_host?>/js/plugin/jquery.fullPage.js"></script>
+<!-- // -->
+<script type="text/javascript" src="<?=$site_host?>/js/main.js"></script>
+<!--[if lte IE 9]>
+	<script type="text/javascript">
+		$(document).ready(function  () {
+			/* 하위브라우저 popup */
+			winPopupOpen("<?=$site_url?>/etc/ie8_popup.php","","width=800, height=600, left=0, top=0, resizable=no, scrollbars=no, status=no;");
+		});
+	</script>
+<![endif]-->
 </body>
 </html>

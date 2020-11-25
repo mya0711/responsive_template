@@ -21,9 +21,9 @@
 						</div>
 					</div>
 					<!-- 외국어선택 -->
-					<div class="header-lang cm-drop-menu-box" data-drop-event="click">
-						<button class="lang-open-btn cm-drop-open-btn"><i class="xi-globus"></i><strong>LANGUAGE</strong><span class="arrow"><i class="material-icons">&#xE313;</i></span></button>
-						<ul id="headerLangList" class="cm-drop-list">
+					<div class="header-lang cm-drop-menu-box-JS" data-drop-event="click">
+						<button class="lang-open-btn cm-drop-open-btn-JS"><i class="xi-globus"></i><strong>LANGUAGE</strong><span class="arrow"><i class="xi-angle-down-min"></i></span></button>
+						<ul id="headerLangList" class="cm-drop-list-JS">
 							<li><a href="<?=$site_host?>/en/">ENGLISH</a></li>
 							<li><a href="<?=$site_host?>/jp/">JAPANESE</a></li>
 							<li><a href="<?=$site_host?>/cn/">CHINESE</a></li>
@@ -31,14 +31,12 @@
 					</div>
 					<!-- 사이트맵 버튼 ( 기본 ) -->
 					<a href="<?=$site_url?>/etc/sitemap.php" class="sitemap-line-btn cm-modal-open-btn" title="사이트맵 열기">
-						<em class="blind">사이트맵</em>
 						<span class="line line1"></span><span class="line line2"></span><span class="line line3"></span><!-- <span class="line line4"></span> -->
 					</a>
 					<!-- 사이트맵 style 02 (toggle기능 사용안하면 date-event 삭제) -->
-					<!-- <a href="#sitemapContent" class="sitemap-line-btn sitemap-open-btn" title="사이트맵 열기" data-event="toggle">
-						<em class="blind">사이트맵</em>
+					<!-- <button class="sitemap-line-btn sitemap-open-btn" title="사이트맵 열기" data-event="toggle">
 						<span class="line line1"></span><span class="line line2"></span><span class="line line3"></span>
-					</a> -->
+					</button> -->
 					<? // include $_SERVER["DOCUMENT_ROOT"].$site_directory."/etc/sitemap_02.php"; ?>
 				</div>
 			</div>
@@ -53,7 +51,7 @@
 				<!-- <div id="gnbBg"></div> -->
 				<ul class="clearfix menu5 area">
 					<li class="gnb1">
-						<a href="<?=$site_url?>/company/sample.php">Menu1</a>
+						<a href="<?=$site_url?>/">Menu1</a>
 						<div class="gnb-2dep">
 							<ul>
 								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
@@ -100,7 +98,7 @@
 			<span class="line line1"></span><span class="line line2"></span><span class="line line3"></span>
 		</button>
 		<div class="gnb-overlay-bg-m"></div>
-		<nav id="gnbM" class="gnb-style-full">
+		<nav id="gnbM" class="gnb-style-basic">
 			<!-- 
 				기본스타일 : .gnb-style-basic
 				Full 스타일 : .gnb-style-full
@@ -118,10 +116,10 @@
 				<!-- // -->
 				<!-- 회원메뉴 -->
 				<ul class="clearfix member-menu-box">
-					<li><a href="<?=$site_url?>/member/login.php"><i class="material-icons">&#xe7ff;</i><strong>로그인</strong></a></li>
-					<li><a href="<?=$site_url?>/member/join_01.php"><i class="material-icons">&#xe7fe;</i><strong>회원가입</strong></a></li>
-					<li style="display:none;"><a href="<?=$site_url?>/member/modify_01.php"><i class="material-icons">&#xe853;</i><strong>마이페이지</strong></a></li>
-					<li style="display:none;"><a href="<?=$site_url?>/member/join_01.php"><i class="material-icons">&#xe890;</i><strong>로그아웃</strong></a></li>
+					<li><a href="<?=$site_url?>/member/login.php"><i class="xi-user-o"></i><strong>로그인</strong></a></li>
+					<li><a href="<?=$site_url?>/member/join_01.php"><i class="xi-user-plus-o"></i><strong>회원가입</strong></a></li>
+					<!-- <li><a href="<?=$site_url?>/member/modify_01.php"><i class="xi-profile-o"></i><strong>마이페이지</strong></a></li>
+					<li><a href="<?=$site_url?>/member/join_01.php"><i class="xi-log-out"></i><strong>로그아웃</strong></a></li> -->
 				</ul>
 			</div>
 			<!-- // -->
@@ -129,7 +127,7 @@
 				<div class="gnb-navigation-inner">
 					<ul id="navigation">
 						<li>
-							<a href="<?=$site_url?>/company/sample.php">Menu1</a>
+							<a href="<?=$site_url?>/">Menu1</a>
 							<ul class="gnb-2dep">
 								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
 							</ul>

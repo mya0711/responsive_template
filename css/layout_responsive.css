@@ -31,7 +31,7 @@
 	#headerInnerWrap{position:fixed; z-index:99;}
 	#headerInner{padding:0 15px;}
 	#header .logo{padding:21px 0;}	/* padding값 적절히 바꿔주세요 */
-	#header.fixed #headerInnerWrap{background-color:#fff; border-bottom:1px solid #eee;}
+	#header.top-fixed #headerInnerWrap{background-color:#fff; border-bottom:1px solid #eee;}
 	
 	/* -------- Header :: UTIL BOX -------- */
 	.header-util-box{padding-right:43px;}
@@ -71,10 +71,8 @@
 	#navigation > li:first-child{border-top:1px solid #e7e7e7}
 	#navigation > li > a {position:relative; display:block; padding:15px; color:#333; font-size:17px; font-weight:500; }
 	#navigation > li.active > a{color:#f57f20;}
-	#navigation > li.has-2dep > a{}
-	#navigation > li.has-2dep.active > a{}
-	#navigation > li .gnb-icon{position:absolute; top:50%; right:15px; margin-top:-10px;}
-	#navigation > li .gnb-icon i{font-size:20px;}
+	#navigation > li.has-2dep > a:before{font-family:xeicon; content: "\e914"; position:absolute; top:50%; right:15px; font-size:1.3em; transform:translateY(-50%);}
+	#navigation > li.has-2dep.active > a:before{content: "\e91b";}
 	/* GNB Mobile ::  메뉴영역 :: 2차 */
 	#navigation > li .gnb-2dep{display:none; padding:15px 0; background-color:#f2f2f2; }
 	#navigation > li .gnb-2dep > li{height:auto !important;}
@@ -140,6 +138,8 @@
 	.header-util-menu-box .lang-select li.cur a{color:#f57f20; z-index:1;}
 	/* 회원메뉴 */
 	.member-menu-box{
+		display:flex;
+		justify-content: space-around;
 		height:100%;
 		text-align:center; 
 		padding:10px 0; margin-right:60px;
@@ -147,7 +147,7 @@
 		 box-sizing: border-box; 
 	}
 	.member-menu-box li{float:left; width:50%; height:100%; position:relative;}
-	.member-menu-box li:before{content:""; position:absolute; top:0px; left:0px; width:1px; height:100%; background-color:rgba(0,0,0,0.1); content:"";}
+	.member-menu-box li:before{content:""; position:absolute; top:10px; bottom:10px; left:0px; width:1px; background-color:rgba(0,0,0,0.1); content:"";}
 	.member-menu-box li:first-child:before{display:none;}
 	.member-menu-box li a{display:block; color:#444;  padding:6px 0}
 	.member-menu-box li a i{font-size:30px;}
@@ -179,7 +179,7 @@
 		  transform: translateY(-7px) rotate(-45deg);
 	}
 	
-	#header.fixed .nav-open-btn .line{background-color:#333}
+	#header.top-fixed .nav-open-btn .line{background-color:#333}
 }
 
 @media all and ( max-width: 800px ){
@@ -239,8 +239,8 @@
 	/* 회원메뉴 */
 	.member-menu-box{padding:5px 0;}
 	.member-menu-box li a{ padding:4px 0}
-	.member-menu-box li a i{font-size:24px;}
-	.member-menu-box li a strong{padding-top:3px;}
+	.member-menu-box li a i{font-size:20px;}
+	.member-menu-box li a strong{padding-top:5px;}
 	.gnb-style-full .member-menu-box{height:60px}
 	.gnb-style-full .member-menu-box li a{padding:10px 0;}
 
@@ -269,8 +269,6 @@
 	#footerTop, #footerBottom{text-align:center;}
 	.footer-left-con,.footer-right-con{float:none; }
 
-	/* -------- Footer :: 상단 -------- */
-	#footerTop{background-color:#fff;}
 	/* Footer :: 푸터로고 */
 	.foot-logo img{height:30px;}
 	.footer-right-con .foot-logo{text-align:center; padding-top:15px;}
@@ -287,20 +285,18 @@
 	.foot-sns-menu li img{width:25px}
 	.foot-sns-menu li a{width:25px; height:25px; line-height:25px;}
 	.foot-sns-menu li a i{font-size:15px; line-height:25px;}
-	
-	/* -------- Footer :: 하단 -------- */
-	/* Footer :: 왼쪽정보 */
+	/* Footer :: 정보 */
 	.footer-address{}
 	.footer-address .footer-address-txt{font-size:12px;}
 	.footer-address p:before{display:none;}
-	/* Footer :: 왼쪽정보 style02 */
+	/* Footer :: 정보 style02 */
 	.footer-address-list dl{font-size:12px;}
 	/* Footer :: Copyright */
 	.footer-copyright{font-size:11px;}
 	/* Footer :: 패밀리사이트 */
 	.family-site-box{width:150px;	}
 	.family-site-box .family-site-open-btn{height:34px; line-height:34px; font-size:13px;}
-	.family-site-list{bottom:36px;}
+	.family-site-box .family-site-open-btn:after{font-size:15px}
 }
 
 /* ****************** SUB LAYOUT ********************** */
@@ -318,7 +314,8 @@
 	#topMenu02 .side-menu-inner ul:after{display:none;}
 	#topMenu02 .side-menu-inner ul li{display:table-cell; vertical-align:middle;}
 	/*  SUB LAYOUT :: 컨텐츠 레이아웃 */
-	#content{padding:70px 15px}
+	#content:not(.wide){padding:70px 15px}
+	#content.wide{padding:70px 0 0 0}
 }
 
 @media all and (max-width:800px){
@@ -387,17 +384,16 @@
 	/*  SUB LAYOUT :: 상단정보 (공통) */
 	#contentInfoCon{margin:30px 0; }
 	#contentInfoCon .content-tit{font-size:24px}
-	#contentInfoCon .content-sub-tit{font-size:13px; line-height:18px;}
-	/*  SUB LAYOUT :: 상단정보(스타일02) */
-	#contentInfoCon.content-info-style02 .content-tit{display:block; padding-bottom:15px;}
-	#contentInfoCon.content-info-style02 .content-tit:after{position:static; display:block; margin:20px 0 0 0;}
-	#contentInfoCon.content-info-style02 .content-sub-tit{display:block; margin-left:0}
+	#contentInfoCon .content-tit:after{position:static; display:block; margin-top:15px;}
+	#contentInfoCon .content-sub-tit{font-size:13px; line-height:18px; margin-top:15px;}
 	/*  SUB LAYOUT :: 상단정보(스타일03) */
-	#contentInfoCon.content-info-style03 .content-tit{float:none; text-align:center;}
-	#contentInfoCon.content-info-style03 .location{float:none; text-align:center; padding-top:23px;}
+	#contentInfoCon.content-title-location{text-align:center;}
+	#contentInfoCon.content-title-location .content-tit{float:none;}
+	#contentInfoCon.content-title-location .location{float:none; padding-top:23px;}
 
 	/*  SUB LAYOUT :: 컨텐츠 레이아웃 */
-	#content{padding:50px 15px}
+	#content:not(.wide){padding:50px 15px}
+	#content.wide{padding:50px 0 0 0}
 }
 @media all and ( max-width: 480px ){
 	/*  SUB LAYOUT :: 비주얼 */

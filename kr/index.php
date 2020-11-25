@@ -3,51 +3,30 @@ include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
 include "./lib/config.php";
 include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 ?>
-<!--[if lte IE 9]>
-	<script type="text/javascript">
-		$(document).ready(function  () {
-			/* 하위브라우저 popup */
-			winPopupOpen("<?=$site_url?>/etc/ie8_popup.php","","width=800, height=600, left=0, top=0, resizable=no, scrollbars=no, status=no;");
-		});
-	</script>
-<![endif]-->
-
-<script>
-	$(function  () {
-		dep1 = 0,
-		dep2 = 0;
-	})
-</script>
-<script type="text/javascript" src="<?=$site_host?>/js/nav.js"></script>
-<script type="text/javascript" src="<?=$site_host?>/js/main.js"></script>
 </head>
 
 <body>
-<!--[if lt IE 7]>
-<p class="cm-alert-ie">현재 웹브라우저에서는 사이트가 정상적으로 표시되지 않을 수 있습니다. <strong><a href="http://browsehappy.com/" target="_blank">여기를 클릭</a></strong>하여 웹브라우저를 업그레이드 하세요.</p>
-<![endif]-->
 <!-- accessibility -->
 <div class="cm-accessibility">
 	<a href="#mainVisual">본문바로가기</a>
 </div>
 <!-- //accessibility -->
-
 <!-- code -->
 <div id="wrap">
 	<!-- header -->
-<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/header.php"; ?>
+	<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/header.php"; ?>
 	<!-- //header -->
 	<!-- container -->
 	<div id="mainContainer">
 		<!-- ****************** 메인비주얼 ********************** -->
-		<section id="mainVisual" class="full-height">	<!-- 메인 비주얼 full 높이 해제 : full-height 클래스 빼주세요  -->
+		<section id="mainVisual" class="full-height"><!-- 메인 비주얼 높이 full height  -->
 			<div class="main-visual-con">
 				<div class="main-visual-item">
 					<div class="main-visual-pc-img" style="background:#fff url(<?=$site_host?>/images/main/main_visual_01.jpg) no-repeat 50% 50%;"></div>
 					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_01_m.jpg" alt="메인비주얼 모바일 이미지 1" /></div>	<!-- 모바일이미지 -->
 					<div class="main-visual-txt-con">
 						<div class="main-visual-txt-inner area-box">
-							<strong class="main-visual-txt1">giantsoft Stand in the world 11</strong>
+							<strong class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3">giantsoft Stand in the world giantsoft Stand in the world  11</strong>
 							<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
 							<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
 							<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
@@ -59,7 +38,19 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_02_m.jpg" alt="메인비주얼 모바일 이미지 2" /></div>	<!-- 모바일이미지 -->
 					<div class="main-visual-txt-con">
 						<div class="main-visual-txt-inner area-box">
-							<strong class="main-visual-txt1">giantsoft Stand in the world 22</strong>
+							<strong class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3">giantsoft Stand in the world giantsoft Stand in the world  22</strong>
+							<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
+							<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
+							<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
+						</div>
+					</div>
+				</div>
+				<div class="main-visual-item">
+					<div class="main-visual-pc-img" style="background:#fff url(<?=$site_host?>/images/main/main_visual_02.jpg) no-repeat 50% 50%;"></div>
+					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_02_m.jpg" alt="메인비주얼 모바일 이미지 2" /></div>	<!-- 모바일이미지 -->
+					<div class="main-visual-txt-con">
+						<div class="main-visual-txt-inner area-box">
+							<strong class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3">giantsoft Stand in the world giantsoft Stand in the world  33</strong>
 							<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
 							<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
 							<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
@@ -67,15 +58,20 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					</div>
 				</div>
 			</div>
+			<div class="main-scroll-icon">
+				<span>SCROLL DOWN</span>
+			</div>
+			<aside class="main-visual-conuter">
+				<div class="area-box"><span class="cur-num">1</span><em class="middle">/</em><span class="total-num"></span></div>
+			</aside>
 		</section>
-
 		<!-- ****************** 메인컨텐츠 ********************** -->
 		<section id="mainContent">
 			<!-- ****************** 메인컨텐츠 1 (퀵메뉴) ********************** -->
-			<article id="mainContent1" data-aos="fade-down">
+			<article id="mainContent1" data-aos="fade-up">
 				<div class="area-box">
 					<div class="main-tit-box">
-						<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
+						<h3 class="main-tit cm-word-split-JS" data-splitting data-css-property="transition" data-speed="0.03" data-speed-delay="0"><strong>메인</strong> 컨텐츠 타이틀</h3>
 						<p class="main-sub-tit"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span> span태그안에 넣으면 모바일에서 줄바꿈이 됩니다.</span></p>
 					</div>
 					<ul class="main-quick-menu-list clearfix">
@@ -83,7 +79,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							<a href="">
 								<div class="quick-menu-item-inner">
 									<p class="item-txt-box">
-										<strong class="item-tit">Giantsoft Business</strong>
+										<strong class="item-tit">1,234,567</strong>
 										<span class="item-sub-tit">Giantsoft Stand in the world</span>
 										<span class="item-sub-txt">1200이하 800이상 에서는 비율대로 줄어든다</span>
 									</p>
@@ -271,7 +267,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 				</div>
 			</article>
 			<!-- ****************** 메인컨텐츠 4 (갤러리 + 설명 슬라이드) ********************** -->
-			<article id="mainContent3">
+			<article id="mainContent4">
 				<div class="area">
 					<div class="main-tit-box">
 						<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
@@ -279,9 +275,9 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					</div>
 					<div class="main-slide-box clearfix">
 						<div class="main-slide-photo-con">
-							<div class="main-slide-photo-item"><div class="slide-photo-inner"><img src="" alt="" /><p style="position:absolute; top:0; left:0; color:#fff; font-size:50px;">1 삭제하세여</p></div></div>
-							<div class="main-slide-photo-item"><div class="slide-photo-inner"><img src="" alt="" /><p style="position:absolute; top:0; left:0; color:#fff; font-size:50px;">2 삭제하세여</p></div></div>
-							<div class="main-slide-photo-item"><div class="slide-photo-inner"><img src="" alt="" /><p style="position:absolute; top:0; left:0; color:#fff; font-size:50px;">3 삭제하세여</p></div></div>
+							<div class="main-slide-photo-item"><div class="slide-photo-inner"><p style="position:absolute; top:0; left:0; color:#fff; font-size:50px;">1 삭제하세여</p></div></div>
+							<div class="main-slide-photo-item"><div class="slide-photo-inner"><p style="position:absolute; top:0; left:0; color:#fff; font-size:50px;">2 삭제하세여</p></div></div>
+							<div class="main-slide-photo-item"><div class="slide-photo-inner"><p style="position:absolute; top:0; left:0; color:#fff; font-size:50px;">3 삭제하세여</p></div></div>
 						</div>
 						<div class="main-slide-text-con">
 							<div class="main-slide-text-item">
@@ -429,7 +425,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							</li>
 							<li>
 								<a href="">
-									<span class="main-board-banner-thumb"><img src="" alt="" /></span>
+									<span class="main-board-banner-thumb"></span>
 								</a>
 							</li>
 						</ul>
@@ -437,7 +433,6 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 				</div>
 			</article>
 		</section>
-		
 		<!-- ****************** 퀵메뉴 ********************** -->
 		<aside id="rightBar">
 			<ul>
@@ -451,9 +446,25 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 	</div>
 	<!-- //container -->
 	<!-- footer -->
-<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/footer.php"; ?>
+	<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/footer.php"; ?>
 	<!-- //footer -->
 </div>
-<!-- //code -->
+<!-- //wrap -->
+<script>
+	dep1 = 0,
+	dep2 = 0;
+</script>
+<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/scripts.php"; ?>
+<script type="text/javascript" src="<?=$site_host?>/js/main.js"></script>
+<script type="text/javascript">
+</script>
+<!--[if lte IE 9]>
+	<script type="text/javascript">
+		$(document).ready(function  () {
+			/* 하위브라우저 popup */
+			winPopupOpen("<?=$site_url?>/etc/ie8_popup.php","","width=800, height=600, left=0, top=0, resizable=no, scrollbars=no, status=no;");
+		});
+	</script>
+<![endif]-->
 </body>
 </html>

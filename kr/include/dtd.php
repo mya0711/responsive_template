@@ -38,44 +38,21 @@
 <link rel="stylesheet" href="<?=$site_host?>/css/layout_responsive.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/content_responsive.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/main_responsive.css" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons"><!-- google -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"><!-- naver -->
 <!-- Board Skin -->
 <link rel="stylesheet" href="<?=$site_host?>/css/common/cm_bbs_common.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/common/cm_board.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/common/cm_gallery.css" />
 <link rel="stylesheet" href="<?=$site_host?>/css/common/cm_faq.css" />
 <link rel="stylesheet" href="<?=$site_host?>/css/common/cm_online.css" />
-<!-- // -->
-
-<script src="<?=$site_host?>/js/vendor/jquery-1.8.3.min.js"></script>
-<script src="<?=$site_host?>/js/vendor/jquery.easing.1.3.js"></script>
-
-<!--[if lt IE 9]>
-	<script src="<?=$site_host?>/js/vendor/html5shiv.js"></script>
-	<script src="<?=$site_host?>/js/vendor/respond.min.js"></script>
-<![endif]-->
-<!--[if lte IE 9]>
-	<link rel="stylesheet" href="<?=$site_host?>/css/ie9.css">
-<![endif]-->
-
-<script src="<?=$site_host?>/js/common.js"></script>
-<script src="<?=$site_host?>/js/layer_popup.js"></script>
-
-<!-- Icon Font -->
-<link href="//fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet"><!-- google -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"><!-- naver -->
-
-<!-- Slick Plugin -->
+<link rel="stylesheet" href="<?=$site_host?>/css/common/cm_member.css" />
+<!-- Plugin -->
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/slick.css">
-<script src="<?=$site_host?>/js/plugin/slick.js"></script>
+<link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/aos.css" />
+<link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/swiper.css" />
+<link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/jquery.fullPage.css" />
 
-<!-- CustomScrollbar Plugin -->
-<link rel="stylesheet" href="<?=$site_host?>/css/plugin/jquery.mCustomScrollbar.css">
-<script src="<?=$site_host?>/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-
-<!-- Magnific Plugin (인증서 확대 모달) -->
-<link rel="stylesheet" href="<?=$site_host?>/css/plugin/magnific-popup.css">
-<script src="<?=$site_host?>/js/plugin/jquery.magnific-popup.js"></script>
-
-<!-- Aos Plugin -->
-<link rel="stylesheet" href="<?=$site_host?>/css/plugin/aos.css" />
-<script src="<?=$site_host?>/js/plugin/aos.js"></script>
+<script type="text/javascript" src="<?=$site_host?>/js/vendor/jquery-1.8.3.min.js"></script>

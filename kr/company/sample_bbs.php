@@ -1,6 +1,6 @@
 <?
 $page_num = "01";
-$sub_num = "03";
+$sub_num = "01";
 $page_section = "company";
 $sub_section = "ceo";
 $page_info = "회사소개";
@@ -15,15 +15,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 /* css */
 
 </style>
-<script>
-/* js */
 
-</script>
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/top.php"; ?>
 				<?
-
 				$code = "news";	// 게시판 코드
-				$lang = 1;	// 언어선택
+				
 				switch($bgu){
 					case "list":
 						include $_SERVER['DOCUMENT_ROOT']."/bbs/bbs_list.php";
@@ -50,7 +46,5 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					break;
 				}
 				?>
-
-
 
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/bottom.php"; ?>

@@ -1,45 +1,42 @@
 /* *******************************************************
  * filename : main.js
  * description : 메인에만 사용되는 JS
- * date : 2020-02-24
+ * date : 2020-11-23
 ******************************************************** */
 
-
-jQuery(function($){
+$(document).ready(function  () {
+	/* ************************
+	* Func : fullpage 레이아웃 사용시
+	* fullpage.js, checkOffset(), toFit() 필요
+	************************ */
 	if ($.exists('#fullpage')) {
-		$('#fullpage').fullpage({
+		var $fullPage = $("#fullpage");
+		var $fullPageSection = $fullPage.children(".section");
+		if ( detectBrowser() === "ie") {
+			var scroll_speed = 500;
+		}else {
+			var scroll_speed = 800;
+		}
+		$fullPage.fullpage({
 			css3: true,
 			fitToSection: false,
 			navigation: true,
 			scrollBar:false,
+			scrollingSpeed:scroll_speed,
 			navigationPosition: 'right',
 			navigationTooltips: ['Content01', 'Content02', 'Content03', 'Content04'],
-			responsiveWidth: 1024,
+			responsiveWidth: tabletWidth,
 			responsiveHeight : 750,
-			onLeave : function(index, nextIndex, direction){
-				if( nextIndex == 2 ){
+			onLeave : function(origin, destination, direction){
+				if ( !($fullPageSection.eq(origin).is(".active-section")) ) {
 					setTimeout(function  () {
-						$("#mainContent1").find(".aos-init").addClass('aos-animate');
-					},300);
-				}else if( nextIndex == 3 ){
-					setTimeout(function  () {
-						$("#mainContent2").find(".aos-init").addClass('aos-animate');
-					},300);
-				}else if( nextIndex == 4 ){
-					setTimeout(function  () {
-						$("#mainContent3").find(".aos-init").addClass('aos-animate');
-					},300);
-
-				}else if( nextIndex == 5 ){
-					/* 5번째 섹션 ( 영역 도달했을때 Slick autoplay 재생시킬때 ) */
-					setTimeout(function  () {
-						$('.footer-partner-list').slick("play");
-					},600);
+						$(".section").eq(origin).addClass("active-section");
+					},500);
 
 				}
-				
-				// 왼쪽leftBar 색상변경
-				if( nextIndex > 1 ){
+
+				// 사이드바 색상변경
+				if ( destination > 1) {
 					$("#fp-nav").addClass("black");
 				}else {
 					$("#fp-nav").removeClass("black");
@@ -67,13 +64,21 @@ jQuery(function($){
 	var $mainVisualItem = $(".main-visual-con");
 	var visualPausePlay = true;		// Pause, play 사용시 변경
 
-	$mainVisualItem.on('init', function(event, slick) {
+	$mainVisualItem.on('init', function(event, slick, currentSlide) {
 		$(".main-visual-item").eq(0).addClass("active-item");
+		if ($.exists('.main-visual-conuter')) {
+			$(".main-visual-conuter .total-num").text(slick.slideCount);
+		}
 	});
 	$mainVisualItem.on('beforeChange', function(event, slick, currentSlide, nextSlide) {	
 		$(".main-visual-item").removeClass("active-item");
-		$(this).find(".main-visual-item").eq(nextSlide).addClass("active-item")
+		$(this).find(".main-visual-item").eq(nextSlide).addClass("active-item");
+		if ($.exists('.main-visual-conuter')) {
+			$(".main-visual-conuter .cur-num").text(nextSlide+1);
+		}
 	});
+
+	// 메인 비주얼 슬라이드
 	$mainVisualItem.slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -93,10 +98,10 @@ jQuery(function($){
 
 	$mainVisualItem.find(".slick-dots").wrap("<aside class='slick-dots-wrapper'><div class='area-box'></div></aside>");
 
+	// 일시정지, 재생버튼 사용시
 	if ( visualPausePlay ) {
 		$(".slick-dots-wrapper").children().append("<span class='slick-control-btns'><button class='slick-pause-btn' title='일시정지'><i class='xi-pause'></i></button><button class='slick-play-btn' title='재생'><i class='xi-play-circle-o'></i></button></span>");
 	
-		// 일시정지, 재생버튼
 		$(document).on("click",".slick-pause-btn",function  () {
 			$mainVisualItem.slick("slickPause");
 			$(this).hide();
@@ -109,14 +114,6 @@ jQuery(function($){
 		});
 	}
 
-	// 스크롤 아이콘 모션
-	if ($.exists('.main-scroll-icon')) {
-		var $moveIcon = $('.main-scroll-icon');
-		var moveIcon = setInterval(function() {
-			$moveIcon.animate({opacity:'.5',"margin-bottom":'-=10px'}).animate({opacity:'1',"margin-bottom":'+=10px'})
-		}, 1000);
-	}
-	
 	/* *********************** 메인 갤러리 슬라이드 ************************ */
 	$('.main-gallery-rolling-con > ul').slick({
 		slidesToShow: 4,

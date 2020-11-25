@@ -2,36 +2,34 @@
 /* *******************************************************
  * filename : content.css
  * description : 서브페이지 컨텐츠 CSS
- * date : 2019-02-01
+ * date : 2020-11-11
 ******************************************************** */
-
 
 /* ******************  서브공통 ********************** */
 /* -------- 공통 스크롤바  -------- */
 .custom-scrollbar-cover{display:none;}
 
-/* -------- 공통 테이블스타일 -------- */
-.test-table{width:100%;}
-.test-table th{border: 1px solid #c6c6c6; border-top: 1px solid #333; padding: 20px 0; background-color: #f7f7f7; font-size: 16px; font-weight: 300; letter-spacing: -0.7px; color: #464646;}
-.test-table td{padding: 25px 0; border: 1px solid #c6c6c6; text-align: center; font-size: 16px; line-height: 1.7; font-weight: 300; letter-spacing: -0.75px; color: #555;}
-
 /* -------- 공통 :: 탭 -------- */
 /* Tab 공통 스타일 */
-.sub-cm-tab-wrapper{position:relative; height:60px; margin-bottom:15px;}
-.sub-tab-cm-style ul{margin-right:-4px}
-.sub-tab-cm-style ul li{float:left; position:relative; width:20%; position:relative; margin-left:-1px;  background-color:#fff;}
-.sub-tab-cm-style ul li:first-child{margin-left:0}
-.sub-tab-cm-style ul li a{display:table; height:60px; width:100%; border:1px solid #e5e5e5; border-bottom:1px solid #e5e5e5; }
-.sub-tab-cm-style ul li a em{display:table-cell; vertical-align:middle; color:#494949; font-size:18px; letter-spacing:-0.30px; text-align:center;}
-.sub-tab-cm-style ul li.selected{z-index:1; }
-.sub-tab-cm-style ul li.selected a{background-color:#333; border-color:#333}
-.sub-tab-cm-style ul li.selected a em{color:#fff; }
-.sub-tab-cm-style .cm-tab-m-btn{display:none}
+.sub-tab-wrapper-style{position:relative; height:60px; margin-bottom:15px; }
+.sub-tab-list-style ul{display:table; width:100%; height:100%; table-layout:fixed;}
+.sub-tab-list-style ul:after{display:none}
+.sub-tab-list-style ul li{/* float:left; */ display:table-cell; vertical-align:middle; position:relative; width:20%; background-color:#fff; border:1px solid #e5e5e5; border-left:0 }
+.sub-tab-list-style ul li:first-child{border-left:1px solid #e5e5e5;}
+.sub-tab-list-style ul li a{display:table; height:58px; width:100%; }
+.sub-tab-list-style ul li a em{display:table-cell; vertical-align:middle; color:#494949; font-size:18px; letter-spacing:-0.30px; text-align:center;}
+.sub-tab-list-style ul li.selected{z-index:1; }
+.sub-tab-list-style ul li.selected a{background-color:#333; border-color:#333}
+.sub-tab-list-style ul li.selected a em{color:#fff; }
 /* Tab Fixed Move*/
-.sub-tab-cm-style.fixed{position:fixed; top:0px; left:0; width:100%; height:60px;}
-/* Tab Contents ( 임시 ) */
-.sub-cm-tab-con{padding:30px; border:1px solid #ddd; min-height:200px; background-color:#f2f2f2; margin-top:20px;}
+.sub-tab-list-style.top-fixed{position:fixed; top:70px; left:0; width:100%; height:60px;}
+/* Mobile Tab Drop Menu */
+.sub-drop-open-btn-style{display:none}
 
-
+@media all and (min-width:1025px){
+	/* Tab Fixed Background */
+	.sub-tab-list-style:before{position:absolute; top:0px; bottom:0px; left:50%; width:0; content:""; background-color:#fff; border-bottom:1px solid #e5e5e5; transition:all 0.5s}
+	.sub-tab-list-style.top-fixed:before{width:100%; margin-left:-50%}
+}
 
 /* ******************  회사소개 ********************** */

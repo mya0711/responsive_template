@@ -15,8 +15,8 @@ include "../lib/config.php";
 	$(".sitemap-wrapper").append("<ul></ul>");
 	
 	for(var i=0; i < gnbLength; i++){
-		var gnbText = $gnbList.eq(i).children("a").text();
-		var gnb2depList = $gnbList.eq(i).find(".gnb-2dep > ul").html() ? $gnbList.eq(i).find(".gnb-2dep > ul").html() :	'<a>test</a>';
-		$(".sitemap-wrapper > ul").append('<li><h2>'+gnbText+'</h2><ul class="sitemap-2dep">'+gnb2depList+'</ul></li>');
+		var $gnb1depItem = $gnbList.eq(i).children("a");
+		var $gnb2depList = $gnbList.eq(i).find(".gnb-2dep > ul").html() ? $gnbList.eq(i).find(".gnb-2dep > ul").html() :	'<a href="'+$gnb1depItem.attr("href")+'">'+$gnb1depItem.text()+'</a>';
+		$(".sitemap-wrapper > ul").append('<li><h2>'+$gnb1depItem.text()+'</h2><ul class="sitemap-2dep">'+$gnb2depList+'</ul></li>');
 	}
 </script>

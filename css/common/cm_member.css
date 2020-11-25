@@ -333,12 +333,18 @@
 	.join-form-tbl .join-sub-txt, .join-form-tbl .join-sub-txt2{display:block; margin-left:0; margin-top:5px; word-break:keep-all; line-height:15px; }
 	
 	/* JOIN 02::기타 */
+	.ios-os .join-form-tbl fieldset{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
 	.id-input .input-basic,
 	.address-input .input-basic:first-of-type{float:left; width:calc(100% - 85px) !important;}
 	.birth-input .select-basic{width:calc(33.33% - 30px) !important;}
 	.birth-input .select-basic:first-child{width:calc(33.33% - 4px) !important;}
-	.tel-input .input-basic,
-    .tel-input .select-basic{width:calc(33.33% - 15px) !important;}
+    .tel-input .select-basic{width:calc(33.33% - 14px) !important;}
+	.tel-input .input-basic{width:calc(33.33% - 15px) !important;}
 	.email-input .input-basic{width:calc(50% - 11px) !important;}
 	.email-input .select-basic{width:100% !important; margin-top:5px;}
 	.address-input .input-basic{margin-top:3px;}

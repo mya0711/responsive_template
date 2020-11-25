@@ -8,6 +8,8 @@
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/footer.php"; ?>
 	<!-- //footer -->
 </div>
-<!-- //code -->
+<!-- //wrap -->
+<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/scripts.php"; ?>
+<script type="text/javascript" src="<?=$site_host?>/js/sub.js"></script>
 </body>
 </html>

@@ -1,22 +1,38 @@
 /* *******************************************************
  * filename : sub.js
  * description : 서브컨텐츠에만 사용되는 JS
- * date : 2020-02-24
+ * date : 2020-11-23
 ******************************************************** */
 
-jQuery(function($){
-	/* 서브 Visual Active */ 
+$(document).ready(function  () {
+	/* ************************
+	* Func : 서브 Visual Active 클래스 붙이기
+	* addClassName () 필요
+	************************ */
 	setTimeout(function  () {
 		addClassName($("#visual"), "active");
-	});
+	},200);
 
-	/* 서브 MagnificPopup */
+	/* ************************
+	* Func : 모달팝업 플러그인 사용
+	* MagnificPopup.js 필요
+	************************ */
 	if ($.exists(".popup-gallery")) {
 		magnificPopup($(".popup-gallery"));
 	}
 
-	/* 서브 Scrollbar Table  */ 
+	/* ************************
+	* Func : 일정 가로사이즈 아래부터 scroll 사용하기
+	* mCustomScrollbar.js, customScrollX() 필요
+	************************ */
+	/* 서브 Scrollbar object  */
 	$(".custom-scrollbar-wrapper").each(function  () {
+		if ( $("html").attr("lang") == "ko" ) {
+			var dragTxt = "좌우로 드래그 해주세요.";
+		}else {
+			var dragTxt = "Drag left and right.";
+		}
+		$(this).append("<div class='custom-scrollbar-cover'><div class='scroll-cover-txt'><i class='xi-touch'></i><p>"+dragTxt+"</p></div></div>");
 		var $scrollObject = $(this).find(".scroll-object-box");
 		if ($.exists($scrollObject)) {
 			customScrollX($scrollObject);
@@ -26,75 +42,107 @@ jQuery(function($){
 		});
 	});
 	
-	/* *********************** 서브 메뉴 FIXED ************************ */
+	/* ************************
+	* Func : 서브 상단 메뉴 FIXED
+	* getWindowWidth(), checkOffset(), toFit() 필요
+	************************ */
 	if ($.exists(".fixed-sub-menu")) {
 		var $fixedSubMenu = $(".fixed-sub-menu");
-	
-		$(window).scroll(function  () {
-			var topMenuStart =  $fixedSubMenu.offset().top;
-			objectFixed($fixedSubMenu, topMenuStart);
+		var topMenuStart =  checkOffset($fixedSubMenu);
+		$(window).resize(function  () {
+			if ( getWindowWidth() > tabletWidth ) {
+				topMenuStart =  checkOffset($fixedSubMenu);
+			}else {
+				$fixedSubMenu.removeClass("top-fixed");
+			}
 		});
+		window.addEventListener('scroll', toFit(function  () {
+			if ( getWindowWidth() > tabletWidth ) {
+				objectFixed($fixedSubMenu, topMenuStart, "top-fixed");
+			}else {
+				$fixedSubMenu.removeClass("top-fixed");
+			}
+		}, {
+		}),{ passive: true })
 	}
-
-	/* *********************** 메뉴 FIXED 및 해당영역 이동 ************************ */
-	if ($.exists(".cm-fixed-tab-container")) {
-		if ( $.exists(".cm-fixed-link-tab-wrapper")) {
-			var menuFunc = "linkTab";	// 링크이동일때
-		}else {
-			var menuFunc = "moveTab";	// 영역이동일때
-		}
-		var $fixedMoveTab = $(".cm-fixed-move-tab-list");
+	
+	/* ************************
+	* Func : 컨텐츠 메뉴 FIXED 및 클릭시 해당영역 이동
+	* getScrollTop(), getWindowWidth(), checkOffset(), toFit(), checkFixedHeight(), moveScrollTop() 필요
+	************************ */
+	if ($.exists(".cm-fixed-tab-container-JS")) {
+		var $fixedMoveTab = $(".cm-fixed-tab-list-JS");		// fixed되는 메뉴 클래스
 		var $moveTabItem = $fixedMoveTab.find("li");
 		var menuCount= $moveTabItem.size();
+		var nav = [];
 		
-		startPointCheck();
-		$(window).on('resize', startPointCheck); 
+		$(window).on('load', function  () {
+			checkStartOffset();
+			nav = checkTopOffset();
+		});
+		$(window).on('resize', function  () {
+			checkStartOffset();
+			nav = checkTopOffset();
+		}); 		
 		
-		// Fixed되는 시점, 탭 높이값 측정
-		function startPointCheck () {
-			if ( getWindowWidth() < 1025 ) {
-				fixedHeaderHeight = $("#header").height();
-			}else {
-				fixedHeaderHeight = 0
+		// 탭이 붙기 시작하는 지점 체크
+		function checkStartOffset () {
+			var fixedStartPoint =  $(".cm-fixed-tab-container-JS").offset().top - checkFixedHeight();	
+			return fixedStartPoint;
+		}		
+
+		// 해당되는 각각의 영역 상단값 측정
+		function checkTopOffset () {
+			var arr = [];
+			for(var i=0;i < menuCount;i++){
+				arr[i]=$($moveTabItem.eq(i).children("a").attr("href")).offset().top;
 			}
-			fixedTabHeight = $fixedMoveTab.height();
-			fixedStartPoint =  $(".cm-fixed-move-tab-wrapper").offset().top - fixedHeaderHeight;	// 탭이 붙는 지점
-			
-			if ( menuFunc === "moveTab" ) {
-				nav= new Array();
-				for(var i=0;i < menuCount;i++){
-					nav[i]="nav"+i;
-					nav[i]=$($moveTabItem.eq(i).children("a").attr("href")).offset().top - fixedTabHeight - fixedHeaderHeight;
+			return arr;
+		}
+
+		// 스크롤 event 
+		window.addEventListener('scroll', toFit(function  () {
+			// 메뉴fixed
+			// objectFixed($fixedMoveTab, checkStartOffset(), "top-fixed");
+
+			if ( getScrollTop() >  checkStartOffset() ) {
+				$fixedMoveTab.addClass("top-fixed");
+			}else if ( getScrollTop() <  (checkStartOffset() + $fixedMoveTab.height()) ) {
+				$fixedMoveTab.removeClass("top-fixed");
+			}
+
+			$moveTabItem.each(function  (idx) {
+				var eachOffset = nav[idx] -  checkFixedHeight();
+				if( getScrollTop() >= eachOffset ){
+					$moveTabItem.removeClass('selected');
+					$moveTabItem.eq(idx).addClass('selected');
+					// 모바일 드롭메뉴일때
+					if ($.exists($moveTabItem.parents(".cm-drop-menu-box-JS"))) {
+						$fixedMoveTab.find(".cm-drop-open-btn-JS > span").text($moveTabItem.eq(idx).find("em").text());
+					}
+				};
+			});
+			}, {
+		}),{ passive: true })
+		
+		// 클릭 event 
+		$moveTabItem.find("a").click(function  () {
+			var goDiv = $($(this).attr("href")).offset().top - checkFixedHeight() +1;
+			moveScrollTop(goDiv);
+			// 모바일 드롭메뉴일때
+			if ($.exists($(this).parents(".cm-drop-menu-box-JS")) ) {
+				if ( getWindowWidth () < $fixedMoveTab.data("drop-width")+1 ) {
+					$fixedMoveTab.find("ul").slideUp();
 				}
 			}
-		}
-
-		$(window).scroll(function  () {
-			// 메뉴fixed
-			objectFixed($fixedMoveTab, fixedStartPoint);
-			if ( menuFunc === "moveTab" ) { 
-				$moveTabItem.each(function  (idx) {
-					if( getScrollTop() >= nav[idx] ){
-						$moveTabItem.removeClass('selected');
-						$moveTabItem.eq(idx).addClass('selected');
-					};
-				});
-			}
-			
+			 
+			return false;
 		});
-		
-		if ( menuFunc === "moveTab" ) { 
-			$moveTabItem.find("a").click(function  () {
-				var goDiv = $($(this).attr("href")).offset().top - (fixedTabHeight-1) - fixedHeaderHeight;
-				moveScrollTop(goDiv);
-				 
-				return false;
-			});
-		}
 	}
 
-
-	/* *********************** 에디터 관련 ************************ */
+	/* ************************
+	* Func : 에디터관련
+	************************ */
 	if ($.exists(".editor")) {
 		/* 테이블 스크롤넣기 */ 
 		$(".editor table").each(function  () {
@@ -111,35 +159,4 @@ jQuery(function($){
 			}
 		});
 	}
-});
-
-
-$(window).load(function  () {	
-	/* *********************** 리스트의 높이값 맞추기 ************************ */
-	$(".auto-height-list-con").each(function  () {
-		var $autoList = $(this).find(".auto-height-item");	// ul > li
-		var $autoListInner = $autoList.children(".inner-box");	 // ul > li 안에 높이값을 넣는영역
-		var heightDiv = ".inner";				// 높이값을 결정하는 영역		
-		var listNum = $autoList.length;			
-		var resetWidth = $(this).data("reset-width") ; // 높이값을 해제하는 구간
-		
-		autoHeight();
-		$(window).on('resize', autoHeight);
-
-		function  autoHeight(){
-			maxHeight = 0;
-			for (var i=0; i<listNum; i++) {
-				var curHeight = $autoList.eq(i).find(heightDiv).innerHeight();
-				if ( curHeight > maxHeight ) {
-					maxHeight = curHeight;
-				}
-			}
-			//console.log(maxHeight);
-			$autoListInner.height(maxHeight);
-			
-			if ( getWindowWidth() < resetWidth + 1 ){
-				$autoListInner.css('height','auto');
-			}
-		}
-	});
 });

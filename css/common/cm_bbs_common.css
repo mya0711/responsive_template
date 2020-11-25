@@ -65,23 +65,19 @@ display:inline-block; vertical-align:middle; width:30px; height:30px; border:1px
 .custom-check-item-box .custom-check-item{margin:2px 5px}
 .custom-check-item{display:inline-block; vertical-align:middle;}
 .custom-check-item input[type="checkbox"]{display:none; display/*\**/: inline-block\9;} /* ie7, ie8 display:inline-block */
-.custom-check-item label .check-icon{position:relative; top:1px;display:inline-block; width:16px; height:16px; border:1px solid #ddd; vertical-align:middle; display/*\**/: none\9;}
-.custom-check-item label .check-icon i{position:absolute; top:0px; left:0px; display:none; font-size:16px;}
-.custom-check-item label strong{display:inline-block; vertical-align:middle; font-weight:400; margin-left:8px; font-size:15px; color:#333;}
-.custom-check-item input[type="checkbox"]:checked + label .check-icon {border-color:#000}
-.custom-check-item input[type="checkbox"]:checked + label .check-icon i{display:block; color:#000}
+.custom-check-item label{display:inline-block; position:relative; padding-left:22px; color:#333; font-size:15px; letter-spacing:-0.3px; line-height:15px; }
+.custom-check-item label::before{font-family: 'xeicon'; content: "\ea0e"; position:absolute; top:1px; left:0px; font-size:18px; color:#ccc;}
+.custom-check-item input[type="checkbox"]:checked + label::before{color:#000; content: "\e92e";}
 
 /* 공통 :: 라디오 */
 .custom-radio-item-box{margin:0 -5px}
 .custom-radio-item-box .custom-radio-item{margin:2px 5px}
 .custom-radio-item{display:inline-block; vertical-align:middle;}
 .custom-radio-item input[type="radio"]{display:none; display/*\**/: inline-block\9;} /* ie7, ie8 display:inline-block */
-.custom-radio-item label{display:inline-block; position:relative; padding-left:22px; color:#333; font-size:14.5px; letter-spacing:-0.3px; line-height:15px; }
-.custom-radio-item label::before{content:""; position:absolute; top:2px; left:0px; width:14px; height:14px; border:1px solid #cfcfcf; background-color:#fff; -webkit-border-radius:16px;-moz-border-radius:16px;-o-border-radius:16px;border-radius:16px;}
-.custom-radio-item label::after{display:none; content:""; position:absolute; top:6px; left:4px; width:8px; height:8px; background:#000; -webkit-border-radius:8px;-moz-border-radius:8px;-o-border-radius:8px;border-radius:8px;}
+.custom-radio-item label{display:inline-block; position:relative; padding-left:22px; color:#333; font-size:15px; letter-spacing:-0.3px; line-height:15px; }
+.custom-radio-item label::before{font-family: 'xeicon'; content: "\e9c6"; position:absolute; top:1px; left:0px; font-size:18px; color:#ccc;}
 .custom-radio-item label strong{display:inline-block; vertical-align:middle; font-weight:400; font-size:15px; color:#333;}
-.custom-radio-item input[type="radio"]:checked + label::before{border-color:#000}
-.custom-radio-item input[type="radio"]:checked + label::after{display:block; }
+.custom-radio-item input[type="radio"]:checked + label::before{color:#000; content: "\e9c7";}
 
 @media all and (max-width:800px) {
 	/* 공통 :: 버튼  */
@@ -318,16 +314,23 @@ display:inline-block; vertical-align:middle; width:30px; height:30px; border:1px
 	.bbs-write-tbl td{padding:10px 0; border-bottom:1px solid #ddd; }
 	.bbs-write-tbl td .write-input,
 	.bbs-write-tbl td .write-select,
-	.bbs-write-tbl td .write-textarea{width:100% ; border:0; background-color:#f0f0f0; -webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;border-radius:5px;}
+	.bbs-write-tbl td .write-textarea{width:100% ; border:0; max-width:none; background-color:#f0f0f0; -webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;border-radius:5px;}
 	.bbs-write-tbl td .write-textarea{height:80px;}
 	.bbs-write-tbl td .write-sub-txt, .bbs-write-tbl td .write-sub-txt2{display:block; margin-left:0; margin-top:5px; text-align:right; font-size:12px; }
 
 	/* 게시판 :: 쓰기, 문의폼 :: 기타 */
+	.ios-os .bbs-write-tbl .phone-fieldset,
+	.ios-os .bbs-write-tbl .email-fieldset{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
 	.bbs-write-tbl .input-check{padding:5px 0;}
 	.bbs-write-tbl .input-check span{margin-right:15px;}
 	.phone-fieldset .write-input,
-    .phone-fieldset .write-select{width:calc(33.33% - 18px) !important;}
-	.email-fieldset .write-input{width:calc(50% - 14px) !important;}
+    .phone-fieldset .write-select{width:calc(33.33% - 18px) !important; max-width:none !important;}
+	.email-fieldset .write-input{width:calc(50% - 13.5px) !important;}
 	.email-fieldset .write-select{width:100% !important; margin-top:5px; max-width:none;}
 	.bbs-write-tbl .address-btn{min-width:auto; font-size:12px; margin-left:5px; -webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;border-radius:5px;}
 }
