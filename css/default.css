@@ -2,13 +2,13 @@
 /* *******************************************************
  * filename : default.css
  * description : reset / common / editor CSS
- * date : 2019-11-12
+ * date : 2020-11-25
 ******************************************************** */
 
 
 /* *******************
  * description : reset tag
- * date : 2019-11-12
+ * date : 2020-11-25
 ******************* */
 html {
 	overflow-y:scroll;
@@ -579,7 +579,7 @@ textarea{resize:none;}
 
 /* *******************
  * description : common.css
- * date : 2019-11-12
+ * date : 2020-11-25
 ******************* */
 .cm-fl { float:left; }
 .cm-fr { float:right; }

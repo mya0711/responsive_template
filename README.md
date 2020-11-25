@@ -3,10 +3,145 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2020-08-11
+* UpDate :  2020-11-25
   
 
 ## 업데이트 내역
+
+- #### 2020-11-25
+
+  #### * php 파일
+	<code> <b>1. kr/company/sample.php</b></code>
+	* wide컨텐츠 : $content_type="wide"; 
+	* 샘플추가
+
+	<code> <b>2. kr/company/bbs_basic.php → kr/company/sample_bbs.php</b></code>
+	* $lang = 1;	// 언어선택 삭제
+
+	<code> <b>3. kr/company/sample_online.php</b></code>
+	* 온라인문의 샘플로 넣어놓았습니다.
+
+	<code> <b>4. kr/etc/sitemap.php</b></code>
+	* 제이쿼리 수정
+
+	<code> <b>5. kr/etc/sitemap_02.php</b></code>
+	* 사이트맵 02 오류수정
+	
+	<code> <b>6. kr/include/bottom.php</b></code>
+	* <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/scripts.php"; ?> 추가
+
+	<code> <b>7. kr/include/dtd.php</b></code>
+	* 스크립트 하단으로 이동, css정리
+
+	<code> <b>8. kr/include/footer.php</b></code>
+	* 패밀리사이트 수정, 드롭메뉴클래스 수정, 모달레이어 팝업 삭제
+	
+	<code> <b>9. kr/include/footer.php</b></code>
+	* 언어선택 드롭메뉴 클래스 수정
+	* 구글아이콘-> 네이버아이콘으로 변경
+	
+	<code> <b>10. kr/include/scripts.php</b></code>
+	* scripts.php :  스크립트 모음 
+	
+	<code> <b>11. kr/include/top.php</b></code>
+	* nav.js 에서 dep1 사용을위해 변경 
+	* 구글아이콘-> 네이버아이콘으로 변경
+	* wide 컨텐츠 사용을 위해 조건문 추가
+	* 상단 타이틀 스타일 2가지로 축소
+
+	
+	<code> <b>12. kr/index.php, kr/index_fullpage.php</b></code>
+	* 조건부주석 하단으로 이동
+	* splitting 예시 추가
+
+	<code> <b>12. kr/lib/config.php</b></code>
+	* $lang="1";	// 국문 1, 영문 2, 중문 3, 일문 4 추가
+	
+  #### * css 파일
+	<code> <b>1. css/layout.css </b></code>
+	* 전체페이지 word-break:keep-all; 삽입
+	* header, top-menu-fixed => 기존 fixed 클래스에서 top-fixed클래스로 변경
+	* 푸터 레이아웃 색상변경 
+	* top버튼 기존 fixed => bottom-fixed로 수정
+	* Footer 주석 수정, familysite 수정
+	* 비주얼영역 이전,다음 버튼 수정
+	* 전체적으로 네이버아이콘으로 변경
+	* content영역 wide일때 / wide 아닐때 나눔
+	* 상단정보 표시 2가지스타일로 축소
+	* 사이트맵 02 세로 가운데정렬로 수정
+
+
+	<code> <b>2. css/layout_responsive.css </b></code>
+	* 모바일 gnb 아이콘 네이버아이콘으로 변경(before로 사용)
+	* 모바일 gnb 회원메뉴 display:flex로 변경
+
+	<code> <b>3. css/main.css </b></code>
+	* main visual 1텍스트 splitting 사용하여 변경
+	* 화살표 크기지정 삭제 / 스크롤아이콘 제이쿼리에서 css애니메이션으로 변경
+
+	<code> <b>4. css/default.css</b></code>
+	* ios input[type="search"] 초기화 추가, ios input태그 border-radius 초기화
+	* .font-xi:before{font-family:xeicon !important} 추가
+	* split Text 기본 css 추가
+	* br태그 관련 css 추가(m-br / pc-br)
+
+	<code> <b>5. css/content.css, css/content_responsive.css</b></code>
+	* 탭 스타일 클래스이름 수정
+	* 드롭메뉴 스타일 클래스이름 수정
+
+	<code> <b>6. css/common/cm_member.css</b></code>
+	* 이메일,연락처 폼 수정 ( 간격최적화 ) 
+
+	<code> <b>7. css/common/cm_bbs_common.css</b></code>
+	* custom checkbox / radio checkbox 네이버아이콘 before로 수정
+	* 글쓰기폼, 문의폼 수정( 간격최적화 ) 
+
+	<code> <b>8. kr/css/language.css</b></code>
+	* html[lang="ko"]{} 사용
+	* 주석넣어놓음
+	
+
+
+  #### * js 파일
+	<code> <b>1. js/common.js </b></code>
+	* 전체적으로 정리
+	* splitting.js 추가
+
+
+	<code> <b>2. js/functions.js </b></code>
+	* 많이 사용하는 함수만 모아놓은 js
+
+
+	<code> <b>3. js/layer_popup.js </b></code>
+	* addModalLayer() 추가
+	* cm-modal-open-btn 이벤트 수정
+
+	<code> <b>4. js/main.js </b></code>
+	* fullpage onLeave 콜백함수 수정
+	* 메인js 현재 paging 보여주는 기능 추가
+	* 스크롤 아이콘 모션 삭제
+
+	<code> <b>5. js/nav.js </b></code>
+	* 전체적으로 정리 및 수정
+
+	<code> <b>6. js/plugin/jquery.fullPage.js </b></code>
+	* 버전변경 ( fullPage 2.8.6 => fullPage 2.9.7 )
+
+	<code> <b>7. js/plugin/splitting.min.js </b></code>
+	* Splitting js 추가
+	
+	<code> <b>8. js/plugin/swiper.min.js.map </b></code>
+	* swiper.min.js 사용시 필요
+
+	<code> <b>9. js/sub.js </b></code>
+	* 전체적으로 정리 및 수정
+	* 드래그 해주세요 문구 스크립트로 추가
+	* 서브 메뉴 fixed 전체적으로 수정
+	
+	
+
+
+***************************
 
 - #### 2020-08-11
 
