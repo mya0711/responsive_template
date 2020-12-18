@@ -3,10 +3,18 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2020-11-25
+* UpDate :  2020-12-18
   
 
 ## 업데이트 내역
+
+- #### 2020-12-18
+
+  #### * php 파일
+	<code> <b>1. kr/ect/sitemap.php</b></code>
+	* 변수명 변경 ( $gnbList => $sitemapGnbList )
+
+***************************
 
 - #### 2020-11-25
 
