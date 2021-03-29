@@ -22,7 +22,7 @@ Responsive Website Template
 	* ★ Fixed Tab 오류로 인한 클래스추가(top-fixed-object)
 	
 	<code> <b>3. kr/incllude/dtd.php</b></code>
-	* <meta name="theme-color" content="#222222"> 추가
+	* <pre><meta name="theme-color" content="#222222"></pre> 추가
 	* 많이 사용하는 스킨 css만 선언 / 그외는 추가될때 선언해주세요.
 
 	<code> <b>4. kr/incllude/header.php</b></code>
@@ -91,7 +91,7 @@ Responsive Website Template
 	
 	<code> <b>2. js/layer_popup.js</b></code>
 	* 모달 오픈시 팝업닫기버튼으로 포커스 이동할수있도록 추가(웹접근성)
-	* ECS클릭시 모달팝업 닫힐 수 있도록 추가(웹접근성)
+	* ESC클릭시 모달팝업 닫힐 수 있도록 추가(웹접근성)
 
 	<code> <b>3. js/main.js</b></code>
 	* aos-animate클래스 붙는방법 수정(좌우 네비게이션으로 풀페이지 이동시 클래스가 안붙는 오류)
