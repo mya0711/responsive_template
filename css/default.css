@@ -131,7 +131,7 @@ body.mouse button:focus{
 }
 
 /* input 기본 스타일 초기화 */
-input[type="text"],input[type="password"],input[type="file"],
+input[type="text"],input[type="password"],input[type="file"],input[type="search"],input[type="email"],
 select,
 textarea{
    -webkit-border-radius: 0;
@@ -151,6 +151,7 @@ textarea{resize:none;}
 	.ios-os input[type="search"],
 	.ios-os input[type="password"],
 	.ios-os input[type="file"],
+	.ios-os input[type="email"],
 	.ios-os select,
 	.ios-os textarea{
 		    -webkit-appearance: none;

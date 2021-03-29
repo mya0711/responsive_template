@@ -22,9 +22,9 @@ $(document).ready(function  () {
 
 	function checkOsBrowser () {
 		if ( isMobile() ) {
-			$("body").removeClass("is-pc").addClass("is-mobile").addClass("os-"+detectOS());
+			$("body").removeClass("is-pc").addClass("is-mobile").addClass(detectOS()+"-os");
 		}else {
-			$("body").removeClass("is-mobile").addClass("is-pc").addClass("browser-"+detectBrowser());
+			$("body").removeClass("is-mobile").addClass("is-pc").addClass(detectBrowser()+"-browser");
 		}
 	}
 	/* ************************

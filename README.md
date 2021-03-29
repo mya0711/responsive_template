@@ -8,6 +8,18 @@ Responsive Website Template
 
 ## 업데이트 내역
 
+- #### 2021-03-29(2차)
+
+ #### * css 파일
+	<code> <b>1. css/default.css</b></code>
+	* input 기본스타일 초기화 type추가(search,email타입)
+	
+	<code> <b>2. css/common/cm_bbs_common.css</b></code>
+	* paging 네이버아이콘변경 및 first,last css 추가
+
+
+***************************
+
 - #### 2021-03-29
 
   #### * php 파일
@@ -22,7 +34,7 @@ Responsive Website Template
 	* ★ Fixed Tab 오류로 인한 클래스추가(top-fixed-object)
 	
 	<code> <b>3. kr/incllude/dtd.php</b></code>
-	* <pre><meta name="theme-color" content="#222222"></pre> 추가
+	* meta 태그 theme-color  추가
 	* 많이 사용하는 스킨 css만 선언 / 그외는 추가될때 선언해주세요.
 
 	<code> <b>4. kr/incllude/header.php</b></code>

@@ -2,7 +2,7 @@
 /* *******************************************************
  * filename : board.css
  * description : paging, 버튼, 게시판 뷰, 쓰기 등 게시판에 관련된 통합 CSS
- * date : 2020-02-21
+ * date : 2021-03-29
 ******************************************************** */
 
 /* ******************   게시판 :: 공통  ********************** */
@@ -31,8 +31,13 @@
 .paging a{position:relative; display:block; width:30px; height:30px;  line-height:30px; margin:0 2px; border:1px solid #ddd; text-align:center; font-size:13px; color:#868686; letter-spacing:-0.25px; background-color:#fff; }
 .paging a:hover{color:#222;}
 .paging a.cur{border-color:#333; background-color:#333; color:#fff;}
-.paging a.paging-arrow{line-height:28px;}
-.paging i{vertical-align:middle; color:inherit}
+.paging a.paging-arrow i{position:relative; top:-1px; vertical-align:middle; color:inherit; font-size:24px;}
+/* .paging:not(.no-margin) a.paging-prev{margin-right:15px}
+.paging:not(.no-margin) a.paging-next{margin-left:15px} */ 
+.paging .paging-first i,
+.paging .paging-last i{transform:translateX(-8px)}
+.paging .paging-first i:before,
+.paging .paging-last i:before{display:block;width:7px}
 /* Style01 (margin없는형태)  */
 .paging.no-margin a{margin:0; margin-left:-1px}
 .paging.no-margin a.cur{position:relative; z-index:1; background-color:transparent; color:#333;}
@@ -128,17 +133,23 @@
 	/* ~개씩 보기 */
 	.top-view-select-box{margin-left: 10px;}
 	.top-view-select-box select{width:80px;}
+	/* 공통 :: PAGING */
+	.paging:not(.no-margin) a.paging-prev{margin-right:2px}
+	.paging:not(.no-margin) a.paging-next{margin-left:2px}
 	/* 공통 :: SEARCH BOX */
 	.board-search-box .search-subject-select,
 	.board-search-box .search-word{font-size:13px;}
 	.board-search-box .search-subject-select{width:70px}
 	.board-search-box .search-word{width:calc(100% - 70px);}
-	
 	/* 상단 SEARCH BOX */
 	.bbs-top-list-box{margin-bottom:20px}
 	.bbs-top-list-box .board-search-box{clear:both; float:none; width:auto; }
 }
 @media all and (max-width:359px) {
+	/* 공통 :: PAGING */
+	.paging a{margin:0 0 0 -1px}
+	.paging:not(.no-margin) a.paging-prev{margin-right:0}
+	.paging:not(.no-margin) a.paging-next{margin-left:-1px}
 	/* ~개씩 보기 */
 	.top-view-select-box select{width:55px;}
 }
