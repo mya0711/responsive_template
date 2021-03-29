@@ -36,68 +36,68 @@ Responsive Website Template
 	* php버전변경으로 인한 수정 ( $tools => $db )
 
 
-#### * css 파일
-		<code> <b>1. css/default.css</b></code>
-		* 웹접근성을 위해 focus:outline:none 관련된부분 수정
-		* 스킵네비게이션 스타일 수정(가독성을 높이기위해)
-		* ★ split 감싸주는 word태그에 line-height 변경 => g,y 들어갈경우 그부분에 line-height 조정필요
+  #### * css 파일
+	<code> <b>1. css/default.css</b></code>
+	* 웹접근성을 위해 focus:outline:none 관련된부분 수정
+	* 스킵네비게이션 스타일 수정(가독성을 높이기위해)
+	* ★ split 감싸주는 word태그에 line-height 변경 => g,y 들어갈경우 그부분에 line-height 조정필요
 
-		<code> <b>2. css/layout.css</b></code>
-		* ::selectoion 추가
-		* table, th, td{word-break:break-word} 추가
-		* #header .logo : padding-bottom 삭제
-		* 외국어선택 나열방식 추가
-		* #gnb > ul > li > a : height 삭제
-		* li:hover 이벤트됬을때 2차메뉴배경 깔리는부분 삭제 => #gnb.each-menu > ul > li .gnb-2dep.open:before{height:calc(100% + 20px); opacity:1.0;filter:Alpha(opacity=100);}
+	<code> <b>2. css/layout.css</b></code>
+	* ::selectoion 추가
+	* table, th, td{word-break:break-word} 추가
+	* #header .logo : padding-bottom 삭제
+	* 외국어선택 나열방식 추가
+	* #gnb > ul > li > a : height 삭제
+	* li:hover 이벤트됬을때 2차메뉴배경 깔리는부분 삭제 => #gnb.each-menu > ul > li .gnb-2dep.open:before{height:calc(100% + 20px); opacity:1.0;filter:Alpha(opacity=100);}
 
-		<code> <b>3. css/main.css</b></code>
-		* Fullpage일때 레이아웃 선언부분 추가
-		* 메인 공통 타이틀 data-aos 위치변경으로 인한 수정
+	<code> <b>3. css/main.css</b></code>
+	* Fullpage일때 레이아웃 선언부분 추가
+	* 메인 공통 타이틀 data-aos 위치변경으로 인한 수정
 
-		<code> <b>4. css/common/cm_bbs_common.css</b></code>
-		* 3/29일자 수정파일업로드
-		* 공통컬러 추가
-		* paging 관련 클래스 추가(margin없는형태:no-margin / 원형형태 : paging-style02 / 라인형태 : paging-style03
-		* 관리자코멘트부분 css수정
+	<code> <b>4. css/common/cm_bbs_common.css</b></code>
+	* 3/29일자 수정파일업로드
+	* 공통컬러 추가
+	* paging 관련 클래스 추가(margin없는형태:no-margin / 원형형태 : paging-style02 / 라인형태 : paging-style03
+	* 관리자코멘트부분 css수정
 
-		<code> <b>5. css/common/cm_board.css</b></code>
-		* 공통색상추가
-		* 기본리스트 최적화작업 및 아이콘수정
-		* 기본게시판 스킨2~4 최적화수정작업
+	<code> <b>5. css/common/cm_board.css</b></code>
+	* 공통색상추가
+	* 기본리스트 최적화작업 및 아이콘수정
+	* 기본게시판 스킨2~4 최적화수정작업
 
-		<code> <b>6. css/common/cm_gallery.css</b></code>
-		* 3/26일자 수정파일업로드
-		* 갤러리스킨1 : category 색상변경 및 아이콘변경 
-		
-		<code> <b>7. css/common/cm_member.css</b></code>
-		* 2/21일자 수정파일업로드
-		* 로그인폼 가로값 수정
+	<code> <b>6. css/common/cm_gallery.css</b></code>
+	* 3/26일자 수정파일업로드
+	* 갤러리스킨1 : category 색상변경 및 아이콘변경 
+	
+	<code> <b>7. css/common/cm_member.css</b></code>
+	* 2/21일자 수정파일업로드
+	* 로그인폼 가로값 수정
 
-		<code> <b>8. css/common/cm_shopping.css</b></code>
-		* 2/21일자 수정파일업로드
-		* 후기 스킨1, 4번 폼 수정
+	<code> <b>8. css/common/cm_shopping.css</b></code>
+	* 2/21일자 수정파일업로드
+	* 후기 스킨1, 4번 폼 수정
 
-		<code> <b>9. css/common/cm_store.css</b></code>
-		* 2/21일자 수정파일업로드
-		* 매장관리(지도형) 5번 스킨폼 수정
+	<code> <b>9. css/common/cm_store.css</b></code>
+	* 2/21일자 수정파일업로드
+	* 매장관리(지도형) 5번 스킨폼 수정
 
 
-#### * js 파일
-		<code> <b>1. js/common.js</b></code>
-		* 브라우저 체크 및 기기체크 checkOsBrowser() 함수로 변경하여 리사이즈시 적용될수있도록 수정
-		* 스킵네비게이션 html[lang=ko] 가 아닐경우 영문으로 들어가게 수정
-		* 키보드,터치이용시/ 마우스이용시 구분(웹접근성)
-		* 탑버튼 클릭시 포커스가 상단으로 이동할수있도록 수정(웹접근성)
-		
-		<code> <b>2. js/layer_popup.js</b></code>
-		* 모달 오픈시 팝업닫기버튼으로 포커스 이동할수있도록 추가(웹접근성)
-		* ECS클릭시 모달팝업 닫힐 수 있도록 추가(웹접근성)
+  #### * js 파일
+	<code> <b>1. js/common.js</b></code>
+	* 브라우저 체크 및 기기체크 checkOsBrowser() 함수로 변경하여 리사이즈시 적용될수있도록 수정
+	* 스킵네비게이션 html[lang=ko] 가 아닐경우 영문으로 들어가게 수정
+	* 키보드,터치이용시/ 마우스이용시 구분(웹접근성)
+	* 탑버튼 클릭시 포커스가 상단으로 이동할수있도록 수정(웹접근성)
+	
+	<code> <b>2. js/layer_popup.js</b></code>
+	* 모달 오픈시 팝업닫기버튼으로 포커스 이동할수있도록 추가(웹접근성)
+	* ECS클릭시 모달팝업 닫힐 수 있도록 추가(웹접근성)
 
-		<code> <b>3. js/main.js</b></code>
-		* aos-animate클래스 붙는방법 수정(좌우 네비게이션으로 풀페이지 이동시 클래스가 안붙는 오류)
+	<code> <b>3. js/main.js</b></code>
+	* aos-animate클래스 붙는방법 수정(좌우 네비게이션으로 풀페이지 이동시 클래스가 안붙는 오류)
 
-		<code> <b>4. js/sub.js</b></code>
-		* Fixed Tab js 수정 => 스크롤이 0이거나 탭이 fixed되지 않을때 높이값 체크가 안되는 오류
+	<code> <b>4. js/sub.js</b></code>
+	* Fixed Tab js 수정 => 스크롤이 0이거나 탭이 fixed되지 않을때 높이값 체크가 안되는 오류
 
 
 ***************************
