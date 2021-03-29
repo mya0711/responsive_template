@@ -10,14 +10,14 @@ Responsive Website Template
 
 - #### 2021-03-29(2차)
 
- #### * css 파일
+  #### * css 파일
 	<code> <b>1. css/default.css</b></code>
 	* input 기본스타일 초기화 type추가(search,email타입)
 	
 	<code> <b>2. css/common/cm_bbs_common.css</b></code>
 	* paging 네이버아이콘변경 및 first,last css 추가
 
-#### * js 파일
+  #### * js 파일
 	<code> <b>1. js/common.js</b></code>
 	*checkOsBrowser() 수정
 
