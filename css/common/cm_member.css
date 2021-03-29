@@ -2,7 +2,7 @@
 /* *******************************************************
  * filename : member.css
  * description : 로그인,회원가입,회원정보 수정등 회원메뉴에 관련된  CSS
- * date : 2020-11-25
+ * date : 2020-02-21
 ******************************************************** */
 
 /* ******************   공통  ********************** */
@@ -62,7 +62,8 @@
 .form-list-icon{text-align:left; margin-bottom:20px;}
 .form-list-icon > li{border:1px solid #ddd; background-color:#fff; padding:0px 10px; margin-top:10px;}
 .form-list-icon > li:first-child{margin-top:0;}
-.form-list-icon > li .login-input{height:54px; width:80%; width:calc(100% - 50px);  background:none; border:0; color:#aaa; font-size:14px;}
+.form-list-icon > li .login-input{height:54px; width:80%; width:100%;  background:none; border:0; color:#aaa; font-size:14px;}
+.form-list-icon > li i + .login-input{width:calc(100% - 50px); }
 .form-list-icon > li .login-input:focus{color:#333;}
 .form-list-icon > li i{vertical-align:middle; color:#888; width:35px;}
 /*  LOGIN :: 아이디저장 및 하단영역 */

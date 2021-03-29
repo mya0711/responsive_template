@@ -28,11 +28,10 @@ $(document).ready(function  () {
 			responsiveWidth: tabletWidth,
 			responsiveHeight : 750,
 			onLeave : function(origin, destination, direction){
-				if ( !($fullPageSection.eq(origin).is(".active-section")) ) {
+				if ( !($fullPageSection.eq(destination-1).is(".active-section")) ) {
 					setTimeout(function  () {
-						$(".section").eq(origin).addClass("active-section");
+						$(".section").eq(destination-1).find(".aos-init").addClass('aos-animate');
 					},500);
-
 				}
 
 				// 사이드바 색상변경

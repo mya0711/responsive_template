@@ -27,7 +27,7 @@ $script_content = $admin_stat->script_content;
 
 <?
 if($bgu=="view" and $idx){ 
-	$idx = $tools->filter($idx);
+	$idx = $db->filter($idx);
 	$row = $db->object("cs_bbs_data","where idx='$idx'");
 	$bbs_title = $row->subject;
 }

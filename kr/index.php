@@ -68,13 +68,13 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 		<!-- ****************** 메인컨텐츠 ********************** -->
 		<section id="mainContent">
 			<!-- ****************** 메인컨텐츠 1 (퀵메뉴) ********************** -->
-			<article id="mainContent1" data-aos="fade-up">
+			<article id="mainContent1">
 				<div class="area-box">
-					<div class="main-tit-box">
+					<div class="main-tit-box" data-aos>
 						<h3 class="main-tit cm-word-split-JS" data-splitting data-css-property="transition" data-speed="0.03" data-speed-delay="0"><strong>메인</strong> 컨텐츠 타이틀</h3>
-						<p class="main-sub-tit"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span> span태그안에 넣으면 모바일에서 줄바꿈이 됩니다.</span></p>
+						<p class="main-sub-tit" data-aos="fade-up"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span> span태그안에 넣으면 모바일에서 줄바꿈이 됩니다.</span></p>
 					</div>
-					<ul class="main-quick-menu-list clearfix">
+					<ul class="main-quick-menu-list clearfix" data-aos="fade-up" data-aos-delay="1000">
 						<li class="quick-menu-item quick-menu-item1">
 							<a href="">
 								<div class="quick-menu-item-inner">
@@ -129,9 +129,9 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 			<!-- ****************** 메인컨텐츠 2 (갤러리) ********************** -->
 			<article id="mainContent2">
 				<div class="area">
-					<div class="main-tit-box">
-						<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
-						<p class="main-sub-tit"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span>타이틀 서브 텍스트가 들어갑니다</span></p>
+					<div class="main-tit-box" data-aos>
+						<h3 class="main-tit cm-word-split-JS" data-splitting data-css-property="transition" data-speed="0.03" data-speed-delay="0"><strong>메인</strong> 컨텐츠 타이틀</h3>
+						<p class="main-sub-tit" data-aos="fade-up"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span> span태그안에 넣으면 모바일에서 줄바꿈이 됩니다.</span></p>
 					</div>
 					<ul class="main-news-list clearfix">
 						<li>
@@ -176,9 +176,9 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 			<!-- ****************** 메인컨텐츠 3 (갤러리 슬라이드) ********************** -->
 			<article id="mainContent3">
 				<div class="area">
-					<div class="main-tit-box">
-						<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
-						<p class="main-sub-tit"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span>타이틀 서브 텍스트가 들어갑니다</span></p>
+					<div class="main-tit-box" data-aos>
+						<h3 class="main-tit cm-word-split-JS" data-splitting data-css-property="transition" data-speed="0.03" data-speed-delay="0"><strong>메인</strong> 컨텐츠 타이틀</h3>
+						<p class="main-sub-tit" data-aos="fade-up"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span> span태그안에 넣으면 모바일에서 줄바꿈이 됩니다.</span></p>
 					</div>
 					<article class="main-gallery-rolling-con">
 						<ul class="bbs-basic-gallery-con">

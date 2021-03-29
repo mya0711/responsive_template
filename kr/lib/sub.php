@@ -20,7 +20,7 @@ if($page_info){
 	}
 }
 if($bgu=="view" and $idx){
-	$idx = $tools->filter($idx);
+	$idx = $db->filter($idx);
 	$row_t = $db->object("cs_bbs_data","where idx='$idx'");
 	$content = $tools->strCut_utf(strip_tags($row_t->content), 100);
 	$sub_description = $row_t->subject." - ".$content;

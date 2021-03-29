@@ -2,13 +2,13 @@
 /* *******************************************************
  * filename : default.css
  * description : reset / common / editor CSS
- * date : 2020-11-25
+ * date : 2021-03-29
 ******************************************************** */
 
 
 /* *******************
  * description : reset tag
- * date : 2020-11-25
+ * date : 2021-03-29
 ******************* */
 html {
 	overflow-y:scroll;
@@ -125,7 +125,8 @@ button{
 	border:0px;
 	background:none;
 }
-a:focus, button:focus{
+body.mouse a:focus, 
+body.mouse button:focus{
 	outline:none;
 }
 
@@ -683,7 +684,7 @@ a:hover .over-bg{
 } 
 
 /* Skip Navgation */
-.cm-accessibility a { position:absolute; text-align:center; width:200px; display:block; background:#222; color:#fff; left:-9999px; }
+.cm-accessibility a { position:absolute; text-align:center; width:200px; padding:10px 0; display:block; background:#222; color:#fff; left:-9999px; font-size:16px ; font-weight:500;}
 .cm-accessibility a:hover { z-index:999999; margin-left:-100px; left:50%; }
 .cm-accessibility a:focus { z-index:999999; margin-left:-100px; left:50%; }
 .cm-accessibility a:active { z-index:999999; margin-left:-100px; left:50%; }
@@ -708,7 +709,7 @@ a:hover .over-bg{
 /* Split Text (plugin) */
 .cm-word-split-JS{overflow:hidden; opacity:0; }
 .cm-word-split-JS.splitting{opacity:1.0; }
-.cm-word-split-JS.splitting .word{overflow:hidden; line-height:1.4; display:inline-block;}
+.cm-word-split-JS.splitting .word{overflow:hidden; line-height:1.1; display:inline-block;}
 .cm-word-split-JS.splitting .char{display:inline-block; position:relative; font-size:inherit; font-family:inherit; font-weight:inherit; opacity:0; }
 
 /* br tag */

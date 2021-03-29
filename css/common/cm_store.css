@@ -348,25 +348,30 @@ box-sizing: border-box;}
 
 
 /* ******************  매장관리 :: 매장관리 05(지도형) ********************** */
-/* 지도 :: 이미지 */
-#mapImageCon{float:left; width:380px; text-align:center;}
-#storeSearchCon{float:left; margin-left:20px; width:calc(100% - 400px);}
+/* 지도 :: 레이아웃 및 공통 */
+#mapImageCon{float:left; width:50%; text-align:center; margin-top:20px;}
+#storeSearchCon{float:left; width:50%;}
+.store-list-style05-wrapper .map-search-tit{display:block; font-weight:500; font-size:20px; letter-spacing:-0.25px; color:#222; margin-bottom:15px;}
+.store-list-style05-wrapper .map-search-sub-txt{font-weight:400; font-size:15px; letter-spacing:-0.25px; color:#555; line-height:1.5}
 /* 지도 :: 검색 */
-.store-list-style05-map .map-search-con{padding:20px; border:1px solid #ddd; margin-bottom:20px;}
-.store-list-style05-map .map-search-con .search-title{margin-bottom:15px; color:#333; font-size:15px;}
-.store-list-style05-map .store-search-tbl{}
+.store-list-style05-map .map-search-con{padding:0 40px; border:1px solid #ddd; margin-bottom:20px;}
+.store-list-style05-map .map-search-sec{padding:55px 0;}
+.store-list-style05-map .map-search-sec:first-child{border-bottom:1px solid #e2e2e2;}
+.store-list-style05-map .store-search-tbl{width:100%}
 .store-list-style05-map .store-search-tbl th,
-.store-list-style05-map .store-search-tbl td{padding:7px 0;}
+.store-list-style05-map .store-search-tbl td{padding:5px 0; text-align:left; font-size:15px; color:#222; font-weight:400}
 .store-list-style05-map .store-search-tbl td input[type="text"],
-.store-list-style05-map .store-search-tbl td select{border:1px solid #ccc;}
-.store-list-style05-map .store-search-tbl td input[type="text"]{height:30px; width:calc(100% - 70px);}
-.store-list-style05-map .store-search-tbl td select{height:34px; width:100px;}
-.store-list-style05-map .search-btn{display:inline-block; height:34px; line-height:30px; width:50px; text-align:center; background-color:#333; color:#fff; margin-left:5px; vertical-align:middle;}
+.store-list-style05-map .store-search-tbl td select{height:50px; border:1px solid #ddd;}
+.store-list-style05-map .store-search-tbl td .area-select-con{margin:0 -5px}
+.store-list-style05-map .store-search-tbl td .area-select-con select{float:left; width:calc(50% - 10px); margin:0 5px;}
+.store-list-style05-map .store-search-tbl td input[type="text"]{width:calc(100% - 125px);}
+.store-list-style05-map .search-btn{display:inline-block; height:50px; line-height:30px; width:115px; text-align:center; background-color:#222; color:#fff; margin-left:6px; vertical-align:middle;}
 /* 지도 :: 검색결과 */
+#mapResultList{margin-top:50px}
 .store-result-list-tbl{width:100%; }
-.store-result-list-tbl th{height:40px; font-size:14px; border-top:1px solid #ccc; color:#333;}
+.store-result-list-tbl th{height:50px; font-size:14px; border-top:1px solid #333; color:#333;}
 .store-result-list-tbl th,.store-result-list-tbl td{border-bottom:1px solid #ccc;}
-.store-result-list-tbl td{padding:10px 0; text-align:center; font-size:13px; line-height:1.2em; letter-spacing:-0.5px; word-break:keep-all;}
+.store-result-list-tbl td{padding:10px 0; text-align:center; font-size:15px; line-height:1.2em; letter-spacing:-0.5px; word-break:keep-all;}
 .store-result-list-tbl .store-img {width:100px; height:70px; border:1px solid #ddd; margin:0 auto;}
 .store-result-list-tbl .store-img img {width:100%; height:100%;}
 .store-result-list-tbl .detail-btn,
@@ -377,30 +382,46 @@ box-sizing: border-box;}
 .store-view-style05 h1{height:60px; line-height:60px; font-size:24px; font-weight:500; letter-spacing:-0.5px; text-align:center; padding:0;color:#fff;}
 .store-view-style05-inner{}
 .store-view-style05-inner img{width:100%;}
-
+@media all and (max-width:1024px){
+	#mapImageCon{margin-top:0}
+	.store-list-style05-map .map-search-con{padding:0 15px;}
+	.store-list-style05-map .map-search-sec{padding:45px 0;}
+}
 @media all and (max-width:800px){
-	 #mapImageCon{float:none; margin:0 auto;}
-	 #storeSearchCon {float:none; width:100%; margin-left: 0; margin-top: 20px;}
+	#mapImageCon{float:none; margin:0 auto;}
+	#mapImageCon img{position:relative; left:50%; transform:translateX(-50%)}
+	#storeSearchCon {float:none; width:100%; margin-left: 0; margin-top: 20px;}
+	.store-list-style05-map .map-search-sec{padding:15px 0;}
+	.store-list-style05-map .map-search-sec.txt-box{display:none}
+	.store-list-style05-wrapper .map-search-tit{font-size:16px; margin-bottom:10px;}
+	.store-list-style05-wrapper .map-search-sub-txt{font-size:13px; word-break:keep-all}
 	 /* 지도 :: 검색 */
-	.store-list-style05-map .map-search-con .search-title{display:none;}
+	.store-list-style05-map .map-search-sec .map-search-tit{display:none;}
 	.store-list-style05-map .store-search-tbl tr,
 	.store-list-style05-map .store-search-tbl th,
 	.store-list-style05-map .store-search-tbl td{display:block; text-align:left;}
+	.store-list-style05-map .store-search-tbl td input[type="text"],
+	.store-list-style05-map .store-search-tbl td select{height:30px}
+	.store-list-style05-map .search-btn{height:30px; line-height:30px;}
 	 /* 지도 :: 검색결과 */
-	.store-result-list-tbl{display:block; border-top:1px solid #eee;}
+	.store-result-list-tbl{display:block; border-top:1px solid #ccc;}
 	.store-result-list-tbl tbody,
 	.store-result-list-tbl tr,
 	.store-result-list-tbl td{display:block;}
 	.store-result-list-tbl .head{display:none;}
-	.store-result-list-tbl tr{position:relative; min-height:105px;; padding:10px 0 10px 115px; border-bottom:1px solid #eee;}
+	.store-result-list-tbl tr{position:relative; min-height:105px;; padding:10px 0 10px 115px; border-bottom:1px solid #ccc;}
 	.store-result-list-tbl td.picture{position:absolute; top:10px; left:0px; padding:0}
-	.store-result-list-tbl td{border-bottom:0; position:relative; text-align:left; padding:10px 0 0 22px;}
-	.store-result-list-tbl td.name{font-size:15px; color:#000; font-weight:500; padding:5px 0 0 0}
-	.store-result-list-tbl .detail-btn{width:100%; display:block; height:28px; line-height:28px; background-color:#333; margin-top:5px; color:#fff ;text-align:center; font-weight:300; font-size:11px; letter-spacing:1px;}
-	.store-result-list-tbl i{display:block; position:absolute; top:6px; left:0px; font-size:16px; color:#aaa}
+	.store-result-list-tbl td{border-bottom:0; position:relative; text-align:left; padding:10px 0 0 22px; font-size:13px;}
+	.store-result-list-tbl td.name{font-size:16px; color:#000; font-weight:500; padding:5px 0 0 0}
+	.store-result-list-tbl .detail-btn{width:100%; display:block; height:28px; line-height:28px; background-color:#333; margin-top:5px; color:#fff ;text-align:center; font-weight:300; font-size:10px; letter-spacing:1px;}
+	.store-result-list-tbl i{display:block; position:absolute; top:10px; left:0px; font-size:16px; color:#aaa}
 	 /* 지도 :: 뷰페이지 */
 	 .store-view-style05{width:auto; margin:30px 15px;}
 	 .store-view-style05 h1{height:auto; line-height:normal; font-size:17px; padding-bottom:20px;}
+}
+@media all and (max-width:480px){
+	#mapImageCon img{transform:translateX(-50%) scale(0.8)}
+	#storeSearchCon{margin-top:0}
 }
 
 

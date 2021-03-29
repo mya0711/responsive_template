@@ -17,11 +17,33 @@ $(document).ready(function  () {
 	* Func : 브라우저 체크 및 기기체크
 	* isMobile() 필요
 	************************ */
-	if ( isMobile() ) {
-		$("body").addClass("is-mobile").addClass(detectOS()+"-os");
-	}else {
-		$("body").addClass("is-pc").addClass(detectBrowser()+"-browser");
+	checkOsBrowser();
+	$(window).on('resize', checkOsBrowser);
+
+	function checkOsBrowser () {
+		if ( isMobile() ) {
+			$("body").removeClass("is-pc").addClass("is-mobile").addClass("os-"+detectOS());
+		}else {
+			$("body").removeClass("is-mobile").addClass("is-pc").addClass("browser-"+detectBrowser());
+		}
 	}
+	/* ************************
+	* Func : 스킵네비게이션 영문번역
+	************************ */
+	if ( $("html").attr("lang") != "ko" ) {
+		$(".cm-accessibility a").text("Skip to content");
+	}
+
+	/* ************************
+	* Func : 웹접근성 키보드이용시
+	************************ */
+	$("body").mousemove(function(event) { 
+		$(this).addClass("mouse");
+	});
+	$("body").on("keydown touchstart",function(event) { 
+		$(this).removeClass("mouse");
+	});
+
 		
 	/* ************************
 	* Func : 드롭메뉴 공통
@@ -258,6 +280,7 @@ $(document).ready(function  () {
 			}else {
 				moveScrollTop(0, 300);
 			}
+			$(".logo > a").focus();
 			
 			return false;
 		});

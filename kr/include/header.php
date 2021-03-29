@@ -1,5 +1,5 @@
 	
-	<header id="header" class="">
+	<header id="header" class="top-fixed-object"><!-- .top-fixed가 붙는 object에 top-fixed-object 클래스 추가  -->
 		<div class="gnb-overlay-bg"></div>
 		<div id="headerInnerWrap">
 			<!-- ****************** 헤더상단 ********************** -->
@@ -27,6 +27,13 @@
 							<li><a href="<?=$site_host?>/en/">ENGLISH</a></li>
 							<li><a href="<?=$site_host?>/jp/">JAPANESE</a></li>
 							<li><a href="<?=$site_host?>/cn/">CHINESE</a></li>
+						</ul>
+					</div>
+					<!-- 외국어 선택 2 -->
+					<div class="header-lang-list">
+						<ul class="clearfix">
+							<li class="cur"><a href="<?=$site_host?>/kr/">KOR</a></li>
+							<li><a href="<?=$site_host?>/en/">ENG</a></li>
 						</ul>
 					</div>
 					<!-- 사이트맵 버튼 ( 기본 ) -->

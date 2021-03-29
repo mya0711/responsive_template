@@ -74,7 +74,14 @@ function ajaxLoad(strUrl){
 		url: strUrl,
 		data: "",
 		success: function(resultText){
-			$modalWrap.find(".modal-inner-content").html(resultText);
+			$modalWrap.find(".modal-inner-content").html(resultText).find(".modal-close-btn").focus();
+			$(document).keydown(function(event) {
+				if ( event.keyCode == 27 || event.which == 27 ) {
+					if ( $modalWrap.css("display") == "block" ) {
+						ajaxUnLoad();
+					}
+				}
+			});
 		},
 		error: function() {
 			if ( $("html").attr("lang") == "ko" ) {

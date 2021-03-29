@@ -3,6 +3,8 @@ include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
 include "./lib/config.php";
 include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 ?>
+<!-- fullpage css -->
+<link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/jquery.fullPage.css" />
 </head>
 
 <body>
@@ -65,6 +67,9 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 			<div class="main-scroll-icon">
 				<span>SCROLL DOWN</span>
 			</div>
+			<aside class="main-visual-conuter">
+				<div class="area-box"><span class="cur-num">1</span><em class="middle">/</em><span class="total-num"></span></div>
+			</aside>
 		</section>
 		<!-- ****************** 메인 컨텐츠1 ********************** -->
 		<section id="mainContent1" class="section" style="background:#fff url(<?=$site_host?>/images/main/main_visual_02.jpg) no-repeat 50% 50%; background-size:cover;">

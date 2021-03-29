@@ -288,7 +288,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						<!-- Start -->
 						<!-- <article class="cm-fixed-tab-container-JS">
 							<aside class="sub-tab-wrapper-style">
-								<div class="sub-tab-list-style cm-fixed-tab-list-JS">
+								<div class="sub-tab-list-style cm-fixed-tab-list-JS top-fixed-object">
 									<div class="area">
 										<ul class="clearfix cm-drop-list">
 											<li class="selected"><a href="#fixedContent1"><em>Fixed Move 1</em></a></li>
@@ -328,7 +328,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						<!-- Start -->
 						<article class="cm-fixed-tab-container-JS">
 							<aside class="sub-tab-wrapper-style">
-								<div class="sub-tab-list-style sub-drop-menu-style cm-fixed-tab-list-JS cm-drop-menu-box-JS" data-drop-width="800" data-drop-event="click">
+								<div class="sub-tab-list-style sub-drop-menu-style cm-fixed-tab-list-JS cm-drop-menu-box-JS top-fixed-object" data-drop-width="800" data-drop-event="click">
 									<div class="area">
 										<a href="javascript:;" class="sub-drop-open-btn-style cm-drop-open-btn-JS"><span>Fixed Move 1</span><i class="xi-caret-down-min arrow"></i></a>
 										<ul class="clearfix cm-drop-list-JS">

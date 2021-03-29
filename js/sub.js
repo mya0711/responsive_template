@@ -99,6 +99,15 @@ $(document).ready(function  () {
 			}
 			return arr;
 		}
+		
+		// 스크롤 0일때 상단fixed되는 높이값 체크
+		function checkFixedObjectHeight () {
+			var fixedObjectTotalHeight = 0;
+			for (var i=0; i<$(".top-fixed-object").length; i++) {
+				var fixedObjectTotalHeight = fixedObjectTotalHeight + $(".top-fixed-object").eq(i).outerHeight();
+			}
+			return fixedObjectTotalHeight;
+		}
 
 		// 스크롤 event 
 		window.addEventListener('scroll', toFit(function  () {
@@ -127,8 +136,20 @@ $(document).ready(function  () {
 		
 		// 클릭 event 
 		$moveTabItem.find("a").click(function  () {
-			var goDiv = $($(this).attr("href")).offset().top - checkFixedHeight() +1;
-			moveScrollTop(goDiv);
+			var goDivOffset = $($(this).attr("href")).offset().top - checkFixedHeight() +1;	// 이동해야할 지점
+			if ( getScrollTop()  < checkStartOffset()) {
+				if ( getScrollTop() == 0 ) {
+					var goDiv = goDivOffset - checkFixedObjectHeight();
+				}else {
+					var goDiv = goDivOffset - $fixedMoveTab.height();
+				}
+			}else {
+				var goDiv = goDivOffset;
+			}
+			setTimeout(function  () {
+				moveScrollTop(goDiv);
+			});
+
 			// 모바일 드롭메뉴일때
 			if ($.exists($(this).parents(".cm-drop-menu-box-JS")) ) {
 				if ( getWindowWidth () < $fixedMoveTab.data("drop-width")+1 ) {

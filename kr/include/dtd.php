@@ -29,6 +29,7 @@
 <meta name="Googlebot" content="All" />
 <meta name="Googlebot" content="<?=$site_robots?>" />
 <meta name="Robots" content="<?=$site_robots?>">
+<meta name="theme-color" content="#222222">
 <link rel="canonical" href="<?=$site_host?>">
 <link rel="stylesheet" href="<?=$site_host?>/css/default.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/layout.css">
@@ -44,15 +45,11 @@
 <link rel="stylesheet" href="<?=$site_host?>/css/common/cm_bbs_common.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/common/cm_board.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/common/cm_gallery.css" />
-<link rel="stylesheet" href="<?=$site_host?>/css/common/cm_faq.css" />
-<link rel="stylesheet" href="<?=$site_host?>/css/common/cm_online.css" />
-<link rel="stylesheet" href="<?=$site_host?>/css/common/cm_member.css" />
 <!-- Plugin -->
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/slick.css">
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/jquery.mCustomScrollbar.css">
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/magnific-popup.css">
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/aos.css" />
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/swiper.css" />
-<link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/jquery.fullPage.css" />
 
 <script type="text/javascript" src="<?=$site_host?>/js/vendor/jquery-1.8.3.min.js"></script>
