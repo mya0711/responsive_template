@@ -17,6 +17,10 @@ Responsive Website Template
 	<code> <b>2. css/common/cm_bbs_common.css</b></code>
 	* paging 네이버아이콘변경 및 first,last css 추가
 
+#### * js 파일
+	<code> <b>1. js/common.js</b></code>
+	*checkOsBrowser() 수정
+
 
 ***************************
 
