@@ -2,7 +2,7 @@
 /* *******************************************************
  * filename : gallery.css
  * description : 갤러리형 게시판 관련 CSS
- * date : 2021-03-26
+ * date : 2021-04-21
 ******************************************************** */
 
 /* ******************   갤러리 게시판 :: 갤러리 기본형 G01 ********************** */
@@ -737,4 +737,73 @@
 	.bbs-basic-gallery-con12-list-con li .gallery-info-box .gal-tit{font-size:15px;}
 	.bbs-basic-gallery-con12-list-con li .gallery-info-box .gal-txt{font-size:12px;}
 	.bbs-basic-gallery-con12-list-con li .gallery-info-box .gal-day{font-size:11px}
+}
+
+
+ /* ******************   갤러리 게시판 :: 갤러리 G13 ********************** */
+.gallery-con13-list-con{margin:0 -1%;}
+.gallery-con13-list-con .press-item{float:left; width:31.33%; margin:0 1% 2%;}
+.gallery-con13-list-con .press-item .press-inner{position:relative; overflow:hidden; display:block; }
+.gallery-con13-list-con .press-item .press-inner .thumb{position:relative; overflow:hidden; display:block; height:0; padding-top:100%;}
+.gallery-con13-list-con .press-item .press-inner .press-cover{position:absolute; top:0px; left:0px; right:0px; bottom:0px;}
+.gallery-con13-list-con .press-item .press-inner .press-cover:before{position:absolute; bottom:0px; left:0px; right:0px; height:0%; background-color:#333; content:""; transition:height 0.7s cubic-bezier(0.22, 0.16, 0, 0.91); }
+.gallery-con13-list-con .press-item .press-inner .press-cover-inner{position:relative; box-sizing:border-box; height:100%; z-index:1; padding:40px; color:#fff; font-size:16px; line-height:1.5;  opacity:0; transition:opacity 0.5s cubic-bezier(0.22, 0.16, 0, 0.91) 0s; }
+.gallery-con13-list-con .press-item .press-inner .press-cover-inner dl{ margin-bottom:2em;}
+.gallery-con13-list-con .press-item .press-inner .press-cover-inner dl dt{font-size:1.25em; line-height:1.6; font-weight:500; margin-bottom:1em;}
+.gallery-con13-list-con .press-item .press-inner .press-cover-inner dl dd{font-size:1em; opacity:0.5}
+.gallery-con13-list-con .press-item .press-inner .press-cover-inner .press-date-info{font-size:0.93em; opacity:0.5;}
+.gallery-con13-list-con .press-item .press-inner .press-cover-inner .press-more-btn{position:absolute; bottom:40px; left:40px; color:#fff; font-size:1.375em}
+@media all and (min-width:801px){
+	.gallery-con13-list-con .press-item .press-inner:hover .press-cover:before{height:100%;}
+	.gallery-con13-list-con .press-item .press-inner:hover .press-cover-inner{opacity:1; transition-delay:0.3s; transition-duration:1s}
+}
+@media all and (max-width:1220px){
+	.gallery-con13-list-con .press-item .press-inner .press-cover-inner{padding:20px}
+	.gallery-con13-list-con .press-item .press-inner .press-cover-inner .press-more-btn{bottom:20px; left:20px;}
+	.gallery-con13-list-con .press-item .press-inner .press-cover-inner dl dd{display:none;}
+}
+@media all and (max-width:800px){
+	.press-list-con{margin:0;}
+	.gallery-con13-list-con .press-item{float:none; width:auto; margin:0 0 10px 0;}
+	.gallery-con13-list-con .press-item .press-inner{border:1px solid #eee; padding:10px; min-height:100px;}
+	.gallery-con13-list-con .press-item .press-inner .thumb{position:absolute; top:10px; left:10px; width:100px; padding-top:100px;}
+	.gallery-con13-list-con .press-item .press-inner .press-cover{position:static; padding-top:5px;}
+	.gallery-con13-list-con .press-item .press-inner .press-cover-inner{height:auto; opacity:1.0; padding:0 30px 0 110px; font-size:12px; color:#333;}
+	.gallery-con13-list-con .press-item .press-inner .press-cover-inner .press-more-btn{bottom:-5px; left:auto; right:5px; color:#333;}
+}
+
+
+ /* ******************   갤러리 게시판 :: 갤러리 G14 ********************** */
+.gallery-con14-list-con{overflow:hidden; margin: 0px -1%; }
+.gallery-con14-list-con li{float:left; width:31.33%; margin:0 1%  2%; }
+.gallery-con14-list-con li a{display:block; position:relative; -webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;-ms-transition:all 0.3s;transition:all 0.3s;}
+.gallery-con14-list-con li a .gallery-thum-box{position: relative; padding-top: 60.25%; overflow: hidden;}	/* padding-top 으로 이미지의 비율 조정 */
+.gallery-con14-list-con li a .gallery-thum {position: absolute; top: 0; left: 0; right: 0; bottom: 0; display:block; overflow:hidden;}
+.gallery-con14-list-con li a .gallery-thum img{position: absolute; top: 0; left: 0; width: 100%; height: 100%; -webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;transition:all 0.3s;}
+.gallery-con14-list-con li a .gallery-txt-con{position:relative; padding:1em 0; font-size:15px;}
+.gallery-con14-list-con li a .gal-category{display:inline-block; min-width:30px; padding:8px 10px; text-align:center; font-size:0.93em; margin-bottom:1em; background-color:#aaa; color:#fff; z-index:1;}
+.gallery-con14-list-con li a .gal-category.ing{background-color:#f58020; }
+.gallery-con14-list-con li a .gal-tit{display:block; white-space:nowrap; overflow:hidden;text-overflow:ellipsis; font-size:1.33em; color:#222; font-weight:500; letter-spacing:-0.75px; margin-bottom:1em;}
+.gallery-con14-list-con li a .gallery-txt-con .gal-day{display:block; line-height:2; color:#666; font-size:1em; font-weight:300;}
+.gallery-con14-list-con li a .gallery-txt-con .gal-day dt,
+.gallery-con14-list-con li a .gallery-txt-con .gal-day dd{display:inline-block; vertical-align:middle;}
+.gallery-con14-list-con li a .gallery-txt-con .gal-day i{font-size:1.06em; vertical-align:middle; margin-top:-2px; margin-right:5px;}
+.gallery-con14-list-con li a:hover{border-color:#1958a3}
+.gallery-con14-list-con li a:hover .gallery-thum img {
+	-webkit-transform: scale(1.1) rotate(0.002deg); 
+	-moz-transform: scale(1.1) rotate(0.002deg);
+	-ms-transform: scale(1.1) rotate(0.002deg);
+	-o-transform: scale(1.1) rotate(0.002deg); 
+	transform: scale(1.1) rotate(0.002deg);
+}
+
+@media all and (max-width:800px){
+	.gallery-con14-list-con li{width:48%;}	
+	.gallery-con14-list-con li a .gallery-txt-con{font-size:13px;}
+}
+@media all and (max-width:480px){  
+	.gallery-con14-list-con li{width:auto; float:none; margin:0 0 15px 0}	
+	.gallery-con14-list-con li a{border:1px solid #ddd; padding:10px;}
+	.gallery-con14-list-con li a .gal-category{padding:4px 5px;}
+	.gallery-con14-list-con li a .gallery-txt-con{font-size:12px;}
 }

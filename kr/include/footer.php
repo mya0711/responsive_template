@@ -55,7 +55,7 @@
 		</div>
 	</article>
 	<footer id="footer">
-		<a href="#wrap" class="to-top-btn"><em class="blind">TOP</em><i class="xi-arrow-up"></i></a>
+		<button class="to-top-btn"><em class="blind">TOP</em><i class="xi-arrow-up"></i></button>
 		<div id="footerInner" class="clearfix">
 			<!-- 푸터 상단 -->
 			<article id="footerTop">

@@ -3,10 +3,29 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2021-03-29
+* UpDate :  2021-04-21
   
 
 ## 업데이트 내역
+
+- #### 2021-04-21
+
+  #### * css 파일
+	<code> <b>1. css/layout.css</b></code>
+	* footer 패밀리사이트 오픈 아이콘 반대로된부분 변경
+	* 서브 loaction 메뉴 화살표를 네이버아이콘으로 변경
+	
+	<code> <b>2. css/common/스킨게시판.css</b></code>
+	* makehome 게시판 추가로 업데이트 및 추가
+
+
+
+  #### * php 파일
+	<code> <b>1. /kr/include/footer.php</b></code>
+	* top버튼을 a태그에서 button태그로 변경
+
+
+***************************
 
 - #### 2021-03-29(2차)
 
