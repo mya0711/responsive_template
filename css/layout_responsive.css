@@ -187,16 +187,12 @@
 	.header-search-box{margin-left:5px;}
 	.header-search-inner{
 		position:fixed; left:0; top:80px; 
-		height:38px; width:auto; 
-		border:3px solid #333; 
-		text-align:left; 
+		height:38px; width:100%;; 
+		border-width:3px;
 		padding-right:35px;
-		-webkit-box-sizing: border-box;
-		 box-sizing: border-box; 
 	}
-	.header-search-inner .header-search-inner-box{background-color:#fff; border:0; padding-right:34px}
-	.header-search-inner .header-search-btn{right:34px;}
-	.header-search-inner .header-search-close-btn{top:0; right:-3px; border:0; height:100%; width:38px; border-radius:0;}
+	.header-search-inner .header-search-btn{right:40px;}
+	.header-search-inner .header-search-close-btn{height:100%; width:38px; border-radius:0;}
 }
 @media all and ( max-width: 480px ){
 	#header,#headerInnerWrap{height:60px;}

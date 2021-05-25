@@ -13,7 +13,7 @@ $(document).ready(function  () {
 		var $fullPage = $("#fullpage");
 		var $fullPageSection = $fullPage.children(".section");
 		if ( detectBrowser() === "ie") {
-			var scroll_speed = 500;
+			var scroll_speed = 600;
 		}else {
 			var scroll_speed = 800;
 		}
@@ -30,7 +30,7 @@ $(document).ready(function  () {
 			onLeave : function(origin, destination, direction){
 				if ( !($fullPageSection.eq(destination-1).is(".active-section")) ) {
 					setTimeout(function  () {
-						$(".section").eq(destination-1).find(".aos-init").addClass('aos-animate');
+						$(".section").eq(destination-1).addClass("active-section");
 					},500);
 				}
 
@@ -120,7 +120,7 @@ $(document).ready(function  () {
 		arrows: true,
 		fade: false,
 		dots:false,
-		autoplay: true,
+		autoplay: false,
 		speed:800,
 		infinite:true,
 		autoplaySpeed: 3000,
@@ -153,7 +153,7 @@ $(document).ready(function  () {
 		arrows: true,
 		fade: false,
 		dots:false,
-		autoplay: true,
+		autoplay: false,
 		speed:800,
 		infinite:true,
 		autoplaySpeed: 3000,
@@ -169,7 +169,7 @@ $(document).ready(function  () {
 		arrows: false,
 		fade: true,
 		dots:false,
-		autoplay: true,
+		autoplay: false,
 		speed:800,
 		infinite:true,
 		autoplaySpeed: 3000,

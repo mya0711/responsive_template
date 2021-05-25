@@ -66,8 +66,9 @@
 		<div id="middleArea">
 			<!-- ****************** 서브메뉴 ********************** -->
 			<?if($page_section != "search" ){?>
+			<!--  모든 서브메뉴 : fixed될때 fixed-sub-menu, top-fixed-object 클래스 추가  -->
 			<!-- 서브메뉴1 -->
-			<aside id="topMenu01" class="fixed-sub-menu top-fixed-object"><!--  서브메뉴가 fixed될때 fixed-sub-menu 추가 --> <!-- .top-fixed가 붙는 object에 top-fixed-object 클래스 추가  -->
+			<aside id="topMenu01" class="fixed-sub-menu top-fixed-object">
 				<div class="side-menu-inner">
 					<div class="area">
 						<ul class="snb sub-menu-<?=$page_section?> clearfix">
@@ -78,7 +79,7 @@
 			</aside>
 			<!-- // -->
 			<!-- 서브메뉴 2 -->
-			<aside id="topMenu02" class=""><!--  서브메뉴가 fixed될때 fixed-sub-menu 추가 -->
+			<aside id="topMenu02" class="">
 				<div class="side-menu-inner">
 					<div class="area">
 						<ul class="snb sub-menu-<?=$page_section?> clearfix">
@@ -90,7 +91,7 @@
 			<!-- // -->
 			
 			<!-- 서브메뉴 3 -->
-			<aside id="topMenu03" class=""><!--  서브메뉴가 fixed될때 fixed-sub-menu 추가 -->
+			<aside id="topMenu03" class="">
 				<div class="side-menu-inner">
 					<div class="area">
 						<ul class="snb sub-menu-<?=$page_section?>">
@@ -102,7 +103,7 @@
 			<!-- // -->
 
 			<!-- 서브메뉴 4(PC,모바일 모두사용가능) -->
-			<aside id="topMenu04" class=""><!--  서브메뉴가 fixed될때 fixed-sub-menu 추가 -->
+			<aside id="topMenu04" class="">
 				<div class="side-menu-inner">
 					<div class="cm-top-menu area clearfix">
 						<a href="<?=$site_url?>/" class="location-to-home-btn" title="메인으로"><i class="xi-home"></i></a>
@@ -183,7 +184,7 @@
 			<section id="content" class="<?if($content_type == "wide"){?>wide<?}else{?>area<?}?>">
 				<!-- ****************** 상단정보 ********************** -->
 				<!-- 상단정보 (기본/센터정렬) -->
-				<aside id="contentInfoCon">
+				<aside id="contentInfoCon" class="area">
 					<h3 class="content-tit"><?if($sub_info){?><?=$sub_info?><?}else{?><?=$page_info?><?}?></h3>
 					<p class="content-sub-tit">언제나 처음 시작하였던 다짐과 포부로 미래를 열어가겠습니다. </p>
 				</aside>

@@ -25,17 +25,19 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 	<!-- container -->
 	<div id="fullpage">
 		<!-- ****************** 메인비주얼 ********************** -->
-		<section id="mainVisual" class="section" style="background:#fff url(<?=$site_host?>/images/main/main_visual_01.jpg) no-repeat 50% 50%; background-size:cover;">
-			<div class="main-visual-con">
+		<section id="mainVisual" class="section">
+			<article class="main-visual-con">
 				<div class="main-visual-item">
 					<div class="main-visual-pc-img" style="background:#fff url(<?=$site_host?>/images/main/main_visual_01.jpg) no-repeat 50% 50%;"></div>
 					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_01_m.jpg" alt="메인비주얼 모바일 이미지 1" /></div>	<!-- 모바일이미지 -->
 					<div class="main-visual-txt-con">
-						<div class="main-visual-txt-inner area-box">
-							<strong class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3">giantsoft Stand in the world giantsoft Stand in the world  11</strong>
-							<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
-							<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
-							<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
+						<div class="main-visual-txt-box area-box">
+							<div class="main-visual-txt-inner">
+								<strong class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3">giantsoft Stand in the world giantsoft Stand in the world  11</strong>
+								<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
+								<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
+								<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -43,27 +45,17 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					<div class="main-visual-pc-img" style="background:#fff url(<?=$site_host?>/images/main/main_visual_02.jpg) no-repeat 50% 50%;"></div>
 					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_02_m.jpg" alt="메인비주얼 모바일 이미지 2" /></div>	<!-- 모바일이미지 -->
 					<div class="main-visual-txt-con">
-						<div class="main-visual-txt-inner area-box">
-							<strong class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3">giantsoft Stand in the world giantsoft Stand in the world  22</strong>
-							<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
-							<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
-							<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
+						<div class="main-visual-txt-box area-box">
+							<div class="main-visual-txt-inner">
+								<strong class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3">giantsoft Stand in the world giantsoft Stand in the world  11</strong>
+								<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
+								<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
+								<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="main-visual-item">
-					<div class="main-visual-pc-img" style="background:#fff url(<?=$site_host?>/images/main/main_visual_02.jpg) no-repeat 50% 50%;"></div>
-					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_02_m.jpg" alt="메인비주얼 모바일 이미지 2" /></div>	<!-- 모바일이미지 -->
-					<div class="main-visual-txt-con">
-						<div class="main-visual-txt-inner area-box">
-							<strong class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3">giantsoft Stand in the world giantsoft Stand in the world  33</strong>
-							<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
-							<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
-							<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
-						</div>
-					</div>
-				</div>
-			</div>
+			</article>
 			<div class="main-scroll-icon">
 				<span>SCROLL DOWN</span>
 			</div>
@@ -74,11 +66,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 		<!-- ****************** 메인 컨텐츠1 ********************** -->
 		<section id="mainContent1" class="section" style="background:#fff url(<?=$site_host?>/images/main/main_visual_02.jpg) no-repeat 50% 50%; background-size:cover;">
 			<div class="area-box">
-				<div class="main-tit-box" data-aos="fade-up" data-aos-duration="1000">
+				<div class="main-tit-box">
 					<h3 class="main-tit cm-word-split-JS" data-splitting data-css-property="transition" data-speed="0.03" data-speed-delay="0"><strong>메인</strong> 컨텐츠 타이틀</h3>
 					<p class="main-sub-tit"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span>타이틀 서브 텍스트가 들어갑니다</span></p>
 				</div>
-				<ul class="main-quick-menu-list clearfix" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+				<ul class="main-quick-menu-list clearfix">
 					<li class="quick-menu-item quick-menu-item1">
 						<a href="">
 							<div class="quick-menu-item-inner">
@@ -133,11 +125,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 		<!-- ****************** 메인 컨텐츠2  ********************** -->
 		<section id="mainContent2" class="section" style="background:#fff url(<?=$site_host?>/images/main/main_visual_01.jpg) no-repeat 50% 50%; background-size:cover;">
 			<div class="area">
-				<div class="main-tit-box" data-aos="fade-up" data-aos-duration="1000">
+				<div class="main-tit-box">
 					<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
 					<p class="main-sub-tit"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span>타이틀 서브 텍스트가 들어갑니다</span></p>
 				</div>
-				<ul class="main-news-list clearfix" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+				<ul class="main-news-list clearfix">
 					<li>
 						<a href="">
 							<span class="bbs-inner-thumb over-img"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" class="img-full" /></span>
@@ -178,13 +170,13 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 			</div>
 		</section>
 		<!-- ****************** 메인 컨텐츠3  ********************** -->
-		<section id="mainContent3" class="section"style="background:#fff url(<?=$site_host?>/images/main/main_visual_02.jpg) no-repeat 50% 50%; background-size:cover;">
+		<section id="mainContent3" class="section" style="background:#fff url(<?=$site_host?>/images/main/main_visual_02.jpg) no-repeat 50% 50%; background-size:cover;">
 			<div class="area">
-				<div class="main-tit-box" data-aos="fade-up" data-aos-duration="1000">
+				<div class="main-tit-box">
 					<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
 					<p class="main-sub-tit"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span>타이틀 서브 텍스트가 들어갑니다</span></p>
 				</div>
-				<article class="main-gallery-rolling-con" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+				<article class="main-gallery-rolling-con">
 					<ul class="bbs-basic-gallery-con">
 						<li>
 							<a href="">

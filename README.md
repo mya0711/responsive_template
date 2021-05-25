@@ -3,10 +3,55 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2021-04-21
+* UpDate :  2021-05-25
   
 
 ## 업데이트 내역
+
+- #### 2021-05-25
+
+  #### * css 파일
+	<code> <b>1. css/layout.css</b></code>
+	* #header, #headerInner 의 transition 삭제(익스플로러 페이지바뀔때마다 헤더 움직이는 현상으로 삭제)
+	* 헤더 검색박스 css 수정
+	* #gnb.each-menu > ul > li .gnb-2dep 스타일 수정
+	* 탑메뉴 display:table => display:flex로 변경
+
+	<code> <b>2. css/layout_responsive.css</b></code>
+	* 헤더 검색박스 css 수정
+	
+	<code> <b>3. css/main.css</b></code>
+	* 메인비주얼 텍스트영역 transform:translateY(-50%) 삭제 후 flex로 변경
+	* active-section클래스 붙을때 splitting 효과 추가
+	* 컨텐츠5 : background-attachment:fixed 익스플로러 버벅이는 오류로 익스제외 브라우저에서만 사용하도록 변경
+		
+	<code> <b>2. css/common/cm_bbs_common.css</b></code>
+	* 검색 serach box : select 없을때 제대로 나올 수 있도록 수정
+
+
+
+  #### * php 파일
+	<code> <b>1. /kr/index.php</b></code>
+	* 메인텍스트박스 flex변경을 위한 영역추가
+
+	<code> <b>2. /kr/index_fullpage.php</b></code>
+	* 메인텍스트박스 flex변경을 위한 영역추가
+	* data-aos 삭제
+	
+	<code> <b>3. /kr/include/header.php</b></code>
+	* 검색영역 변경
+
+	<code> <b>4. /kr/include/top.php</b></code>
+	* 탑메뉴 주석수정
+	* 상단타이틀영역 area 추가
+
+ #### * js 파일
+	<code> <b>1. /js/main.js</b></code>
+	* fullpage 속도 익스일때 500 -> 600으로 변경
+	* fullpage OnLeave 수정 ( 풀페이지안에서 aos사용하면 버벅이는 이슈로 인하여 삭제 )
+	
+
+***************************
 
 - #### 2021-04-21
 

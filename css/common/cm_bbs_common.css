@@ -55,7 +55,8 @@
 .board-search-box .search-subject-select,
 .board-search-box .search-word{float:left; width:40px; height:40px; border:1px solid #ccc; background-color:#fff; padding:0 10px; font-size:14px; color:#333; letter-spacing:-0.3px;}
 .board-search-box .search-subject-select{width:120px;}
-.board-search-box .search-word{width:calc(100% - 120px); border-left:0; border-right:0;}
+.board-search-box .search-word{width:100%; border-right:0;}
+.board-search-box .search-subject-select + .search-word{width:calc(100% - 120px); border-left:0; }
 .board-search-box .search-subject-select:focus,
 .board-search-box .search-word:focus{color:#333;}
 .board-search-box .search-word::placeholder{color:#333;}
@@ -140,7 +141,7 @@
 	.board-search-box .search-subject-select,
 	.board-search-box .search-word{font-size:13px;}
 	.board-search-box .search-subject-select{width:70px}
-	.board-search-box .search-word{width:calc(100% - 70px);}
+	.board-search-box .search-subject-select + .search-word{width:calc(100% - 70px);}
 	/* 상단 SEARCH BOX */
 	.bbs-top-list-box{margin-bottom:20px}
 	.bbs-top-list-box .board-search-box{clear:both; float:none; width:auto; }

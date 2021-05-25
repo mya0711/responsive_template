@@ -11,11 +11,9 @@
 						<button class="header-search-open-btn" title="검색창열기"><i class="xi-search"></i></button>
 						<div class="header-search-inner">
 							<!-- <form action=""> -->
-								<div class="header-search-inner-box">
-									<label for="headerSearch" class="blind">검색</label>
-									<input type="text" class="header-search-word" id="headerSearch" placeholder="검색어를 입력하세요" />
-									<button class="header-search-btn" type="submit" title="검색" onclick="location.href='<?=$site_url?>/search/'"><i class="xi-search"></i></button>
-								</div>
+							<label for="headerSearch" class="blind">검색</label>
+							<input type="text" class="header-search-word" id="headerSearch" placeholder="검색어를 입력하세요" />
+							<button class="header-search-btn" type="submit" title="검색" onclick="location.href='<?=$site_url?>/search/'"><i class="xi-search"></i></button>
 							<!-- </form> -->
 							<button class="header-search-close-btn" title="검색창닫기"><i class="xi-close-min"></i></button>
 						</div>

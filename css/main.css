@@ -42,10 +42,14 @@
 /* 메인 비주얼 :: 텍스트 */
 .main-visual-item .main-visual-txt-con{
 	position:absolute; 
-	top:50%; left:0px; 
+	left:0px; top:0;
 	width:100%; 
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
+	height:100%;
+}
+.main-visual-item .main-visual-txt-box{
+	display:flex;
+	align-items:center;
+	height:100%;
 }
 .main-visual-item .main-visual-txt-con .main-visual-txt1,
 .main-visual-item .main-visual-txt-con .main-visual-txt2,
@@ -168,6 +172,7 @@
 	animation: text-active-animation 1.5s cubic-bezier(0.4, 0, 0.2, 1) both;
 } */
  /* transition일때 */ 
+.active-section .main-tit.splitting .char,
 .aos-animate .main-tit.splitting .char{
 	opacity:1.0;
 	transform:translateY(0);
@@ -278,7 +283,8 @@
 
 
 /* -------- 메인 컨텐츠 :: 컨텐츠5(FIXED 배너) -------- */
-#mainContent5{padding:110px 0 120px; background:url(/images/main/main_visual_01.jpg) no-repeat 50% 50%; background-size:cover; background-attachment:fixed}
+#mainContent5{padding:110px 0 120px; background:url(/images/main/main_visual_01.jpg) no-repeat 50% 50%; background-size:cover; }
+body:not(.ie-browser) #mainContent5{background-attachment:fixed}
 .main-fixed-con{text-align:center; padding:0 15px; font-size:13px; letter-spacing:-0.55px;}
 .main-fixed-con .main-fixed-sub-tit{color:#fff; font-size:1.923em; padding-bottom:1.6em}
 .main-fixed-con .main-fixed-tit{color:#fff; font-size:2.923em; font-weight:300; letter-spacing:-1px; padding-bottom:1.0em;}

@@ -20,16 +20,18 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 	<div id="mainContainer">
 		<!-- ****************** 메인비주얼 ********************** -->
 		<section id="mainVisual" class="full-height"><!-- 메인 비주얼 높이 full height  -->
-			<div class="main-visual-con">
+			<article class="main-visual-con">
 				<div class="main-visual-item">
 					<div class="main-visual-pc-img" style="background:#fff url(<?=$site_host?>/images/main/main_visual_01.jpg) no-repeat 50% 50%;"></div>
 					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_01_m.jpg" alt="메인비주얼 모바일 이미지 1" /></div>	<!-- 모바일이미지 -->
 					<div class="main-visual-txt-con">
-						<div class="main-visual-txt-inner area-box">
-							<strong class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3">giantsoft Stand in the world giantsoft Stand in the world  11</strong>
-							<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
-							<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
-							<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
+						<div class="main-visual-txt-box area-box">
+							<div class="main-visual-txt-inner">
+								<strong class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3">giantsoft Stand in the world giantsoft Stand in the world  11</strong>
+								<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
+								<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
+								<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -37,27 +39,31 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					<div class="main-visual-pc-img" style="background:#fff url(<?=$site_host?>/images/main/main_visual_02.jpg) no-repeat 50% 50%;"></div>
 					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_02_m.jpg" alt="메인비주얼 모바일 이미지 2" /></div>	<!-- 모바일이미지 -->
 					<div class="main-visual-txt-con">
-						<div class="main-visual-txt-inner area-box">
-							<strong class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3">giantsoft Stand in the world giantsoft Stand in the world  22</strong>
-							<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
-							<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
-							<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
+						<div class="main-visual-txt-box area-box">
+							<div class="main-visual-txt-inner">
+								<strong class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3">giantsoft Stand in the world giantsoft Stand in the world  22</strong>
+								<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
+								<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
+								<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="main-visual-item">
-					<div class="main-visual-pc-img" style="background:#fff url(<?=$site_host?>/images/main/main_visual_02.jpg) no-repeat 50% 50%;"></div>
-					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_02_m.jpg" alt="메인비주얼 모바일 이미지 2" /></div>	<!-- 모바일이미지 -->
+					<div class="main-visual-pc-img" style="background:#fff url(<?=$site_host?>/images/main/main_visual_01.jpg) no-repeat 50% 50%;"></div>
+					<div class="main-visual-m-img"><img src="<?=$site_host?>/images/main/main_visual_01_m.jpg" alt="메인비주얼 모바일 이미지 1" /></div>	<!-- 모바일이미지 -->
 					<div class="main-visual-txt-con">
-						<div class="main-visual-txt-inner area-box">
-							<strong class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3">giantsoft Stand in the world giantsoft Stand in the world  33</strong>
-							<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
-							<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
-							<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
+						<div class="main-visual-txt-box area-box">
+							<div class="main-visual-txt-inner">
+								<strong class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3">giantsoft Stand in the world giantsoft Stand in the world  33</strong>
+								<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
+								<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
+								<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</article>
 			<div class="main-scroll-icon">
 				<span>SCROLL DOWN</span>
 			</div>

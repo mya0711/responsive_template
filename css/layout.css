@@ -2,7 +2,7 @@
 /* *******************************************************
  * filename : layout.css
  * description : 전체 레이아웃 CSS
- * date : 2020-11-25
+ * date : 2021-05-21
 ******************************************************** */
 
 /* ****************** LAYOUT ********************** */
@@ -30,8 +30,7 @@ table, th, td{word-break:break-word;}
 /* ****************** HEADER ********************** */
 #header{
 	position:relative; /* position:absolute; */ height:100px; top:0; left:0; width:100%; z-index:9999; 
-	-webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;-ms-transition:all 0.3s;transition:all 0.3s
-}	/* 배경위에 헤더가있으면 absolute변경 후 headerInnerWrap 배경삭제 */
+}
 .fullpage-wrapper #header{
 	position:fixed;
 }
@@ -40,12 +39,8 @@ table, th, td{word-break:break-word;}
 	-webkit-transition:background-color 0.3s;
 	transition:background-color 0.3s
 }
-#headerInner{
-	position:relative; height:100%; margin:0px auto; padding:0 45px;  
-	-webkit-transition:padding 0.3s;
-	transition:padding 0.3s
-}
-#header .logo{position:relative; z-index:100; float:left; padding-top:30px; }		/* padding값 적절히 바꿔주세요 */
+#headerInner{position:relative; height:100%; margin:0px auto; padding:0 45px; }
+#header .logo{position:relative; z-index:100; float:left; padding-top:30px; }
 #header .logo a{display:block; }
 #header .logo img{display:block; vertical-align:top;}
 
@@ -54,29 +49,41 @@ table, th, td{word-break:break-word;}
 
 /* Header :: 검색버튼 */
 .header-search-box{position:relative; float:left; margin-left:10px; z-index:101; }
-.header-search-box i{font-size:22px; letter-spacing:-0.15px; color:#333;}
+.header-search-box i{font-size:22px;}
 .header-search-open-btn{width:32px; height:32px; color:#333;  border:1px solid #333}
 .header-search-inner{
-	overflow:hidden; position:absolute; top:0px; right:0; width:200px; opacity:0;filter:Alpha(opacity=0); visibility:hidden;
-	-webkit-transition:all 0.5s;-moz-transition:all 0.5s;-o-transition:all 0.5s;-ms-transition:all 0.5s;transition:all 0.5s
+	overflow:hidden; 
+	position:absolute; top:0px; right:0; 
+	width:200px; height:32px; padding-right:65px; 
+	box-sizing:border-box;
+	border:1px solid #333;
+	background-color:#fff;
+	opacity:0;filter:Alpha(opacity=0); 
+	visibility:hidden;
+	-webkit-transition:all 0.5s;
+	transition:all 0.5s
 }	
-.header-search-inner .header-search-inner-box{overflow:hidden; height:32px; border:1px solid #333;  padding-right:64px; }
-.header-search-inner .header-search-word{height:32px; width:100%; vertical-align:top; background-color:transparent; border:0; color:#333; font-size:13px; font-weight:300; text-indent:10px;}
+.header-search-inner .header-search-word{height:30px; width:calc(100% - 30px); vertical-align:top; background-color:transparent; border:0; color:#333; font-size:13px; font-weight:300; text-indent:10px;}
 .header-search-inner .header-search-word::placeholder{color:#333;}
 .header-search-inner .header-search-btn{position:absolute; top:0px; right:32px; width:32px; height:32px;}
 .header-search-inner .header-search-btn i{font-size:20px; line-height:32px;}
-.header-search-inner .header-search-close-btn{position:absolute; top:1px; right:1px; width:32px; height:32px; background-color:#333; color:#fff; border:1px solid #333; }
+.header-search-inner .header-search-close-btn{position:absolute; top:0px; right:0px; width:32px; height:32px; background-color:#333; color:#fff; border:1px solid #333; }
 .header-search-inner .header-search-close-btn i{color:#fff;}
-.header-search-box.open .header-search-inner{display:block;}
 /* 검색 open */
-.header-search-box.open .header-search-inner{visibility:visible; opacity:1.0;filter:Alpha(opacity=100); -webkit-transition:visibility 0.5s, opacity 0.5s;	-moz-transition:visibility 0.5s, opacity 0.5s;-o-transition:visibility 0.5s, opacity 0.5s;-ms-transition:visibility 0.5s, opacity 0.5s;	transition:visibility 0.5s, opacity 0.5s;}
+.header-search-box.open .header-search-inner{
+	opacity:1.0;filter:Alpha(opacity=100); 
+	visibility:visible; 
+	-webkit-transition:visibility 0.5s, opacity 0.5s;	
+	transition:visibility 0.5s, opacity 0.5s;
+}
 @media all and ( min-width: 801px ){
-	.header-search-inner .header-search-inner-box{
+	.header-search-inner .header-search-inner{
 		  -webkit-transform: translateX(0);
 		  transform: translateX(10px);
-		-webkit-transition:all 0.2s;	-moz-transition:all 0.2s;-o-transition:all 0.2s;-ms-transition:all 0.2s;transition:all 0.2s
+		-webkit-transition:all 0.2s;
+		transition:all 0.2s;
 	}
-	.header-search-box.open .header-search-inner .header-search-inner-box{
+	.header-search-box.open .header-search-inner{
 		  -webkit-transform: translateX(0);
 		  transform: translateX(0);
 	}
@@ -183,7 +190,7 @@ table, th, td{word-break:break-word;}
 #gnb.each-menu > ul > li .gnb-2dep{
 	/* display:none; */
 	position:absolute; 
-	top:100px; 
+	top:80px; 
 	left:0px; 
 	z-index:99;
 	width:100%; 
@@ -192,16 +199,21 @@ table, th, td{word-break:break-word;}
 	opacity:0;filter:Alpha(opacity=0);
 }
 #gnb.each-menu > ul > li .gnb-2dep:before{
-	content:""; position:absolute; top:-20px; left:0px; right:0px; height:0; opacity:0;filter:Alpha(opacity=0); background-color:#f57f20; 
-	-webkit-transition:all 0.4s; transition:all 0.4s
+	content:""; 
+	position:absolute; top:0px; left:0px; right:0px; 
+	height:0; 
+	opacity:0;filter:Alpha(opacity=0); 
+	background-color:#f57f20; 
+	-webkit-transition:all 0.4s; 
+	transition:all 0.4s;
 }
-#gnb.each-menu > ul > li .gnb-2dep ul{padding:0px 0px 15px 0;}
+#gnb.each-menu > ul > li .gnb-2dep ul{padding:15px 0px;}
 #gnb.each-menu > ul > li .gnb-2dep ul li{position:relative; padding:8px 10px; opacity:0;filter:Alpha(opacity=0);-webkit-transition:all 0s 0s;-moz-transition:all  0s 0s;-o-transition:all  0s 0s;-ms-transition:all  0s 0s;transition:all  0s 0s; }
 #gnb.each-menu > ul > li .gnb-2dep ul li a{display:block; color:#fff; font-size:14px; font-weight:400; text-align:center; line-height:1.4; opacity:0.9;filter:Alpha(opacity=90);}
 #gnb.each-menu > ul > li .gnb-2dep ul li a:hover{opacity:1.0;filter:Alpha(opacity=100);}
 /* over했을때 */
 #gnb.each-menu > ul > li .gnb-2dep.open{visibility:visible; opacity:1.0;filter:Alpha(opacity=100);}
-#gnb.each-menu > ul > li .gnb-2dep.open:before{height:calc(100% + 20px); opacity:1.0;filter:Alpha(opacity=100);}
+#gnb.each-menu > ul > li .gnb-2dep.open:before{height:100%; opacity:1.0;filter:Alpha(opacity=100);}
 #gnb > ul > li .gnb-2dep.open ul li{opacity:1.0;filter:Alpha(opacity=100); -webkit-transition:all 0.8s;-moz-transition:all 0.8s;-o-transition:all 0.8s;-ms-transition:all 0.8s;transition:all 0.8s;}
 #gnb > ul > li .gnb-2dep.open ul li:nth-child(1){-webkit-transition-delay: 0.1s; transition-delay:0.1s;}
 #gnb > ul > li .gnb-2dep.open ul li:nth-child(2){-webkit-transition-delay: 0.2s; transition-delay:0.2s;}
@@ -382,7 +394,7 @@ table, th, td{word-break:break-word;}
 /*  SUB LAYOUT :: 서브메뉴(스타일1) */
 #topMenu01{position:relative; width:100%;height:70px; }
 #topMenu01 .side-menu-inner{text-align:center; width:100%; height:69px; border-bottom:1px solid #ddd; background-color: #fff;}
-#topMenu01 .side-menu-inner ul{display:inline-block; *display:inline;*zoom:1;}
+#topMenu01 .side-menu-inner ul{display:flex; align-items:center; justify-content:center;}
 #topMenu01 .side-menu-inner ul li{float:left; max-width:200px;} /* max-width 자유롭게 수정 */
 #topMenu01 .side-menu-inner ul li > a{
 	display:block; 
@@ -420,12 +432,10 @@ table, th, td{word-break:break-word;}
 /* SUB LAYOUT :: 서브메뉴(스타일2) */
 #topMenu02{position:relative; width:100%;height:70px; }
 #topMenu02 .side-menu-inner{text-align:center; width:100%; height:69px; border-bottom:1px solid #ddd; background-color: #fff;}
-#topMenu02 .side-menu-inner > ul{/* display:inline-block; *display:inline;*zoom:1;  width: 100%;*/}
+#topMenu02 .side-menu-inner ul{display:flex; align-items:center; justify-content:center;}
 #topMenu02 .side-menu-inner ul li{
-	/* float:left; */ 
-	display:inline-block; 
+	float:left;
 	width: 16.66%; 
-	margin-left:-3px; 
 	border-right:1px solid #ddd;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -433,7 +443,7 @@ table, th, td{word-break:break-word;}
 	-webkit-transition:all 0.4s; 
 	transition:all 0.4s;
 }
-#topMenu02 .side-menu-inner ul li:first-child {border-left: 1px solid #ddd; margin-left:0}
+#topMenu02 .side-menu-inner ul li:first-child {border-left: 1px solid #ddd;}
 #topMenu02 .side-menu-inner ul li > a{
 	display:block; 
 	display:table; 
@@ -470,9 +480,10 @@ table, th, td{word-break:break-word;}
 /* SUB LAYOUT :: 서브메뉴(스타일3) */
 #topMenu03{position:relative; width:100%;height:70px; }
 #topMenu03 .side-menu-inner{text-align:center; width:100%; height:69px; border-bottom:1px solid #ddd; background-color: #fff;}
-#topMenu03 .side-menu-inner ul{display:table; width:100%; height:100%; table-layout:fixed; }
+#topMenu03 .side-menu-inner ul{display:flex; align-items:center; justify-content:center; }
 #topMenu03 .side-menu-inner ul li{
-	display:table-cell;
+	float:left;
+	width:25%;
 	vertical-align:middle;
 	border-right:1px solid #ddd;
 	-webkit-transition:all 0.4s;
@@ -522,7 +533,7 @@ table, th, td{word-break:break-word;}
 #topMenu04 .menu-location > .cur-location span{display:block; width:100%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; line-height:69px; color:#222; font-weight:400; font-size:18px; letter-spacing:-0.5px;}
 #topMenu04 .menu-location > .cur-location .arrow{position:absolute; top:50%; right:10px; width:20px; height:20px;margin-top:-10px; font-size:20px;}
 #topMenu04 .menu-location.open > .cur-location .arrow{transform:rotate(-180deg); margin-top:-10px;}
-#topMenu04 .menu-location .location-menu-con{display:none; position:absolute; top:69px; left:-1px; width:calc(100% - 1px); border:1px solid #ddd; border-top:0; background-color:#fff; z-index:11; padding-bottom:10px }
+#topMenu04 .menu-location .location-menu-con{display:none; position:absolute; top:100%; left:-1px; right:0px; border:1px solid #ddd; border-top:0; background-color:#fff; z-index:11; padding-bottom:10px }
 #topMenu04 .menu-location .location-menu-con li a{display:block; padding:10px 20px; font-size:15px; word-break:keep-all; line-height:1.5;}
 #topMenu04 .menu-location .location-menu-con li.on{position:relative;}
 #topMenu04 .menu-location .location-menu-con li.on a{color:#f57f20; font-weight:500;}
