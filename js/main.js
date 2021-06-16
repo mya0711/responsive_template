@@ -12,17 +12,12 @@ $(document).ready(function  () {
 	if ($.exists('#fullpage')) {
 		var $fullPage = $("#fullpage");
 		var $fullPageSection = $fullPage.children(".section");
-		if ( detectBrowser() === "ie") {
-			var scroll_speed = 600;
-		}else {
-			var scroll_speed = 800;
-		}
 		$fullPage.fullpage({
 			css3: true,
 			fitToSection: false,
 			navigation: true,
 			scrollBar:false,
-			scrollingSpeed:scroll_speed,
+			scrollingSpeed:800,
 			navigationPosition: 'right',
 			navigationTooltips: ['Content01', 'Content02', 'Content03', 'Content04'],
 			responsiveWidth: tabletWidth,

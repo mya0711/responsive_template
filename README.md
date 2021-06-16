@@ -70,6 +70,7 @@ Responsive Website Template
 	
 	<code> <b>3. /js/main.js</b></code>
 	* fullpage onLeave 이벤트 수정
+	* fullpage scrollingSpeed 통일
 	* 전체 주석스타일 변경
 
 	<code> <b>4. /js/nav.js</b></code>
