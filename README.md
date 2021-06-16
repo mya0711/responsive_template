@@ -3,10 +3,89 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2021-05-25
+* UpDate :  2021-06-15
   
 
 ## 업데이트 내역
+
+- #### 2021-06-15
+
+  #### * css 파일
+	<code> <b>1. css/default.css</b></code>
+	* 익스 하위브라우저 팝업창 기존 팝업대신 레이어팝업으로 대체
+
+	<code> <b>2. css/ie9.css</b></code>
+	* AOS 삭제로 해당소스 삭제
+	* 메인텍스트, 서브메뉴 display:flex 로 변경 후 틀어지는부분 수정 
+	
+	<code> <b>3. css/layout.css</b></code>
+	* fullpage 일때 #wrap, .to-top-btn 수정
+	* header search input width 100% 변경
+	* GNB 전체메뉴, 각각메뉴 부분적으로 수정
+	* 서브레이아웃 topMenu03 틀어지는부분 수정
+		
+	<code> <b>4. css/layout_responsive.css</b></code>
+	* gnb mobile 레이아웃 수정
+	
+	<code> <b>5. css/main.css</b></code>
+	* 비주얼 높이값 100vh추가
+	* #fullpage .section:not(#mainFooter){min-height:750px;} 푸터영역은 min-height 젹용 안되도록 수정
+	* AOS 삭제 후 대체소스변경
+	
+	<code> <b>6. css/animate.css</b></code>
+	* AOS 대체소스 애니메이션 css 추가
+
+	<code> <b>7. css/plugin/aos.css</b></code>
+	* AOS 삭제
+
+  #### * php 파일
+	<code> <b>1. /kr/index.php, /kr/index_fullpage.php</b></code>
+	* AOS 삭제 후 대체소스 변경
+	* 하위브라우저 조건부주석 수정
+
+	<code> <b>2. /kr/include/bottom.php</b></code>
+	* mCustomScroll, magnific-popup js 서브에서 로딩되도록 이동
+	
+	<code> <b>3. /kr/include/dtd.php</b></code>
+	* animate.css 추가
+	* aos.css 삭제
+	* 조건부주석 추가 => ie9.css 추가(중간에 변경하면서 사라진듯..)
+
+	<code> <b>4. /kr/include/header.php</b></code>
+	* 모바일 네비게이션 gnb랑 공통으로 쓸수있도록 수정
+
+	<code> <b>5. /kr/include/scripts.php</b></code>
+	* aos.js 삭제
+	* mCustomScroll, magnific-popup js 서브에서 로딩되도록 이동
+	* waypoints.min.js 추가
+
+  #### * js 파일
+	<code> <b>1. /js/common.js</b></code>
+	* aosInit() 함수호출 삭제
+	* 웹접근성을위해 키보드이용시 mouse클래스붙는부분 익스버벅이는 이슈로 익스제외 함수호출
+	* waypoint 추가
+	
+	<code> <b>2. /js/functions.js</b></code>
+	* aosInit() 함수 삭제
+	
+	<code> <b>3. /js/main.js</b></code>
+	* fullpage onLeave 이벤트 수정
+	* 전체 주석스타일 변경
+
+	<code> <b>4. /js/nav.js</b></code>
+	* 전체적으로 정리 및 함수화
+
+	<code> <b>5. /js/plugin/aos.js</b></code>
+	* 삭제
+
+	<code> <b>6. /js/plugin/waypoints.min.js</b></code>
+	* 추가
+
+ #### * image 파일
+	<code> <b>1. 메인비주얼 이미지 4장</b></code>
+	* 퀄리티 60%로 수정
+
+***************************
 
 - #### 2021-05-25
 
@@ -45,7 +124,7 @@ Responsive Website Template
 	* 탑메뉴 주석수정
 	* 상단타이틀영역 area 추가
 
- #### * js 파일
+  #### * js 파일
 	<code> <b>1. /js/main.js</b></code>
 	* fullpage 속도 익스일때 500 -> 600으로 변경
 	* fullpage OnLeave 수정 ( 풀페이지안에서 aos사용하면 버벅이는 이슈로 인하여 삭제 )

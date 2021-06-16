@@ -1,13 +1,13 @@
 /* *******************************************************
  * filename : main.js
  * description : 메인에만 사용되는 JS
- * date : 2020-11-25
+ * date : 2021-06-15
 ******************************************************** */
 
 $(document).ready(function  () {
 	/* ************************
 	* Func : fullpage 레이아웃 사용시
-	* fullpage.js, checkOffset(), toFit() 필요
+	* fullpage.js , detectBrowser() 필요
 	************************ */
 	if ($.exists('#fullpage')) {
 		var $fullPage = $("#fullpage");
@@ -28,12 +28,9 @@ $(document).ready(function  () {
 			responsiveWidth: tabletWidth,
 			responsiveHeight : 750,
 			onLeave : function(origin, destination, direction){
-				if ( !($fullPageSection.eq(destination-1).is(".active-section")) ) {
-					setTimeout(function  () {
-						$(".section").eq(destination-1).addClass("active-section");
-					},500);
-				}
-
+				setTimeout(function  () {
+					$(".section").eq(destination-1).find("[data-scroll]").addClass("animated");
+				},500);
 				// 사이드바 색상변경
 				if ( destination > 1) {
 					$("#fp-nav").addClass("black");
@@ -43,7 +40,11 @@ $(document).ready(function  () {
 			}
 		});
 	}
-	/* *********************** 메인 비주얼 ************************ */
+
+	/* ************************
+	* Func : 메인 비주얼 높이 설정 및 slick 슬라이드
+	* slick.js , getWindowWidth(), getWindowHeight() 필요
+	************************ */
 	// 메인 비주얼 높이값 설정
 	if ($.exists('#mainVisual.full-height')) {
 		mainVisualHeight();
@@ -58,7 +59,7 @@ $(document).ready(function  () {
 			}
 		}
 	}
-	
+
 	// 메인 비주얼 슬라이드
 	var $mainVisualItem = $(".main-visual-con");
 	var visualPausePlay = true;		// Pause, play 사용시 변경
@@ -100,7 +101,7 @@ $(document).ready(function  () {
 	// 일시정지, 재생버튼 사용시
 	if ( visualPausePlay ) {
 		$(".slick-dots-wrapper").children().append("<span class='slick-control-btns'><button class='slick-pause-btn' title='일시정지'><i class='xi-pause'></i></button><button class='slick-play-btn' title='재생'><i class='xi-play-circle-o'></i></button></span>");
-	
+
 		$(document).on("click",".slick-pause-btn",function  () {
 			$mainVisualItem.slick("slickPause");
 			$(this).hide();
@@ -113,7 +114,10 @@ $(document).ready(function  () {
 		});
 	}
 
-	/* *********************** 메인 갤러리 슬라이드 ************************ */
+	/* ************************
+	* Func : 메인 갤러리 슬라이드
+	* slick.js 필요
+	************************ */
 	$('.main-gallery-rolling-con > ul').slick({
 		slidesToShow: 4,
 		slidesToScroll: 1,
@@ -145,8 +149,11 @@ $(document).ready(function  () {
 					}
 				  ]
 	});
-
-	/* *********************** 메인 갤러리 + 설명 슬라이드 ************************ */
+	
+	/* ************************
+	* Func : 메인 갤러리 + 설명 슬라이드
+	* slick.js 필요
+	************************ */
 	$('.main-slide-photo-con').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -177,8 +184,11 @@ $(document).ready(function  () {
 		pauseOnHover:false,
 		asNavFor: '.main-slide-photo-con'
 	});	
-
-	/* *********************** 사이드바 FIXED ************************ */
+	
+	/* ************************
+	* Func : 사이드바 FIXED
+	* objectFixed() 필요
+	************************ */
 	if ($.exists('#rightBar')) {
 		$(window).scroll(function  () {
 			var rightStartTop = $(window).height() / 2;

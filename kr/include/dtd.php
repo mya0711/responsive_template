@@ -39,6 +39,7 @@
 <link rel="stylesheet" href="<?=$site_host?>/css/layout_responsive.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/content_responsive.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/main_responsive.css" />
+<link rel="stylesheet" href="<?=$site_host?>/css/animate.css" />
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons"><!-- google -->
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"><!-- naver -->
 <!-- Board Skin -->
@@ -49,7 +50,9 @@
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/slick.css">
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/jquery.mCustomScrollbar.css">
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/magnific-popup.css">
-<link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/aos.css" />
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/swiper.css" />
-
+<!--[if lte IE 9]>
+	<link rel="stylesheet" href="<?=$site_host?>/css/ie9.css">
+<![endif]-->
 <script type="text/javascript" src="<?=$site_host?>/js/vendor/jquery-1.8.3.min.js"></script>
+

@@ -1,6 +1,6 @@
 <?
 $page_num = "01";
-$sub_num = "02";
+$sub_num = "01";
 // $sub_num2 = "01";	// 사용안할시 주석처리
 $page_section = "company";
 $sub_section = "ceo";
@@ -45,7 +45,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/top.php"; ?>
 				<!-- ****************** 기본 이미지 ********************** -->
 				<!-- 준비중 -->
-				<section class="sample-container" style="background:#eee;">
+				<section class="sample-container" style="background:#eee;" data-scroll="fade-down">
 					<article class="area">
 						<h4><b>이미지</b> : 컨텐츠 내용이 준비중일때 이미지</h4>
 						<img src="<?=$site_url?>/images/content/content_ready_img.png" alt="서비스 준비중입니다." style="display:block; margin:0 auto; max-width:100%;" />

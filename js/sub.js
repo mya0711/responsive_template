@@ -1,8 +1,9 @@
 /* *******************************************************
  * filename : sub.js
  * description : 서브컨텐츠에만 사용되는 JS
- * date : 2020-11-25
+ * date : 2021-06-14
 ******************************************************** */
+
 
 $(document).ready(function  () {
 	/* ************************
@@ -41,7 +42,7 @@ $(document).ready(function  () {
 			$(this).find(".custom-scrollbar-cover").fadeOut(200);
 		});
 	});
-	
+
 	/* ************************
 	* Func : 서브 상단 메뉴 FIXED
 	* getWindowWidth(), checkOffset(), toFit() 필요
@@ -65,7 +66,7 @@ $(document).ready(function  () {
 		}, {
 		}),{ passive: true })
 	}
-	
+
 	/* ************************
 	* Func : 컨텐츠 메뉴 FIXED 및 클릭시 해당영역 이동
 	* getScrollTop(), getWindowWidth(), checkOffset(), toFit(), checkFixedHeight(), moveScrollTop() 필요

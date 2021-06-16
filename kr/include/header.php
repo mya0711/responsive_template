@@ -54,7 +54,7 @@
 					- 각각메뉴 : class="each-menu" + <div id="gnbBg"></div> 삭제
 				-->
 				<!-- <div id="gnbBg"></div> -->
-				<ul class="clearfix menu5 area">
+				<ul class="clearfix area">
 					<li class="gnb1">
 						<a href="<?=$site_url?>/">Menu1</a>
 						<div class="gnb-2dep">
@@ -112,50 +112,28 @@
 			<!-- 언어 선택 or 회원메뉴 사용안할시 삭제 -->
 			<div class="header-util-menu-box">
 				<!-- 언어 선택 리스트 -->
-				<!-- <ul class="clearfix lang-select">
+				<ul class="clearfix lang-select">
 					<li class="cur"><a href="<?=$site_host?>/kr/">KR</a></li>
 					<li><a href="<?=$site_host?>/en/">EN</a></li>
 					<li><a href="<?=$site_host?>/jp/">JP</a></li>
 					<li><a href="<?=$site_host?>/cn/">CH</a></li>
-				</ul> -->
+				</ul>
 				<!-- // -->
 				<!-- 회원메뉴 -->
 				<ul class="clearfix member-menu-box">
+					<?if($mem_row->idx){?>
+					<li><a href="<?=$site_url?>/member/modify_01.php"><i class="xi-profile-o"></i><strong>마이페이지</strong></a></li>
+					<li><a href="<?=$site_url?>/member/join_01.php"><i class="xi-log-out"></i><strong>로그아웃</strong></a></li>
+					<?}else{?>
 					<li><a href="<?=$site_url?>/member/login.php"><i class="xi-user-o"></i><strong>로그인</strong></a></li>
 					<li><a href="<?=$site_url?>/member/join_01.php"><i class="xi-user-plus-o"></i><strong>회원가입</strong></a></li>
-					<!-- <li><a href="<?=$site_url?>/member/modify_01.php"><i class="xi-profile-o"></i><strong>마이페이지</strong></a></li>
-					<li><a href="<?=$site_url?>/member/join_01.php"><i class="xi-log-out"></i><strong>로그아웃</strong></a></li> -->
+					<?}?>
 				</ul>
 			</div>
 			<!-- // -->
 			<div class="gnb-navigation-wrapper">
 				<div class="gnb-navigation-inner">
-					<ul id="navigation">
-						<li>
-							<a href="<?=$site_url?>/">Menu1</a>
-							<ul class="gnb-2dep">
-								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
-							</ul>
-						</li>
-						<li>
-							<a href="<?=$site_url?>/">Menu2</a>
-							<ul class="gnb-2dep">
-								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
-							</ul>
-						</li>
-						<li>
-							<a href="<?=$site_url?>/">Menu3</a>
-							<ul class="gnb-2dep">
-								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
-							</ul>
-						</li>
-						<li>
-							<a href="<?=$site_url?>/">Menu4</a>
-							<ul class="gnb-2dep">
-								<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_company.php"; ?>
-							</ul>
-						</li>
-					</ul>
+					<ul id="navigation" data-menu-clone="true"></ul><!-- PC메뉴 같을때 true / 같지않으면 false 후 메뉴삽입 -->
 				</div>
 			</div>
 		</nav>

@@ -1,7 +1,7 @@
 /* *******************************************************
  * filename : common.js
  * description : 전체적으로 사용되는 JS
- * Update : 2020-11-25
+ * Update : 2021-06-15
 ******************************************************** */
 
 var laptopWidth = 1366;
@@ -10,8 +10,8 @@ var mobileWidth = 800;
 
 $(window).load(function  () {
 	// toAnchorParameter("anchor");	/* 주소~?anchor=content  */ 
-	aosInit ();	// 사용안할시 삭제
 });
+
 $(document).ready(function  () {
 	/* ************************
 	* Func : 브라우저 체크 및 기기체크
@@ -19,7 +19,6 @@ $(document).ready(function  () {
 	************************ */
 	checkOsBrowser();
 	$(window).on('resize', checkOsBrowser);
-
 	function checkOsBrowser () {
 		if ( isMobile() ) {
 			$("body").removeClass("is-pc").addClass("is-mobile").addClass(detectOS()+"-os");
@@ -27,6 +26,7 @@ $(document).ready(function  () {
 			$("body").removeClass("is-mobile").addClass("is-pc").addClass(detectBrowser()+"-browser");
 		}
 	}
+
 	/* ************************
 	* Func : 스킵네비게이션 영문번역
 	************************ */
@@ -37,13 +37,34 @@ $(document).ready(function  () {
 	/* ************************
 	* Func : 웹접근성 키보드이용시
 	************************ */
-	$("body").mousemove(function(event) { 
-		$(this).addClass("mouse");
-	});
-	$("body").on("keydown touchstart",function(event) { 
-		$(this).removeClass("mouse");
-	});
+	if ( detectBrowser() !== "ie" || !isMobile() ) {
+		mouseCheck();
+	}
+	function mouseCheck () {
+		$("body").mousemove(function(event) { 
+			$(this).addClass("mouse");
+		});
+		$("body").on("keydown touchstart",function(event) { 
+			$(this).removeClass("mouse");
+		});
+	}
 
+	/* ************************
+	* Func : Waypoint.js
+	* Waypoint.js, isMobile () 필요
+	************************ */
+	if ($.exists('[data-scroll]')) {
+		if ( isMobile() ) {
+			startOffset = "100%";
+		}else {
+			startOffset = "90%";
+		}
+		$("[data-scroll]").waypoint(function(){
+			$(this).addClass("animated");
+		}, { 
+			offset: startOffset
+		});
+	}
 		
 	/* ************************
 	* Func : 드롭메뉴 공통
