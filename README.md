@@ -81,7 +81,7 @@ Responsive Website Template
 	<code> <b>6. /js/plugin/waypoints.min.js</b></code>
 	* 추가
 
- #### * image 파일
+  #### * image 파일
 	<code> <b>1. 메인비주얼 이미지 4장</b></code>
 	* 퀄리티 60%로 수정
 
