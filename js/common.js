@@ -301,9 +301,10 @@ $(document).ready(function  () {
 			if ($.exists('#fullpage')) {
 				$.fn.fullpage.moveTo(1);
 			}else {
-				moveScrollTop(0, 300);
+				$("html, body").animate({scrollTop:0}, 300 ,"easeInOutExpo",function  () {
+					$(".logo > a").focus();
+				});
 			}
-			$(".logo > a").focus();
 			
 			return false;
 		});

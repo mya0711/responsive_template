@@ -38,6 +38,7 @@ Responsive Website Template
   #### * js 파일
 	<code> <b>1. /js/common.js</b></code>
 	* Splitting() 하위브라우저 작동되지않도록수정
+	* top버튼 이벤트 수정
 	
 	<code> <b>2. /js/functions.js</b></code>
 	* Mac Os - Big Sur, Safari 버전 모바일로 체크되는이슈 수정
