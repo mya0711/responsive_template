@@ -80,6 +80,7 @@ function detectOS(){
   * 모바일 체크 함수
   * return : 모바일 true / PC false
   * Ipad Safari userAgent 변경으로 인해 if문 추가 (2020-07-17)
+  * Mac Os - Big Sur, Safari(14.0) Macintosh 로 체크되어 mobile로 분류되는 이슈로 가로사이즈 조건문 추가(2021-06-15)
   ************************ */
 function isMobile(){
 	var UserAgent = navigator.userAgent;
@@ -98,7 +99,7 @@ function isMobile(){
 function detectIpad() {
 	var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 	// Lying iOS13 iPad
-	if (userAgent.match(/Macintosh/i) !== null) {
+	if (userAgent.match(/Macintosh/i) !== null && getWindowWidth () < 1025 ) {
 		// need to distinguish between Macbook and iPad
 		var canvas = document.createElement("canvas");
 		if (canvas !== null) {

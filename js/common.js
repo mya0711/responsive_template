@@ -193,11 +193,13 @@ $(document).ready(function  () {
 	}
 	/* -------- Split :: Splitting Plugin -------- */ 
 	if ($.exists('.cm-word-split-JS')) {
-		Splitting();
-		var $splittingTxt = $(".cm-word-split-JS");
-		$($splittingTxt).each(function  () {
-			splittingTextDelay($(this),$(this).data("speed"),$(this).data("speed-delay"));
-		});
+		if ( detectBrowser () !== "ie" || ieVersionCheck() > 9 ) {
+			Splitting();
+			var $splittingTxt = $(".cm-word-split-JS");
+			$($splittingTxt).each(function  () {
+				splittingTextDelay($(this),$(this).data("speed"),$(this).data("speed-delay"));
+			});
+		}
 	}
 
 	/* ************************

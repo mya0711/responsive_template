@@ -3,10 +3,47 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2021-06-15
+* UpDate :  2021-06-23
   
 
 ## 업데이트 내역
+
+- #### 2021-06-23
+
+  #### * css 파일
+	<code> <b>1. css/ie9.css</b></code>
+	* Split.js 하위브라우저 작동 안하는 이슈로 수정
+
+	<code> <b>2. css/layout.css</b></code>
+	* fullpage 일때 html{overflow:hidden; height:100%;} / #wrap{position:static; } 설정
+	=> 로딩될때 스크롤바 보였다가 없어져서 살짝 흔들리는 이슈로 html overflow:hidden;
+	=> 익스플로러에서 버벅이는이슈 및 하위브라우저 이슈로 수정
+	
+	<code> <b>3. css/layout_responsive.css</b></code>
+	* 공통레이아웃 area영역 조정 (max-width:1260px)
+	=> 가로값 + 양옆 padding 값까지 더한 크기부터 미디어쿼리작성
+
+  #### * php 파일
+	<code> <b>1. /kr/index_fullpage.php</b></code>
+	* fullpage PHP 변수추가
+	* #wrap 태그에 클래스 삭제(fullpage.js에서 클래스 자동생성)
+
+	<code> <b>2. /kr/include/dtd.php</b></code>
+	* fullpage PHP 변수추가에 따른 조건문 추가 => fullpage일경우 <html class="fullpage-html"> 클래스 생성
+	
+	<code> <b>3. /kr/company/sample.php</b></code>
+	* Scale축소할때 자동높이값 라이브러리 추가 : spidochescaler
+	* 이미지맵 반응형 라이브러리 추가
+
+  #### * js 파일
+	<code> <b>1. /js/common.js</b></code>
+	* Splitting() 하위브라우저 작동되지않도록수정
+	
+	<code> <b>2. /js/functions.js</b></code>
+	* Mac Os - Big Sur, Safari 버전 모바일로 체크되는이슈 수정
+
+***************************
+
 
 - #### 2021-06-15
 

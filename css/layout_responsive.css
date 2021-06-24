@@ -6,11 +6,11 @@
 ******************************************************** */
 
 /* ****************** 공통레이아웃 ********************** */
-@media all and (max-width:1620px){	/* max-width : (area-box width) + 20px */
-	.area-box{padding:0 30px;}
+@media all and (max-width:1660px){	/* max-width : (area-box width) + 60px */
+	.area-box{padding:0 30px; max-width:none;}
 }
-@media all and (max-width:1220px){
-	.area{padding:0 30px;}
+@media all and (max-width:1260px){ /* max-width : (area width) + 60px */ 
+	.area{padding:0 30px; max-width:none;}
 }
 @media all and (max-width:1024px){
 	.area-box,
@@ -27,7 +27,7 @@
 }
 @media all and ( max-width: 1024px ){	/* 1024까지 레이아웃유지가 안될시 max-width: 컨텐츠너비+20px */
 	#header,#headerInnerWrap{height:80px;}
-	.fullpage-wrapper #header{position:relative;}
+	#fullpage #header{position:relative;}
 	#headerInnerWrap{position:fixed; z-index:99;}
 	#headerInner{padding:0 15px;}
 	#header .logo{padding:21px 0;}	/* padding값 적절히 바꿔주세요 */
@@ -245,7 +245,7 @@
 }
 
 /* ****************** FOOTER ********************** */
-@media all and (max-width:1220px){
+@media all and (max-width:1260px){
 	/* Footer :: 푸터로고 */
 	.foot-logo{float:none; display:block; padding-right:0; padding-bottom:15px;}
 	/* Footer :: 푸터메뉴 */
@@ -298,7 +298,7 @@
 }
 
 /* ****************** SUB LAYOUT ********************** */
-@media all and (max-width:1220px){
+@media all and (max-width:1260px){
 	/*  SUB LAYOUT :: 비주얼 */
 	#visual .visual-txt-con{padding:0}
 	/*  SUB LAYOUT :: 서브메뉴(스타일2,3,4) */

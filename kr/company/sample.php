@@ -28,6 +28,10 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 .test-table{width:100%;}
 .test-table th{border: 1px solid #c6c6c6; border-top: 1px solid #333; padding: 20px 0; background-color: #f7f7f7; font-size: 16px; font-weight: 300; letter-spacing: -0.7px; color: #464646;}
 .test-table td{padding: 25px 0; border: 1px solid #c6c6c6; text-align: center; }
+@media all and ( max-width: 800px ){
+	.spidochescaler-table-container th,
+	.spidochescaler-table-container td{font-size:22px;}
+}
 
 /* 리스트 Sample */
 .rolling-active-list-con{margin:0 -1%;}
@@ -169,6 +173,71 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						<!-- // -->
 					</article>
 				</section>
+				
+				<!-- 모바일에서 사이즈 줄이기 -->
+				<section class="sample-container">
+					<article class="area">
+						<h4><b>scale 축소 :</b> 모바일에서  scale 축소</h4>
+						<table class="test-table spidochescaler-table-container">
+							<caption>테이블 샘플입니다. 테이블 목적을 입력해주세요</caption>
+							<tbody>
+								<colgroup>
+									<col style="width:10%;"/>
+									<col style="width:10%;"/>
+									<col style="width:10%;"/>
+									<col style="width:10%;"/>
+									<col style="width:10%;"/>
+								</colgroup>
+								<tr>
+									<th scope="col">1</th>
+									<th scope="col">2</th>
+									<th scope="col">3</th>
+									<th scope="col">4</th>
+									<th scope="col">5</th>
+								</tr>
+								<tr>
+									<td>3~4칸 되는</td>
+									<td>테이블</td>
+									<td>모바일로 줄일때</td>
+									<td>scale로 줄어들게</td>
+									<td>하는방법</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- // -->
+					</article>
+					<script src="<?=$site_host?>/js/plugin/spidocheScaler.min.js"></script>
+					<!-- sub.js 이동 -->
+					<script>
+					// Scale 자동조정
+					$('.spidochescaler-table-container').spidochescaler({
+						maxWidth:800
+					});
+					</script>
+				</section>
+
+				<!-- 이미지맵  -->
+				<section class="sample-container image-map-container">
+					<article class="area">
+						<h4><b>이미지맵 반응형 사용</b></h4>
+						<!-- 스크롤 영역 Start(이미지) -->
+						<img src="/images/main/main_visual_01.jpg" alt="" style="display:block; margin:0 auto; max-width:100%;" usemap="#Map" />
+						<map name="Map" id="Map">
+						  <area shape="rect" coords="186,149,494,309" href="#" />
+						  <area shape="rect" coords="846,365,1554,633" href="#" />
+						  <area shape="rect" coords="142,753,542,1017" href="#" />
+						</map>
+						<!-- // -->
+					</article>
+				</section>
+					<script src="<?=$site_host?>/js/plugin/jquery.rwdImageMaps.min.js"></script>
+					<!-- sub.js 이동 -->
+					<script>
+					$(document).ready(function(e) {
+						// 이미지맵 반응형 위치조정
+						$("img[usemap]").rwdImageMaps();
+					});
+					</script>
 
 					
 				<!-- MagnificPopup -->

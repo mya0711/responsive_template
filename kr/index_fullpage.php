@@ -1,6 +1,7 @@
 <?
 include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
 include "./lib/config.php";
+$fullpage = 1;
 include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 ?>
 <!-- fullpage css -->
@@ -18,7 +19,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 <!-- //accessibility -->
 
 <!-- code -->
-<div id="wrap" class="fullpage-wrapper">
+<div id="wrap">
 	<!-- header -->
 	<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/header.php"; ?>
 	<!-- //header -->

@@ -5,6 +5,9 @@
  * date : 2021-06-14
 ******************************************************** */
 
+/* -------- default.css -------- */
+.cm-word-split-JS{opacity:1.0;}
+
 /* -------- layout.css -------- */
 /*  SUB LAYOUT :: 서브메뉴(스타일1) */
 #topMenu01 .side-menu-inner ul{display:inline-block;}
