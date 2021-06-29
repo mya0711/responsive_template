@@ -183,11 +183,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 			<article id="mainContent3">
 				<div class="area">
 					<div class="main-tit-box">
-						<h3 class="main-tit"><strong>메인</strong> 컨텐츠 타이틀</h3>
+						<h3 class="main-tit">해당영역갔을때 slickPlay 됩니다</h3>
 						<p class="main-sub-tit"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span> span태그안에 넣으면 모바일에서 줄바꿈이 됩니다.</span></p>
 					</div>
 					<article class="main-gallery-rolling-con">
-						<ul class="bbs-basic-gallery-con">
+						<ul class="bbs-basic-gallery-con start-autoplay-scroll-object" data-scroll="fade-up">
 							<li>
 								<a href="">
 									<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>

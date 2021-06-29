@@ -250,6 +250,8 @@
 	.foot-logo{float:none; display:block; padding-right:0; padding-bottom:15px;}
 	/* Footer :: 푸터메뉴 */
 	.foot-menu{float:none; display:inline-block;}
+	/* Footer :: 사이트맵 */
+	.footer-sitemap-list-con{display:none;}
 	/* Footer :: 패밀리사이트 */
 	.family-site-box{position:static; position:relative; top:0px; margin:15px auto 0;}
 }

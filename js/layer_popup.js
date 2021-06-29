@@ -18,24 +18,24 @@ $(document).on("click",".cm-modal-open-btn",function  () {
   ************************ */
 function htmlScrollControl (toggle) {
 	if (toggle) {
-		if ($.exists('#fullpage')) {
-			$.fn.fullpage.setAllowScrolling(false);
-			$.fn.fullpage.setKeyboardScrolling(false);
-		}else {
+		if (!($.exists('#fullpage')) || $.exists('.fp-responsive')) {
 			$("html").css({
 				"margin-right":"17px",
 				"overflow-y":"hidden"
 			});
+		}else {
+			$.fn.fullpage.setAllowScrolling(false);
+			$.fn.fullpage.setKeyboardScrolling(false);
 		}
 	} else {
-		if ($.exists('#fullpage')) {
-			$.fn.fullpage.setAllowScrolling(true);
-			$.fn.fullpage.setKeyboardScrolling(true);
-		}else {
+		if (!($.exists('#fullpage')) || $.exists('.fp-responsive')) {
 			$("html").css({
 				"margin-right":"0",
 				"overflow-y":"scroll"
 			});
+		}else {
+			$.fn.fullpage.setAllowScrolling(true);
+			$.fn.fullpage.setKeyboardScrolling(true);
 		}
 	}
 }

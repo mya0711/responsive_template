@@ -3,10 +3,37 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2021-06-23
+* UpDate :  2021-06-29
   
 
 ## 업데이트 내역
+
+- #### 2021-06-29
+
+  #### * css 파일
+	<code> <b>1. css/layout.css, css/layout_responsive.css</b></code>
+	* .foot-menu{float:left; } 삭제
+	* 푸터 사이트맵 스타일 추가
+
+  #### * php 파일
+	<code> <b>1. /kr/index.php</b></code>
+	* Slick 슬라이드 해당영역갔을때 play 되는 예시 추가(.start-autoplay-scroll-object)
+
+	<code> <b>2. /kr/include/footer.php</b></code>
+	* div 정리 및 사이트맵 추가
+
+  #### * js 파일
+	<code> <b>1. /js/common.js</b></code>
+	* 웹접근성 키보드이용시 조건문 수정(익스에서 작동안되도록)
+	* 푸터 사이트맵 복사 함수 추가 ( cloneFooterSitemap() )
+	
+	<code> <b>2. /js/main.js</b></code>
+	* 해당영역 갔을때 slick 슬라이드 play => .start-autoplay-scroll-object
+
+	<code> <b>3. /js/layer_popup.js</b></code>
+	* fullpage responsive모드일때 모달팝업띄우면 스크롤바 2개생기는 이슈로 조건문 수정 
+
+***************************
 
 - #### 2021-06-23
 

@@ -257,8 +257,6 @@ table, th, td{word-break:break-word;}
 .footer-left-con{float:left; }
 .footer-right-con{float:right;}
 
-/* -------- FOOTER :: 상단 -------- */
-#footerTop{border-top:1px solid #ddd; padding:15px 0; }
 /* Footer :: TOP버튼 */
 .to-top-btn{
 	position:fixed; bottom:-100px; right:15px; display:block; width:46px; height:46px; background-color:#fff; text-align:center; color:#333; z-index:99;
@@ -273,29 +271,35 @@ table, th, td{word-break:break-word;}
 .to-top-btn:hover i{transform:translateY(-3px)}
 #fullpage .to-top-btn{display:none;}
 
+/* -------- FOOTER :: 상단 -------- */
+#footerTop{border-top:1px solid #ddd; padding:25px 0; }
+
 /* Footer :: 푸터메뉴 */
-.foot-menu{float:left; }
+.foot-menu{}
 .foot-menu li{float:left; position:relative; padding-left:40px; line-height:35px;}
 /* .foot-menu li:before{position:absolute; top:50%; left:18px; content:""; width:2px; height:2px; background-color:#636363; border-radius:50%; } */ /* dot 형태 */ 
 .foot-menu li:before{position:absolute; top:50%; left:18px; width:1px; height:10px; margin-top:-5px; background-color:#ddd;  content:"";} /* line 형태 */ 
 .foot-menu li:first-child{padding-left:0}
 .foot-menu li:first-child:before{display:none} 
-.foot-menu li a{color:#aaa; font-size:16.5px;}
+.foot-menu li a{color:#aaa; font-size:16.5px; letter-spacing:-0.5px;}
 .foot-menu li a b{color:#333; font-weight:500;}
 
-/* Footer :: SNS 리스트 */
-.foot-sns-menu{}
-.foot-sns-menu li{float:left; margin-left:5px}
-.foot-sns-menu li:first-child{margin-left:0}
-.foot-sns-menu li img{width:35px;}
-.foot-sns-menu li a{display:block; width:35px; height:35px; -webkit-border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%;border-radius:50%; background-color:#444; color:#fff; line-height:35px; text-align:center;}
-.foot-sns-menu li a i{font-size:20px; line-height:35px;}
+/* Footer :: 사이트맵 */
+.footer-sitemap-list-con > ul > li{float:left; padding-left:60px;}
+.footer-sitemap-list-con > ul > li:first-child{padding-left:0;}
+.footer-sitemap-list-con > ul > li h3{margin-bottom:20px; color:#333; font-size:17px; font-weight:500; letter-spacing:-0.5px;}
+.footer-sitemap-list-con > ul > li .sitemap-2dep li{margin-bottom:15px;}
+.footer-sitemap-list-con > ul > li .sitemap-2dep li:last-child{margin-bottom:0}
+.footer-sitemap-list-con > ul > li .sitemap-2dep li a{display:block; color:#aaa; font-size:14px; letter-spacing:-0.3px; transition:all 0.4s}
+.footer-sitemap-list-con > ul > li .sitemap-2dep li a:hover{color:#f57f20;}
 
 /* -------- FOOTER :: 하단 -------- */
 #footerBottom{ padding:25px 0; }
+
 /* Footer :: 푸터로고 */
 .foot-logo{display:block; padding-bottom:20px;}
 .footer-right-con .foot-logo{text-align:right;}
+
 /* Footer :: 정보 */
 .footer-address{margin-bottom:15px; letter-spacing:-0.5px;}
 .footer-address .footer-address-txt{color:#444; font-size:14px; line-height:1.7; margin:0 -8px;}
@@ -303,6 +307,7 @@ table, th, td{word-break:break-word;}
 .footer-address p:before{position:absolute; top:50%; left:-8px; width:1px; height:10px; margin-top:-5px; background-color:#ccc; content:"";}
 .footer-address p:first-child:before{display:none;}
 .footer-address a{color:inherit}
+
 /* Footer :: 정보 style02 */
 .footer-address-info-box{margin-bottom:15px; letter-spacing:-0.5px;}
 .footer-address-list dl{display:inline-block; vertical-align:middle; color:#aaa; font-size:14px; line-height:1.7; margin-left:15px; }
@@ -312,9 +317,18 @@ table, th, td{word-break:break-word;}
 .footer-address-list dl dt{margin-right:7px; color:#666;}
 .footer-address-list span{display:inline-block; margin-right:15px}
 .footer-address-list a{color:inherit}
+
 /* Footer :: Copyright */
 .footer-copyright{font-size:13px; letter-spacing:-0.5px;}
 .footer-copyright b{color:#f57f20}
+
+/* Footer :: SNS 리스트 */
+.foot-sns-menu{text-align:right;}
+.foot-sns-menu li{/* float:left; */display:inline-block; vertical-align:middle; margin-left:5px}
+.foot-sns-menu li:first-child{margin-left:0}
+.foot-sns-menu li img{width:35px;}
+.foot-sns-menu li a{display:block; width:35px; height:35px; -webkit-border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%;border-radius:50%; background-color:#444; color:#fff; line-height:35px; text-align:center;}
+.foot-sns-menu li a i{font-size:20px; line-height:35px;}
 
 /* Footer :: 패밀리사이트 */
 .family-site-box{/* position:absolute; top:20px; right:0;*/ position:relative; width:215px; text-align:left; letter-spacing:-0.25px;}

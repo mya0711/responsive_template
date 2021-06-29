@@ -180,6 +180,21 @@ $(document).ready(function  () {
 		asNavFor: '.main-slide-photo-con'
 	});	
 	
+	
+	/* ************************
+	* Func : 해당영역갔을때 슬라이드 autoPlay
+	* wayPoint.js 필요
+	************************ */
+	// 해당영역갔을때 슬라이드 autoPlay
+	if ($.exists('.start-autoplay-scroll-object')) {
+		$(".start-autoplay-scroll-object").slick("slickPause");
+		$(".start-autoplay-scroll-object").waypoint(function  () {
+			$(this).slick("slickPlay");
+		}, { 
+			offset: startOffset
+		});
+	}
+
 	/* ************************
 	* Func : 사이드바 FIXED
 	* objectFixed() 필요

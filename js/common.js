@@ -37,7 +37,7 @@ $(document).ready(function  () {
 	/* ************************
 	* Func : 웹접근성 키보드이용시
 	************************ */
-	if ( detectBrowser() !== "ie" || !isMobile() ) {
+	if ( detectBrowser() !== "ie" && !isMobile() ) {
 		mouseCheck();
 	}
 	function mouseCheck () {
@@ -344,5 +344,25 @@ $(document).ready(function  () {
 						}
 					  ]
 		});
+	}
+
+	
+	/* ************************
+	* Func : 하단 :: 푸터 사이트맵 삽입(대메뉴복사)
+	************************ */
+	if ( $.exists(".footer-sitemap-list-con") ) {
+		cloneFooterSitemap();
+
+		function cloneFooterSitemap () {
+			var $sitemapGnbList = $("#gnb > ul > li");
+			var gnbLength = $sitemapGnbList.length;
+			$(".footer-sitemap-list-con").append("<ul></ul>");
+			
+			for(var i=0; i < gnbLength; i++){
+				var $gnb1depItem = $sitemapGnbList.eq(i).children("a");
+				var $gnb2depList = $sitemapGnbList.eq(i).find(".gnb-2dep > ul").html() ? $sitemapGnbList.eq(i).find(".gnb-2dep > ul").html() :	'<a href="'+$gnb1depItem.attr("href")+'">'+$gnb1depItem.text()+'</a>';
+				$(".footer-sitemap-list-con > ul").append('<li><h3>'+$gnb1depItem.text()+'</h3><ul class="sitemap-2dep">'+$gnb2depList+'</ul></li>');
+			}
+		}
 	}
 });
