@@ -27,7 +27,7 @@
 }
 @media all and ( max-width: 1024px ){	/* 1024까지 레이아웃유지가 안될시 max-width: 컨텐츠너비+20px */
 	#header,#headerInnerWrap{height:80px;}
-	#fullpage #header{position:relative;}
+	.fullpage-html #header{position:relative;}
 	#headerInnerWrap{position:fixed; z-index:99;}
 	#headerInner{padding:0 15px;}
 	#header .logo{padding:21px 0;}	/* padding값 적절히 바꿔주세요 */

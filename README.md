@@ -14,6 +14,7 @@ Responsive Website Template
 	<code> <b>1. css/layout.css, css/layout_responsive.css</b></code>
 	* .foot-menu{float:left; } 삭제
 	* 푸터 사이트맵 스타일 추가
+	* #fullpage #header -> .fullpage-html #header 로 수정
 
   #### * php 파일
 	<code> <b>1. /kr/index.php</b></code>

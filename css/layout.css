@@ -35,7 +35,7 @@ table, th, td{word-break:break-word;}
 #header{
 	position:relative; /* position:absolute; */ height:100px; top:0; left:0; width:100%; z-index:9999; 
 }
-#fullpage #header{
+.fullpage-html #header{
 	position:fixed;
 }
 #headerInnerWrap{
