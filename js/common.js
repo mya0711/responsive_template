@@ -365,4 +365,50 @@ $(document).ready(function  () {
 			}
 		}
 	}
+
+	/* ************************
+	* Func : Custom Select 
+	************************ */
+	if ($.exists('.custom-select')) {
+		$(".custom-select").each(function() {
+			var classes = $(this).attr("class");
+			var id = $(this).attr("id");
+			var name = $(this).attr("name");
+			var template = '<div class="' + classes + '">';
+			template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + "</span>";
+			template += '<ul class="custom-option-drop-list">';
+			$(this).find("option").each(function() {
+				template += '<li class="custom-option-item ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + "</li>";
+			});
+			template += "</ul></div>";
+			$(this).wrap('<div class="custom-select-wrapper"></div>');
+			$(this).hide();
+			$(this).after(template);
+		});
+		$(".custom-option:first-of-type").hover(function() {
+			$(this).parents(".custom-option-drop-list").addClass("option-hover");
+		}, function() {
+			$(this).parents(".custom-option-drop-list").removeClass("option-hover");
+		});
+		$(".custom-select-trigger").on("click", function(event) {
+			$("html").one("click", function() {
+				$(".custom-select").removeClass("opened");
+			});
+			$(this).parents(".custom-select").toggleClass("opened");
+			event.stopPropagation();
+		});
+		$(".custom-option-item").on("click", function() {
+			$(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+			$(this).parents(".custom-option-drop-list").find(".custom-option-item").removeClass("selection");
+			$(this).addClass("selection");
+			$(this).parents(".custom-select").removeClass("opened");
+			$(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+			// 이메일 선택할때 넣어주세요.
+			/* if ($(this).data("value") != "a" && $(this).data("value") != "b") {
+				$(".email2").attr("value", $(this).text()).prop("readonly", true);
+			} else {
+				$(".email2").attr("value", "").prop("readonly", false).focus();
+			} */
+		});
+	}
 });

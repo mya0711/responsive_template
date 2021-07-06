@@ -3,10 +3,30 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2021-06-29
+* UpDate :  2021-07-06
   
 
 ## 업데이트 내역
+
+- #### 2021-07-06
+
+  #### * css 파일
+	<code> <b>1. css/layout_responsive.css</b></code>
+	* 모바일 네비게이션 마크업 수정으로 인한 css 수정
+
+	<code> <b>2. css/common/cm_bbs_common.css</b></code>
+	* Custom Select 추가
+
+  #### * php 파일
+	<code> <b>1. /kr/company/sample.php</b></code>
+	* Custom Select 추가
+
+  #### * js 파일
+	<code> <b>1. /js/common.js</b></code>
+	* Custom Select 추가
+
+***************************
+
 
 - #### 2021-06-29
 

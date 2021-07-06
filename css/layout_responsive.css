@@ -227,7 +227,7 @@
 	.gnb-style-full .header-util-menu-box + .gnb-navigation-wrapper{top:60px; }
 	.gnb-style-full-member .gnb-navigation-wrapper{bottom:60px;}
 	#navigation > li > a{font-size:15px;}
-	#navigation > li .gnb-2dep > li > a{font-size:13px;}
+	#navigation > li .gnb-2dep > ul > li > a{font-size:13px;}
 
 	/* Header :: 언어선택 및 회원메뉴 */
 	.header-util-menu-box{/* height:60px; */}

@@ -554,5 +554,31 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					</article>
 				</section>
 
+				
+				<section class="sample-container">
+					<article class="area">
+						<h4><b>기타</b> : Select Custom </h4>
+						
+						<p>- Onchange 이벤트에는 사용 X</p>
+						<p>- 감싸는 태그에 width를 주거나, /css/cm_bbs_common.css 수정<br><br></p>
+
+						<div class="sample-select-custom" style="width:300px">
+							<!-- Select Custom -->
+							<div class="select-box custom-select-box">
+								<select name="" class="custom-select" placeholder="Select">
+									<option value="" selected>Option1</option>
+									<option value="">Option2</option>
+									<option value="">Option3</option>
+									<option value="">Option4</option>
+									<option value="">Option5</option>
+									<option value="">Option6</option>
+									<option value="">Option7</option>
+								</select>
+							</div>
+							<!-- // -->
+						</div>
+					</article>
+				</section>
+
 					
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/bottom.php"; ?>
