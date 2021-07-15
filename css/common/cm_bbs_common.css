@@ -117,7 +117,7 @@
 	cursor: pointer;
 	width:100%;
 }
-.custom-select {
+.custom-select-wrapper .custom-select {
 	position: relative;
 	display: block;
 }

@@ -369,8 +369,8 @@ $(document).ready(function  () {
 	/* ************************
 	* Func : Custom Select 
 	************************ */
-	if ($.exists('.custom-select')) {
-		$(".custom-select").each(function() {
+	if ($.exists('.custom-select-box .custom-select')) {
+		$(".custom-select-box .custom-select").each(function() {
 			var classes = $(this).attr("class");
 			var id = $(this).attr("id");
 			var name = $(this).attr("name");

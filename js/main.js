@@ -32,6 +32,12 @@ $(document).ready(function  () {
 				}else {
 					$("#fp-nav").removeClass("black");
 				}
+
+				if ( destination > 4 )  {
+					$("body:not('.fp-responsive')").find("#header").hide();	// ie responsive모드에서 상단으로 이동시 destination 오류로 추가
+				}else {
+					$("body:not('.fp-responsive')").find("#header").show();
+				}
 			}
 		});
 	}

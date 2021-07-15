@@ -3,10 +3,28 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2021-07-06
+* UpDate :  2021-07-15
   
 
 ## 업데이트 내역
+
+- #### 2021-07-15
+
+  #### * css 파일
+	<code> <b>1. css/layout.css</b></code>
+	* #wrap{height:100%;} 삭제 : 익스플로러 fullpage responsive 모드시 스크롤 안생기는 오류발생  
+
+	<code> <b>2. css/common/cm_bbs_common.css</b></code>
+	* Custom Select 관련 수정 : 게시판 검색영역 select 와 겹치는 이슈로 수정
+ 
+  #### * js 파일
+	<code> <b>1. /js/common.js</b></code>
+	* Custom Select 관련 수정 : 게시판 검색영역 select 와 겹치는 이슈로 수정
+	
+	<code> <b>2. /js/main.js</b></code>
+	* fullpage 푸터영역갈때 #header 없어지게 추가 : 익스플로러 fullpage responsive 모드시 destination 오류로 :not선택자 추가
+
+***************************
 
 - #### 2021-07-06
 
