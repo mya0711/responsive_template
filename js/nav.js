@@ -213,7 +213,7 @@ function activeMenuIdx () {
 		$gnbItem.eq(dep1-1).addClass("on");
 		$gnbMList.eq(dep1-1).addClass("on");
 		$snb.each(function  () {
-			$(this).find("li").eq(dep2-1).addClass("on");
+			$(this).children("li").eq(dep2-1).addClass("on");
 		});
 		$snbMenu.find(".menu-location").each(function  () {
 			// 2depth ON

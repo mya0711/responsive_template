@@ -360,8 +360,8 @@ table, th, td{word-break:break-word;}
 #visual .visual-sub-txt,
 #visual .location{
 	opacity:0;filter:Alpha(opacity=0);
-    -webkit-transform: translateY(-30px); 
-     transform: translateY(-30px);
+    -webkit-transform: translateY(30px); 
+     transform: translateY(30px);
 	-webkit-transition:opacity 1.0s, transform 1.0s;
 	transition:opacity 1.0s, transform 1.0s;
 }

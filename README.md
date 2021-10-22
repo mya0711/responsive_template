@@ -3,10 +3,35 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2021-07-15
+* UpDate :  2021-10-22
   
 
 ## 업데이트 내역
+
+- #### 2021-10-22
+
+  #### * css 파일
+	<code> <b>1. css/layout.css</b></code>
+	* 서브비주얼 텍스트 기본효과 컨텐츠 효과 통일감을 위해 아래->위로 변경
+
+	<code> <b>2. css/common/cm_bbs_common.css</b></code>
+	* Search 페이지 기본색상 #000 으로 변경
+ 
+  #### * js 파일
+	<code> <b>1. /js/common.js</b></code>
+	* Waypoint 로딩시점 window.load로 변경
+	
+	<code> <b>2. /js/nav.js</b></code>
+	* 3차메뉴가 있을경우를 대비하여 2차메뉴만 on될수 있도록 변경(find->children)
+
+  #### * php 파일
+	<code> <b>1. /include/dtd.php</b></code>
+	* Naver아이콘 명칭변경 -> XEicon
+	
+	<code> <b>2. /include/top.php</b></code>
+	* 서브컨텐츠 타이틀 data-scroll="fade-up" 추가 
+
+***************************
 
 - #### 2021-07-15
 

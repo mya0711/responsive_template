@@ -10,6 +10,22 @@ var mobileWidth = 800;
 
 $(window).load(function  () {
 	// toAnchorParameter("anchor");	/* 주소~?anchor=content  */ 
+	/* ************************
+	* Func : Waypoint.js
+	* Waypoint.js, isMobile () 필요
+	************************ */
+	if ($.exists('[data-scroll]')) {
+		if ( isMobile() ) {
+			startOffset = "100%";
+		}else {
+			startOffset = "90%";
+		}
+		$("[data-scroll]").waypoint(function(){
+			$(this).addClass("animated");
+		}, { 
+			offset: startOffset
+		});
+	}
 });
 
 $(document).ready(function  () {
@@ -46,23 +62,6 @@ $(document).ready(function  () {
 		});
 		$("body").on("keydown touchstart",function(event) { 
 			$(this).removeClass("mouse");
-		});
-	}
-
-	/* ************************
-	* Func : Waypoint.js
-	* Waypoint.js, isMobile () 필요
-	************************ */
-	if ($.exists('[data-scroll]')) {
-		if ( isMobile() ) {
-			startOffset = "100%";
-		}else {
-			startOffset = "90%";
-		}
-		$("[data-scroll]").waypoint(function(){
-			$(this).addClass("animated");
-		}, { 
-			offset: startOffset
 		});
 	}
 		

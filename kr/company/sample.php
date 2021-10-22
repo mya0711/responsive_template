@@ -49,7 +49,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/top.php"; ?>
 				<!-- ****************** 기본 이미지 ********************** -->
 				<!-- 준비중 -->
-				<section class="sample-container" style="background:#eee;" data-scroll="fade-down">
+				<section class="sample-container" style="background:#eee;"  data-scroll="fade-up">
 					<article class="area">
 						<h4><b>이미지</b> : 컨텐츠 내용이 준비중일때 이미지</h4>
 						<img src="<?=$site_url?>/images/content/content_ready_img.png" alt="서비스 준비중입니다." style="display:block; margin:0 auto; max-width:100%;" />

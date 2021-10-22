@@ -41,7 +41,7 @@
 <link rel="stylesheet" href="<?=$site_host?>/css/main_responsive.css" />
 <link rel="stylesheet" href="<?=$site_host?>/css/animate.css" />
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons"><!-- google -->
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"><!-- naver -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"><!-- XEicon -->
 <!-- Board Skin -->
 <link rel="stylesheet" href="<?=$site_host?>/css/common/cm_bbs_common.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/common/cm_board.css">

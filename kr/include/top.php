@@ -184,12 +184,12 @@
 			<section id="content" class="<?if($content_type == "wide"){?>wide<?}else{?>area<?}?>">
 				<!-- ****************** 상단정보 ********************** -->
 				<!-- 상단정보 (기본/센터정렬) -->
-				<aside id="contentInfoCon" class="area">
+				<aside id="contentInfoCon" class="area" data-scroll="fade-up">
 					<h3 class="content-tit"><?if($sub_info){?><?=$sub_info?><?}else{?><?=$page_info?><?}?></h3>
 					<p class="content-sub-tit">언제나 처음 시작하였던 다짐과 포부로 미래를 열어가겠습니다. </p>
 				</aside>
 				<!-- 상단정보 (왼쪽타이틀 +오른쪽 location) -->
-				<aside id="contentInfoCon" class="content-title-location clearfix area">
+				<aside id="contentInfoCon" class="content-title-location clearfix area" data-scroll="fade-up">
 					<h3 class="content-tit"><?if($sub_info){?><?=$sub_info?><?}else{?><?=$page_info?><?}?></h3>
 					<div class="location">
 						<ul>
