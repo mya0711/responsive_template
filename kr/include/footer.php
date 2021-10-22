@@ -64,6 +64,7 @@
 					<ul class="foot-menu clearfix">
 						<li><a href="<?=$site_url?>/etc/privacy.php" class="cm-modal-open-btn"><b>개인정보처리방침</b></a></li>
 						<li><a href="<?=$site_url?>/etc/agreement.php" class="cm-modal-open-btn">이용약관</a></li>
+						<li><a href="<?=$site_url?>/etc/email.php" class="cm-modal-open-btn">이메일 무단수집 거부</a></li>
 					</ul>
 				</div>
 				<!-- 푸터상단 오른쪽 -->

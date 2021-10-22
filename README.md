@@ -23,13 +23,23 @@ Responsive Website Template
 	
 	<code> <b>2. /js/nav.js</b></code>
 	* 3차메뉴가 있을경우를 대비하여 2차메뉴만 on될수 있도록 변경(find->children)
+	* Total Drop Down 헤더일경우 색상이 바뀔대를 대비하여 gnb에 마우스올렸을때 #header에 gnb-open 클래스 추가
 
   #### * php 파일
 	<code> <b>1. /include/dtd.php</b></code>
 	* Naver아이콘 명칭변경 -> XEicon
 	
 	<code> <b>2. /include/top.php</b></code>
-	* 서브컨텐츠 타이틀 data-scroll="fade-up" 추가 
+	* 서브컨텐츠 타이틀 data-scroll="fade-up" 추가
+	
+	<code> <b>3. /include/footer.php</b></code>
+	* 이메일 무단수집거부 추가
+
+	<code> <b>4. /kr/etc/agreement.php, /kr/etc/privacy.php</b></code>
+	* 개발연동코드로 수정
+
+	<code> <b>4. /kr/index.php, /kr/index_fullpage.php</b></code>
+	* 팝업 개발연동코드 추가
 
 ***************************
 

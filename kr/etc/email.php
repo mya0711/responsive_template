@@ -5,17 +5,17 @@ include "../lib/config.php";
 
 <?
 if($lang==1){//국문
-	$page_index = "privacy";
-	$title = "개인정보처리방침";
+	$page_index = "email";
+	$title = "이메일 무단수집 거부";
 } else if($lang==2){//영문
-	$page_index = "privacy_en";
-	$title = "Privacy Policy";
+	$page_index = "email_en";
+	$title = "Email Unauthorized Collection Denied";
 } else if($lang==3){//중문
-	$page_index = "privacy_cn";
-	$title = "个人信息处理方针";
+	$page_index = "email_cn";
+	$title = "拒绝未经授权的电子邮件收集";
 } else if($lang==4){//일문
-	$page_index = "privacy_jp";
-	$title = "個人情報処理方針";
+	$page_index = "email_jp";
+	$title = "이메일 무단수집 거부";
 }
 ?>
 

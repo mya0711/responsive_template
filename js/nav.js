@@ -75,6 +75,7 @@ function cloneMenu () {
 function openTotalMenu () {
 	$gnbItem.children("a").on("mouseenter focus",function  () {
 		$gnbItem.removeClass("on");
+		$("#header").addClass("gnb-open");
 		$(this).parent("li").addClass("on");
 		if (!($gnb.is(".open"))) {
 			$gnb.addClass("open");
@@ -84,6 +85,7 @@ function openTotalMenu () {
 	$gnbList.on("mouseleave",gnb_return);
 	$gnbList.find("a").last().on("focusout",gnb_return);
 	function gnb_return () {
+		$("#header").removeClass("gnb-open");
 		$gnb.removeClass("open");
 		$gnbItem.removeClass("on");
 		$gnbBg.removeClass("open");

@@ -297,5 +297,12 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 		}); 
 		</script>
 <![endif]-->
+<?
+if($tools->device()=="mobile"){
+	include $_SERVER['DOCUMENT_ROOT']."/in_popup_m.php";
+}else{
+	include $_SERVER['DOCUMENT_ROOT']."/in_popup.php";
+}
+?>
 </body>
 </html>
