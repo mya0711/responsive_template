@@ -532,6 +532,36 @@
 .search-result-detail-container .search-result-classify-item:first-child .search-result-classify-inner {border-right: 0}
 .search-result-detail-container .total-search-result-bbs-list{border-top:1px solid #000;}
  
+ /* 검색 :: 검색결과 faq */
+.totabl-search-list-tit-box + .search-bbs-faq-list{margin-top:-30px}
+.totabl-search-list-tit-box + .search-bbs-faq-list .search-faq-list-con{border-top:0}
+.search-faq-list-con{border-top:1px solid #000;}
+.search-faq-list-con .faq-item{border-bottom:1px solid #d7d7d7;}
+.search-faq-list-con .faq-item dt{position:relative; padding:15px 30px 15px 55px; cursor:pointer; }
+.search-faq-list-con .faq-item dt .faq-title{display:block; color:#343434; font-size:16px; font-weight:400; letter-spacing:-0.5px; line-height:24px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; vertical-align:top;}
+.search-faq-list-con .faq-item dt .arrow{position:absolute; top:16px; right:15px; width:13px; height:9px; }
+.search-faq-list-con .faq-item dt i{color:#666; font-size:26px;}
+.search-faq-list-con .faq-item.open dt .arrow i{margin-top:-2px; transform:rotate(-180deg);}
+.search-faq-list-con .faq-item.open dt .faq-title{white-space:normal; text-overflow:unset;}
+.search-faq-list-con .faq-item dd{display:none; position:relative; border-top:1px solid #d7d7d7; padding:18px 30px 15px 55px; background:#f0f0f0; /*min-height:20px*/}
+.search-faq-list-con .faq-item dd .answer-txt-con{line-height:24px; font-size:14px; color:#333; }
+.search-faq-list-con .faq-item dt .question-icon,
+.search-faq-list-con .faq-item dd .answer-icon{
+    position:absolute; top:11px; left:10px; 
+	width:30px; height:30px; line-height:30px; 
+	text-align:center; 
+	color:#fff; 
+	font-size:13px; 
+	font-weight:400;
+	border:1px solid #888;
+    -webkit-border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%;border-radius:50%;
+}
+.search-faq-list-con .faq-item dt .question-icon{background-color:#888}
+.search-faq-list-con .faq-item dd .answer-icon{background-color:transparent; color:#222; }
+.search-faq-list-con .faq-item dd .answer-con{min-height:20px}
+.search-faq-list-con.faq-category-list-con dl dt .faq-category{display:inline-block; width:110px; color:#aaa; margin-right:5px; font-size:13px; line-height:24px; vertical-align:top; }
+.search-faq-list-con.faq-category-list-con dl dt .faq-title{display:inline-block; width:calc(95% - 120px);}
+
 /* -------- 통합검색 -------- */
 @media all and (max-width:800px){
     /* 검색 :: 검색결과 상단 */
@@ -549,6 +579,18 @@
     .total-search-result-bbs-list li a .result-tit{font-size:15px;}
     /* 검색 :: 검색결과 상세페이지  */
     .search-result-detail-container .search-result-classify-item:first-child .search-result-classify-inner {border-bottom:0; }
+	/* 검색 :: 검색결과 FAQ 게시판 */
+	.search-faq-list-con .faq-item dt{padding-left:45px;}
+	.search-faq-list-con .faq-item dt .faq-title{font-size:14px; line-height:18px; }
+	.search-faq-list-con .faq-item dt .arrow{top:12px;}
+	.search-faq-list-con .faq-item dd{padding:15px;}
+	.search-faq-list-con .faq-item dt .question-icon,.search-faq-list-con .faq-item dd .answer-icon{top:14px; left:15px; width:20px; height:20px; line-height:20px; font-size:11px;}
+	.search-faq-list-con .faq-item dd .answer-icon{display:block; position:static; margin-bottom:10px;}
+	.search-faq-list-con .faq-item dd .answer-con{min-height:auto}
+	.search-faq-list-con.faq-category-list-con dl dt{padding-top:40px;}
+	.search-faq-list-con.faq-category-list-con dl dt .faq-category{position:absolute; top:13px; left:45px; right:30px; width:auto; margin-right:0; line-height:22px; }
+	.search-faq-list-con.faq-category-list-con dl dt .faq-title{display:block; width:100%; }
+	.search-faq-list-con.faq-category-list-con dl dt .arrow{top:23px;}
 }
 @media all and (max-width:480px){
     /* 검색 :: 검색결과 상단 */
@@ -557,4 +599,6 @@
     .totabl-search-list-tit-box{padding-bottom:10px; margin-bottom:15px;}
     .totabl-search-list-tit-box .total-search-list-tit{font-size:20px}
     .total-search-result-bbs-list li.thumb-item a .result-thumb{float:none; width:100%; max-width:200px; margin-right:0; margin-bottom:15px;}
+	/* 검색 :: 검색결과 FAQ 게시판 */
+	.totabl-search-list-tit-box + .search-bbs-faq-list{margin-top:-15px}
 }

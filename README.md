@@ -3,10 +3,24 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2021-10-22
+* UpDate :  2021-11-01
   
 
 ## 업데이트 내역
+
+- #### 2021-11-01
+
+  #### * css 파일
+	<code> <b>1. css/common/cm_bbs_common.css</b></code>
+	*  통합검색 FAQ 스타일 추가
+
+	<code> <b>2. css/common/cm_board.css</b></code>
+	* 기본리스트 게시판 6,7번 스타일 추가
+
+	<code> <b>2. css/common/cm_gallery.css</b></code>
+	* 갤러리스트 게시판 15,16, 17번 스타일 추가
+
+***************************
 
 - #### 2021-10-22
 

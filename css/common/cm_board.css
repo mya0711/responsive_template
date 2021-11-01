@@ -243,3 +243,61 @@
 	.bbs-list-style05{margin:0}
 	.bbs-list-style05 .bbs-list-item{width:100%; margin:0 0 10px}
 }
+
+
+/* ******************   리스트형 게시판 :: 리스트 06  ********************** */
+.bbs-list-style06 li{position:relative; border:1px solid #dedede; margin-bottom:1.2rem; box-sizing:border-box}
+.bbs-list-style06 li:after{position:absolute; content:""; width:100%; height:100%; box-sizing:border-box; border:2px solid #ddd; top:0; left:0; opacity:0; transition:all 0.3s; z-index:-1}
+.bbs-list-style06 li .inner{position:relative; display:block; padding:27px 2.6%; }
+.bbs-list-style06 li .inner .tit{padding-right:100px; font-size:17px; font-weight:400; letter-spacing:-0.5px; color:#444; line-height:1.3; transition:color 0.3s}
+.bbs-list-style06 li .inner .tit a{font-weight:400; color:#444; transition:color 0.3s}
+.bbs-list-style06 li .inner .rt-btn{position:absolute; right:2.6%; top:50%; margin-top:-17px; width:80px; height:32px; line-height:32px; text-align:center; border:1px solid #e4e4e4; box-sizing:border-box; font-weight:500; font-size:13px; color:#878787; letter-spacing:0; transition:all 0.3s}
+.bbs-list-style06 li .inner .rt-btn i{font-size:15px; margin-right:10px; vertical-align:middle; position:relative; top:-2px}
+@media all and (min-width:801px){	
+	.bbs-list-style06 li:hover:after{opacity:1}
+	.bbs-list-style06 li:hover .tit,
+	.bbs-list-style06 li:hover .tit a{color:#ff8a3c}
+	.bbs-list-style06 li:hover .inner .rt-btn{background-color:#eb8500; color:#fff; border-color:#eb8500}
+}
+@media all and (max-width:800px){		
+	.bbs-list-style06 li .inner .tit{font-size:14px; }
+	.bbs-list-style06 li .inner .rt-btn{font-size:11px; width:70px; height:28px; line-height:28px; margin-top:-14px}
+}
+@media all and (max-width:480px){		
+	.bbs-list-style06 li .inner{padding:15px}
+	.bbs-list-style06 li .inner .tit{padding-right:0}
+	.bbs-list-style06 li .inner .rt-btn{position:relative; display:inline-block; top:auto; margin-top:20px; right:auto}
+}
+
+
+/* ******************   리스트형 게시판 :: 리스트 07  ********************** */
+.bbs-list-style07{margin:0 0.7%}
+.bbs-list-style07 li{float:left; width:23.6%; margin:0 0.7% 4%; box-shadow:0 4px 12px -1px rgba(0,0,0,0.09)}
+.bbs-list-style07 li a{position:relative; display:block; border:1px solid #c7c7c7; padding:13% 10% 25.8%; transition:all 0.3s}
+.bbs-list-style07 li a .date{font-weight:400; font-size:14px; letter-spacing:0; color:#0b0b0b;}
+.bbs-list-style07 li a .date b{display:block; font-weight:700; font-size:33px; color:#00a7cf; margin-top:3px; transition:all 0.3s}
+.bbs-list-style07 li a .txt-wrap{position:relative; padding-top:80px}
+.bbs-list-style07 li a .txt-wrap .category{display:inline-block; font-weight:500; font-size:11px; letter-spacing:0.25px; color:#ff3600; border:1px solid #e3e3e3; border-radius:50px; width:60px; text-align:center; height:22px; line-height:22px; position:absolute; top:0; left:0; transition:all 0.3s; background-color:#fff}
+.bbs-list-style07 li a .txt-wrap .txt{font-weight:500; font-size:22px; letter-spacing:-0.6px; color:#0b0b0b; line-height:1.59; height:3.17em; overflow:hidden; transition:all 0.3s}
+.bbs-list-style07 li a .new{position:absolute; top:0; right:0; width:48px; height:25px; line-height:25px; text-align:center; font-weight:700; font-size:11px; letter-spacing:0; color:#00a7cf; border:1px solid rgba(0,167,207,0.42); border-radius:50px; top:7%; right:6.8%; background-color:#fff}
+@media all and (min-width:801px){	
+	.bbs-list-style07 li a:hover{background-color:#00a7cf; border-color:#00a7cf}
+	.bbs-list-style07 li a:hover .date b{color:#003b66}
+	.bbs-list-style07 li a:hover .txt-wrap .txt{color:#fff}
+	.bbs-list-style07 li a:hover .txt-wrap .category,
+	.bbs-list-style07 li a:hover .new{color:#e10000; border-color:#00a7cf}
+}
+@media all and (max-width:960px){		
+	.bbs-list-style07 li{width:48.6%}
+	.bbs-list-style07 li a{padding:10% 7% 15%}
+}
+@media all and (max-width:800px){		
+	.bbs-list-style07 li{margin-bottom:2%}
+	.bbs-list-style07 li a{padding:8% 6% 12%}
+	.bbs-list-style07 li a .date{font-size:12px}
+	.bbs-list-style07 li a .date b{font-size:22px}
+	.bbs-list-style07 li a .txt-wrap{padding-top:30px}
+	.bbs-list-style07 li a .txt-wrap .category{width:55px; height:20px; line-height:20px; font-size:10px}
+	.bbs-list-style07 li a .txt-wrap .txt{font-size:16px}
+	.bbs-list-style07 li a .new{font-size:10px; width:40px; height:20px; line-height:22px}
+}

@@ -807,3 +807,104 @@
 	.gallery-con14-list-con li a .gal-category{padding:4px 5px;}
 	.gallery-con14-list-con li a .gallery-txt-con{font-size:12px;}
 }
+
+
+
+ /* ******************   갤러리 게시판 :: 갤러리 G15 ********************** */
+.bbs-basic-gallery-con15 > ul {overflow:hidden; margin: -1.21%;}
+.bbs-basic-gallery-con15 > ul li {float:left; width:30.89%; margin:1.21%; }
+.bbs-basic-gallery-con15 > ul li a{display:block; position:relative;}
+.bbs-basic-gallery-con15 .gallery-img-thumb {position:relative; overflow:hidden; height:0; padding-top:68.42%; }
+.bbs-basic-gallery-con15 .category{position:absolute; bottom:0px; right:0px; width:100px; height:30px; line-height:30px; background-color:#fff; color:#000; font-size:13px; font-weight:600;z-index:1; text-align:center;}
+.bbs-basic-gallery-con15 > ul li img {position:absolute; top:0px; left:0px; width:100%; height:100%;} 
+.bbs-basic-gallery-con15 > ul li .gallery-tit {display:block; padding:20px 0 15px; font-size:24px;  letter-spacing: -1px; color:#000000;  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.bbs-basic-gallery-con15 > ul li .date {font-size:13px; letter-spacing:-0.25px; color: #aaa;}
+.bbs-basic-gallery-con15 > ul li .img-over-thum {position:absolute; opacity:0;filter:Alpha(opacity=0); width:100%; height:100%; left:0; top:0; background-color:rgba(235,133,0,0.6); -webkit-transition: all 0.3s; -moz-transition: all 0.3s; -ms-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s; }
+.bbs-basic-gallery-con15 > ul li .img-over-thum span {position:absolute; top:50%; width:100%; text-align:center; transform:translateY(-50%);}
+.bbs-basic-gallery-con15 > ul li .img-over-thum span i {font-size:48px; color: #fff; transition: transform 0.4s;}
+
+@media all and (min-width:801px){
+	.bbs-basic-gallery-con15 > ul li:hover .img-over-thum {opacity:1;filter:Alpha(opacity=100);-webkit-transition: all 0.3s; -moz-transition: all 0.3s; -ms-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s; }
+	.bbs-basic-gallery-con15 > ul li:hover .img-over-thum span i {transform:rotate(180deg);} 
+}
+@media all and (max-width:1024px){
+	.bbs-basic-gallery-con15 > ul { margin:-15px -1%;}
+	.bbs-basic-gallery-con15 > ul li{width:48%; margin:15px 1%;}
+	.bbs-basic-gallery-con15 > ul li .gallery-tit{font-size:15px; margin-bottom:0;}
+	.bbs-basic-gallery-con15 > ul li .img-over-thum span i{font-size:30px; margin-left:5px; position:relative; top:-2px;}
+ }
+@media all and (max-width:800px){
+    .bbs-basic-gallery-con15 > ul li .gallery-tit{height:24px; line-height:24px; font-size:15px; padding-top:10px;}
+	.bbs-basic-gallery-con15 .category {width:auto; padding:0 20px; height:25px; line-height:25px;}
+    .bbs-basic-gallery-con15 > ul li .img-over-thum span{bottom:-30px; height:30px; line-height:30px; font-size:13px;}
+    .bbs-basic-gallery-con15 > ul li .img-over-thum span i{font-size:18px; margin-left:3px;}
+}
+
+
+ /* ******************   갤러리 게시판 :: 갤러리 G16(동영상) ********************** */
+.gallery-con16-list-con {margin:0 -1.24% 0;}
+.gallery-con16-list-con li {float:left; width: 22.5%; margin:0 1.24% 55px; text-align:center;}
+.gallery-con16-list-con li a {display:block;}
+.gallery-con16-list-con li .img {position:relative; padding-top: 66.66%; border:1px solid #ddd; -webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+ box-sizing: border-box;  }
+.gallery-con16-list-con li .img img {position:absolute; top:0; left:0; width:100%; height:100%;}
+.gallery-con16-list-con li .tit-wrap {display:table; width:100%; height:66px; }
+.gallery-con16-list-con li .promotion-tit {display:table-cell; vertical-align:middle;}
+.gallery-con16-list-con li .promotion-tit p {font-size: 16px; line-height:1.5em; max-height:3em; color: #424242; font-weight:400;}
+.gallery-con16-list-con li .view-btn {width:145px; height: 38px; line-height: 36px; font-size:12px; color: #2d2d2d; text-align:center; display:block; background-color: #fff; border: 1px solid #2d2d2d; border-radius: 50px; margin:auto;}
+.gallery-con16-list-con li .view-btn  .view-btn-icon {margin-right: 10px;}
+.gallery-con16-list-con li .view-btn.video-btn {background-color: #424242; border-color:transparent; color: #fff;}
+
+/* 팝업 */
+.gallery-con16-pop {position:relative; max-width:1000px; margin:50px auto; background-color:#fff; width:96%;}
+.gallery-con16-pop h1 {text-align:left; font-size: 24px; color: #060606; background-color: #fff; padding: 35px 40px;}
+.gallery-con16-pop .modal-close-btn  {right:40px; top:27px;}
+.gallery-con16-pop .modal-close-btn i { color: #000 !important;}
+.gallery-con16-pop .inner-box {padding:50px; border-top: 1px solid #000;}
+.gallery-con16-pop .inner {padding:0; height:auto; border:0; margin:auto; }
+.gallery-con16-pop .inner .iframe-wrap {padding-top:56.25%; position:relative;}
+.gallery-con16-pop .inner iframe {position:absolute; left:0; top:0; width:100%; height:100%;}
+@media all and (max-width:800px){
+	.gallery-con16-list-con {margin:0 -1%;}
+	.gallery-con16-list-con li {width: 31.25%; margin:0 1% 25px;}
+	.gallery-con16-list-con li .tit-wrap {height:46px; }
+	.gallery-con16-list-con li .promotion-tit p {font-size: 13px;  }
+	.gallery-con16-list-con li .view-btn {width:110px; height: 26px; line-height:24px; }
+	.gallery-con16-list-con li .view-btn  .view-btn-icon {margin-right: 5px; }
+	.gallery-con16-list-con li .view-btn  .view-btn-icon img {height: 11px;}
+	.gallery-con16-list-con li .view-btn.video-btn {font-size:11px;}
+	/* 팝업 */
+	.gallery-con16-pop h1 {font-size:18px; padding:25px 20px; }
+	.gallery-con16-pop .modal-close-btn {top:20px; right:20px;}
+	.gallery-con16-pop .modal-close-btn img {height:21px;}
+	.gallery-con16-pop .inner-box {padding:20px;}
+}
+@media all and (max-width: 480px){
+	.gallery-con16-list-con {margin:0 -1% -25px;}
+	.gallery-con16-list-con li {width: 48%; margin:0 1% 25px;}
+}
+
+
+ /* ******************   갤러리 게시판 :: 갤러리 G17(동영상) ********************** */
+.gallery-con17-list-con li{border-bottom:1px solid #dbdbdb; padding:59px 0; display:table; width:100%; table-layout:fixed}
+.gallery-con17-list-con li:first-child{padding-top:0}
+.gallery-con17-list-con li > div{display:table-cell; vertical-align:middle}
+.gallery-con17-list-con li .video-con-film{width:64%;}
+.gallery-con17-list-con li .video-con-film .video-wrap{position:relative; padding-top:56.5%; display:block}
+.gallery-con17-list-con li .video-con-film .video-wrap iframe{position:absolute; top:0; left:0; width:100%; height:100%; border-radius:7px;}
+.gallery-con17-list-con li .video-con-txt{padding-left:5%}
+.gallery-con17-list-con li .video-con-txt .video-con-tit{position:relative; font-weight:400; font-size:32px; letter-spacing:-1px; color:#000; line-height:1.25em; padding:35px 0 30px; word-break:keep-all}
+.gallery-con17-list-con li .video-con-txt .video-con-tit:before{position:absolute; display:inline-block;content:"\ea4c"; font-family:"xeicon"; left:0; top:0; line-height:1}
+.gallery-con17-list-con li .video-con-txt .video-con-tit:after{position:absolute; display:inline-block;content:""; width:48px; height:2px; background:#000; left:0; bottom:0}
+.gallery-con17-list-con li .video-con-txt .video-con-explain{font-weight:400; font-size:16px; letter-spacing:-0.75px; line-height:1.625em; color:#000; opacity:0.5; padding-top:12%; word-break:keep-all}
+
+@media all and (max-width:800px){	
+	.gallery-con17-list-con li{padding:30px 0; display:block; box-sizing:border-box}
+	.gallery-con17-list-con li > div{display:block}
+	.gallery-con17-list-con li .video-con-film{width:100%;}
+	.gallery-con17-list-con li .video-con-txt{padding:20px 0 0}
+	.gallery-con17-list-con li .video-con-txt .video-con-tit{font-size:21px; padding-bottom:18px; padding-top:28px;}
+	.gallery-con17-list-con li .video-con-txt .video-con-tit:after{width:24px;}
+	.gallery-con17-list-con li .video-con-txt .video-con-explain{font-size:13px; padding-top:22px;}
+}
