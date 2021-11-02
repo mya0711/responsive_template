@@ -3,10 +3,19 @@ $page_num = "01";
 $sub_num = "03";
 $page_section = "search";
 $sub_section = "index";
-$page_info = "통합검색";	// EN : Search / CH : 综合搜索 / JP : 統合検索
+
 $sub_info = "";
 include $_SERVER["DOCUMENT_ROOT"]."/lib/config.php";
 include "../lib/config.php";
+if($lang==1){
+$page_info = "통합검색";	// EN : Search / CH : 综合搜索 / JP : 統合検索
+} else if($lang==2){
+$page_info = "Search";	// EN : Search / CH : 综合搜索 / JP : 統合検索
+} else if($lang==3){
+$page_info = "综合搜索";	// EN : Search / CH : 综合搜索 / JP : 統合検索
+} else if($lang==4){
+$page_info = "統合検索";	// EN : Search / CH : 综合搜索 / JP : 統合検索
+}
 $sub_description = ""; // 페이지 설명(서브페이지) *필요시 사용
 include "../lib/sub.php";
 include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
@@ -19,18 +28,55 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 </style>
 <script>
 /* js */
+$(document).ready(function  () {
+	$(".search-bbs-faq-list").each(function  () {
+		var $faqItem = $(this).find(".faq-item");
 
+		$faqItem.children("dt").click(function  () {
+			var $faqCon = $(this).siblings();
+			if ($faqCon.css("display") == "block") {
+				$(this).siblings().slideUp();
+				$(".faq-item").removeClass("open");
+			}else {
+				$(".faq-item > dd:visible").slideUp();
+				$(".faq-item").removeClass("open");
+				$(this).parent("dl").addClass("open");
+				$faqCon.slideDown();	
+			}
+		});
+	});
+});
 </script>
+
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/top.php"; ?>
-				
+<?
+if($_POST[allSearch]){
+	
+	$allSearch = $db->filter($_POST[allSearch]);
+
+	$bbs_cnt = $db->cnt_join("cs_bbs_data a left join cs_bbs b on a.code=b.code ","where a.lang='$lang' and (a.subject like '%$allSearch%' or a.content like '%$allSearch%') and b.bbs_search=1");
+
+	//언어설정 들어가면 lang 추가해주시면 됩니다.
+	$goods_cnt = $db->cnt("cs_goods","where display=1 and (name like '%$allSearch%' or content like '%$allSearch%' or content_re like '%$allSearch%')");
+
+	$all_cnt = $bbs_cnt+$goods_cnt;
+
+}
+	
+?>
+						
 						<!-- 여기서부터 START (/search/index.php)-->
+						<?if($lang==1){//국문?>
 						<article class="search-result-top-container">
 							<aside class="search-result-top-con">
-								<div class="result-top-tit"><strong class="result-bold-txt">"테스트"</strong> 검색결과</div>
-								<p class="result-txt"><strong class="result-bold-txt">"테스트"</strong> 에 대한 <b>123</b>개의 검색결과입니다.</p>
+								<div class="result-top-tit"><strong class="result-bold-txt">"<?=$allSearch?>"</strong> 검색결과</div>
+								<?if($all_cnt>0){?>
+								<p class="result-txt"><strong class="result-bold-txt">"<?=$allSearch?>"</strong> 에 대한 <b><?=$all_cnt?></b>개의 검색결과입니다.</p>
+								<?}?>
+								<?if($all_cnt==0){?>
 								<!-- 검색결과가 없을때 -->
 								<div class="no-result-txt">
-									<p><strong class="result-bold-txt">"테스트"</strong> 에 대한 검색결과가 없습니다. 다시 시도하여 주시기 바랍니다.</p>
+									<p><strong class="result-bold-txt">"<?=$allSearch?>"</strong> 에 대한 검색결과가 없습니다. 다시 시도하여 주시기 바랍니다.</p>
 									<ul>
 										<li>- 단어의 철자가 정확한지 확인하세요.</li>
 										<li>- 한글을 영어로 혹은 영어를 한글로 입력했는지 확인하세요.</li>
@@ -39,83 +85,35 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 									</ul>
 								</div>
 								<!-- // -->
+								<?}?>
 							</aside>
 							<!-- 통합검색일때 넣어주세요 -->
 							<article class="search-result-classify-con clearfix">
 								<div class="search-result-classify-item">
 									<div class="search-result-classify-inner">
 										<p class="result-list-tit"><i class="material-icons"></i> 게시글 검색 결과</p>
-										<p class="result-info"><strong class="result-bold-txt">777</strong>개의 컨텐츠가 <br>검색되었습니다.</p>
+										<p class="result-info"><strong class="result-bold-txt"><?=$bbs_cnt?></strong>개의 컨텐츠가 <br>검색되었습니다.</p>
 									</div>
 								</div>
 								<div class="search-result-classify-item">
 									<div class="search-result-classify-inner">
 										<p class="result-list-tit"><i class="material-icons"></i> 제품 검색 결과</p>
-										<p class="result-info"><strong class="result-bold-txt">777</strong>개의 컨텐츠가 <br>검색되었습니다.</p>
+										<p class="result-info"><strong class="result-bold-txt"><?=$goods_cnt?></strong>개의 컨텐츠가 <br>검색되었습니다.</p>
 									</div>
 								</div>
 							</article>
 							<!-- // -->
 						</article>
-						<section class="total-search-result-list-con">
-							<article class="total-search-result-con total-search-board-result-con">
-								<div class="totabl-search-list-tit-box clearfix">
-									<h3 class="total-search-list-tit"><strong>게시글</strong> 검색결과</h3>
-									<a href="./search_board.php" class="total-search-more-btn" title="게시글 검색결과 더보기"><i class="material-icons">&#xe03b;</i></a>
-								</div>
-								<ul class="total-search-result-bbs-list">
-									<li>
-										<a href="">
-											<span class="result-cate">갤러리</span>
-											<strong class="result-tit">홈페이지를 새롭게 오픈하였습니다.</strong>
-											<p class="result-txt">이른 아침 작은 새들 노랫소리 들려오면 언제나 그랬듯 아쉽게 잠을 깬다 창문 하나 햇살 가득 눈부시게 비쳐오고 서늘한 냉기에 재채기할까 말까
-											눈 비비며 빼꼼히 창밖을 내다보니 삼삼오오 아이들은 재잘대며 학교 가고 산책 갔다 오시는 아버지의 양손에는 효과를 알 수 없는 약수가 하나 가득 딸각딸각 아침 짓는 어머니의 분주함과 엉금엉금 냉수 찾는 그 아들의 게으름이 상큼하고 깨끗한 아침의 향기와 구수하게 밥 뜸드는 냄새가 어우러진 </p>
-										</a>
-									</li>
-									<li>
-										<a href="">
-											<span class="result-cate">NEWS</span>
-											<strong class="result-tit">홈페이지를 새롭게 오픈하였습니다.</strong>
-											<p class="result-txt">이른 아침 작은 새들 노랫소리 들려오면 언제나 그랬듯 아쉽게 잠을 깬다 창문 하나 햇살 가득 눈부시게 비쳐오고 서늘한 냉기에 재채기할까 말까
-											눈 비비며 빼꼼히 창밖을 내다보니 삼삼오오 아이들은 재잘대며 학교 가고 산책 갔다 오시는 아버지의 양손에는 효과를 알 수 없는 약수가 하나 가득 딸각딸각 아침 짓는 어머니의 분주함과 엉금엉금 냉수 찾는 그 아들의 게으름이 상큼하고 깨끗한 아침의 향기와 구수하게 밥 뜸드는 냄새가 어우러진 </p>
-										</a>
-									</li>
-									<li>
-										<a href="">
-											<span class="result-cate">영상</span>
-											<strong class="result-tit">홈페이지를 새롭게 오픈하였습니다.</strong>
-											<p class="result-txt">이른 아침 작은 새들 노랫소리 들려오면 언제나 그랬듯 아쉽게 잠을 깬다 창문 하나 햇살 가득 눈부시게 비쳐오고 서늘한 냉기에 재채기할까 말까
-											눈 비비며 빼꼼히 창밖을 내다보니 삼삼오오 아이들은 재잘대며 학교 가고 산책 갔다 오시는 아버지의 양손에는 효과를 알 수 없는 약수가 하나 가득 딸각딸각 아침 짓는 어머니의 분주함과 엉금엉금 냉수 찾는 그 아들의 게으름이 상큼하고 깨끗한 아침의 향기와 구수하게 밥 뜸드는 냄새가 어우러진 </p>
-										</a>
-									</li>
-									<li class="thumb-item"><!-- 갤러리 형식의 리스트이면 thumb-item 를 붙여야함 -->
-										<a href="">
-											<span class="result-cate">갤러리</span>
-											<span class="result-thumb"><img src="http://design.giantsoft.co.kr/images/test/thum/test14.jpg" alt=""></span>
-											<strong class="result-tit">홈페이지를 새롭게 오픈하였습니다.</strong>
-											<p class="result-txt">이른 아침 작은 새들 노랫소리 들려오면 언제나 그랬듯 아쉽게 잠을 깬다 창문 하나 햇살 가득 눈부시게 비쳐오고 서늘한 냉기에 재채기할까 말까
-											눈 비비며 빼꼼히 창밖을 내다보니 삼삼오오 아이들은 재잘대며 학교 가고 산책 갔다 오시는 아버지의 양손에는 효과를 알 수 없는 약수가 하나 가득 딸각딸각 아침 짓는 어머니의 분주함과 엉금엉금 냉수 찾는 그 아들의 게으름이 상큼하고 깨끗한 아침의 향기와 구수하게 밥 뜸드는 냄새가 어우러진 </p>
-										</a>
-									</li>
-								</ul>
-							</article>
-							<!-- 통합검색일때 ( 제품검색 ) -->
-							<article class="total-search-result-con">
-								<div class="totabl-search-list-tit-box clearfix">
-									<h3 class="total-search-list-tit"><strong>제품</strong> 검색결과</h3>
-									<a href="./search_product.php" class="total-search-more-btn" title="제품 검색결과 더보기"><i class="material-icons">&#xe03b;</i></a>
-								</div>
-								해당 프로젝트에 들어가는 제품 리스트 넣어주세요
-							</article>
-						</section>
-						<!-- 영문버전 -->
+						<?}?>
+
+						<?if($lang==2){//영문?>
 						<article class="search-result-top-container">
 							<aside class="search-result-top-con">
-								<div class="result-top-tit"><strong class="result-bold-txt">"TEST"</strong> Search Result</div>
-								<p class="result-txt"><b>123</b> results for <strong class="result-bold-txt">"TEST"</strong>.</p>
+								<div class="result-top-tit"><strong class="result-bold-txt">"<?=$allSearch?>"</strong> Search Result</div>
+								<p class="result-txt"><b><?=$all_cnt?></b> results for <strong class="result-bold-txt">"<?=$allSearch?>"</strong>.</p>
 								<!-- 검색결과가 없을때 -->
 								<div class="no-result-txt">
-									<p>No results for <strong class="result-bold-txt">"TEST"</strong> Please try again.</p>
+									<p>No results for <strong class="result-bold-txt">"<?=$allSearch?>"</strong> Please try again.</p>
 									<ul class="en-no-result-txt">
 										<li>- Make sure the word is spelled correctly.</li>
 										<li>- Make sure you have entered Korean as English or English as Korean.</li>
@@ -130,78 +128,28 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 								<div class="search-result-classify-item">
 									<div class="search-result-classify-inner">
 										<p class="result-list-tit"><i class="material-icons"></i> Search results</p>
-										<p class="result-info"><strong class="result-bold-txt">777</strong>content found.</p>
+										<p class="result-info"><strong class="result-bold-txt"><?=$bbs_cnt?></strong>content found.</p>
 									</div>
 								</div>
 								<div class="search-result-classify-item">
 									<div class="search-result-classify-inner">
 										<p class="result-list-tit"><i class="material-icons"></i> Product search results</p>
-										<p class="result-info"><strong class="result-bold-txt">777</strong>content found.</p>
+										<p class="result-info"><strong class="result-bold-txt"><?=$goods_cnt?></strong>content found.</p>
 									</div>
 								</div>
 							</article>
 							<!-- // -->
 						</article>
-						<section class="total-search-result-list-con">
-							<article class="total-search-result-con total-search-board-result-con">
-								<div class="totabl-search-list-tit-box clearfix">
-									<h3 class="total-search-list-tit"><strong>Posts</strong> Search Results</h3>
-									<a href="./search_board.php" class="total-search-more-btn" title="Posts Search Results"><i class="material-icons">&#xe03b;</i></a>
-								</div>
-								<ul class="total-search-result-bbs-list">
-									<li>
-										<a href="">
-											<span class="result-cate">갤러리</span>
-											<strong class="result-tit">홈페이지를 새롭게 오픈하였습니다.</strong>
-											<p class="result-txt">이른 아침 작은 새들 노랫소리 들려오면 언제나 그랬듯 아쉽게 잠을 깬다 창문 하나 햇살 가득 눈부시게 비쳐오고 서늘한 냉기에 재채기할까 말까
-											눈 비비며 빼꼼히 창밖을 내다보니 삼삼오오 아이들은 재잘대며 학교 가고 산책 갔다 오시는 아버지의 양손에는 효과를 알 수 없는 약수가 하나 가득 딸각딸각 아침 짓는 어머니의 분주함과 엉금엉금 냉수 찾는 그 아들의 게으름이 상큼하고 깨끗한 아침의 향기와 구수하게 밥 뜸드는 냄새가 어우러진 </p>
-										</a>
-									</li>
-									<li>
-										<a href="">
-											<span class="result-cate">NEWS</span>
-											<strong class="result-tit">홈페이지를 새롭게 오픈하였습니다.</strong>
-											<p class="result-txt">이른 아침 작은 새들 노랫소리 들려오면 언제나 그랬듯 아쉽게 잠을 깬다 창문 하나 햇살 가득 눈부시게 비쳐오고 서늘한 냉기에 재채기할까 말까
-											눈 비비며 빼꼼히 창밖을 내다보니 삼삼오오 아이들은 재잘대며 학교 가고 산책 갔다 오시는 아버지의 양손에는 효과를 알 수 없는 약수가 하나 가득 딸각딸각 아침 짓는 어머니의 분주함과 엉금엉금 냉수 찾는 그 아들의 게으름이 상큼하고 깨끗한 아침의 향기와 구수하게 밥 뜸드는 냄새가 어우러진 </p>
-										</a>
-									</li>
-									<li>
-										<a href="">
-											<span class="result-cate">영상</span>
-											<strong class="result-tit">홈페이지를 새롭게 오픈하였습니다.</strong>
-											<p class="result-txt">이른 아침 작은 새들 노랫소리 들려오면 언제나 그랬듯 아쉽게 잠을 깬다 창문 하나 햇살 가득 눈부시게 비쳐오고 서늘한 냉기에 재채기할까 말까
-											눈 비비며 빼꼼히 창밖을 내다보니 삼삼오오 아이들은 재잘대며 학교 가고 산책 갔다 오시는 아버지의 양손에는 효과를 알 수 없는 약수가 하나 가득 딸각딸각 아침 짓는 어머니의 분주함과 엉금엉금 냉수 찾는 그 아들의 게으름이 상큼하고 깨끗한 아침의 향기와 구수하게 밥 뜸드는 냄새가 어우러진 </p>
-										</a>
-									</li>
-									<li class="thumb-item"><!-- 갤러리 형식의 리스트이면 thumb-item 를 붙여야함 -->
-										<a href="">
-											<span class="result-cate">갤러리</span>
-											<span class="result-thumb"><img src="http://design.giantsoft.co.kr/images/test/thum/test14.jpg" alt=""></span>
-											<strong class="result-tit">홈페이지를 새롭게 오픈하였습니다.</strong>
-											<p class="result-txt">이른 아침 작은 새들 노랫소리 들려오면 언제나 그랬듯 아쉽게 잠을 깬다 창문 하나 햇살 가득 눈부시게 비쳐오고 서늘한 냉기에 재채기할까 말까
-											눈 비비며 빼꼼히 창밖을 내다보니 삼삼오오 아이들은 재잘대며 학교 가고 산책 갔다 오시는 아버지의 양손에는 효과를 알 수 없는 약수가 하나 가득 딸각딸각 아침 짓는 어머니의 분주함과 엉금엉금 냉수 찾는 그 아들의 게으름이 상큼하고 깨끗한 아침의 향기와 구수하게 밥 뜸드는 냄새가 어우러진 </p>
-										</a>
-									</li>
-								</ul>
-							</article>
-							<!-- 통합검색일때 ( 제품검색 ) -->
-							<article class="total-search-result-con">
-								<div class="totabl-search-list-tit-box clearfix">
-									<h3 class="total-search-list-tit"><strong>Product </strong> Search Results</h3>
-									<a href="./search_product.php" class="total-search-more-btn" title="Product Search Results"><i class="material-icons">&#xe03b;</i></a>
-								</div>
-								해당 프로젝트에 들어가는 제품 리스트 넣어주세요
-							</article>
-						</section>
-						<!-- // -->
-						<!-- 중문버전 -->
+						<?}?>
+
+						<?if($lang==3){//중문?>
 						<article class="search-result-top-container">
 							<aside class="search-result-top-con">
-								<div class="result-top-tit"><strong class="result-bold-txt">"TEST"</strong>搜索结果</div>
-								<p class="result-txt"><strong class="result-bold-txt">"TEST"</strong> 对于 <b>123</b>结果来自.</p>
+								<div class="result-top-tit"><strong class="result-bold-txt">"<?=$allSearch?>"</strong>搜索结果</div>
+								<p class="result-txt"><strong class="result-bold-txt">"<?=$allSearch?>"</strong> 对于 <b><?=$all_cnt?></b>结果来自.</p>
 								<!-- 검색결과가 없을때 -->
 								<div class="no-result-txt">
-									<p><strong class="result-bold-txt">"TEST"</strong> 找不到结果。 请再试一次。</p>
+									<p><strong class="result-bold-txt">"<?=$allSearch?>"</strong> 找不到结果。 请再试一次。</p>
 									<ul>
 										<li>- 确保单词拼写正确。</li>
 										<li>- 确保您输入韩语为英语或英语为韩语。</li>
@@ -216,78 +164,28 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 								<div class="search-result-classify-item">
 									<div class="search-result-classify-inner">
 										<p class="result-list-tit"><i class="material-icons"></i> 帖子 搜索结果</p>
-										<p class="result-info"><strong class="result-bold-txt">777</strong>内容已被检索。</p>
+										<p class="result-info"><strong class="result-bold-txt"><?=$bbs_cnt?></strong>内容已被检索。</p>
 									</div>
 								</div>
 								<div class="search-result-classify-item">
 									<div class="search-result-classify-inner">
 										<p class="result-list-tit"><i class="material-icons"></i> 生产 搜索结果</p>
-										<p class="result-info"><strong class="result-bold-txt">777</strong>内容已被检索。</p>
+										<p class="result-info"><strong class="result-bold-txt"><?=$goods_cnt?></strong>内容已被检索。</p>
 									</div>
 								</div>
 							</article>
 							<!-- // -->
 						</article>
-						<section class="total-search-result-list-con">
-							<article class="total-search-result-con total-search-board-result-con">
-								<div class="totabl-search-list-tit-box clearfix">
-									<h3 class="total-search-list-tit"><strong>帖子 </strong> 搜索结果</h3>
-									<a href="./search_board.php" class="total-search-more-btn" title="帖子 搜索结果"><i class="material-icons">&#xe03b;</i></a>
-								</div>
-								<ul class="total-search-result-bbs-list">
-									<li>
-										<a href="">
-											<span class="result-cate">갤러리</span>
-											<strong class="result-tit">홈페이지를 새롭게 오픈하였습니다.</strong>
-											<p class="result-txt">이른 아침 작은 새들 노랫소리 들려오면 언제나 그랬듯 아쉽게 잠을 깬다 창문 하나 햇살 가득 눈부시게 비쳐오고 서늘한 냉기에 재채기할까 말까
-											눈 비비며 빼꼼히 창밖을 내다보니 삼삼오오 아이들은 재잘대며 학교 가고 산책 갔다 오시는 아버지의 양손에는 효과를 알 수 없는 약수가 하나 가득 딸각딸각 아침 짓는 어머니의 분주함과 엉금엉금 냉수 찾는 그 아들의 게으름이 상큼하고 깨끗한 아침의 향기와 구수하게 밥 뜸드는 냄새가 어우러진 </p>
-										</a>
-									</li>
-									<li>
-										<a href="">
-											<span class="result-cate">NEWS</span>
-											<strong class="result-tit">홈페이지를 새롭게 오픈하였습니다.</strong>
-											<p class="result-txt">이른 아침 작은 새들 노랫소리 들려오면 언제나 그랬듯 아쉽게 잠을 깬다 창문 하나 햇살 가득 눈부시게 비쳐오고 서늘한 냉기에 재채기할까 말까
-											눈 비비며 빼꼼히 창밖을 내다보니 삼삼오오 아이들은 재잘대며 학교 가고 산책 갔다 오시는 아버지의 양손에는 효과를 알 수 없는 약수가 하나 가득 딸각딸각 아침 짓는 어머니의 분주함과 엉금엉금 냉수 찾는 그 아들의 게으름이 상큼하고 깨끗한 아침의 향기와 구수하게 밥 뜸드는 냄새가 어우러진 </p>
-										</a>
-									</li>
-									<li>
-										<a href="">
-											<span class="result-cate">영상</span>
-											<strong class="result-tit">홈페이지를 새롭게 오픈하였습니다.</strong>
-											<p class="result-txt">이른 아침 작은 새들 노랫소리 들려오면 언제나 그랬듯 아쉽게 잠을 깬다 창문 하나 햇살 가득 눈부시게 비쳐오고 서늘한 냉기에 재채기할까 말까
-											눈 비비며 빼꼼히 창밖을 내다보니 삼삼오오 아이들은 재잘대며 학교 가고 산책 갔다 오시는 아버지의 양손에는 효과를 알 수 없는 약수가 하나 가득 딸각딸각 아침 짓는 어머니의 분주함과 엉금엉금 냉수 찾는 그 아들의 게으름이 상큼하고 깨끗한 아침의 향기와 구수하게 밥 뜸드는 냄새가 어우러진 </p>
-										</a>
-									</li>
-									<li class="thumb-item"><!-- 갤러리 형식의 리스트이면 thumb-item 를 붙여야함 -->
-										<a href="">
-											<span class="result-cate">갤러리</span>
-											<span class="result-thumb"><img src="http://design.giantsoft.co.kr/images/test/thum/test14.jpg" alt=""></span>
-											<strong class="result-tit">홈페이지를 새롭게 오픈하였습니다.</strong>
-											<p class="result-txt">이른 아침 작은 새들 노랫소리 들려오면 언제나 그랬듯 아쉽게 잠을 깬다 창문 하나 햇살 가득 눈부시게 비쳐오고 서늘한 냉기에 재채기할까 말까
-											눈 비비며 빼꼼히 창밖을 내다보니 삼삼오오 아이들은 재잘대며 학교 가고 산책 갔다 오시는 아버지의 양손에는 효과를 알 수 없는 약수가 하나 가득 딸각딸각 아침 짓는 어머니의 분주함과 엉금엉금 냉수 찾는 그 아들의 게으름이 상큼하고 깨끗한 아침의 향기와 구수하게 밥 뜸드는 냄새가 어우러진 </p>
-										</a>
-									</li>
-								</ul>
-							</article>
-							<!-- 통합검색일때 ( 제품검색 ) -->
-							<article class="total-search-result-con">
-								<div class="totabl-search-list-tit-box clearfix">
-									<h3 class="total-search-list-tit"><strong>生产  </strong> 搜索结果</h3>
-									<a href="./search_product.php" class="total-search-more-btn" title="生产 搜索结果"><i class="material-icons">&#xe03b;</i></a>
-								</div>
-								해당 프로젝트에 들어가는 제품 리스트 넣어주세요
-							</article>
-						</section>
-						<!-- // -->
-						<!-- 일문버전 -->
+						<?}?>
+
+						<?if($lang==4){//일문?>
 						<article class="search-result-top-container">
 							<aside class="search-result-top-con">
-								<div class="result-top-tit"><strong class="result-bold-txt">"TEST"</strong>検索結果</div>
-								<p class="result-txt"><strong class="result-bold-txt">"TEST"</strong>の<b>1</b>本検索結果です。</p>
+								<div class="result-top-tit"><strong class="result-bold-txt">"<?=$allSearch?>"</strong>検索結果</div>
+								<p class="result-txt"><strong class="result-bold-txt">"<?=$allSearch?>"</strong>の<b><?=$all_cnt?></b>本検索結果です。</p>
 								<!-- 검색결과가 없을때 -->
 								<div class="no-result-txt">
-									<p><strong class="result-bold-txt">"TEST"</strong>の検索結果がありません。再試行してください。</p>
+									<p><strong class="result-bold-txt">"<?=$allSearch?>"</strong>の検索結果がありません。再試行してください。</p>
 									<ul>
 										<li> - 単語のスペルが正しいことを確認してください。</li>
 										<li> - ハングルを英語でまたは英語をハングルで入力してください。</li>
@@ -302,61 +200,219 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 								<div class="search-result-classify-item">
 									<div class="search-result-classify-inner">
 										<p class="result-list-tit"><i class="material-icons"></i> スレッド検索結果</p>
-										<p class="result-info"><strong class="result-bold-txt">777</strong>のコンテンツが検索されました。</p>
+										<p class="result-info"><strong class="result-bold-txt"><?=$bbs_cnt?></strong>のコンテンツが検索されました。</p>
 									</div>
 								</div>
 								<div class="search-result-classify-item">
 									<div class="search-result-classify-inner">
 										<p class="result-list-tit"><i class="material-icons"></i>  製品検索結果</p>
-										<p class="result-info"><strong class="result-bold-txt">777</strong>のコンテンツが検索されました。</p>
+										<p class="result-info"><strong class="result-bold-txt"><?=$goods_cnt?></strong>のコンテンツが検索されました。</p>
 									</div>
 								</div>
 							</article>
 							<!-- // -->
 						</article>
+						<?}?>
+
 						<section class="total-search-result-list-con">
+<?
+$bbs_rs = $db->select("cs_bbs","where bbs_search=1 order by idx asc");
+while($bbs_row = mysqli_fetch_object($bbs_rs)){//전체 게시판 루프 시작
+	$list_bbs_cnt = $db->cnt("cs_bbs_data","where code='$bbs_row->code' and lang='$lang' and (subject like '%$allSearch%' or content like '%$allSearch%')");
+
+	//반드시 여기를 수정해주세요.
+	if($bbs_row->code=="notice" or $bbs_row->code=="board"){
+		$sub_domain = "notice/".$bbs_row->code.".php";
+	}
+	
+?>
+							<?if($list_bbs_cnt>0){?>
+							<?if($bbs_row->bbs_type==4){//FAQ형 게시판?>
+							<article class="total-search-result-con search-faq-con">
+							<?} else {?>
 							<article class="total-search-result-con total-search-board-result-con">
+							<?}?>
 								<div class="totabl-search-list-tit-box clearfix">
-									<h3 class="total-search-list-tit"><strong>スレッド </strong> 検索結果</h3>
-									<a href="./search_board.php" class="total-search-more-btn" title="スレッド 検索結果"><i class="material-icons">&#xe03b;</i></a>
+									<?if($lang==1){//국문?>
+									<h3 class="total-search-list-tit"><strong><?=$bbs_row->name?></strong> 검색결과</h3>
+									<a href="./search_board.php?allSearch=<?=$allSearch?>&code=<?=$bbs_row->code?>" class="total-search-more-btn" title="게시글 검색결과 더보기"><i class="material-icons">&#xe03b;</i></a>
+									<?}?>
+
+									<?if($lang==2){//영문?>
+									<h3 class="total-search-list-tit"><strong><?=$bbs_row->name?></strong> Search Results</h3>
+									<a href="./search_board.php?allSearch=<?=$allSearch?>&code=<?=$bbs_row->code?>" class="total-search-more-btn" title="Posts Search Results"><i class="material-icons">&#xe03b;</i></a>
+									<?}?>
+
+									<?if($lang==3){//중문?>
+									<h3 class="total-search-list-tit"><strong><?=$bbs_row->name?> </strong> 搜索结果</h3>
+									<a href="./search_board.php?allSearch=<?=$allSearch?>&code=<?=$bbs_row->code?>" class="total-search-more-btn" title="帖子 搜索结果"><i class="material-icons">&#xe03b;</i></a>
+									<?}?>
+
+									<?if($lang==4){//일문?>
+									<h3 class="total-search-list-tit"><strong><?=$bbs_row->name?> </strong> 検索結果</h3>
+									<a href="./search_board.php?allSearch=<?=$allSearch?>&code=<?=$bbs_row->code?>" class="total-search-more-btn" title="スレッド 検索結果"><i class="material-icons">&#xe03b;</i></a>
+									<?}?>
 								</div>
+								<?if($bbs_row->bbs_type==4){//FAQ형 게시판?>
+								<article class="search-bbs-faq-list">
+									<article class="search-faq-list-con faq-category-list-con">
+<?
+$bbs_data_rs = $db->select("cs_bbs_data","where code='$bbs_row->code' and lang='$lang' and (subject like '%$allSearch%' or content like '%$allSearch%') order by idx desc LIMIT 5");
+while($bbs_data_row = mysqli_fetch_object($bbs_data_rs)){
+	if($bbs_row->bbs_cate==1 and $bbs_data_row->cate){
+		$row_cate = $db->object("cs_cate","where code='$bbs_row->code' and idx='$bbs_data_row->cate'");
+	}
+
+	$content = $bbs_data_row->content;
+	$content = str_replace("<P>","",$content);
+	$content = str_replace("</P>","<br/>",$content);
+	$content = str_replace("<p>","",$content);
+	$content = str_replace("</p>","<br/>",$content);
+	$content = $tools->strHtml($content);
+
+	
+?>
+										<dl class="faq-item">
+											<dt>
+												<div class="faq-subject">
+													<span class="question-icon">Q</span>
+													<?if($bbs_row->bbs_cate==1){?>
+													<span class="faq-category">[<?=$row_cate->name?>]</span>
+													<?}?>
+													<strong class="faq-title"><?=$db->stripSlash($bbs_data_row->subject);?></strong>
+													<span class="arrow"><i class="material-icons">&#xE313;</i></span>
+												</div>
+											</dt>
+											<dd>
+												<span class="answer-icon">A</span>
+												<div class="answer-con">
+													<div class="editor"><?=$content;?></div>
+												</div>
+											</dd>
+										</dl>
+<?}?>
+										
+									</article>
+								</article>
+								<?} else {//FAQ형 게시판 제외 다른 게시판들?>
 								<ul class="total-search-result-bbs-list">
-									<li>
-										<a href="">
-											<span class="result-cate">갤러리</span>
-											<strong class="result-tit">홈페이지를 새롭게 오픈하였습니다.</strong>
-											<p class="result-txt">이른 아침 작은 새들 노랫소리 들려오면 언제나 그랬듯 아쉽게 잠을 깬다 창문 하나 햇살 가득 눈부시게 비쳐오고 서늘한 냉기에 재채기할까 말까
-											눈 비비며 빼꼼히 창밖을 내다보니 삼삼오오 아이들은 재잘대며 학교 가고 산책 갔다 오시는 아버지의 양손에는 효과를 알 수 없는 약수가 하나 가득 딸각딸각 아침 짓는 어머니의 분주함과 엉금엉금 냉수 찾는 그 아들의 게으름이 상큼하고 깨끗한 아침의 향기와 구수하게 밥 뜸드는 냄새가 어우러진 </p>
-										</a>
-									</li>
-									<li>
-										<a href="">
-											<span class="result-cate">NEWS</span>
-											<strong class="result-tit">홈페이지를 새롭게 오픈하였습니다.</strong>
-											<p class="result-txt">이른 아침 작은 새들 노랫소리 들려오면 언제나 그랬듯 아쉽게 잠을 깬다 창문 하나 햇살 가득 눈부시게 비쳐오고 서늘한 냉기에 재채기할까 말까
-											눈 비비며 빼꼼히 창밖을 내다보니 삼삼오오 아이들은 재잘대며 학교 가고 산책 갔다 오시는 아버지의 양손에는 효과를 알 수 없는 약수가 하나 가득 딸각딸각 아침 짓는 어머니의 분주함과 엉금엉금 냉수 찾는 그 아들의 게으름이 상큼하고 깨끗한 아침의 향기와 구수하게 밥 뜸드는 냄새가 어우러진 </p>
-										</a>
-									</li>
-									<li>
-										<a href="">
-											<span class="result-cate">영상</span>
-											<strong class="result-tit">홈페이지를 새롭게 오픈하였습니다.</strong>
-											<p class="result-txt">이른 아침 작은 새들 노랫소리 들려오면 언제나 그랬듯 아쉽게 잠을 깬다 창문 하나 햇살 가득 눈부시게 비쳐오고 서늘한 냉기에 재채기할까 말까
-											눈 비비며 빼꼼히 창밖을 내다보니 삼삼오오 아이들은 재잘대며 학교 가고 산책 갔다 오시는 아버지의 양손에는 효과를 알 수 없는 약수가 하나 가득 딸각딸각 아침 짓는 어머니의 분주함과 엉금엉금 냉수 찾는 그 아들의 게으름이 상큼하고 깨끗한 아침의 향기와 구수하게 밥 뜸드는 냄새가 어우러진 </p>
-										</a>
-									</li>
+<?
+$bbs_data_rs = $db->select("cs_bbs_data","where code='$bbs_row->code' and lang='$lang' and (subject like '%$allSearch%' or content like '%$allSearch%') order by idx desc LIMIT 5");
+while($bbs_data_row = mysqli_fetch_object($bbs_data_rs)){
+	if($bbs_row->bbs_cate==1 and $bbs_data_row->cate){
+		$row_cate = $db->object("cs_cate","where code='$bbs_row->code' and idx='$bbs_data_row->cate'");
+	}
+
+	
+?>
+									<?if($bbs_row->bbs_type==3){?>
 									<li class="thumb-item"><!-- 갤러리 형식의 리스트이면 thumb-item 를 붙여야함 -->
-										<a href="">
-											<span class="result-cate">갤러리</span>
-											<span class="result-thumb"><img src="http://design.giantsoft.co.kr/images/test/thum/test14.jpg" alt=""></span>
-											<strong class="result-tit">홈페이지를 새롭게 오픈하였습니다.</strong>
-											<p class="result-txt">이른 아침 작은 새들 노랫소리 들려오면 언제나 그랬듯 아쉽게 잠을 깬다 창문 하나 햇살 가득 눈부시게 비쳐오고 서늘한 냉기에 재채기할까 말까
-											눈 비비며 빼꼼히 창밖을 내다보니 삼삼오오 아이들은 재잘대며 학교 가고 산책 갔다 오시는 아버지의 양손에는 효과를 알 수 없는 약수가 하나 가득 딸각딸각 아침 짓는 어머니의 분주함과 엉금엉금 냉수 찾는 그 아들의 게으름이 상큼하고 깨끗한 아침의 향기와 구수하게 밥 뜸드는 냄새가 어우러진 </p>
+
+										<? if($_SESSION['USERID']){ ?>
+											<? if($_SESSION['USERID']==$bbs_data_row->userid){ ?>
+												<a href="<?=$site_url?>/<?=$sub_domain?>?bgu=view&idx=<?=$bbs_data_row->idx?>">
+											<? } else { ?>
+												<? if($bbs_data_row->secret=="y"){ ?>	
+													<a href="<?=$site_url?>/<?=$sub_domain?>?bgu=pass&bbs_view_secr=1&idx=<?=$bbs_data_row->idx;?>">
+												<? } else { ?>
+													<a href="<?=$site_url?>/<?=$sub_domain?>?bgu=view&idx=<?=$bbs_data_row->idx?>">
+												<? } ?>
+											<? } ?>
+										<? } else { ?>
+											<? if($bbs_data_row->secret=="y"){ ?>
+												<a href="<?=$site_url?>/<?=$sub_domain?>?bgu=pass&bbs_view_secr=1&idx=<?=$bbs_data_row->idx;?>">
+											<? } else { ?>
+												<a href="<?=$site_url?>/<?=$sub_domain?>?bgu=view&idx=<?=$bbs_data_row->idx?>">
+											<? } ?>
+										<? } ?>
+
+										<?if($bbs_row->bbs_cate==1){//카테고리형이면?>
+											<span class="result-cate"><?=$row_cate->name?></span>
+										<?}?>
+											<span class="result-thumb">
+											<?if($bbs_row->bbs_video==1){//유튜브 사용?>
+											<?if($bbs_data_row->sum_file){//유튜브 사용 but 썸네일 따로 사용?>
+											<img src="<?=$site_host?>/data/bbsData/<?=$bbs_data_row->sum_file?>" alt="">
+											<?} else {//유튜브용 썸네일 사용?>
+											<img src="http://img.youtube.com/vi/<?=$bbs_data_row->video_code?>/mqdefault.jpg" alt="">
+											<?}?>
+											<?} else {//유튜브 미사용?>
+											<img src="<?=$site_host?>/data/bbsData/<?=$bbs_data_row->sum_file?>" alt="">
+											<?}?>
+											</span>
+											<strong class="result-tit"><?=$db->stripSlash($bbs_data_row->subject);?></strong>
+											<p class="result-txt"><?=strip_tags($bbs_data_row->content)?></p>
 										</a>
 									</li>
+									<?} else {?>
+									<li>
+										<? if($_SESSION['USERID']){ ?>
+											<? if($_SESSION['USERID']==$bbs_row->userid){ ?>
+												<a href="<?=$site_url?>/<?=$sub_domain?>?bgu=view&idx=<?=$bbs_data_row->idx?>">
+											<? } else { ?>
+												<? if($bbs_row->secret=="y"){ ?>	
+													<a href="<?=$site_url?>/<?=$sub_domain?>?bgu=pass&bbs_view_secr=1&idx=<?=$bbs_data_row->idx;?>">
+												<? } else { ?>
+													<a href="<?=$site_url?>/<?=$sub_domain?>?bgu=view&idx=<?=$bbs_data_row->idx?>">
+												<? } ?>
+											<? } ?>
+										<? } else { ?>
+											<? if($bbs_row->secret=="y"){ ?>
+												<a href="<?=$site_url?>/<?=$sub_domain?>?bgu=pass&bbs_view_secr=1&idx=<?=$bbs_data_row->idx;?>">
+											<? } else { ?>
+												<a href="<?=$site_url?>/<?=$sub_domain?>?bgu=view&idx=<?=$bbs_data_row->idx?>">
+											<? } ?>
+										<? } ?>
+										<?if($bbs_row->bbs_cate==1){//카테고리형이면?>
+											<span class="result-cate"><?=$row_cate->name?></span>
+										<?}?>
+											<strong class="result-tit"><?=$db->stripSlash($bbs_data_row->subject);?></strong>
+											<p class="result-txt"><?=strip_tags($bbs_data_row->content)?></p>
+										</a>
+									</li>
+									<?}?>
+<?}?>
+									
 								</ul>
+								<?}?>
+
 							</article>
+							<?}?>
+<?}?>
+
+
 							<!-- 통합검색일때 ( 제품검색 ) -->
+							<?if($lang==1){//국문?>
+							<article class="total-search-result-con">
+								<div class="totabl-search-list-tit-box clearfix">
+									<h3 class="total-search-list-tit"><strong>제품</strong> 검색결과</h3>
+									<a href="./search_product.php" class="total-search-more-btn" title="제품 검색결과 더보기"><i class="material-icons">&#xe03b;</i></a>
+								</div>
+								해당 프로젝트에 들어가는 제품 리스트 넣어주세요
+							</article>
+							<?}?>
+
+							<?if($lang==2){//영문?>
+							<article class="total-search-result-con">
+								<div class="totabl-search-list-tit-box clearfix">
+									<h3 class="total-search-list-tit"><strong>Product </strong> Search Results</h3>
+									<a href="./search_product.php" class="total-search-more-btn" title="Product Search Results"><i class="material-icons">&#xe03b;</i></a>
+								</div>
+								해당 프로젝트에 들어가는 제품 리스트 넣어주세요
+							</article>
+							<?}?>
+
+							<?if($lang==3){//중문?>
+							<article class="total-search-result-con">
+								<div class="totabl-search-list-tit-box clearfix">
+									<h3 class="total-search-list-tit"><strong>生产  </strong> 搜索结果</h3>
+									<a href="./search_product.php" class="total-search-more-btn" title="生产 搜索结果"><i class="material-icons">&#xe03b;</i></a>
+								</div>
+								해당 프로젝트에 들어가는 제품 리스트 넣어주세요
+							</article>
+							<?}?>
+
+							<?if($lang==4){//일문?>
 							<article class="total-search-result-con">
 								<div class="totabl-search-list-tit-box clearfix">
 									<h3 class="total-search-list-tit"><strong>製品  </strong> 検索結果</h3>
@@ -364,8 +420,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 								</div>
 								해당 프로젝트에 들어가는 제품 리스트 넣어주세요
 							</article>
+							<?}?>
 						</section>
-						<!-- // -->
+						
+
+					
 						<!-- // 여기까지 -->
  
  

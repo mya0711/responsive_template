@@ -3,10 +3,18 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2021-11-01
+* UpDate :  2021-11-02
   
 
 ## 업데이트 내역
+
+- #### 2021-11-02
+
+  #### * php 파일
+	<code> <b>1. /kr/search/ *.php</b></code>
+	* 기존 통합검색파일 백업(_index.php) 후 개발 연동소스 추가
+
+***************************
 
 - #### 2021-11-01
 
