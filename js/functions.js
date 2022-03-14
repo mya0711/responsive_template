@@ -1,7 +1,7 @@
 /* *******************************************************
  * filename : functions.js
  * description : 전체적으로 사용되는 JS
- * date :2020-11-25
+ * date : 2022-03-14
 ******************************************************** */
 
 /* ************************
@@ -209,7 +209,7 @@ function magnificPopup (popupGallery) {
 			beforeOpen: function() {
 			  // just a hack that adds mfp-anim class to markup 
 			   this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
-			   this.st.mainClass = this.st.el.attr('data-effect');
+			   this.st.mainClass = "mfp-zoom-in"; // this.st.el.attr('data-effect');
 			}
 		  },
 		closeOnContentClick: true,
@@ -410,3 +410,43 @@ function toFit(cb, _ref) {
 		});
 	};
 }
+
+
+
+ /* ************************
+  * html Scroll Controls
+  * return true( 스크롤막을때 ) / false( 스크롤사용할때 )
+  * $.exists 함수 필요
+  ************************ */
+function htmlScrollControl (toggle) {
+	if (toggle) {
+		if (!($.exists('#fullpage')) || $.exists('.fp-responsive')) {
+			$("html").css({
+				"margin-right":getScrollBarWidth(),
+				"overflow-y":"hidden"
+			});
+		}else {
+			$.fn.fullpage.setAllowScrolling(false);
+			$.fn.fullpage.setKeyboardScrolling(false);
+		}
+	} else {
+		if (!($.exists('#fullpage')) || $.exists('.fp-responsive')) {
+			$("html").css({
+				"margin-right":"0",
+				"overflow-y":"scroll"
+			});
+		}else {
+			$.fn.fullpage.setAllowScrolling(true);
+			$.fn.fullpage.setKeyboardScrolling(true);
+		}
+	}
+}
+
+
+ /* ************************
+  * CSS Variable 100vh Setting
+  ************************ */
+var set100Vh = function set100Vh() {
+  document.documentElement.style.setProperty('--full-height', window.innerHeight + 'px');
+};
+window.addEventListener('resize', set100Vh);

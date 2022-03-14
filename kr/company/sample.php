@@ -15,15 +15,11 @@ include "../lib/sub.php";
 include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 ?>
 <style>
-.sample-container{margin-bottom:100px; font-size: 16px; line-height: 1.7; font-weight: 300; letter-spacing: -0.75px; color: #555;}
-.sample-container h4{color:#222; font-weight:600; font-size:20px; letter-spacing:-1px; padding:10px; border:1px solid #ccc; background-color:#fff; font-weight:400; margin-bottom:20px;}
+.sample-container{margin-bottom:100px; font-size: 1.6rem; line-height: 1.7; font-weight: 300; letter-spacing: -0.75px; color: #555;}
+.sample-container h4{color:#222; font-weight:600; font-size:2rem; letter-spacing:-1px; padding:0.5em; border:1px solid #ccc; background-color:#fff; font-weight:400; margin-bottom:1em;}
 .sample-container h4 b{color:#f57f20;}
 .sample-container h4:before{content:"-"; margin-right:7px;}
 
-@media all and ( max-width: 1024px ){
-	.sample-container{margin-bottom:50px; font-size:13px;}
-	.sample-container h4{font-size:15px; margin-bottom:10px}
-}
 /* 테이블 Sample */
 .test-table{width:100%;}
 .test-table th{border: 1px solid #c6c6c6; border-top: 1px solid #333; padding: 20px 0; background-color: #f7f7f7; font-size: 16px; font-weight: 300; letter-spacing: -0.7px; color: #464646;}
@@ -117,6 +113,14 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						<h4><b>스크롤커스텀 :</b> 모바일사이즈에서 가로스크롤 생성</h4>
 						<!-- 스크롤 영역 Start(테이블) -->
 						<div class="custom-scrollbar-wrapper">
+							<div class="cm-scroll-drag-guide">
+								<div class="cm-scroll-drag-inner">
+									<span class="drag-tail">
+										<em class="tail"></em>
+										<i class="xi-touch hand-icon"></i>
+									</span>
+								</div>
+							</div>
 							<div class="scroll-object-box">
 								<table class="test-table scroll-object"><!-- .scroll-object -->
 									<caption>테이블 샘플입니다. 테이블 목적을 입력해주세요</caption>
@@ -243,7 +247,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 				<!-- MagnificPopup -->
 				<section class="sample-container">
 					<article class="area">
-						<h4><b>모달팝업 :</b> 팝업 플러그인</h4>
+						<h4><b>모달팝업 :</b> MagnificPopup 플러그인</h4>
 						<div class="popup-gallery"><!-- popup-gallery 클래스 사용 -->
 							<a href="/images/main/main_visual_01.jpg" title="내용1" style="display:inline-block; width:200px;"><img src="/images/main/main_visual_01.jpg" alt="" width="200" />내용1</a>
 							<a href="/images/main/main_visual_02.jpg" title="내용2" style="display:inline-block; width:200px;"><img src="/images/main/main_visual_02.jpg" alt="" width="200" />내용2</a>
@@ -253,6 +257,19 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					</article>
 				</section>
 				<!-- // -->
+
+				<section class="sample-container">
+					<article class="area">
+						<h4><b>모달팝업 :</b> spotlight 팝업 플러그인</h4>
+						<div class="spotlight-group"><!-- spotlight-group 클래스 사용 -->
+							
+							<a href="/images/main/main_visual_01.jpg" title="내용1" style="display:inline-block; width:200px;" class="spotlight"><img src="/images/main/main_visual_01.jpg" alt="" width="200" />내용1</a>
+							<a href="/images/main/main_visual_02.jpg" title="내용2" style="display:inline-block; width:200px;" class="spotlight"><img src="/images/main/main_visual_02.jpg" alt="" width="200" />내용2</a>
+							<a href="/images/main/main_visual_01.jpg" title="내용3" style="display:inline-block; width:200px;" class="spotlight"><img src="/images/main/main_visual_01.jpg" alt="" width="200" />내용3</a>
+							<a href="/images/main/main_visual_02.jpg" title="내용4" style="display:inline-block; width:200px;" class="spotlight"><img src="/images/main/main_visual_02.jpg" alt="" width="200" />내용4</a>
+						</div>
+					</article>
+				</section>
 
 					
 				<section class="sample-container">

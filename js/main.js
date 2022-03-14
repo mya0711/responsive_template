@@ -1,7 +1,7 @@
 /* *******************************************************
  * filename : main.js
  * description : 메인에만 사용되는 JS
- * date : 2021-06-15
+ * date : 2022-03-14
 ******************************************************** */
 
 $(document).ready(function  () {
@@ -48,8 +48,8 @@ $(document).ready(function  () {
 	************************ */
 	// 메인 비주얼 높이값 설정
 	if ($.exists('#mainVisual.full-height')) {
-		mainVisualHeight();
-		$(window).on('resize', mainVisualHeight);
+		//mainVisualHeight();
+		//$(window).on('resize', mainVisualHeight);
 
 		function mainVisualHeight () {
 			var visual_height = getWindowHeight()	- $("#header").height();	// header가 fixed or absolute일경우 - $("#header").height() 삭제
@@ -130,7 +130,7 @@ $(document).ready(function  () {
 		infinite:true,
 		autoplaySpeed: 3000,
 		easing: 'easeInOutQuint',
-		pauseOnHover:false,
+		pauseOnHover:true,
 		prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Prev" tabindex="0" role="button"><i class="material-icons">&#xE314;</i></button>',
 		nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="material-icons">&#xE315;</i></button>',
 		responsive: [

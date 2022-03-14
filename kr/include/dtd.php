@@ -46,11 +46,13 @@
 <link rel="stylesheet" href="<?=$site_host?>/css/common/cm_bbs_common.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/common/cm_board.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/common/cm_gallery.css" />
+<link rel="stylesheet" href="<?=$site_host?>/css/common/cm_sitemap.css" />
 <!-- Plugin -->
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/slick.css">
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/jquery.mCustomScrollbar.css">
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/magnific-popup.css">
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/swiper.css" />
+<link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/spotlight.css" />
 <!--[if lte IE 9]>
 	<link rel="stylesheet" href="<?=$site_host?>/css/ie9.css">
 <![endif]-->

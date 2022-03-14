@@ -3,10 +3,109 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2021-11-02
+* UpDate :  2022-03-14
   
 
 ## 업데이트 내역
+
+- #### 2022-03-14
+
+  #### * css 파일
+	<code> <b>1. /css/layout.css, /css/layout_responsive.css</b></code>
+	* CSS 변수 사용을 위한 셋팅
+	* 스크롤 커스텀 css  추가
+	* 전체적으로 css변수 사용으로 변경
+	* #headerInner { display:flex; align-items:center; justify-content:space-between; } 으로 수정하여 가운데정렬이 자동으로 될수있게 수정
+	* 사이트맵 스타일 삭제 -> /css/common/cm_sitemap.css로 이동
+
+	<code> <b>2. /css/main.css</b></code>
+	* #mainVisual 높이값 변수로 수정
+	* main-visual-item .main-visual-pc-img에 선언되어있는 css를 모바일도 모두 사용할 수 있도록 클래스 수정
+	
+	<code> <b>3. /css/plugin/magnific-popup.css</b></code>
+	* 전체적으로 css 정리
+
+	<code> <b>4. /css/common/cm_sitemap.css</b></code>
+	* 사이트맵 공통 스타일 5개 추가
+
+	<code> <b>4. /css/plugin/spotlight.css</b></code>
+	* 모달팝업 spotlight css 추가
+
+ #### * js 파일
+	<code> <b>1. /js/common.js</b></code>
+	* document.ready 삭제(이전 상단에 js있을때 사용했던 소스)
+	* 사이트맵 js 추가
+	* 익스플로러 엣지 전환 소스 추가
+
+	<code> <b>2. /js/functions.js</b></code>
+	* 공통으로 많이사용하는 함수 htmlScrollControl() 이동( 기존 layer_popup.js에서 이동 )
+	=> 스크롤 막을때 htmlScrollControl(true), 스크롤 다시사용할때 htmlScrollControl(false)
+	* var(--full-height) 스크립트로 수정되도록 추가 =>  계속 사용할지 확인해야함
+
+	<code> <b>3. /js/layer_popup.js</b></code>
+	* 공통으로 많이사용하는 함수 htmlScrollControl() 삭제
+	
+	<code> <b>4. /js/main.js</b></code>
+	*  var(--full-height) 사용으로 메인비주얼 높이값 설정 주석처리 => 다시 사용할지 확인야함
+	* 기본슬라이드 slick js 수정 => pauseOnHover:true
+
+	<code> <b>5. /js/nav.js</b></code>
+	*  gnbLength 변수 추가
+	* 모바일 네비게이션 사용시 htmlScrollControl 함수로 수정
+
+	<code> <b>6. /js/sub.js</b></code>
+	*  '좌우로 드래그해주세요' 커버 삭제 후 아이콘 추가
+
+	<code> <b>7. /js/plugin/jquery.magnific-popup.js</b></code>
+	*  기본 모달팝업 플러그인 버벅이는 이슈로 버전 수정
+
+	<code> <b>8. /js/plugin/spotlight.min.js</b></code>
+	*  기본 모달팝업 갤러리형 플러그인 추가
+
+#### * php 파일
+	<code> <b>1. /kr/index.php, /kr/index_fullpage.php</b></code>
+	* 메인 비주얼 이미지 모바일도 배경형태로 변경 후 클래스 수정
+	
+	<code> <b>2. /kr/company/sample.php</b></code>
+	* 스크롤 커버 삭제, 아이콘 추가
+	* spotlight 팝업 추가
+
+	<code> <b>3. /kr/index.php, /kr/index_fullpage.php</b></code>
+	* 메인 비주얼 이미지 모바일도 배경형태로 변경 후 클래스 수정
+	
+	<code> <b>4. /kr/etc/sitemap.php, /kr/etc/sitemap_02.php 삭제</b></code>
+	* /kr/sitemap/ 이동
+
+	<code> <b>5. /kr/sitemap/sitemap~sitemap_05.php 추가</b></code>
+	* 사이트맵 기본스타일 정리 01~ 05
+	
+	<code> <b>6. /kr/include/bottom.php</b></code>
+	* mCustomScrollbar.contact.min.js, magnific-popup.js 공통 스크립트 파일로 이동
+	
+	<code> <b>7. /kr/include/dtd.php</b></code>
+	* cm_sitemap.css, spotlight.css 추가
+	
+	<code> <b>8. /kr/include/footer.php</b></code>
+	* 사이트맵 인클루드 추가
+
+	<code> <b>9. /kr/include/header.php</b></code>
+	* title 속성 영문으로 수정
+	* 사이트맵 버튼 수정 => 사이트맵 1 : ajax 호출, 사이트맵 2/3/4/5 : include  (footer)
+		
+	<code> <b>10. /kr/include/scripts.php</b></code>
+	* gsap script 추가
+	* mCustomScrollbar.contact.min.js, magnific-popup.js 이동
+	* spotlight.js 추가
+	* common.js 선언위치 하단으로 이동(nav.js에 있는 변수사용으로 인하여)
+
+#### * 기타 파일
+	<code> <b>1. /404.html</b></code>
+	*  home 으로 가는 버튼 추가
+
+	<code> <b>2. /robots.txt</b></code>
+	* 보안상이유로 하단 disallow : 폴더명 삭제
+
+***************************
 
 - #### 2021-11-02
 

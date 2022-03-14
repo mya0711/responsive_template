@@ -3,19 +3,19 @@
 		<div class="gnb-overlay-bg"></div>
 		<div id="headerInnerWrap">
 			<!-- ****************** 헤더상단 ********************** -->
-			<div id="headerInner" class="clearfix">
-				<h1 class="logo"><a href="<?=$site_url?>/"><em class="blind">메인으로</em><img src="<?=$site_host?>/images/common/logo.png" alt="<?=$site_head_title?>" /></a></h1>
+			<div id="headerInner">
+				<h1 class="logo"><a href="<?=$site_url?>/" title="to home"><img src="<?=$site_host?>/images/common/logo.png" alt="<?=$site_head_title?>" /></a></h1>
 				<div class="header-util-box">
 					<!-- 통합검색 -->
 					<div class="header-search-box">
-						<button class="header-search-open-btn" title="검색창열기"><i class="xi-search"></i></button>
+						<button class="header-search-open-btn" title="Open Search"><i class="xi-search"></i></button>
 						<div class="header-search-inner">
 							<!-- <form action=""> -->
-							<label for="headerSearch" class="blind">검색</label>
+							<label for="headerSearch" class="blind">Search</label>
 							<input type="text" class="header-search-word" id="headerSearch" placeholder="검색어를 입력하세요" />
-							<button class="header-search-btn" type="submit" title="검색" onclick="location.href='<?=$site_url?>/search/'"><i class="xi-search"></i></button>
+							<button class="header-search-btn" type="submit" title="Search" onclick="location.href='<?=$site_url?>/search/'"><i class="xi-search"></i></button>
 							<!-- </form> -->
-							<button class="header-search-close-btn" title="검색창닫기"><i class="xi-close-min"></i></button>
+							<button class="header-search-close-btn" title="Close"><i class="xi-close-min"></i></button>
 						</div>
 					</div>
 					<!-- 외국어선택 -->
@@ -34,21 +34,20 @@
 							<li><a href="<?=$site_host?>/en/">ENG</a></li>
 						</ul>
 					</div>
-					<!-- 사이트맵 버튼 ( 기본 ) -->
-					<a href="<?=$site_url?>/etc/sitemap.php" class="sitemap-line-btn cm-modal-open-btn" title="사이트맵 열기">
-						<span class="line line1"></span><span class="line line2"></span><span class="line line3"></span><!-- <span class="line line4"></span> -->
-					</a>
-					<!-- 사이트맵 style 02 (toggle기능 사용안하면 date-event 삭제) -->
-					<!-- <button class="sitemap-line-btn sitemap-open-btn" title="사이트맵 열기" data-event="toggle">
+					<!-- 사이트맵 style 01  -->
+					<a href="<?=$site_url?>/sitemap/sitemap_01.php" class="sitemap-line-btn cm-modal-open-btn" title="Open the sitemap">
 						<span class="line line1"></span><span class="line line2"></span><span class="line line3"></span>
-					</button> -->
-					<? // include $_SERVER["DOCUMENT_ROOT"].$site_directory."/etc/sitemap_02.php"; ?>
+					</a>
+					<!-- 사이트맵 style 02,03,04,05 -->
+					<button class="sitemap-line-btn cm-sitemap-open-btn" title="Open the sitemap">
+						<span class="line line1"></span><span class="line line2"></span><span class="line line3"></span>
+					</button>
 				</div>
 			</div>
 			<!-- ****************** GNB ********************** -->
 			<!-- GNB PC  -->
 			<nav id="gnb" class="each-menu">
-				<h2 class="blind">주메뉴</h2>
+				<h2 class="blind">Menu</h2>
 				<!-- 
 					- 전체메뉴 : class="total-menu"
 					- 각각메뉴 : class="each-menu" + <div id="gnbBg"></div> 삭제
@@ -99,7 +98,7 @@
 			</nav>
 		</div>
 		<!-- GNB Mobile -->
-		<button class="nav-open-btn" title="네비게이션 열기">
+		<button class="nav-open-btn" title="Menu Open">
 			<span class="line line1"></span><span class="line line2"></span><span class="line line3"></span>
 		</button>
 		<div class="gnb-overlay-bg-m"></div>
@@ -108,7 +107,7 @@
 				기본스타일 : .gnb-style-basic
 				Full 스타일 : .gnb-style-full
 			-->
-			<h2 class="blind">주메뉴</h2>
+			<h2 class="blind">Menu</h2>
 			<!-- 언어 선택 or 회원메뉴 사용안할시 삭제 -->
 			<div class="header-util-menu-box">
 				<!-- 언어 선택 리스트 -->

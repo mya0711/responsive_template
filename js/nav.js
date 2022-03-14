@@ -1,7 +1,7 @@
 /* *******************************************************
  * filename : nav.js
  * description : 네비게이션 및 사이드바 on 등 메뉴에 관련된 JS
- * date : 2021-06-14
+ * date : 2022-03-14
 ******************************************************** */
 
 // PC, 모바일 공통
@@ -13,6 +13,7 @@ var $gnbList = $gnb.children("ul");
 var $gnbItem = $gnbList.children("li");
 var $gnb_dep2 = $gnbItem.children(".gnb-2dep");
 var $gnbBg = $('.gnb-overlay-bg');
+var gnbLength = $gnbItem.length;
 // 모바일
 var $menuBtn = $("#header .nav-open-btn");
 var $gnbM = $("#gnbM");
@@ -133,7 +134,8 @@ function openMobileMenu () {
 	$menuBtn.addClass("active");
 	$gnbM.addClass("open");
 	$gnbMBg.fadeIn();
-	$("body").css({'height':$(window).height(), 'overflow':'hidden'});
+	//$("body").css({'height':$(window).height(), 'overflow':'hidden'});
+	htmlScrollControl(true);
 	if ( dep1> 0 && dep2> 0 ) {
 		$gnbMList.children("li").eq(dep1-1).addClass("active").find(".gnb-2dep").show().find("li").eq(dep2-1).addClass("on");
 	}
@@ -144,7 +146,8 @@ function closeMobileMenu () {
 	$menuBtn.removeClass("active");
 	$gnbM.removeClass("open");
 	$gnbMBg.hide();
-	$("body").css({'height':'auto', 'overflow':'auto'});
+	//$("body").css({'height':'auto', 'overflow':'auto'});
+	htmlScrollControl(false);
 	if ( dep1> 0 && dep2> 0 ) {
 		$gnbMList.children("li").removeClass("active").find(".gnb-2dep").hide();
 	}

@@ -1,5 +1,2 @@
 User-agent: *
-Disallow: /	
-Disallow: /gsadmin/
-Disallow: /lib/
-Disallow: /webeditor/
+Disallow: /

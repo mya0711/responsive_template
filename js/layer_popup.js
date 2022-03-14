@@ -1,7 +1,7 @@
 /* *******************************************************
  * filename : layer_popup.js
  * description : 모달레이어를 띄울때 사용되는 ajax JS
- * date : 2020-11-25
+ * date : 2022-03-14
 ******************************************************** */
 
 
@@ -10,35 +10,6 @@ $(document).on("click",".cm-modal-open-btn",function  () {
 	ajaxLoad($(this).attr("href"));
 	return false;
 });
-
- /* ************************
-  * html Scroll Controls
-  * return true( 스크롤막을때 ) / false( 스크롤사용할때 )
-  * $.exists 함수 필요
-  ************************ */
-function htmlScrollControl (toggle) {
-	if (toggle) {
-		if (!($.exists('#fullpage')) || $.exists('.fp-responsive')) {
-			$("html").css({
-				"margin-right":"17px",
-				"overflow-y":"hidden"
-			});
-		}else {
-			$.fn.fullpage.setAllowScrolling(false);
-			$.fn.fullpage.setKeyboardScrolling(false);
-		}
-	} else {
-		if (!($.exists('#fullpage')) || $.exists('.fp-responsive')) {
-			$("html").css({
-				"margin-right":"0",
-				"overflow-y":"scroll"
-			});
-		}else {
-			$.fn.fullpage.setAllowScrolling(true);
-			$.fn.fullpage.setKeyboardScrolling(true);
-		}
-	}
-}
 
  /* ************************
   * Modal 영역 생성

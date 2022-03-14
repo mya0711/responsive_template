@@ -1,7 +1,7 @@
 /* *******************************************************
  * filename : sub.js
  * description : 서브컨텐츠에만 사용되는 JS
- * date : 2021-06-14
+ * date : 2022-03-14
 ******************************************************** */
 
 
@@ -28,12 +28,7 @@ $(document).ready(function  () {
 	************************ */
 	/* 서브 Scrollbar object  */
 	$(".custom-scrollbar-wrapper").each(function  () {
-		if ( $("html").attr("lang") == "ko" ) {
-			var dragTxt = "좌우로 드래그 해주세요.";
-		}else {
-			var dragTxt = "Drag left and right.";
-		}
-		$(this).append("<div class='custom-scrollbar-cover'><div class='scroll-cover-txt'><i class='xi-touch'></i><p>"+dragTxt+"</p></div></div>");
+		$(this).prepend("<div class='custom-scrollbar-cover'><div class='scroll-cover-txt'><i class='xi-touch'></i></div></div>");
 		var $scrollObject = $(this).find(".scroll-object-box");
 		if ($.exists($scrollObject)) {
 			customScrollX($scrollObject);
