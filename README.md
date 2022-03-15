@@ -17,6 +17,7 @@ Responsive Website Template
 	* 전체적으로 css변수 사용으로 변경
 	* #headerInner { display:flex; align-items:center; justify-content:space-between; } 으로 수정하여 가운데정렬이 자동으로 될수있게 수정
 	* 사이트맵 스타일 삭제 -> /css/common/cm_sitemap.css로 이동
+	* 헤더 분기점 1024에서 1260으로 변경
 
 	<code> <b>2. /css/main.css</b></code>
 	* #mainVisual 높이값 변수로 수정
@@ -31,7 +32,7 @@ Responsive Website Template
 	<code> <b>4. /css/plugin/spotlight.css</b></code>
 	* 모달팝업 spotlight css 추가
 
- #### * js 파일
+  #### * js 파일
 	<code> <b>1. /js/common.js</b></code>
 	* document.ready 삭제(이전 상단에 js있을때 사용했던 소스)
 	* 사이트맵 js 추가
@@ -44,7 +45,7 @@ Responsive Website Template
 
 	<code> <b>3. /js/layer_popup.js</b></code>
 	* 공통으로 많이사용하는 함수 htmlScrollControl() 삭제
-	
+
 	<code> <b>4. /js/main.js</b></code>
 	*  var(--full-height) 사용으로 메인비주얼 높이값 설정 주석처리 => 다시 사용할지 확인야함
 	* 기본슬라이드 slick js 수정 => pauseOnHover:true
@@ -62,7 +63,7 @@ Responsive Website Template
 	<code> <b>8. /js/plugin/spotlight.min.js</b></code>
 	*  기본 모달팝업 갤러리형 플러그인 추가
 
-#### * php 파일
+  #### * php 파일
 	<code> <b>1. /kr/index.php, /kr/index_fullpage.php</b></code>
 	* 메인 비주얼 이미지 모바일도 배경형태로 변경 후 클래스 수정
 	
@@ -98,7 +99,7 @@ Responsive Website Template
 	* spotlight.js 추가
 	* common.js 선언위치 하단으로 이동(nav.js에 있는 변수사용으로 인하여)
 
-#### * 기타 파일
+  #### * 기타 파일
 	<code> <b>1. /404.html</b></code>
 	*  home 으로 가는 버튼 추가
 
