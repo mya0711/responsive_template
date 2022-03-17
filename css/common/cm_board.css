@@ -2,7 +2,7 @@
 /* *******************************************************
  * filename : board_list.css
  * description : 일반 게시판 관련 CSS
- * date : 2021-03-26
+ * date : 2022-03-16
 ******************************************************** */
 /* ******************   게시판 :: 공통색상 ********************** */
 .bbs-list-style02 .bbs-item a:hover .bbs-subject-txt,
@@ -18,14 +18,14 @@
 
 /* ******************   게시판 :: 기본리스트 01 ********************** */
 /* 게시판 :: 기본리스트 :: 레이아웃 */
-.bbs-list-tbl{display:table; width:100%; table-layout:fixed;}
+.bbs-list-tbl{display:table; width:100%; table-layout:fixed; font-size:16px;}
 .bbs-list-head{display:table-header-group; }
-.bbs-list-head span{display:table-cell; text-align:center; background:#fff; color:#222; font-weight:500; font-size:15px; letter-spacing:-0.5px; padding:20px 0; border-top:1px solid #333;  border-bottom:1px solid #ddd;}
+.bbs-list-head span{display:table-cell; text-align:center; background:#fff; color:#222; font-weight:500; font-size:1em; letter-spacing:-0.03125em; padding:20px 0; border-top:1px solid #333;  border-bottom:1px solid #ddd;}
 .bbs-list-row{display:table-row; width:100%;}
-.bbs-list-row .column{display:table-cell; vertical-align:middle; padding:16px 0; color:#444; font-size:15px; letter-spacing:-0.5px; text-align:center; border-bottom:1px solid #ddd;}
+.bbs-list-row .column{display:table-cell; vertical-align:middle; padding:25px 0; color:#444; font-size:1em; letter-spacing:-0.03125em; text-align:center; border-bottom:1px solid #ddd;}
 .bbs-list-row:hover{background-color:#f6f6f6}
 /* 게시판 :: 기본리스트 ::  항목 */
-.bbs-list-row.notice-row .notice-tit{display:inline-block; height:20px; line-height:20px; padding:0px 10px; background-color:#333; color:#fff; font-size:11px; -webkit-border-radius:10px;-moz-border-radius:10px;-o-border-radius:10px;border-radius:10px;}
+.bbs-list-row.notice-row .notice-tit{display:inline-block; height:24px; line-height:24px; padding:0px 10px; background-color:#333; color:#fff; font-size:13px; }
 .bbs-list-row.notice-row .column,.bbs-list-row.notice-row .bbs-subject-con .bbs-subject-txt{font-weight:500 !important;}
 .bbs-list-row .bbs-title{text-align:left;}
 .bbs-list-row .bbs-title a{display:block; position:relative; padding:0 60px 0 0; color:#444; }	/* ★ 댓글이 있을때 padding-right:100px ★  */

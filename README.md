@@ -3,10 +3,41 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2022-03-14
+* UpDate :  2022-03-17
   
 
 ## 업데이트 내역
+
+- #### 2022-03-17
+
+  #### * css 파일
+	<code> <b>1. /css/layout.css</b></code>
+	* 스크롤 커스텀 css 모바일기기에서는 적용안되도록 변경
+	* #footerInner css 삭제
+
+	<code> <b>2. /css/layout_responsive.css</b></code>
+	* nav-open-btn 메뉴열렸을때 정렬 수정(481px~1260px만)
+	
+	<code> <b>3. /css/common/cm_bbs_common.css</b></code>
+	* total number, icon 색 css 변수사용
+	* board search box css 최적화 및 스타일 추가
+	* board category 스타일추가
+	* custom-select option list 오픈을 css가 아닌 js로 열리게 하기위해 변경
+
+	<code> <b>4. /css/common/cm_board.css</b></code>
+	* 간격 및 폰트사이즈 수정
+
+  #### * js 파일
+	<code> <b>1. /js/common.js</b></code>
+	* tableWidth 변수값 수정
+	* startOffset 변수 상단으로 이동
+	* custom Select 스크립트 수정
+
+  #### * php 파일
+	<code> <b>8. /kr/include/footer.php</b></code>
+	* 사이트맵 인클루드 기본 3번으로 수정
+
+***************************
 
 - #### 2022-03-14
 

@@ -18,14 +18,14 @@
 	--sub-menu-height: 69px;
 	--full-height: 100vh;
 }
-*::-webkit-scrollbar {
+body:not(.is-mobile) *::-webkit-scrollbar {
 	width: 15px;
 	height: 15px;
 }
-*::-webkit-scrollbar-track {
+body:not(.is-mobile) *::-webkit-scrollbar-track {
   background-color: #f1f1f1;
 }
-*::-webkit-scrollbar-thumb {
+body:not(.is-mobile) *::-webkit-scrollbar-thumb {
 	background-color: #c1c1c1;
 }
 ::selection {
@@ -279,7 +279,6 @@ table, th, td{word-break:break-word;}
 
 /* -------- FOOTER :: 레이아웃 -------- */
 #footer{background-color:#fff;}
-#footerInner{position:relative; }
 .footer-left-con{float:left; }
 .footer-right-con{float:right;}
 

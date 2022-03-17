@@ -5,8 +5,9 @@
 ******************************************************** */
 
 var laptopWidth = 1366;
-var tabletWidth = 1024; // 헤더가 변경되는 시점
+var tabletWidth = 1260; // 헤더가 변경되는 시점
 var mobileWidth = 800;
+startOffset = isMobile ? "100%" : "90%";
 
 $(window).load(function  () {
 	// toAnchorParameter("anchor");	/* 주소~?anchor=content  */ 
@@ -15,11 +16,6 @@ $(window).load(function  () {
 	* Waypoint.js, isMobile () 필요
 	************************ */
 	if ($.exists('[data-scroll]')) {
-		if ( isMobile() ) {
-			startOffset = "100%";
-		}else {
-			startOffset = "90%";
-		}
 		$("[data-scroll]").waypoint(function(){
 			$(this).addClass("animated");
 		}, { 
@@ -383,12 +379,14 @@ if ($.exists('.custom-select-box .custom-select')) {
 	$(".custom-select-box .custom-select").each(function() {
 		var classes = $(this).attr("class");
 		var id = $(this).attr("id");
-		var name = $(this).attr("name");
+		var name = $(this).attr("name"); 
+		var placeholder = $(this).attr("placeholder") ? $(this).attr("placeholder") : $(this).find("option:selected").text();
 		var template = '<div class="' + classes + '">';
-		template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + "</span>";
+		template += '<span class="custom-select-trigger">' + placeholder + "</span>";
 		template += '<ul class="custom-option-drop-list">';
 		$(this).find("option").each(function() {
-			template += '<li class="custom-option-item ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + "</li>";
+			var first_select = $(this).is(":selected") ? " selection" : "";
+			template += '<li class="custom-option-item'+ first_select +'" data-value="' + $(this).attr("value") + '">' + $(this).html() + "</li>";
 		});
 		template += "</ul></div>";
 		$(this).wrap('<div class="custom-select-wrapper"></div>');
@@ -403,8 +401,10 @@ if ($.exists('.custom-select-box .custom-select')) {
 	$(".custom-select-trigger").on("click", function(event) {
 		$("html").one("click", function() {
 			$(".custom-select").removeClass("opened");
+			$(".custom-option-drop-list").slideUp();
 		});
 		$(this).parents(".custom-select").toggleClass("opened");
+		$(this).siblings(".custom-option-drop-list").slideToggle();
 		event.stopPropagation();
 	});
 	$(".custom-option-item").on("click", function() {

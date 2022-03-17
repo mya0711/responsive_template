@@ -147,4 +147,4 @@
 			</div>
 		</article>
 	</footer>
-	<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/sitemap/sitemap_02.php"; ?>
+	<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/sitemap/sitemap_03.php"; ?>

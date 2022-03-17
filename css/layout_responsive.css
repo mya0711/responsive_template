@@ -197,7 +197,6 @@
 	
 	#header.top-fixed .nav-open-btn .line{background-color:#333}
 }
-
 @media all and ( max-width: 800px ){
 	/* Header :: 검색버튼 */
 	.header-search-box{margin-left:5px;}
@@ -212,6 +211,9 @@
 	}
 	.header-search-inner .header-search-btn{right:40px;}
 	.header-search-inner .header-search-close-btn{height:100%; width:38px; border-radius:0;}
+}
+@media all and ( min-width: 481px ) and ( max-width: 1260px ) {
+	.nav-open-btn.active{right:20px;}
 }
 @media all and ( max-width: 480px ){
 	#header .logo img{height:30px;}
@@ -393,7 +395,7 @@
 	#contentInfoCon.content-title-location .location{float:none; padding-top:23px;}
 
 	/*  SUB LAYOUT :: 컨텐츠 레이아웃 */
-	#content:not(.wide){padding:50px 15px}
+	#content:not(.wide){padding:50px var(--area-padding)}
 	#content.wide{padding:50px 0 0 0}
 }
 
