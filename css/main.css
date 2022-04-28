@@ -63,7 +63,7 @@
 .main-visual-item .main-visual-txt-con .main-visual-more-btn{display:inline-block; font-size:16px; font-weight:300; color:#333; padding:15px 30px;  border-radius:30px; background-color:#fff;}
 
 /* 메인 비주얼 :: active효과 */
-.main-visual-item.active-item .main-visual-pc-img{
+.main-visual-item.active-item .main-visual-img{
     -webkit-transform: scale(1.0,1.0) rotate(0.002deg);
      transform: scale(1.0,1.0) rotate(0.002deg);
 }

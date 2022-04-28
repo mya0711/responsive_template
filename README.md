@@ -3,10 +3,29 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2022-03-17
+* UpDate :  2022-04-28
   
 
 ## 업데이트 내역
+
+- #### 2022-04-28
+
+  #### * css 파일
+	<code> <b>1. /css/default.css</b></code>
+	* pc-br, m-br 분기점 1024에서 1260px로 변경
+
+	<code> <b>2. /css/main.css,  /css/main_responsive.css</b></code>
+	* 모바일 비주얼 이미지도 active효과 작동하도록 수정
+	* 모바일 이미지 width 100% 소스 삭제
+	
+  #### * js 파일
+	<code> <b>1. /js/common.js</b></code>
+	* waypoint PC버전일경우 startOffset 90%->70% 수정
+
+	<code> <b>2. /js/nav.js</b></code>
+	* 모바일 gnb 열린 후 창 크게했을때 스크롤바 다시생성되도록 하는 조건문 수정
+
+***************************
 
 - #### 2022-03-17
 

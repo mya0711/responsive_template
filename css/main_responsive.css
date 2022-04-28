@@ -15,7 +15,6 @@
 	/* 메인 비주얼 :: 이미지 */
 	.main-visual-item .main-visual-pc-img{display:none;}
 	.main-visual-item .main-visual-m-img{display:block;}
-	.main-visual-m-img img{width:100%;}
 	/* 메인 비주얼 :: 텍스트 */
 	.main-visual-item .main-visual-txt-con{}
 	.main-visual-item .main-visual-txt-con .main-visual-txt1{font-size:18px; margin-bottom:14px}

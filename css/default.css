@@ -715,7 +715,7 @@ a:hover .over-bg{
 
 /* br tag */
 .m-br{display:none;}
-@media all and ( max-width: 1024px ){
+@media all and ( max-width: 1260px ){
 	.m-br{display:block;}
 	.pc-br{display:none;}
 }

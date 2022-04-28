@@ -58,7 +58,7 @@ $(window).resize(function  () {
 	// 모바일 gnb열린 후 창 크게했을때 스크롤바 생성
 	if ( menuState ) {
 		if ( getWindowWidth() > tabletWidth ) {
-			$("body").css({'height':'auto', 'overflow':'auto'});
+			htmlScrollControl (false);
 		}
 	}
 	if ( $.exists("#gnbM") ) {

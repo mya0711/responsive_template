@@ -7,7 +7,7 @@
 var laptopWidth = 1366;
 var tabletWidth = 1260; // 헤더가 변경되는 시점
 var mobileWidth = 800;
-startOffset = isMobile ? "100%" : "90%";
+startOffset = isMobile ? "100%" : "70%";
 
 $(window).load(function  () {
 	// toAnchorParameter("anchor");	/* 주소~?anchor=content  */ 
