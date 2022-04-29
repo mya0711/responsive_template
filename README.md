@@ -3,10 +3,19 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2022-04-28
+* UpDate :  2022-04-29
   
 
 ## 업데이트 내역
+
+- #### 2022-04-29
+
+  #### * php 파일
+	<code> <b>1. /kr/include/dtd.php</b></code>
+	* dtd 상단 <? header("X-Frame-Options: SAMEORIGIN");?> 추가
+	=> 타 도메인에서 iframe으로 사용할 수 없도록 추가(웹취약점보완)
+
+***************************
 
 - #### 2022-04-28
 

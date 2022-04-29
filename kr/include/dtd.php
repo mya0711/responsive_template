@@ -1,3 +1,4 @@
+<? header("X-Frame-Options: SAMEORIGIN");?>
 <!doctype html>
 <html lang="ko"<?if($fullpage){?> class="fullpage-html"<?}?>>
 <head>
