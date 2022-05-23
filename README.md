@@ -3,10 +3,22 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2022-04-29
+* UpDate :  2022-05-23
   
 
 ## 업데이트 내역
+
+- #### 2022-05-23
+
+  #### * css 파일
+	<code> <b>1. /css/main.css</b></code>
+	* wave 모션 애니메이션 css 정렬 정리
+
+  #### * js 파일
+	<code> <b>1. /js/main.js</b></code>
+	* rightBar objectFixed 함수 수정 
+
+***************************
 
 - #### 2022-04-29
 

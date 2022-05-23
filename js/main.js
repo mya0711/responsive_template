@@ -208,7 +208,7 @@ $(document).ready(function  () {
 	if ($.exists('#rightBar')) {
 		$(window).scroll(function  () {
 			var rightStartTop = $(window).height() / 2;
-			objectFixed($("#rightBar"), rightStartTop);
+			objectFixed($("#rightBar"), rightStartTop, "fixed");
 		});
 	}
 });
