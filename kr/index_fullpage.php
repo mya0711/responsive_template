@@ -9,15 +9,11 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 </head>
 
 <body>
-<!--[if lt IE 7]>
-<p class="cm-alert-ie">현재 웹브라우저에서는 사이트가 정상적으로 표시되지 않을 수 있습니다. <strong><a href="http://browsehappy.com/" target="_blank">여기를 클릭</a></strong>하여 웹브라우저를 업그레이드 하세요.</p>
-<![endif]-->
 <!-- accessibility -->
 <div class="cm-accessibility">
 	<a href="#mainVisual">본문바로가기</a>
 </div>
 <!-- //accessibility -->
-
 <!-- code -->
 <div id="wrap">
 	<!-- header -->
@@ -277,6 +273,100 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 				</article>
 			</div>
 		</section>
+		<!-- ****************** 메인컨텐츠 10 (Swiper 예제)********************** -->
+		<section id="mainContent10" class="section">
+			<div class="area">
+				<div class="main-gallery-rolling-con2 swiper-container">
+					<ul class="bbs-basic-gallery-con swiper-wrapper">
+						<li class="swiper-slide">
+							<a href="">
+								<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
+								<div class="gallery-txt-con">
+									<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
+									<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
+									<span class="gal-day">16.08.30</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="">
+								<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
+								<div class="gallery-txt-con">
+									<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
+									<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
+									<span class="gal-day">16.08.30</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="">
+								<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
+								<div class="gallery-txt-con">
+									<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
+									<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
+									<span class="gal-day">16.08.30</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="">
+								<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
+								<div class="gallery-txt-con">
+									<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
+									<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
+									<span class="gal-day">16.08.30</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="">
+								<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
+								<div class="gallery-txt-con">
+									<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
+									<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
+									<span class="gal-day">16.08.30</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="">
+								<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
+								<div class="gallery-txt-con">
+									<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
+									<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
+									<span class="gal-day">16.08.30</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="">
+								<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
+								<div class="gallery-txt-con">
+									<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
+									<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
+									<span class="gal-day">16.08.30</span>
+								</div>
+							</a>
+						</li>
+						<li class="swiper-slide">
+							<a href="">
+								<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
+								<div class="gallery-txt-con">
+									<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
+									<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
+									<span class="gal-day">16.08.30</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<div class="main-news-swiper-controls">
+						<div class="swiper-scrollbar"></div>
+						<button title="Prev" class="arrow-prev"><i class="xi-angle-left-min"></i></button>
+						<button title="Next" class="arrow-next"><i class="xi-angle-right-min"></i></button>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section id="mainFooter" class="section fp-auto-height">
 			<!-- footer -->
 			<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/footer.php"; ?>
@@ -284,6 +374,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 		</section>
 	</div>
 	<!-- //container -->
+	<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/sitemap/sitemap_03.php"; ?>
 </div>
 <!-- //wrap -->
 <script>
@@ -295,22 +386,6 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 <script type="text/javascript" src="<?=$site_host?>/js/plugin/jquery.fullPage.js"></script>
 <!-- // -->
 <script type="text/javascript" src="<?=$site_host?>/js/main.js"></script>
-<!--[if lte IE 9]>
-		<article id="browserUpgradePopup">
-			<div class="browser-upgrade-popup-dim"></div>
-			<div class="browser-upgrade-popup-inner">
-				<button class="browser-popup-close-btn" title="close" onclick="javascript:;"><i class="xi-close-thin"></i></button>
-				<span class="browser-popup-caution-icon"><i class="xi-error-o"></i></span>
-				<h2 class="browser-popup-tit"><b>브라우저 업데이트</b> 안내</h2>
-				<p class="browser-popup-txt">현재 사용중인 브라우저는 곧 지원이 중단됩니다. <br>원활한 서비스를 제공받기 위해<br><b>보안과 속도가 강화된 브라우저로 업그레이드</b> 하시기 바랍니다.</p>
-			</div>
-		</article>
-		<script type="text/javascript">
-		$(".browser-popup-close-btn").click(function  () {
-			$("#browserUpgradePopup").hide();
-		}); 
-		</script>
-<![endif]-->
 <?
 if($tools->device()=="mobile"){
 	include $_SERVER['DOCUMENT_ROOT']."/in_popup_m.php";

@@ -56,10 +56,11 @@ Responsive Website Template
 
 	
   #### * php 파일
-	<code> <b>1. /kr/index.php</b></code>
+	<code> <b>1. /kr/index.php, /kr/index_fullpage.php</b></code>
 	* 구글아이콘폰트 사용부분 삭제
 	* Swiper 예제 삽입
 	* IE9 조건부주석 삭제 → 브라우저업데이트 안내 팝업 익스플로러 접속시 나오도록 수정
+	* footer 사이트맵 include 이동
 
 	<code> <b>2. /kr/company/sample.php</b></code>
 	* 제이쿼리 버전 변경으로 document.ready 이벤트 수정
@@ -74,7 +75,9 @@ Responsive Website Template
 	* ScrollToPlugin.min.js 추가
 	* waypoint 버전 업그레이드 : waypoint.min.js 삭제 → jquery.waypoints.min.js 변경
 	* IE9 조건부주석 삭제
- 
+	
+	<code> <b>5. /kr/include/footer.php, /kr/include/bottom.php</b></code>
+	* footer 사이트맵 include 삭제, bottom.php 으로 이동
 
 ***************************
 

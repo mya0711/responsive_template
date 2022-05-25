@@ -548,6 +548,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 	<!-- footer -->
 	<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/footer.php"; ?>
 	<!-- //footer -->
+	<? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/sitemap/sitemap_03.php"; ?>
 </div>
 <!-- //wrap -->
 <script>
