@@ -41,7 +41,6 @@
 <link rel="stylesheet" href="<?=$site_host?>/css/content_responsive.css">
 <link rel="stylesheet" href="<?=$site_host?>/css/main_responsive.css" />
 <link rel="stylesheet" href="<?=$site_host?>/css/animate.css" />
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons"><!-- google -->
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"><!-- XEicon -->
 <!-- Board Skin -->
 <link rel="stylesheet" href="<?=$site_host?>/css/common/cm_bbs_common.css">
@@ -54,8 +53,5 @@
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/magnific-popup.css">
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/swiper.css" />
 <link rel="stylesheet" type="text/css" href="<?=$site_host?>/css/plugin/spotlight.css" />
-<!--[if lte IE 9]>
-	<link rel="stylesheet" href="<?=$site_host?>/css/ie9.css">
-<![endif]-->
-<script type="text/javascript" src="<?=$site_host?>/js/vendor/jquery-1.8.3.min.js"></script>
 
+<script type="text/javascript" src="<?=$site_host?>/js/vendor/jquery-3.6.0.min.js"></script>

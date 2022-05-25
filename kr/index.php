@@ -194,7 +194,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 									<div class="gallery-txt-con">
 										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
 										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
-										<span class="gal-day"><i class="material-icons">&#xE8AE;</i> 16.08.30</span>
+										<span class="gal-day">16.08.30</span>
 									</div>
 								</a>
 							</li>
@@ -204,7 +204,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 									<div class="gallery-txt-con">
 										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
 										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
-										<span class="gal-day"><i class="material-icons">&#xE8AE;</i> 16.08.30</span>
+										<span class="gal-day">16.08.30</span>
 									</div>
 								</a>
 							</li>
@@ -214,7 +214,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 									<div class="gallery-txt-con">
 										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
 										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
-										<span class="gal-day"><i class="material-icons">&#xE8AE;</i> 16.08.30</span>
+										<span class="gal-day">16.08.30</span>
 									</div>
 								</a>
 							</li>
@@ -224,7 +224,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 									<div class="gallery-txt-con">
 										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
 										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
-										<span class="gal-day"><i class="material-icons">&#xE8AE;</i> 16.08.30</span>
+										<span class="gal-day">16.08.30</span>
 									</div>
 								</a>
 							</li>
@@ -234,7 +234,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 									<div class="gallery-txt-con">
 										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
 										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
-										<span class="gal-day"><i class="material-icons">&#xE8AE;</i> 16.08.30</span>
+										<span class="gal-day">16.08.30</span>
 									</div>
 								</a>
 							</li>
@@ -244,7 +244,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 									<div class="gallery-txt-con">
 										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
 										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
-										<span class="gal-day"><i class="material-icons">&#xE8AE;</i> 16.08.30</span>
+										<span class="gal-day">16.08.30</span>
 									</div>
 								</a>
 							</li>
@@ -254,7 +254,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 									<div class="gallery-txt-con">
 										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
 										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
-										<span class="gal-day"><i class="material-icons">&#xE8AE;</i> 16.08.30</span>
+										<span class="gal-day">16.08.30</span>
 									</div>
 								</a>
 							</li>
@@ -264,7 +264,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 									<div class="gallery-txt-con">
 										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
 										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
-										<span class="gal-day"><i class="material-icons">&#xE8AE;</i> 16.08.30</span>
+										<span class="gal-day">16.08.30</span>
 									</div>
 								</a>
 							</li>
@@ -281,9 +281,9 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					</div>
 					<div class="main-slide-box clearfix">
 						<div class="main-slide-photo-con">
-							<div class="main-slide-photo-item"><div class="slide-photo-inner"><p style="position:absolute; top:0; left:0; color:#fff; font-size:50px;">1 삭제하세여</p></div></div>
-							<div class="main-slide-photo-item"><div class="slide-photo-inner"><p style="position:absolute; top:0; left:0; color:#fff; font-size:50px;">2 삭제하세여</p></div></div>
-							<div class="main-slide-photo-item"><div class="slide-photo-inner"><p style="position:absolute; top:0; left:0; color:#fff; font-size:50px;">3 삭제하세여</p></div></div>
+							<div class="main-slide-photo-item"><div class="slide-photo-inner"><p style="position:absolute; top:0; left:0; color:#fff; font-size:50px;">1 <br>왼쪽사진+오른쪽설명글 롤링</p></div></div>
+							<div class="main-slide-photo-item"><div class="slide-photo-inner"><p style="position:absolute; top:0; left:0; color:#fff; font-size:50px;">2 <br>왼쪽사진+오른쪽설명글 롤링</p></div></div>
+							<div class="main-slide-photo-item"><div class="slide-photo-inner"><p style="position:absolute; top:0; left:0; color:#fff; font-size:50px;">3 <br>왼쪽사진+오른쪽설명글 롤링</p></div></div>
 						</div>
 						<div class="main-slide-text-con">
 							<div class="main-slide-text-item">
@@ -417,7 +417,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							<li><a href="" class="bbs-tit">홈페이지를 오픈하였습니다. 많은 이용 부탁드립니다</a><span class="bbs-date">2018-03-29</span></li>
 							<li><a href="" class="bbs-tit">홈페이지를 오픈하였습니다. 많은 이용 부탁드립니다</a><span class="bbs-date">2018-03-29</span></li>
 						</ul>
-						<a href="" class="board-more-btn" title="공지사항 페이지로 이동"><i class="material-icons">&#xE8DE;</i></a>
+						<a href="" class="board-more-btn" title="공지사항 페이지로 이동"><i class="xi-hamburger-out"></i></a>
 					</div>
 					<div class="main-board-banner-con">
 						<ul>
@@ -438,15 +438,109 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					</div>
 				</div>
 			</article>
+
+			<article id="mainContent10">
+				<div class="area">
+					<div class="main-gallery-rolling-con2 swiper-container">
+						<ul class="bbs-basic-gallery-con swiper-wrapper">
+							<li class="swiper-slide">
+								<a href="">
+									<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
+									<div class="gallery-txt-con">
+										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
+										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
+										<span class="gal-day">16.08.30</span>
+									</div>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="">
+									<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
+									<div class="gallery-txt-con">
+										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
+										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
+										<span class="gal-day">16.08.30</span>
+									</div>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="">
+									<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
+									<div class="gallery-txt-con">
+										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
+										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
+										<span class="gal-day">16.08.30</span>
+									</div>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="">
+									<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
+									<div class="gallery-txt-con">
+										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
+										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
+										<span class="gal-day">16.08.30</span>
+									</div>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="">
+									<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
+									<div class="gallery-txt-con">
+										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
+										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
+										<span class="gal-day">16.08.30</span>
+									</div>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="">
+									<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
+									<div class="gallery-txt-con">
+										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
+										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
+										<span class="gal-day">16.08.30</span>
+									</div>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="">
+									<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
+									<div class="gallery-txt-con">
+										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
+										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
+										<span class="gal-day">16.08.30</span>
+									</div>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="">
+									<div class="gallery-thum-box"><span class="gallery-thum"><img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" /></span></div>
+									<div class="gallery-txt-con">
+										<strong class="gal-tit">갤러리 게시판입니다 일반 게시판입니다.</strong>
+										<p class="gal-txt">갤러리 기본게시판입니다. 원하는 스타일로 css 수정바랍니다 </p>
+										<span class="gal-day">16.08.30</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<div class="main-news-swiper-controls">
+							<div class="swiper-scrollbar"></div>
+							<button title="Prev" class="arrow-prev"><i class="xi-angle-left-min"></i></button>
+							<button title="Next" class="arrow-next"><i class="xi-angle-right-min"></i></button>
+						</div>
+					</div>
+				</div>
+			</article>
 		</section>
 		<!-- ****************** 퀵메뉴 ********************** -->
 		<aside id="rightBar">
 			<ul>
-				<li><a href="" title="○○페이지 바로가기"><i class="material-icons">&#xE560;</i></a></li>
-				<li><a href="" title="○○페이지 바로가기"><i class="material-icons">&#xE422;</i></a></li>
-				<li><a href="" title="○○페이지 바로가기"><i class="material-icons">&#xE873;</i></a></li>
-				<li><a href="" title="○○페이지 바로가기"><i class="material-icons">&#xE8B8;</i></a></li>
-				<li><a href="" title="○○페이지 바로가기"><i class="material-icons">&#xE3B0;</i></a></li>
+				<li><a href="" title="○○페이지 바로가기"><i class="xi-home-o"></i></a></li>
+				<li><a href="" title="○○페이지 바로가기"><i class="xi-user-o"></i></a></li>
+				<li><a href="" title="○○페이지 바로가기"><i class="xi-cart-o"></i></a></li>
+				<li><a href="" title="○○페이지 바로가기"><i class="xi-share-alt-o"></i></a></li>
+				<li><a href="" title="○○페이지 바로가기"><i class="xi-star-o"></i></a></li>
 			</ul>
 		</aside>
 	</div>
@@ -462,22 +556,6 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 </script>
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/scripts.php"; ?>
 <script type="text/javascript" src="<?=$site_host?>/js/main.js"></script>
-<!--[if lte IE 9]>
-		<article id="browserUpgradePopup">
-			<div class="browser-upgrade-popup-dim"></div>
-			<div class="browser-upgrade-popup-inner">
-				<button class="browser-popup-close-btn" title="close" onclick="javascript:;"><i class="xi-close-thin"></i></button>
-				<span class="browser-popup-caution-icon"><i class="xi-error-o"></i></span>
-				<h2 class="browser-popup-tit"><b>브라우저 업데이트</b> 안내</h2>
-				<p class="browser-popup-txt">현재 사용중인 브라우저는 곧 지원이 중단됩니다. <br>원활한 서비스를 제공받기 위해<br><b>보안과 속도가 강화된 브라우저로 업그레이드</b> 하시기 바랍니다.</p>
-			</div>
-		</article>
-		<script type="text/javascript">
-		$(".browser-popup-close-btn").click(function  () {
-			$("#browserUpgradePopup").hide();
-		}); 
-		</script>
-<![endif]-->
 <?
 if($tools->device()=="mobile"){
 	include $_SERVER['DOCUMENT_ROOT']."/in_popup_m.php";

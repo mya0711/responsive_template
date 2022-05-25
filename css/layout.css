@@ -18,14 +18,14 @@
 	--sub-menu-height: 69px;
 	--full-height: 100vh;
 }
-body:not(.is-mobile) *::-webkit-scrollbar {
+html:not(.is-mobile) *::-webkit-scrollbar {
 	width: 15px;
 	height: 15px;
 }
-body:not(.is-mobile) *::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
+html:not(.is-mobile) *::-webkit-scrollbar-track {
+	background-color: #f1f1f1;
 }
-body:not(.is-mobile) *::-webkit-scrollbar-thumb {
+html:not(.is-mobile) *::-webkit-scrollbar-thumb {
 	background-color: #c1c1c1;
 }
 ::selection {

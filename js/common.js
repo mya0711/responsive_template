@@ -8,63 +8,91 @@ var laptopWidth = 1366;
 var tabletWidth = 1260; // 헤더가 변경되는 시점
 var mobileWidth = 800;
 startOffset = isMobile ? "100%" : "70%";
+gsap.registerPlugin(ScrollToPlugin);
 
-$(window).load(function  () {
-	// toAnchorParameter("anchor");	/* 주소~?anchor=content  */ 
-	/* ************************
-	* Func : Waypoint.js
-	* Waypoint.js, isMobile () 필요
-	************************ */
-	if ($.exists('[data-scroll]')) {
-		$("[data-scroll]").waypoint(function(){
-			$(this).addClass("animated");
-		}, { 
-			offset: startOffset
-		});
-	}
+// default
+checkOsBrowser();	
+mouseCheck();
+translateSkipNav();
+triggerScrollObject();
+topFixedHeader();
+setTopButton();
+if ( detectBrowser() === "ie") {
+	popupUpdateBrowser();
+	convertToEdge();
+}
 
-	/* ************************
-	* Func : Splitting word 번역기능 비활성화
-	************************ */
-	$(".splitting .char").attr("translate","no");
+// add
+Splitting();
+setSplitting();
+smoothScroll();
+if ( $.exists(".footer-sitemap-list-con") ) { cloneFooterSitemap(); }
+if ( $.exists('.footer-partner-list') ) { rollingFooterPartnerList(); }
+
+$(window).on("load",function  () {
+	// toAnchorParameter("anchor");	/* 주소~?anchor=content  */
+});
+
+$(window).on("resize",function  () {
+	checkOsBrowser();
 });
 
 /* ************************
 * Func : 브라우저 체크 및 기기체크
 * isMobile() 필요
 ************************ */
-checkOsBrowser();
-$(window).on('resize', checkOsBrowser);
 function checkOsBrowser () {
 	if ( isMobile() ) {
-		$("body").removeClass("is-pc").addClass("is-mobile").addClass(detectOS()+"-os");
+		$("html").removeClass("is-pc").addClass("is-mobile").addClass(detectOS()+"-os");
 	}else {
-		$("body").removeClass("is-mobile").addClass("is-pc").addClass(detectBrowser()+"-browser");
+		$("html").removeClass("is-mobile").addClass("is-pc").addClass(detectBrowser()+"-browser");
 	}
 }
 
 /* ************************
 * Func : 스킵네비게이션 영문번역
 ************************ */
-if ( $("html").attr("lang") != "ko" ) {
-	$(".cm-accessibility a").text("Skip to content");
+function translateSkipNav () {
+	if ( $("html").attr("lang") != "ko" ) {
+		$(".cm-accessibility a").text("Skip to content");
+	}
 }
 
 /* ************************
 * Func : 웹접근성 키보드이용시
 ************************ */
-if ( detectBrowser() !== "ie" && !isMobile() ) {
-	mouseCheck();
-}
 function mouseCheck () {
-	$("body").mousemove(function(event) { 
-		$(this).addClass("mouse");
-	});
-	$("body").on("keydown touchstart",function(event) { 
-		$(this).removeClass("mouse");
+	if ( !isMobile() ) { 
+		$("body").mousemove(function(event) { 
+			$(this).addClass("mouse");
+		});
+		$("body").on("keydown touchstart",function(event) { 
+			$(this).removeClass("mouse");
+		});
+	}
+}
+
+/* ************************
+* Func : 스크롤시 Trigger Class
+* Waypoint.js, isMobile () 필요
+************************ */
+function triggerScrollObject () {
+	$("[data-scroll]").each(function() {
+		var $scrollElem = $(this);
+		$scrollElem.waypoint(function(direction) {
+			if ( direction === "down" ) {
+				$scrollElem.addClass('animated');
+			}else if ( direction === "up") {
+				$scrollElem.removeClass('animated');
+			}
+		},
+		{
+			triggerOnce: false,
+			offset: startOffset
+		});
 	});
 }
-	
+
 /* ************************
 * Func : 드롭메뉴 공통
 * getWindowWidth () 필요
@@ -177,41 +205,40 @@ $(".cm-tab-container-JS").each(function  () {
 });
 
 /* ************************
-* Func : 단어 Split 사용 
+* Func : 단어 Splitting Plugin 
 * Splitting.js 필요
 ************************ */	
-/* -------- Split :: 기본 -------- */ 
-if ($.exists('.cm-word-split')) {
-	var $mainTxt = ('.cm-word-split');
-	// 텍스트 Split
-	splittingText($mainTxt);
-	// Split 텍스트에 delay주기	
-	$($mainTxt).each(function  () {
+function setSplitting () {
+	// Splitting Char Set Delay
+	var $splittingTxt = $(".cm-word-split-JS");
+	$($splittingTxt).each(function  () {
 		splittingTextDelay($(this),$(this).data("speed"),$(this).data("speed-delay"));
 	});
+
+	// Splitting word 번역기능 비활성화
+	$(".splitting .char").attr("translate","no");
 }
-/* -------- Split :: Splitting Plugin -------- */ 
-Splitting();
-var $splittingTxt = $(".cm-word-split-JS");
-$($splittingTxt).each(function  () {
-	splittingTextDelay($(this),$(this).data("speed"),$(this).data("speed-delay"));
-});
 
 /* ************************
 * Func : 상단 :: 모바일버전에서 헤더 FIXED
 * getWindowWidth (), objectFixed() 필요
 ************************ */	
-if ($.exists('#header')) {
-	$(window).scroll(function  () {
-		if ( getWindowWidth () < (tabletWidth-1) ) {
-			objectFixed($("#header"), 0, "top-fixed");
-		}
+function topFixedHeader () {
+	checkWidth = getWindowWidth();
+	$(window).on("scroll", function  () {
+		toggleFixedClass();
 	});
-	$(window).resize(function  () {
-		if ( getWindowWidth () > tabletWidth ) {
-			$("#header").removeClass("top-fixed");
-		}
+	$(window).on("resize", function  () {
+		checkWidth = getWindowWidth();
+		toggleFixedClass();
 	});
+}
+function toggleFixedClass () {
+	if ( checkWidth < (tabletWidth-1) ) {
+		objectFixed($("#header"), 0, "top-fixed");
+	}else {
+		$("#header").removeClass("top-fixed");
+	}
 }
 
 /* ************************
@@ -298,32 +325,32 @@ function close_cm_sitemap () {
 * Func : 하단 :: top버튼
 * moveScrollTop (), objectFixed() 필요
 ************************ */
-$(".to-top-btn").each(function  () {
-	// top버튼 나오게 (필요한 경우에만 넣으세요)
-	if ( $(this).length > 0 ) {
-		$(window).scroll(function  () {
-			objectFixed($(".to-top-btn"), 0, "bottom-fixed");
-		});
-	}
-	// top버튼 클릭
-	$(this).on("click",function  () {
-		if ($.exists('#fullpage')) {
-			$.fn.fullpage.moveTo(1);
-		}else {
-			$("html, body").animate({scrollTop:0}, 300 ,"easeInOutExpo",function  () {
-				$(".logo > a").focus();
+function setTopButton () {
+	$(".to-top-btn").each(function  () {
+		// top버튼 나오게 (필요한 경우에만 넣으세요)
+		if ( $(this).length > 0 ) {
+			$(window).scroll(function  () {
+				objectFixed($(".to-top-btn"), 0, "bottom-fixed");
 			});
 		}
-		
-		return false;
+		// top버튼 클릭
+		$(this).on("click",function  () {
+			if ($.exists('#fullpage')) {
+				$.fn.fullpage.moveTo(1);
+			}else {
+				$("html, body").animate({scrollTop:0}, 300 ,"easeInOutExpo",function  () {
+					$(".logo > a").focus();
+				});
+			}
+			return false;
+		});
 	});
-});
-
+}
 
 /* ************************
 * Func : 하단 :: 파트너사 리스트
 ************************ */
-if ($.exists('.footer-partner-list')) {
+function rollingFooterPartnerList () {
 	$('.footer-partner-list').slick({
 		slidesToShow: 7,
 		slidesToScroll: 1,
@@ -358,17 +385,13 @@ if ($.exists('.footer-partner-list')) {
 /* ************************
 * Func : 하단 :: 푸터 사이트맵 삽입(대메뉴복사)
 ************************ */
-if ( $.exists(".footer-sitemap-list-con") ) {
-	cloneFooterSitemap();
-
-	function cloneFooterSitemap () {
-		$(".footer-sitemap-list-con").append("<ul></ul>");
-		
-		for(var i=0; i < gnbLength; i++){
-			var $gnb1depItem = $gnbItem.eq(i).children("a");
-			var $gnb2depList = $gnbItem.eq(i).find(".gnb-2dep > ul").html() ? $gnbItem.eq(i).find(".gnb-2dep > ul").html() :	'<a href="'+$gnb1depItem.attr("href")+'">'+$gnb1depItem.text()+'</a>';
-			$(".footer-sitemap-list-con > ul").append('<li><h3>'+$gnb1depItem.text()+'</h3><ul class="sitemap-2dep">'+$gnb2depList+'</ul></li>');
-		}
+function cloneFooterSitemap () {
+	$(".footer-sitemap-list-con").append("<ul></ul>");
+	
+	for(var i=0; i < gnbLength; i++){
+		var $gnb1depItem = $gnbItem.eq(i).children("a");
+		var $gnb2depList = $gnbItem.eq(i).find(".gnb-2dep > ul").html() ? $gnbItem.eq(i).find(".gnb-2dep > ul").html() :	'<a href="'+$gnb1depItem.attr("href")+'">'+$gnb1depItem.text()+'</a>';
+		$(".footer-sitemap-list-con > ul").append('<li><h3>'+$gnb1depItem.text()+'</h3><ul class="sitemap-2dep">'+$gnb2depList+'</ul></li>');
 	}
 }
 
@@ -420,16 +443,4 @@ if ($.exists('.custom-select-box .custom-select')) {
 			$(".email2").attr("value", "").prop("readonly", false).focus();
 		} */
 	});
-}
-
-/* ************************
-* Func : 익스플로러 엣지 전환 소스
-************************ */
-if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
-	window.location = 'microsoft-edge:' + window.location;
-	setTimeout(function() {
-		top.window.open('about:blank','_self').close(); 
-		top.window.opener=self;
-		top.self.close();
-	},1);
 }

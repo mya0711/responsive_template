@@ -48,8 +48,8 @@ $(document).ready(function  () {
 	************************ */
 	// 메인 비주얼 높이값 설정
 	if ($.exists('#mainVisual.full-height')) {
-		//mainVisualHeight();
-		//$(window).on('resize', mainVisualHeight);
+		mainVisualHeight();
+		$(window).on('resize', mainVisualHeight);
 
 		function mainVisualHeight () {
 			var visual_height = getWindowHeight()	- $("#header").height();	// header가 fixed or absolute일경우 - $("#header").height() 삭제
@@ -125,14 +125,15 @@ $(document).ready(function  () {
 		arrows: true,
 		fade: false,
 		dots:false,
-		autoplay: false,
+		autoplay: true,
 		speed:800,
 		infinite:true,
-		autoplaySpeed: 3000,
+		autoplaySpeed: 2000,
 		easing: 'easeInOutQuint',
 		pauseOnHover:true,
-		prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Prev" tabindex="0" role="button"><i class="material-icons">&#xE314;</i></button>',
-		nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="material-icons">&#xE315;</i></button>',
+		touchThreshold: 50,
+		prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Prev" tabindex="0" role="button"><i class="xi-angle-left-thin"></i></button>',
+		nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="xi-angle-right-thin"></i></button>',
 		responsive: [
 					{
 					  breakpoint: 801,
@@ -167,8 +168,8 @@ $(document).ready(function  () {
 		autoplaySpeed: 3000,
 		easing: 'easeInOutQuint',
 		pauseOnHover:false,
-		prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Prev" tabindex="0" role="button"><i class="material-icons">&#xE314;</i></button>',
-		nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="material-icons">&#xE315;</i></button>',
+		prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Prev" tabindex="0" role="button"><i class="xi-angle-left-thin"></i></button>',
+		nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="xi-angle-right-thin"></i></button>',
 		asNavFor: '.main-slide-text-con'
 	});
 	$('.main-slide-text-con').slick({
@@ -194,9 +195,14 @@ $(document).ready(function  () {
 	// 해당영역갔을때 슬라이드 autoPlay
 	if ($.exists('.start-autoplay-scroll-object')) {
 		$(".start-autoplay-scroll-object").slick("slickPause");
-		$(".start-autoplay-scroll-object").waypoint(function  () {
-			$(this).slick("slickPlay");
-		}, { 
+		$(".start-autoplay-scroll-object").waypoint(function(direction) {
+			if ( direction ===  "down" ) {
+				$(".start-autoplay-scroll-object").addClass("play");
+				$(".start-autoplay-scroll-object").slick("slickPlay");
+			}
+		},
+		{
+			triggerOnce: true,
 			offset: startOffset
 		});
 	}
@@ -211,4 +217,48 @@ $(document).ready(function  () {
 			objectFixed($("#rightBar"), rightStartTop, "fixed");
 		});
 	}
+
+	/* ************************
+	* Func : 메인 Swiper 갤러리
+	* swiper.js 필요
+	************************ */
+	var mainSwiper = new Swiper(".main-gallery-rolling-con2", {
+		slidesPerView:1,
+        spaceBetween: 30,
+		watchSlidesVisibility: true,
+        scrollbar: {
+			el: ".main-news-swiper-controls .swiper-scrollbar",
+			hide: false,
+			draggable: true,
+        },
+		navigation: {
+			prevEl: ".main-news-swiper-controls .arrow-prev",
+			nextEl: ".main-news-swiper-controls .arrow-next",
+        },
+		breakpoints: {
+			359: {
+				slidesPerView: 'auto',
+				spaceBetween: 30,
+			},
+			480: {
+				slidesPerView: 2,
+				spaceBetween: 30,
+			},
+			1024: {
+				slidesPerView: 3,
+				spaceBetween: 50,
+			},
+        },
+    });
+	if ($.exists('.main-gallery-rolling-con2')) {
+		$(".main-gallery-rolling-con2").waypoint(function(direction) {
+			if ( direction ===  "down" ) {
+				mainSwiper.autoplay.start()
+			}
+		},
+		{
+			triggerOnce: true,
+			offset: startOffset
+		});
+	}	
 });

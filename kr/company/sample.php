@@ -237,7 +237,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					<script src="<?=$site_host?>/js/plugin/jquery.rwdImageMaps.min.js"></script>
 					<!-- sub.js 이동 -->
 					<script>
-					$(document).ready(function(e) {
+					$(document).on("ready",function(e) {
 						// 이미지맵 반응형 위치조정
 						$("img[usemap]").rwdImageMaps();
 					});

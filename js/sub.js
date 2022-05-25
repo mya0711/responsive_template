@@ -69,7 +69,7 @@ $(document).ready(function  () {
 	if ($.exists(".cm-fixed-tab-container-JS")) {
 		var $fixedMoveTab = $(".cm-fixed-tab-list-JS");		// fixed되는 메뉴 클래스
 		var $moveTabItem = $fixedMoveTab.find("li");
-		var menuCount= $moveTabItem.size();
+		var menuCount= $moveTabItem.length;
 		var nav = [];
 		
 		$(window).on('load', function  () {

@@ -411,8 +411,6 @@ function toFit(cb, _ref) {
 	};
 }
 
-
-
  /* ************************
   * html Scroll Controls
   * return true( 스크롤막을때 ) / false( 스크롤사용할때 )
@@ -420,33 +418,133 @@ function toFit(cb, _ref) {
   ************************ */
 function htmlScrollControl (toggle) {
 	if (toggle) {
-		if (!($.exists('#fullpage')) || $.exists('.fp-responsive')) {
+		// 스크롤 막을때
+		if ($.exists('#fullpage') || $.exists('.fp-responsive')) {
+			$.fn.fullpage.setAllowScrolling(false);
+			$.fn.fullpage.setKeyboardScrolling(false);
+		} else {
 			$("html").css({
 				"margin-right":getScrollBarWidth(),
 				"overflow-y":"hidden"
 			});
-		}else {
-			$.fn.fullpage.setAllowScrolling(false);
-			$.fn.fullpage.setKeyboardScrolling(false);
+			if($("html").is(".smooth-srolling")) {
+				smoothScroll_destory();
+			}
 		}
 	} else {
-		if (!($.exists('#fullpage')) || $.exists('.fp-responsive')) {
+		// 스크롤 다시사용할때
+		if ($.exists('#fullpage') || $.exists('.fp-responsive')) {
+			$.fn.fullpage.setAllowScrolling(true);
+			$.fn.fullpage.setKeyboardScrolling(true);
+		} else {
 			$("html").css({
 				"margin-right":"0",
 				"overflow-y":"scroll"
 			});
-		}else {
-			$.fn.fullpage.setAllowScrolling(true);
-			$.fn.fullpage.setKeyboardScrolling(true);
+			if($("html").is(".smooth-srolling")) {
+				smoothScroll();
+			} 
 		}
 	}
 }
 
-
  /* ************************
   * CSS Variable 100vh Setting
   ************************ */
-var set100Vh = function set100Vh() {
+function set100Vh() {
   document.documentElement.style.setProperty('--full-height', window.innerHeight + 'px');
 };
-window.addEventListener('resize', set100Vh);
+// window.addEventListener('resize', set100Vh);
+
+/* ************************
+* 익스플로러 엣지 전환 소스
+* 익스플로러 브라우저 업데이트 안내 팝업
+************************ */
+function convertToEdge () {
+	if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+		window.location = 'microsoft-edge:' + window.location;
+		setTimeout(function() {
+			top.window.open('about:blank','_self').close(); 
+			top.window.opener=self;
+			top.self.close();
+		},1);
+	}
+}
+function popupUpdateBrowser () {
+	var popupBrowser = '';
+    popupBrowser += '<article id="browserUpgradePopup">';
+    popupBrowser += '<div class="browser-upgrade-popup-dim"></div>';
+    popupBrowser += '<div class="browser-upgrade-popup-inner">';
+    popupBrowser += '<button class="browser-popup-close-btn" title="close"><i class="xi-close-thin"></i></button>';
+    popupBrowser += '<span class="browser-popup-caution-icon"><i class="xi-error-o"></i></span><h2 class="browser-popup-tit"><b>브라우저 업데이트</b> 안내</h2><p class="browser-popup-txt">현재 사용중인 브라우저는 곧 지원이 중단됩니다. <br>원활한 서비스를 제공받기 위해<br><b>보안과 속도가 강화된 브라우저로 업그레이드</b> 하시기 바랍니다.</p>';
+    popupBrowser += '</div>';
+    popupBrowser += '</article>';
+	$("body").append(popupBrowser);
+	$(document).on("click",".browser-popup-close-btn",function  () {
+		$("#browserUpgradePopup").hide();
+		return false;
+	});
+}
+
+ /* ************************
+  * smooth Scroll
+  * gsap.min.js, ScrollToPlugin.min.js
+  ************************ */
+// Check Passive Support
+function smoothScroll_passive(){
+	var supportsPassive = false;
+	try {document.addEventListener("test", null, { get passive() { supportsPassive = true }});
+	} catch(e) {}
+	return supportsPassive;
+}
+
+// Start smooth Scroll
+function smoothScroll(){
+	if( isMobile() || detectOS() === "ios" ) return;
+	var $window = $(window);
+	if(smoothScroll_passive()){
+		window.addEventListener("wheel",smoothScroll_scrolling,{passive: false});
+	}else{
+		$window.on("mousewheel DOMMouseScroll", smoothScroll_scrolling);
+	}
+	$("html").addClass("smooth-srolling");
+}
+
+// Scroll Event
+function smoothScroll_scrolling(event){
+	event.preventDefault();
+	var $window = $(window);
+	var scrollTime = 1.5;
+	// var scrollDistance = $window.height() / 2.5;
+	var delta = 0;
+	if(smoothScroll_passive()){
+		var scrollDistance = $window.height() / 2;
+		delta = event.wheelDelta/120 || -event.originalEvent.detail/3;
+	}else{
+		var scrollDistance = $window.height() / 2.5;
+		if(typeof event.originalEvent.deltaY != "undefined"){
+			delta = -event.originalEvent.deltaY/120;
+		}else{
+			delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+		}
+	}
+
+	var scrollTop = $window.scrollTop();
+	var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+	winScrolling = gsap.to($window, scrollTime, {
+		scrollTo : { y: finalScroll, autoKill:true },
+		ease: Power4.easeOut,
+		overwrite: 5
+	});
+}
+
+// Destroy smooth Scroll
+function smoothScroll_destory (event) {
+	if( isMobile() || detectOS() === "ios" ) return;
+	if(smoothScroll_passive()){
+		window.removeEventListener("wheel",smoothScroll_scrolling);
+	}else{
+		$(window).off("mousewheel DOMMouseScroll", smoothScroll_scrolling);
+	}
+	gsap.killTweensOf($(window),{scrollTo:true});
+}

@@ -3,10 +3,80 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2022-05-23
+* UpDate :  2022-05-25
   
 
 ## 업데이트 내역
+
+- #### 2022-05-25
+
+  #### * css 파일
+	<code> <b>1. /css/default.css</b></code>
+	* Naumo gothic : 사용안하는 폰트 css 삭제
+	* Noto sans KR : 로딩속도개선을 위해 100, 300, 900 주석처리 → 플젝에서 사용하면 주석해제 ★
+	
+	<code> <b>2. /css/layout.css</b></code>
+	* 스크롤바 커스텀 css 수정
+
+	<code> <b>3. /css/layout.css</b></code>
+	* Swiper 예제 추가
+
+	<code> <b>4. /css/common/cm_sitemap.css</b></code>
+	* .cm-sitemap-wrapper : overflow-y:auto로 변경
+
+
+  #### * js 파일
+	<code> <b>1. /js/common.js</b></code>
+	* smooth Scroll 사용을 위한 scrollToplugin 선언
+	* waypoint 버전 업그레이드  → triggerScrollObject() 함수 추가 ★
+	* 페이지에 선언된 함수 파악을 용이하게 하기위해 상단으로 이동
+	* $(window).load(function(){}) → $(window).on("load",function(){}) ★
+	* checkOsBrowswer() 함수 변경 → 확장성을 위해 기존 body 에 클래스 삽입을 html로 변경 ★
+	* Splitting.js를 많이사용하기 때문에 기본 Split 선언 삭제
+	* Header Fixed 함수로 수정, getWindowWidth 오류로 함수 내용수정 등
+
+	<code> <b>2. /js/functions.js</b></code>
+	* htmlScrollControl() 함수 수정 : 조건문 변경 및 smooth scroll 적용 시 모달 오류 수정
+	* set100vh() 함수 실행 삭제
+	* convertToEdge() 함수 추가 (익스플로러에서 엣지 전환소스)
+	* popupUpdateBrowser() 함수 추가 (익스플로러 팝업띄우는 소스)
+	* GSAP Smooth Scroll 함수 추가
+
+	<code> <b>3. /js/layer_popup.js</b></code>
+	* ajaxUnload() 함수 수정
+
+	<code> <b>4. /js/main.js</b></code>
+	* mainVisualHeight() 주석 삭제 → full-height css 변수사용시 모바일브라우저에서 주소창 없어질때마다 높이 재조정으로 끊기는 느낌 발생
+	* Slick 예제 옵션 수정 : 구글아이콘삭제, touchThreshold 추가
+	* waypoint 버전수정으로 재수정
+	* Swiper 예제 추가
+
+	<code> <b>5. /js/sub.js</b></code>
+	* 제이쿼리 버전 업데이트로 .size() → .length 변경
+
+	
+  #### * php 파일
+	<code> <b>1. /kr/index.php</b></code>
+	* 구글아이콘폰트 사용부분 삭제
+	* Swiper 예제 삽입
+	* IE9 조건부주석 삭제 → 브라우저업데이트 안내 팝업 익스플로러 접속시 나오도록 수정
+
+	<code> <b>2. /kr/company/sample.php</b></code>
+	* 제이쿼리 버전 변경으로 document.ready 이벤트 수정
+	
+	<code> <b>3. /kr/include/dtd.php</b></code>
+	* 구글아이콘 삭제
+	* 조건부주석 삭제
+	* 제이쿼리 버전변경 : 1.8.3  → 3.6.0 ★
+
+	<code> <b>4. /kr/include/script.php</b></code>
+	* Tweenmax 삭제 → gsap.min.js 추가
+	* ScrollToPlugin.min.js 추가
+	* waypoint 버전 업그레이드 : waypoint.min.js 삭제 → jquery.waypoints.min.js 변경
+	* IE9 조건부주석 삭제
+ 
+
+***************************
 
 - #### 2022-05-23
 

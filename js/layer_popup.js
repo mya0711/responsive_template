@@ -84,7 +84,7 @@ function layerLoad (strUrl) {
   ************************ */
 function ajaxUnLoad () {
 	htmlScrollControl (false);
-	$(".modal-fixed-pop-wrapper").fadeOut(100, function  () {
+	$(".modal-fixed-pop-wrapper").fadeOut(10, function  () {
 		$(this).remove();
 	});
 }
