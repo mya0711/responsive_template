@@ -3,10 +3,57 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2022-05-25
+* UpDate :  2022-06-03
   
 
 ## 업데이트 내역
+
+- #### 2022-06-03
+
+  #### * css 파일
+	<code> <b>1. /css/default.css</b></code>
+	* m-br, pc-br 프로젝트마다 분기점이 다르기때문에 layout.css로 이동
+	
+	<code> <b>2. /css/layout.css</b></code>
+	* 서브비주얼높이, gnb 폰트사이즈 rem 변경
+	* 공통클래스 이동 및 추가(m-br/pc-br, display-m/displa-pc)
+	* 서브비주얼 →  비주얼 이미지 영역 추가
+
+	<code> <b>3. /css/layout_responsive.css</b></code>
+	* 미디어쿼리 분기점 1260px → 1280px로 변경
+	* html 폰트사이즈 변경 ★
+	* 공통클래스 추가
+	* 모바일 탑메뉴 border 일부분 수정
+	
+	<code> <b>4. /css/main.css, /css/main_responsive.css</b></code>
+	* fullpage 분기점 변경
+	* 메인 비주얼 효과 수정 및 애니메이션 추가
+	
+	<code> <b>5. /css/ie9.css</b></code>
+	* 삭제
+
+  #### * js 파일
+	<code> <b>1. /js/common.js</b></code>
+	* startOffset 변수 선언 오류 수정
+
+	<code> <b>2. /js/main.js</b></code>
+	* 메인비주얼 Slick BeforeChange, AfterChange 이벤트 추가 및 수정
+	
+  #### * php 파일
+	<code> <b>1. /kr/company/sample.php</b></code>
+	* 드래그 이미지영역 드래그아이콘 추가
+
+	<code> <b>2. /kr/include/footer.php</b></code>
+	* 푸터영역 관리자 연동되도록 추가 (/kr/config.php 참고)
+	* 블로그 svg 아이콘 추가	
+
+	<code> <b>3. /kr/include/top.php</b></code>
+	* 서브비주얼 이미지영역 추가
+
+	<code> <b>4. /kr/config.php</b></code>
+	* 푸터 관리자연동 변수 추가
+
+***************************
 
 - #### 2022-05-25
 

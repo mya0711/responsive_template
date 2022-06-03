@@ -53,11 +53,7 @@ $(document).ready(function  () {
 
 		function mainVisualHeight () {
 			var visual_height = getWindowHeight()	- $("#header").height();	// header가 fixed or absolute일경우 - $("#header").height() 삭제
-			if ( getWindowWidth() > 800 ) {
-				$("#mainVisual").height(visual_height);
-			}else {
-				$("#mainVisual").css("height","auto");
-			}
+			$("#mainVisual").height(visual_height);
 		}
 	}
 
@@ -72,14 +68,16 @@ $(document).ready(function  () {
 		}
 	});
 	$mainVisualItem.on('beforeChange', function(event, slick, currentSlide, nextSlide) {	
-		$(".main-visual-item").removeClass("active-item");
 		$(this).find(".main-visual-item").eq(nextSlide).addClass("active-item");
+		$(this).find(".main-visual-item").eq(currentSlide).addClass("stop-active-item");
 		if ($.exists('.main-visual-conuter')) {
 			$(".main-visual-conuter .cur-num").text(nextSlide+1);
 		}
 	});
+	$mainVisualItem.on('afterChange', function() {
+		$(this).find(".stop-active-item").removeClass("stop-active-item active-item");
+	});
 
-	// 메인 비주얼 슬라이드
 	$mainVisualItem.slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -87,12 +85,13 @@ $(document).ready(function  () {
 		fade: true,
 		dots:true,
 		autoplay: true,
-		speed:2000,
+		speed:1500,
 		infinite:true,
 		autoplaySpeed: 4000,
-		easing: 'easeInOutQuint',
+		// easing: 'easeInOutQuint',
 		pauseOnHover:false,
 		zIndex:1,
+		cssEase: 'cubic-bezier(0.87, 0.03, 0.41, 0.9)',
 		prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Prev" tabindex="0" role="button"><i class="xi-angle-left-thin"></i></button>',
 		nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button"><i class="xi-angle-right-thin"></i></button>'
 	});

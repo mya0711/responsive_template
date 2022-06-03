@@ -39,7 +39,9 @@
 		<!-- visual -->
 		<?if($page_section != "search" ){?>
 		<section id="visual" class="sub-visual-<?=$page_section?>">
-			<div class="visual-img-con" style="background:#eee url(<?=$site_host?>/images/layout/sub_visual_<?=$page_section?>.jpg) no-repeat 50% 0%"></div>
+			<div class="visual-img-con">
+				<div class="visual-img-inner" style="background:#eee url(<?=$site_host?>/images/layout/sub_visual_<?=$page_section?>.jpg) no-repeat 50% 0%"></div>
+			</div>
 			<div class="area visual-txt-con">
 				<div class="table-cell-layout">
 					<div class="visual-txt-container">

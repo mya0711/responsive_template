@@ -2,40 +2,65 @@
 /* *******************************************************
  * filename : layout_responsive.css
  * description : 전체 레이아웃 반응형 CSS
- * date : 2022-03-14
+ * date : 2022-06-03
 ******************************************************** */
 
 /* ========================================================
  * SETTING
 ======================================================== */
-@media all and (max-width:1260px){
+@media all and (max-width:1280px){
 	:root{
-		--area-padding: 5%;
 		--header-height: 80px;
 	}
 }
 @media all and (max-width:800px){
 	:root{
-		--sub-visual-height: 240px;
+		--area-padding: 5vw;
+		--sub-visual-height: 24rem;
 		--sub-menu-height: 44px;
 	}
 }
 @media all and ( max-width: 480px ){
 	:root{
 		--header-height: 60px;
-		--sub-visual-height: 180px;
 	}
+}
+
+/* ========================================================
+ * FONT SIZE
+======================================================== */
+@media all and (max-width:1536px){
+	html{font-size:0.6510vw;} /* 10 */
+}
+@media all and (max-width:1280px){
+	html{font-size:0.8594vw;} /* 10 -> 11*/
+}
+@media all and (max-width:800px){
+	html{font-size:1.375vw} /* 10 -> 11*/
+}
+@media all and (max-width:640px){
+	html{font-size:1.7188vw}  /* 10 -> 11*/
+}
+@media all and ( max-width: 480px ){
+	html{font-size:2.2vw}  /* 10 */
+}
+@media all and (max-width:390px){
+	html{font-size:2.1795vw}  /* 10 -> 8.5 */
 }
 
 /* ========================================================
  * LAYOUT
 ======================================================== */
-/* ****************** 공통레이아웃 ********************** */
+/* ****************** 공통클래스 ********************** */
 @media all and (max-width:1660px){	/* max-width : (area-box width) + 60px */
 	.area-box{padding:0 var(--area-padding); max-width:none;}
 }
-@media all and (max-width:1260px){ /* max-width : (area width) + 60px */ 
+@media all and (max-width:1280px){ 
 	.area{padding:0 var(--area-padding); max-width:none;}
+	.m-br{display:block;}
+	.pc-br{display:none;}
+	.display-m{display:block;}
+	.display-pc{display:none;}
 }
 
 /* ****************** HEADER ********************** */
@@ -44,7 +69,7 @@
 	#gnb > ul > li > a{font-size:18px; padding:0 40px}
 	#gnb > ul > li .gnb-2dep ul li a{font-size:14px; }
 }
-@media all and ( max-width: 1260px ){
+@media all and ( max-width: 1280px ){
 	.fullpage-html #header{position:relative;}
 	#headerInnerWrap{position:fixed; z-index:99;}
 	#header.top-fixed #headerInnerWrap{background-color:#fff; border-bottom:1px solid #eee;}
@@ -212,7 +237,7 @@
 	.header-search-inner .header-search-btn{right:40px;}
 	.header-search-inner .header-search-close-btn{height:100%; width:38px; border-radius:0;}
 }
-@media all and ( min-width: 481px ) and ( max-width: 1260px ) {
+@media all and ( min-width: 481px ) and ( max-width: 1280px ) {
 	.nav-open-btn.active{right:20px;}
 }
 @media all and ( max-width: 480px ){
@@ -254,7 +279,7 @@
 }
 
 /* ****************** FOOTER ********************** */
-@media all and (max-width:1260px){
+@media all and (max-width:1280px){
 	/* Footer :: 푸터로고 */
 	.foot-logo{float:none; display:block; padding-right:0; padding-bottom:15px;}
 	/* Footer :: 푸터메뉴 */
@@ -309,7 +334,7 @@
 }
 
 /* ****************** SUB LAYOUT ********************** */
-@media all and (max-width:1260px){
+@media all and (max-width:1280px){
 	/*  SUB LAYOUT :: 비주얼 */
 	#visual .visual-txt-con{padding:0}
 	/*  SUB LAYOUT :: 서브메뉴(스타일2,3,4) */
@@ -319,7 +344,7 @@
 	#topMenu02 .area,
 	#topMenu03 .area{margin:0 -1px}	
 	/*  SUB LAYOUT :: 컨텐츠 레이아웃 */
-	#content:not(.wide){padding:70px 15px}
+	#content:not(.wide){padding:70px var(--area-padding)}
 	#content.wide{padding:70px 0 0 0}
 }
 
@@ -350,10 +375,10 @@
 	/*  SUB LAYOUT :: 서브메뉴 모바일 (스타일1) */
 	#topMenuM01{display:block; position:relative; height:calc(var(--sub-menu-height) + 1px); } /* (+1 border height)*/
 	#topMenuM01 .side-menu-inner{height:var(--sub-menu-height); padding-left:var(--sub-menu-height); border-bottom:1px solid #ddd; }
-	#topMenuM01 .location-to-home-btn{position:absolute; width:var(--sub-menu-height); height:var(--sub-menu-height); left:0px; top:0px; background-color:#fff; text-align:center; }
+	#topMenuM01 .location-to-home-btn{position:absolute; width:var(--sub-menu-height); height:var(--sub-menu-height); left:0px; top:0px; background-color:#fff; text-align:center; border-right:1px solid #ddd; }
 	#topMenuM01 .location-to-home-btn i{color:var(--main-color); font-size:20px; line-height:var(--sub-menu-height);}
 	#topMenuM01 .menu-location{position:relative; float:left; width:50%;}
-	#topMenuM01 .menu-location > .cur-location{position:relative; display:block; width:100%; text-align:left; height:var(--sub-menu-height); padding:0 30px 0 10px; border-left:1px solid #ddd;}
+	#topMenuM01 .menu-location > .cur-location{position:relative; display:block; width:100%; text-align:left; height:var(--sub-menu-height); padding:0 30px 0 10px; }
 	#topMenuM01 .menu-location > .cur-location span{display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; line-height:var(--sub-menu-height); color:#222; font-weight:400; font-size:15px;}
 	#topMenuM01 .menu-location > .cur-location .arrow{position:absolute; top:50%; right:10px; width:20px; height:20px;margin-top:-10px; font-size:20px;}
 	#topMenuM01 .menu-location.open > .cur-location .arrow{transform:rotate(-180deg); margin-top:-10px;}

@@ -2,14 +2,14 @@
 /* *******************************************************
  * filename : main_responsive.css
  * description : 메인 레이아웃 및 컨텐츠 반응형 CSS
- * date : 2020-11-25
+ * date : 2022-06-03
 ******************************************************** */
 
 /* ******************  메인 비주얼 ********************** */
-@media all and ( max-width: 1024px ){
+@media all and ( max-width: 1280px ){
 	/* 공통 :: 레이아웃 */
-	#fullpage .section{height:auto !important;}
-	#fullpage .fp-section .fp-tableCell{padding-top:0; height:0 !important;}
+	#fullpage .section:not(#mainVisual){height:auto !important;}
+	#fullpage .fp-section .fp-tableCell{height:auto !important;}
 }
 @media all and ( max-width: 800px ){
 	/* 메인 비주얼 :: 이미지 */

@@ -1,13 +1,13 @@
 /* *******************************************************
  * filename : common.js
  * description : 전체적으로 사용되는 JS
- * Update : 2022-03-14
+ * Update : 2022-06-03
 ******************************************************** */
 
 var laptopWidth = 1366;
-var tabletWidth = 1260; // 헤더가 변경되는 시점
+var tabletWidth = 1280; // 헤더가 변경되는 시점
 var mobileWidth = 800;
-startOffset = isMobile ? "100%" : "70%";
+startOffset = isMobile() ? "100%" : "70%";
 gsap.registerPlugin(ScrollToPlugin);
 
 // default

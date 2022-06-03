@@ -81,43 +81,53 @@
 					<span class="foot-logo"><img src="<?=$site_host?>/images/common/footer_logo.jpg" alt="<?=$site_head_title?>" /></span>
 					<div class="footer-address">
 						<div class="footer-address-txt">
-							<p>대표 : ○○○</p>
-							<p>주소 : 서울시 영등포구 경인로 775, 3-507 </p>
-							<p>사업자등록번호 : 107-87-18398</p>
+							<p>상호명 : <?=$footer_company?></p>
+							<p>대표 : <?=$footer_name?></p>
+							<p>주소 : <?=$footer_address?></p>
+							<p>사업자등록번호 : <?=$footer_license_number?></p>
+							<p>통신판매신고번호 : <?=$footer_mail_number?></p>
 						</div>
 						<div class="footer-address-txt">
-							<p>TEL : 02.1234.5678</p>
-							<p>FAX : 02.1234.5678</p>
-							<p><a href="mailto:webmaster@giantsoft.co.kr">MAIL : webmaster@giantsoft.co.kr</a></p>
+							<p>TEL : <?=$footer_tel?></p>
+							<p>FAX : <?=$footer_fax?></p>
+							<p><a href="mailto:<?=$footer_email?>">MAIL : <?=$footer_email?></a></p>
 						</div>
 					</div>
 					<div class="footer-address-info-box">
 						<div class="footer-address-list">
 							<dl>
+								<dt>상호명</dt>
+								<dd><?=$footer_company?></dd>
+							</dl>
+							<dl>
 								<dt>대표</dt>
-								<dd>○○○</dd>
+								<dd><?=$footer_name?></dd>
 							</dl>
 							<dl>
 								<dt>주소</dt>
-								<dd>서울시 영등포구 경인로 775, 3-507</dd>
+								<dd><?=$footer_address?></dd>
 							</dl>
 							<dl>
 								<dt>사업자등록번호</dt>
-								<dd>107-87-18398</dd>
+								<dd><?=$footer_license_number?></dd>
+							</dl>
+							<dl>
+								<dt>통신판매신고번호</dt>
+								<dd><?=$footer_mail_number?></dd>
 							</dl>
 						</div>
 						<div class="footer-address-list">
 							<dl>
 								<dt>TEL</dt>
-								<dd>02.1234.5678</dd>
+								<dd><?=$footer_tel?></dd>
 							</dl>
 							<dl>
 								<dt>FAX</dt>
-								<dd>02.1234.5678</dd>
+								<dd><?=$footer_fax?></dd>
 							</dl>
 							<dl>
 								<dt>MAIL</dt>
-								<dd><a href="mailto:webmaster@giantsoft.co.kr">webmaster@giantsoft.co.kr</a></dd>
+								<dd><a href="mailto:<?=$footer_email?>"><?=$footer_email?></a></dd>
 							</dl>
 						</div>
 					</div>
@@ -133,6 +143,8 @@
 							<li><a href="" target="_blank" title="새창으로열기"><i class="xi-kakaostory"></i></a></li>
 							<li><a href="" target="_blank" title="새창으로열기"><i class="xi-twitter"></i></a></li>
 							<li><a href="" target="_blank" title="새창으로열기"><i class="xi-naver"></i></a></li>
+							<li><a href="" target="_blank" title="새창으로열기"><i class="xi-youtube"></i></a></li>
+							<li><a href="" target="_blank" title="새창으로열기"><img src="<?=$site_host?>/images/icon/sns_icon/sns_blog_icon.svg" alt="blog" /></a></li>
 						</ul>
 					</div>
 					<div class="family-site-box cm-drop-menu-box-JS" data-drop-event="click">

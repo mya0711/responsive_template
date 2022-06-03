@@ -170,6 +170,14 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						<br><br>
 						<!-- 스크롤 영역 Start(이미지) -->
 						<div class="custom-scrollbar-wrapper">
+							<div class="cm-scroll-drag-guide">
+								<div class="cm-scroll-drag-inner">
+									<span class="drag-tail">
+										<em class="tail"></em>
+										<i class="xi-touch hand-icon"></i>
+									</span>
+								</div>
+							</div>
 							<div class="scroll-object-box">
 								<img src="<?=$site_host?>/images/test/test_img2.jpg" alt="" class="scroll-object" /><!-- .scroll-object -->
 							</div>
