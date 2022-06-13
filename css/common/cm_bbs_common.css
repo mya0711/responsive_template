@@ -2,12 +2,26 @@
 /* *******************************************************
  * filename : board.css
  * description : paging, 버튼, 게시판 뷰, 쓰기 등 게시판에 관련된 통합 CSS
- * date : 2022-03-16
+ * date : 2022-06-13
 ******************************************************** */
-
-/* ******************   공통 :: COLOR  ********************** */
-.total-list-con b,
-.new-icon-v2{color:var(--main-color) !important;}
+/* ******************   공통 :: Default Setting ********************** */
+:root{
+	--board-main-color: var(--main-color);
+	--board-list-height: 64px; /* 리스트 높이*/
+	--board-list-font-size: 16px;
+	--board-list-font-color: #333;
+	--board-list-icon-width: 60px; 	/* 댓글이 있을때 100px */
+	--board-view-font-size: 14px;
+}
+@media all and (max-width:800px){
+	:root{
+		--board-list-height: auto;
+		--board-list-font-size: 13px;
+		--board-list-font-color: #aaa;
+		--board-list-item-padding: 20px;
+		--board-view-font-size: 13px;
+	}
+}
 
 /* ****************** 공통 :: BUTTON ********************** */
 .cm-btn-controls{overflow:hidden; text-align:center; padding-top:30px;}
@@ -24,9 +38,7 @@
 .cm-btn-controls .btn-style01{background-color:#333;}
 .cm-btn-controls .btn-style02{background-color:#8c8c8c;}
 .cm-btn-controls .btn-style03{box-sizing:border-box; background:#fff; border:1px solid #888; color:#222;}
-@media all and (max-width:800px) {
-	
-}
+
 /* ****************** 공통 :: PAGING ********************** */
 .paging{display:flex; justify-content:center; width:100%; text-align:center; margin:30px 0; flex-wrap:wrap;}
 .paging a{position:relative; display:block; width:30px; height:30px;  line-height:30px; margin:0 2px; border:1px solid #ddd; text-align:center; font-size:13px; color:#868686; letter-spacing:-0.25px; background-color:#fff; }
@@ -54,7 +66,7 @@
 .bbs-top-list-box{display:flex; align-items:center; justify-content:space-between; flex-direction:row-reverse; flex-wrap:wrap; margin-bottom:30px}
 /* -------- 리스트 Total 갯수 -------- */
 .total-list-con{color:#333; font-size:15px; letter-spacing:-0.25px;}
-.total-list-con b{color:#000}
+.total-list-con b{color:var(--board-main-color); }
 .total-list-con i{font-size:16px; margin-right:2px; position:relative; top:1px;}
 /* -------- 카테고리 -------- */
 .board-category-box{width:200px; margin-left:auto; }
@@ -324,19 +336,21 @@
 }
 
 /* ******************   게시판 :: 뷰페이지  ********************** */
+.bbs-view-con{border-top:1px solid #333;}
 /* 게시판 :: 뷰 :: 상단 타이틀 정보 */
-.bbs-view-top{padding:20px; border-top:1px solid #333; border-bottom:1px solid #eee;}
-.bbs-view-top .event-date{overflow:hidden; color:#888; padding-bottom:10px;}
+.bbs-view-top{padding:20px; border-bottom:1px solid #eee; font-size:var(--board-view-font-size);}
+.bbs-view-top .event-date{color:#888; padding-bottom:10px;}
 .bbs-view-top .event-date dt,.bbs-view-top .event-date dd{display:inline-block; letter-spacing:-0.5px;}
 .bbs-view-top .event-date dt{margin-right:10px; color:#333;}
-.bbs-view-top .event-date dt i{font-size:16px; margin:-1px 3px 0 0; vertical-align:middle;}
-.bbs-view-top .reply-state{float:none; text-align:left; margin-bottom:10px;}
-.bbs-view-top .reply-state span{display:inline-block; padding:0 10px; height:24px; line-height:24px; background-color:#888; border-radius:5px; font-size:11px; color:#fff; text-align:center;}
-.bbs-view-top .reply-state.reply-state-finish span{background-color:#5997bb}
-.bbs-view-top .bbs-category{display:block; font-size:13px; margin-bottom:10px;}
-.bbs-view-top .bbs-tit{color:#282828; font-size:22px; letter-spacing:-0.6px; font-weight:500; line-height:32px; word-break:keep-all;}
+.bbs-view-top .event-date dt:before{position:relative; top:-1px; font-family:"xeicon"; content: "\e9a0"; font-size:16px; margin-right:3px; vertical-align:middle;}
+.bbs-view-top .bbs-state-box{margin-bottom:10px}
+.bbs-view-top .bbs-state{display:inline-block; min-width:50px; padding:0 10px; height:30px; line-height:30px; background-color:#888; font-size:13px; border:1px solid #888; color:#fff; text-align:center;}
+.bbs-view-top .bbs-state.ing{border-color:#5997bb; background-color:#5997bb;}
+.bbs-view-top .bbs-state.end{background-color:#fff; color:#999}
+.bbs-view-top .bbs-category{display:block; margin-bottom:10px;}
+.bbs-view-top .bbs-tit{color:#282828; font-size:2em; letter-spacing:-0.0333em; font-weight:500; line-height:1.1; word-break:keep-all;}
 .bbs-view-top .bbs-write-info{margin-top:20px;}
-.bbs-view-top .bbs-write-info dt,.bbs-view-top .bbs-write-info dd{display:inline-block; color:#777; font-size:14px; vertical-align:middle; font-weight:500}
+.bbs-view-top .bbs-write-info dt,.bbs-view-top .bbs-write-info dd{display:inline-block; color:#777; vertical-align:middle; font-weight:500;}
 .bbs-view-top .bbs-write-info dd{margin:0 20px 0 5px; color:#888; font-weight:400}
 .bbs-view-content{padding:30px 20px; border-bottom:1px solid #eee; }
 
@@ -410,7 +424,7 @@
 @media all and (max-width:800px){
 	/* 게시판 :: 뷰 */
 	.bbs-view-top{padding:15px;}
-	.bbs-view-top .bbs-tit{font-size:18px; line-height:26px;}
+	.bbs-view-top .bbs-tit{}
 	.bbs-view-top .bbs-view-info{float:none; overflow:hidden;}
 	.bbs-view-top .bbs-write-info{margin-top:10px;}
 	.bbs-view-top .bbs-write-info dt,

@@ -2,7 +2,7 @@
 	<div class="cm-sitemap-container cm-sitemap-container-03">
 		<div class="sitemap-bg cm-sitemap-bg">
 			<!-- logo 배경 있을경우 -->
-			<div class="logo-bg"><span>LOGO</span></div>
+			<!-- <div class="logo-bg"><span>LOGO</span></div> -->
 		</div>
 		<div class="cm-sitemap-inner-con">
 			<section class="cm-sitemap-area-con area">

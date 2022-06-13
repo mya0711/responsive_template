@@ -118,7 +118,9 @@ $(document).ready(function  () {
 
 			$moveTabItem.each(function  (idx) {
 				var eachOffset = nav[idx] -  checkFixedHeight();
-				if( getScrollTop() >= eachOffset ){
+				var minusOffset = $(window).height() / 6;	// 스크롤시 selected 붙는 지점을 조금 더 빠르게 하기위해 추가
+				
+				if( (getScrollTop() + minusOffset) >= eachOffset ){
 					$moveTabItem.removeClass('selected');
 					$moveTabItem.eq(idx).addClass('selected');
 					// 모바일 드롭메뉴일때

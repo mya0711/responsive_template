@@ -3,10 +3,35 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2022-06-03
+* UpDate :  2022-06-13
   
 
 ## 업데이트 내역
+
+- #### 2022-06-13
+
+  #### * css 파일
+	<code> <b>1. /css/layout_responsive.css</b></code>
+	* 서브 상단메뉴 높이 추가( 800에서 60px, 480에서 45px로 변경)
+	
+	<code> <b>2. /css/common/cm_bbs_common.css</b></code>
+	* 공통적인부분 css변수 사용
+	* 뷰페이지 상단영역 수정 ( 폰트사이즈, event 구글아이콘 삭제 후 xeicon변경, 카테고리 등) 
+
+	<code> <b>3. /css/common/cm_board.css</b></code>
+	* 테이블 구조 추가 및 변경
+	* css 정리 및 사용안하는 css 삭제
+	* 첨부파일 다운로드, 진행중/마감 등 상태를 표시할 수 있는 클래스 추가
+
+  #### * js 파일
+	<code> <b>1. /js/sub.js</b></code>
+	* minusOffset 변수 추가 => 스크롤시 selected붙는 지점을 조금 더 빠르게 하기위해
+	
+  #### * php 파일
+	<code> <b>1. /kr/sitemap/sitemap_03.php</b></code>
+	* 기본사이트맵 로고영역 주석처리
+
+***************************
 
 - #### 2022-06-03
 
