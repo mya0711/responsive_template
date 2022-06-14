@@ -28,14 +28,14 @@ $script_content = $admin_stat->script_content;
 <?//푸터 추가
 $footer_row = $db->object("cs_footer","where lang='$lang'");
 
-$footer_company			= $footer_row->company; //상호명
-$footer_address			= $footer_row->address; //주소
-$footer_tel				= $footer_row->tel; //전화번호
-$footer_fax				= $footer_row->fax; //팩스번호
-$footer_name			= $footer_row->name; //대표자명
+$footer_company			= str_replace("\n","<br>",$footer_row->company); //상호명
+$footer_address			= str_replace("\n","<br>",$footer_row->address); //주소
+$footer_tel				= str_replace("\n","<br>",$footer_row->tel); //전화번호
+$footer_fax				= str_replace("\n","<br>",$footer_row->fax); //팩스번호
+$footer_name			= str_replace("\n","<br>",$footer_row->name); //대표자명
 $footer_email			= $footer_row->email; //이메일
-$footer_license_number	= $footer_row->license_number; //사업자등록번호
-$footer_mail_number		= $footer_row->mail_number; //통신판매신고번호
+$footer_license_number	= str_replace("\n","<br>",$footer_row->license_number); //사업자등록번호
+$footer_mail_number		= str_replace("\n","<br>",$footer_row->mail_number); //통신판매신고번호
 ?>
 
 <?
