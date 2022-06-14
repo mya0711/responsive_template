@@ -3,10 +3,19 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2022-06-13
+* UpDate :  2022-06-14
   
 
 ## 업데이트 내역
+
+- #### 2022-06-14
+
+  #### * php 파일
+	<code> <b>1. /kr/lib/config.php</b></code>
+	* 관리자정보 엔터칠때 br 들어가도록 수정
+
+***************************
+
 
 - #### 2022-06-13
 
