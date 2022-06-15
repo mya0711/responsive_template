@@ -604,6 +604,28 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						</div>
 					</article>
 				</section>
-
+				<section class="sample-container" id="buttonAlign">
+					<article class="area">
+						<h4><b>기타</b> : 게시판 버튼 정렬 예시</h4>
+						<div class="cm-btn-controls">
+							<a href="/board/notice.php?bgu=write" class="btn-style01">센터정렬 버튼</a>
+						</div>
+						<div class="cm-btn-controls cm-btn-align-left">
+							<a href="/board/notice.php?bgu=write" class="btn-style01">좌측정렬 버튼</a>
+						</div>
+						<div class="cm-btn-controls cm-btn-align-right">
+							<a href="/board/notice.php?bgu=write" class="btn-style01">우측정렬 버튼</a>
+						</div>
+						<div class="cm-btn-controls">
+							<div class="left-btn-controls">
+								<a href="/board/notice.php?bgu=pass&amp;bbs_view_edit=1&amp;idx=260" class="btn-style02">수정</a>
+								<a href="/board/notice.php?bgu=pass&amp;bbs_view_del=1&amp;idx=260" class="btn-style03">삭제</a>
+							</div>
+							<div class="right-btn-controls">
+								<a href="/board/notice.php?bgu=list" class="btn-style01">목록</a>
+							</div>
+						</div>
+					</article>
+				</section>
 					
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/bottom.php"; ?>

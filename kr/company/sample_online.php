@@ -17,7 +17,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 </style>
 
 <? include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/top.php"; ?>
-					<!-- 온라인문의 기본형 폼 시작 -->
+	<!-- 온라인문의 기본형 폼 시작 -->
 	<form action="./inquiry_ok.php" name="form" method="post" enctype="multipart/form-data">
 		<section class="bbs-write-con">
 			<article class="bbs-inquiry-agree-con">
@@ -42,7 +42,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 				<table class="bbs-write-tbl">
 					<caption>문의폼입니다.</caption>
 					<colgroup>
-						<col style="width:20%;">
+						<col style="width:150px;">
 						<col>
 					</colgroup>
 					<tbody>
@@ -51,9 +51,17 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							<td><input type="text" class="write-input" name="name"></td>
 						</tr>
 						<tr>
+							<th scope="row"><span class="essential-icon">*</span> 이름</th>
+							<td>
+								<fieldset class="cm-form-fieldset-box">
+									<input type="text" class="write-input" name="name" placeholder="max-width가 잡혀있는 input">
+								</fieldset>
+							</td>
+						</tr>
+						<tr>
 							<th scope="row">연락처</th>
 							<td>
-								<fieldset class="phone-fieldset">
+								<fieldset class="phone-fieldset cm-form-fieldset-box">
 									<select name="tel1" class="write-select width20">
 										<option value="02">02</option>
 										<option value="031">031</option>
@@ -75,16 +83,16 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 										<option value="070">070</option>
 									</select>
 									<span class="hypen">-</span>
-									<input type="text" class="write-input width30" style="max-width:150px;" name="tel2" title="연락처 가운데" maxlength="4">
+									<input type="tel" class="write-input width30" style="max-width:150px;" name="tel2" title="연락처 가운데" maxlength="4">
 									<span class="hypen">-</span>
-									<input type="text" class="write-input width30" style="max-width:150px;"  name="tel3" title="연락처 마지막"maxlength="4">
+									<input type="tel" class="write-input width30" style="max-width:150px;"  name="tel3" title="연락처 마지막"maxlength="4">
 								</fieldset>
 							</td>
 						</tr>
 						<tr>
 							<th scope="row"><span class="essential-icon">*</span> 휴대폰번호</th>
 							<td>
-								<fieldset class="phone-fieldset">
+								<fieldset class="phone-fieldset cm-form-fieldset-box">
 									<select name="phone1" class="write-select width20">
 										<option value="010">010</option>
 										<option value="011">011</option>
@@ -94,17 +102,17 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 										<option value="019">019</option>
 									</select>
 									<span class="hypen">-</span>
-									<input type="text" class="write-input width30" style="max-width:150px;" name="phone2" title="휴대폰번호 가운데" maxlength="4">
+									<input type="tel" class="write-input width30" style="max-width:150px;" name="phone2" title="휴대폰번호 가운데" maxlength="4">
 									<span class="hypen">-</span>
-									<input type="text" class="write-input width30" style="max-width:150px;"  name="phone3" title="휴대폰번호 마지막" maxlength="4">
+									<input type="tel" class="write-input width30" style="max-width:150px;"  name="phone3" title="휴대폰번호 마지막" maxlength="4">
 								</fieldset>
 							</td>
 						</tr>
 						<tr>
 							<th scope="row">이메일</th>
 							<td>
-								<fieldset class="email-fieldset">
-									<input type="text" class="write-input width20" name="email1"> <span class="hypen">@</span> <input type="text" class="write-input width20" name="email2" readonly>
+								<fieldset class="email-fieldset cm-form-fieldset-box">
+									<input type="text" class="write-input width20" name="email1"> <span class="hypen">@</span> <input type="email" class="write-input width20" name="email2" readonly>
 									<select name="email3" class="write-select width20" onChange="res();">
 										<option value="b">메일계정선택</option>
 										<option value="a">직접입력</option>
@@ -124,10 +132,10 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 								</fieldset>
 							</td>
 						</tr>
-					<!-- 	<tr>
+							<tr>
 							<th scope="row"><span class="essential-icon">*</span> 주소</th>
 							<td>
-								<fieldset class="address-fieldset">
+								<fieldset class="address-fieldset cm-form-fieldset-box">
 									<input type="text" class="write-input width30 with-sub-btn-input" name="zip_new" readOnly><button type="button" class="bbs-write-sub-btn trans400" onclick="openDaumPostcode();">우편번호 검색</button>
 									<input type="text" class="write-input width100" name="add1">
 									<input type="text" class="write-input width100" name="add2" placeholder="상세주소 입력">
@@ -137,7 +145,9 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						<tr>
 							<th scope="row">항목1</th>
 							<td>
-								<input type="text" class="write-input width100" name="">
+								<fieldset class="cm-form-fieldset-box">
+									<input type="text" class="write-input width100 with-sub-btn-input" name=""><button type="button" class="bbs-write-sub-btn trans400">input+버튼형태</button>
+								</fieldset>
 							</td>
 						</tr>
 						<tr>
@@ -148,26 +158,26 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							</td>
 						</tr>
 						<tr>
-							<th scope="row">체크항목</th>
+							<th scope="row">단일선택 항목</th>
 							<td>
-								<fieldset class="input-check">
-									<span><input type="radio" name="" value="" checked id="radio1" /><label for="radio1">체크항목1</label></span>
-									<span><input type="radio" name="" value="" id="radio2" /><label for="radio2">체크항목2</label></span>
-									<span><input type="radio" name="" value="" id="radio3" /><label for="radio3">체크항목3</label></span>
-								</fieldset>
+								<div class="custom-radio-item-box">
+									<span class="custom-radio-item"><input type="radio" name="form-radio" id="form-radio1-1" /><label for="form-radio1-1">단일선택1</label></span>
+									<span class="custom-radio-item"><input type="radio" name="form-radio" id="form-radio1-2" /><label for="form-radio1-2">단일선택2</label></span>
+									<span class="custom-radio-item"><input type="radio" name="form-radio" id="form-radio1-3" /><label for="form-radio1-3">단일선택3</label></span>
+								</div>
 							</td>
 						</tr>
 						<tr>
-							<th scope="row">선택항목</th>
+							<th scope="row">중복선택 항목</th>
 							<td>
-								<fieldset class="input-check">
-									<span><input type="checkbox" name="" value="" checked id="check1" /><label for="check1">선택항목1</label></span>
-									<span><input type="checkbox" name="" value="" id="check2" /><label for="check2">선택항목2</label></span>
-									<span><input type="checkbox" name="" value="" id="check3" /><label for="check3">선택항목3</label></span>
-								</fieldset>
+								<div class="custom-checkbox-item-box">
+									<span class="custom-checkbox-item"><input type="checkbox" name="" id="form-checkbox1-1" /><label for="form-checkbox1-1">중복선택1</label></span>
+									<span class="custom-checkbox-item"><input type="checkbox" name="" id="form-checkbox1-2" /><label for="form-checkbox1-2">중복선택2</label></span>
+									<span class="custom-checkbox-item"><input type="checkbox" name="" id="form-checkbox1-3" /><label for="form-checkbox1-3">중복선택3</label></span>
+								</div>
 							</td>
 						</tr>
-					 -->
+					
 						<tr>
 							<th scope="row">첨부파일</th>
 							<td>

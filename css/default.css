@@ -145,6 +145,15 @@ textarea{
 }
 input::-ms-clear, 
 select::-ms-expand{ display: none; }
+select{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' style='opacity:0.5'  viewBox='0 0 6.42 4'><path d='M6.42.69,3.21,4,0,.69.71,0l2.5,2.57L5.71,0Z'/></svg>") no-repeat;
+	background-size: 10px;
+	background-position: calc(100% - 10px) 50%;
+	background-repeat: no-repeat;
+}
 textarea{resize:none;}
 @media all and (max-width:800px){
 	.ios-os input[type="text"],
@@ -158,12 +167,6 @@ textarea{resize:none;}
 		    -moz-appearance: none;
 			appearance: none;
 			border-radius:0;
-	}
-	.ios-os select{
-		background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' style='opacity:0.5'><polygon points='0,0 100,0 50,50'/></svg>") no-repeat;
-		background-size: 8px;
-		background-position: calc(100% - 10px) calc(50% + 3px);
-		background-repeat: no-repeat;
 	}
 }
 

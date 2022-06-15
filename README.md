@@ -3,10 +3,31 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2022-06-14
+* UpDate :  2022-06-15
   
 
 ## 업데이트 내역
+
+- #### 2022-06-15
+
+ #### * css 파일
+	<code> <b>1. /css/default.css</b></code>
+	* select 기본 arrow 배경 삭제 후 svg 삽입
+	
+	<code> <b>2. /css/common/cm_bbs_common.css</b></code>
+	* 전체적으로 미디어쿼리 선언 순서 조정
+	* 공동 버튼 .cm-btn-controls flex로 변경 ★
+	* 버튼 크기 확대
+	* 기본 사용 온라인 문의 최적화작업 ★
+
+  #### * php 파일
+	<code> <b>1. /kr/company/sample.php</b></code>
+	* 게시판에 사용하는 버튼 정렬 예시추가
+
+	<code> <b>2. /kr/company/sample_online.php</b></code>
+	* 온라인문의 예시 추가 및 최적화 작업
+
+***************************
 
 - #### 2022-06-14
 
