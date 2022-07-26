@@ -133,53 +133,36 @@
 				</div>
 			</aside>
 			<!-- // -->
-
 			<!-- 모바일 서브메뉴 1 -->
-			<aside id="topMenuM01" class="cm-top-menu clearfix">
-				<div class="side-menu-inner clearfix">
-					<a href="<?=$site_url?>/" class="location-to-home-btn" title="메인으로"><i class="xi-home"></i></a>
-					<!-- 1차메뉴 -->
-					<div class="menu-location location1 cm-drop-menu-box-JS" data-drop-event="click">
-						<button class="cur-location cm-drop-open-btn-JS">
-							<span><?=$page_info?></span>
-							<i class="xi-angle-down-min arrow"></i>
-						</button>
-						<ul class="location-menu-con cm-drop-list-JS">
-							<li><a href="<?=$site_url?>/">대메뉴1</a></li>
-							<li><a href="<?=$site_url?>/">대메뉴2</a></li>
-							<li><a href="<?=$site_url?>/">대메뉴3</a></li>
-						</ul>
-					</div>
-					<!-- 2차메뉴 -->
-					<div class="menu-location  location2 cm-drop-menu-box-JS" data-drop-event="click">
-						<button class="cur-location cm-drop-open-btn-JS">
-							<span><?=$sub_info?></span>
-							<i class="xi-angle-down-min arrow"></i>
-						</button>
-						<ul class="location-menu-con cm-drop-list-JS">
-							<?  include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_".$page_section.".php"; ?>
-						</ul>
-					</div>
-				</div>
-			</aside>
-			<!-- // -->
-			<!-- 모바일 서브메뉴 2 -->
-			<aside id="topMenuM02" class="cm-top-menu clearfix">
-				<div class="side-menu-inner clearfix">
-					<a href="<?=$site_url?>/" class="location-to-home-btn" title="메인으로"><i class="xi-home"></i></a>
-					<!-- 2차메뉴 -->
-					<div class="menu-location  location2 cm-drop-menu-box-JS" data-drop-event="click">
-						<button class="cur-location cm-drop-open-btn-JS">
-							<span><?=$sub_info?></span>
-							<i class="xi-angle-down-min arrow"></i>
-						</button>
-						<ul class="location-menu-con cm-drop-list-JS">
-							<?  include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_".$page_section.".php"; ?>
-						</ul>
+			<aside id="topMenuM" class="cm-top-menu clearfix">
+				<div class="top-menu-wrapper">
+					<a href="<?=$site_url?>/" class="location-to-home-btn" title="홈으로 바로가기"><i class="xi-home"></i></a>
+					<div class="top-menu-inner clearfix menu-2dep"><!-- 2차메뉴가 있을때 menu-2dep 추가 -->
+						<!-- 1차메뉴 -->
+						<div class="menu-location location1 cm-drop-menu-box-JS" data-drop-event="click">
+							<button class="cur-location cm-drop-open-btn-JS">
+								<span><?=$page_info?></span>
+								<i class="xi-angle-down-min arrow"></i>
+							</button>
+							<ul class="location-menu-con cm-drop-list-JS">
+								<li><a href="<?=$site_url?>/">대메뉴1</a></li>
+								<li><a href="<?=$site_url?>/">대메뉴2</a></li>
+								<li><a href="<?=$site_url?>/">대메뉴3</a></li>
+							</ul>
+						</div>
+						<!-- 2차메뉴 -->
+						<div class="menu-location location2 cm-drop-menu-box-JS" data-drop-event="click">
+							<button class="cur-location cm-drop-open-btn-JS">
+								<span><?=$sub_info?></span>
+								<i class="xi-angle-down-min arrow"></i>
+							</button>
+							<ul class="location-menu-con cm-drop-list-JS">
+								<?  include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/menu_".$page_section.".php"; ?>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</aside>
-			<!-- // -->
 			<?}?>
 			
 			<!-- content -->

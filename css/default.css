@@ -2,7 +2,7 @@
 /* *******************************************************
  * filename : default.css
  * description : reset / common / editor CSS
- * date : 2021-06-14
+ * date : 2022-07-26
 ******************************************************** */
 
 
@@ -592,33 +592,19 @@ textarea{resize:none;}
 .table-cell-layout{display:table-cell; width:100%; height:100%; vertical-align:middle;}
 .over-img{overflow:hidden;}
 .over-img img{
-	-webkit-transition:transform 0.3s;
-	-moz-transition:transform 0.3s;
-	-o-transition:transform 0.3s;
-	-ms-transition:transform 0.3s;
-	transition:transform 0.3s
+	transition:var(--transition-custom);
+	transition-property:transform;
 }
 a:hover .over-img img{
-	-ms-transform: scale(1.1) rotate(0.002deg);
-	  -o-transform: scale(1.1) rotate(0.002deg);
-	  -moz-transform: scale(1.1) rotate(0.002deg);
-	  -webkit-transform: scale(1.1) rotate(0.002deg);
-	  transform: scale(1.1) rotate(0.002deg);
+	transform: scale(1.1) rotate(0.002deg);
 }
 .over-bg{
 	overflow:hidden;
-	-webkit-transition:transform 0.3s;
-	-moz-transition:transform 0.3s;
-	-o-transition:transform 0.3s;
-	-ms-transition:transform 0.3s;
-	transition:transform 0.3s
+	transition:var(--transition-custom);
+	transition-property:transform;
 }
 a:hover .over-bg{
-	-ms-transform: scale(1.1) rotate(0.002deg);
-	  -o-transform: scale(1.1) rotate(0.002deg);
-	  -moz-transform: scale(1.1) rotate(0.002deg);
-	  -webkit-transform: scale(1.1) rotate(0.002deg);
-	  transform: scale(1.1) rotate(0.002deg);
+	transform: scale(1.1) rotate(0.002deg);
 }
 .line-clamp2{
 	overflow:hidden;

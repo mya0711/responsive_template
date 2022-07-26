@@ -3,10 +3,59 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2022-06-15
+* UpDate :  2022-07-26
   
 
 ## 업데이트 내역
+
+- #### 2022-07-26
+
+ #### * css 파일
+	<code> <b>1. /css/animate.css</b></code>
+	* data-scroll Transition duration 변수사용
+	
+	<code> <b>2. /css/default.css</b></code>
+	* .over-img, .over-bg transition 변수사용
+
+	<code> <b>2. /css/layout.css</b></code>
+	* transition 변수 2개 추가 ★
+	* font-family 변수 추가
+	* 변수추가에 따른 전체 transition 통일
+	* 벤더프리픽스 삭제
+	
+	<code> <b>3. /css/layout_responsive.css</b></code>
+	* 푸터 레이아웃 1280부터 가운데정렬로 변경
+	* 모바일 상단메뉴 1단,2단짜리 통합 -> 2단짜리 사용시 클래스만 추가하면됩니다.
+	* 변수추가에 따른 전체 transition 통일
+	* 벤더프리픽스 삭제
+	
+	<code> <b>4. /css/main.css, /css/main_responsive.css</b></code>
+	* 배경 서서히 줄어드는 효과 삽입
+	* 변수추가에 따른 전체 transition 통일
+	* 벤더프리픽스 삭제
+
+  #### * php 파일
+	<code> <b>1. /kr/index.php, /kr/index_fullpage.php</b></code>
+	* 배경축소 애니메이션 예시추가
+
+	<code> <b>2. /kr/company/sample.php</b></code>
+	* 테이블예제 colgroup 위치 이동
+
+	<code> <b>3. /kr/include/footer.php</b></code>
+	* Top버튼 위치 이동 : 맨마지막으로
+	
+	<code> <b>4. /kr/include/top.php</b></code>
+	* 모바일 상단메뉴 1단,2단짜리 통합 -> 2단짜리 사용시 클래스만 추가하면됩니다.
+
+	<code> <b>5. /kr/search/index.php</b></code>
+	* 구글아이콘 삭제
+	
+
+  #### * js 파일
+	<code> <b>1. /js/common.js</b></code>
+	* data-scroll-offset 사용하여 animated 클래스 붙는시점 조정
+
+***************************
 
 - #### 2022-06-15
 

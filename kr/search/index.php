@@ -91,13 +91,13 @@ if($_POST[allSearch]){
 							<article class="search-result-classify-con clearfix">
 								<div class="search-result-classify-item">
 									<div class="search-result-classify-inner">
-										<p class="result-list-tit"><i class="material-icons"></i> 게시글 검색 결과</p>
+										<p class="result-list-tit"><i class="xi-search"></i> 게시글 검색 결과</p>
 										<p class="result-info"><strong class="result-bold-txt"><?=$bbs_cnt?></strong>개의 컨텐츠가 <br>검색되었습니다.</p>
 									</div>
 								</div>
 								<div class="search-result-classify-item">
 									<div class="search-result-classify-inner">
-										<p class="result-list-tit"><i class="material-icons"></i> 제품 검색 결과</p>
+										<p class="result-list-tit"><i class="xi-search"></i> 제품 검색 결과</p>
 										<p class="result-info"><strong class="result-bold-txt"><?=$goods_cnt?></strong>개의 컨텐츠가 <br>검색되었습니다.</p>
 									</div>
 								</div>
@@ -127,13 +127,13 @@ if($_POST[allSearch]){
 							<article class="search-result-classify-con clearfix">
 								<div class="search-result-classify-item">
 									<div class="search-result-classify-inner">
-										<p class="result-list-tit"><i class="material-icons"></i> Search results</p>
+										<p class="result-list-tit"><i class="xi-search"></i> Search results</p>
 										<p class="result-info"><strong class="result-bold-txt"><?=$bbs_cnt?></strong>content found.</p>
 									</div>
 								</div>
 								<div class="search-result-classify-item">
 									<div class="search-result-classify-inner">
-										<p class="result-list-tit"><i class="material-icons"></i> Product search results</p>
+										<p class="result-list-tit"><i class="xi-search"></i> Product search results</p>
 										<p class="result-info"><strong class="result-bold-txt"><?=$goods_cnt?></strong>content found.</p>
 									</div>
 								</div>
@@ -163,13 +163,13 @@ if($_POST[allSearch]){
 							<article class="search-result-classify-con clearfix">
 								<div class="search-result-classify-item">
 									<div class="search-result-classify-inner">
-										<p class="result-list-tit"><i class="material-icons"></i> 帖子 搜索结果</p>
+										<p class="result-list-tit"><i class="xi-search"></i> 帖子 搜索结果</p>
 										<p class="result-info"><strong class="result-bold-txt"><?=$bbs_cnt?></strong>内容已被检索。</p>
 									</div>
 								</div>
 								<div class="search-result-classify-item">
 									<div class="search-result-classify-inner">
-										<p class="result-list-tit"><i class="material-icons"></i> 生产 搜索结果</p>
+										<p class="result-list-tit"><i class="xi-search"></i> 生产 搜索结果</p>
 										<p class="result-info"><strong class="result-bold-txt"><?=$goods_cnt?></strong>内容已被检索。</p>
 									</div>
 								</div>
@@ -199,13 +199,13 @@ if($_POST[allSearch]){
 							<article class="search-result-classify-con clearfix">
 								<div class="search-result-classify-item">
 									<div class="search-result-classify-inner">
-										<p class="result-list-tit"><i class="material-icons"></i> スレッド検索結果</p>
+										<p class="result-list-tit"><i class="xi-search"></i> スレッド検索結果</p>
 										<p class="result-info"><strong class="result-bold-txt"><?=$bbs_cnt?></strong>のコンテンツが検索されました。</p>
 									</div>
 								</div>
 								<div class="search-result-classify-item">
 									<div class="search-result-classify-inner">
-										<p class="result-list-tit"><i class="material-icons"></i>  製品検索結果</p>
+										<p class="result-list-tit"><i class="xi-search"></i> 製品検索結果</p>
 										<p class="result-info"><strong class="result-bold-txt"><?=$goods_cnt?></strong>のコンテンツが検索されました。</p>
 									</div>
 								</div>
@@ -235,22 +235,22 @@ while($bbs_row = mysqli_fetch_object($bbs_rs)){//전체 게시판 루프 시작
 								<div class="totabl-search-list-tit-box clearfix">
 									<?if($lang==1){//국문?>
 									<h3 class="total-search-list-tit"><strong><?=$bbs_row->name?></strong> 검색결과</h3>
-									<a href="./search_board.php?allSearch=<?=$allSearch?>&code=<?=$bbs_row->code?>" class="total-search-more-btn" title="게시글 검색결과 더보기"><i class="material-icons">&#xe03b;</i></a>
+									<a href="./search_board.php?allSearch=<?=$allSearch?>&code=<?=$bbs_row->code?>" class="total-search-more-btn" title="게시글 검색결과 더보기"><i class="xi-list-square"></i></a>
 									<?}?>
 
 									<?if($lang==2){//영문?>
 									<h3 class="total-search-list-tit"><strong><?=$bbs_row->name?></strong> Search Results</h3>
-									<a href="./search_board.php?allSearch=<?=$allSearch?>&code=<?=$bbs_row->code?>" class="total-search-more-btn" title="Posts Search Results"><i class="material-icons">&#xe03b;</i></a>
+									<a href="./search_board.php?allSearch=<?=$allSearch?>&code=<?=$bbs_row->code?>" class="total-search-more-btn" title="Posts Search Results"><i class="xi-list-square"></i></a>
 									<?}?>
 
 									<?if($lang==3){//중문?>
 									<h3 class="total-search-list-tit"><strong><?=$bbs_row->name?> </strong> 搜索结果</h3>
-									<a href="./search_board.php?allSearch=<?=$allSearch?>&code=<?=$bbs_row->code?>" class="total-search-more-btn" title="帖子 搜索结果"><i class="material-icons">&#xe03b;</i></a>
+									<a href="./search_board.php?allSearch=<?=$allSearch?>&code=<?=$bbs_row->code?>" class="total-search-more-btn" title="帖子 搜索结果"><i class="xi-list-square"></i></a>
 									<?}?>
 
 									<?if($lang==4){//일문?>
 									<h3 class="total-search-list-tit"><strong><?=$bbs_row->name?> </strong> 検索結果</h3>
-									<a href="./search_board.php?allSearch=<?=$allSearch?>&code=<?=$bbs_row->code?>" class="total-search-more-btn" title="スレッド 検索結果"><i class="material-icons">&#xe03b;</i></a>
+									<a href="./search_board.php?allSearch=<?=$allSearch?>&code=<?=$bbs_row->code?>" class="total-search-more-btn" title="スレッド 検索結果"><i class="xi-list-square"></i></a>
 									<?}?>
 								</div>
 								<?if($bbs_row->bbs_type==4){//FAQ형 게시판?>
@@ -280,7 +280,7 @@ while($bbs_data_row = mysqli_fetch_object($bbs_data_rs)){
 													<span class="faq-category">[<?=$row_cate->name?>]</span>
 													<?}?>
 													<strong class="faq-title"><?=$db->stripSlash($bbs_data_row->subject);?></strong>
-													<span class="arrow"><i class="material-icons">&#xE313;</i></span>
+													<span class="arrow"><i class="xi-angle-down-min"></i></span>
 												</div>
 											</dt>
 											<dd>
@@ -386,7 +386,7 @@ while($bbs_data_row = mysqli_fetch_object($bbs_data_rs)){
 							<article class="total-search-result-con">
 								<div class="totabl-search-list-tit-box clearfix">
 									<h3 class="total-search-list-tit"><strong>제품</strong> 검색결과</h3>
-									<a href="./search_product.php" class="total-search-more-btn" title="제품 검색결과 더보기"><i class="material-icons">&#xe03b;</i></a>
+									<a href="./search_product.php" class="total-search-more-btn" title="제품 검색결과 더보기"><i class="xi-list-square"></i></a>
 								</div>
 								해당 프로젝트에 들어가는 제품 리스트 넣어주세요
 							</article>
@@ -396,7 +396,7 @@ while($bbs_data_row = mysqli_fetch_object($bbs_data_rs)){
 							<article class="total-search-result-con">
 								<div class="totabl-search-list-tit-box clearfix">
 									<h3 class="total-search-list-tit"><strong>Product </strong> Search Results</h3>
-									<a href="./search_product.php" class="total-search-more-btn" title="Product Search Results"><i class="material-icons">&#xe03b;</i></a>
+									<a href="./search_product.php" class="total-search-more-btn" title="Product Search Results"><i class="xi-list-square"></i></a>
 								</div>
 								해당 프로젝트에 들어가는 제품 리스트 넣어주세요
 							</article>
@@ -406,7 +406,7 @@ while($bbs_data_row = mysqli_fetch_object($bbs_data_rs)){
 							<article class="total-search-result-con">
 								<div class="totabl-search-list-tit-box clearfix">
 									<h3 class="total-search-list-tit"><strong>生产  </strong> 搜索结果</h3>
-									<a href="./search_product.php" class="total-search-more-btn" title="生产 搜索结果"><i class="material-icons">&#xe03b;</i></a>
+									<a href="./search_product.php" class="total-search-more-btn" title="生产 搜索结果"><i class="xi-list-square"></i></a>
 								</div>
 								해당 프로젝트에 들어가는 제품 리스트 넣어주세요
 							</article>
@@ -416,7 +416,7 @@ while($bbs_data_row = mysqli_fetch_object($bbs_data_rs)){
 							<article class="total-search-result-con">
 								<div class="totabl-search-list-tit-box clearfix">
 									<h3 class="total-search-list-tit"><strong>製品  </strong> 検索結果</h3>
-									<a href="./search_product.php" class="total-search-more-btn" title="製品 検索結果"><i class="material-icons">&#xe03b;</i></a>
+									<a href="./search_product.php" class="total-search-more-btn" title="製品 検索結果"><i class="xi-list-square"></i></a>
 								</div>
 								해당 프로젝트에 들어가는 제품 리스트 넣어주세요
 							</article>

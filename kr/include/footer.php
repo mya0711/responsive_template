@@ -55,7 +55,6 @@
 		</div>
 	</article>
 	<footer id="footer">
-		<button class="to-top-btn"><em class="blind">TOP</em><i class="xi-arrow-up"></i></button>
 		<!-- 푸터 상단 -->
 		<article id="footerTop">
 			<div class="area-box clearfix">
@@ -158,4 +157,5 @@
 				</article>
 			</div>
 		</article>
+		<button class="to-top-btn"><em class="blind">TOP</em><i class="xi-arrow-up"></i></button>
 	</footer>

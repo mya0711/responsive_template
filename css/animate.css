@@ -2,14 +2,13 @@
 /* *******************************************************
  * filename : animate.css
  * description : 서브페이지 컨텐츠 CSS
- * date : 2021-06-14
+ * date : 2022-07-26
 ******************************************************** */
 
 /* Basic */
 @media screen {
     html:not(.no-js) [data-scroll] {
-		transition-duration:0.8s;
-        transition-timing-function:ease-in-out;
+		transition:var(--transition-custom2);
 		pointer-events: none;
 		will-change: transform;
 		will-change: opacity;

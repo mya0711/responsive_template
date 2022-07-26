@@ -79,6 +79,7 @@ function mouseCheck () {
 function triggerScrollObject () {
 	$("[data-scroll]").each(function() {
 		var $scrollElem = $(this);
+		var scrollElemOffset = $(this).data("scroll-offset") ? $(this).data("scroll-offset") : startOffset;
 		$scrollElem.waypoint(function(direction) {
 			if ( direction === "down" ) {
 				$scrollElem.addClass('animated');
@@ -88,7 +89,7 @@ function triggerScrollObject () {
 		},
 		{
 			triggerOnce: false,
-			offset: startOffset
+			offset: scrollElemOffset
 		});
 	});
 }

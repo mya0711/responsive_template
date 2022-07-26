@@ -424,7 +424,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					</div>
 				</div>
 			</article>
-
+			<!-- ****************** 메인컨텐츠 10 (Swiper 예제)********************** -->
 			<article id="mainContent10">
 				<div class="area">
 					<div class="main-gallery-rolling-con2 swiper-container">
@@ -518,6 +518,16 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					</div>
 				</div>
 			</article>
+			<!-- ****************** 메인컨텐츠 10 (배경 축소 애니메이션)********************** -->
+			<section id="mainContent11" class="cm-pr">
+				<div class="main-section-bg" data-scroll><div class="main-section-bg-inner" style="background:#fff url(<?=$site_host?>/images/main/main_visual_01.jpg) no-repeat 50% 50% / cover;"></div></div>
+				<div class="area">
+					<div class="main-tit-box scroll-object" data-scroll="fade" data-scroll-offset="100%">
+						<h3 class="main-tit cm-word-split-JS" data-splitting data-css-property="transition" data-speed="0.03" data-speed-delay="0"><strong>메인</strong> 컨텐츠 타이틀</h3>
+						<p class="main-sub-tit" data-scroll="fade-up"><span>타이틀 서브 텍스트가 들어갑니다 </span> <span> span태그안에 넣으면 모바일에서 줄바꿈이 됩니다.</span></p>
+					</div>
+				</div>
+			</section>
 		</section>
 		<!-- ****************** 퀵메뉴 ********************** -->
 		<aside id="rightBar">

@@ -124,20 +124,20 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 							<div class="scroll-object-box">
 								<table class="test-table scroll-object"><!-- .scroll-object -->
 									<caption>테이블 샘플입니다. 테이블 목적을 입력해주세요</caption>
+									<colgroup>
+										<col style="width:10%;"/>
+										<col style="width:10%;"/>
+										<col style="width:10%;"/>
+										<col style="width:10%;"/>
+										<col style="width:10%;"/>
+										<col style="width:10%;"/>
+										<col style="width:10%;"/>
+										<col style="width:10%;"/>
+										<col style="width:10%;"/>
+										<col style="width:10%;"/>
+										<col style="width:10%;"/>
+									</colgroup>
 									<tbody>
-										<colgroup>
-											<col style="width:10%;"/>
-											<col style="width:10%;"/>
-											<col style="width:10%;"/>
-											<col style="width:10%;"/>
-											<col style="width:10%;"/>
-											<col style="width:10%;"/>
-											<col style="width:10%;"/>
-											<col style="width:10%;"/>
-											<col style="width:10%;"/>
-											<col style="width:10%;"/>
-											<col style="width:10%;"/>
-										</colgroup>
 										<tr>
 											<th scope="col">1</th>
 											<th scope="col">2</th>
@@ -192,14 +192,14 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 						<h4><b>scale 축소 :</b> 모바일에서  scale 축소</h4>
 						<table class="test-table spidochescaler-table-container">
 							<caption>테이블 샘플입니다. 테이블 목적을 입력해주세요</caption>
+							<colgroup>
+								<col style="width:10%;"/>
+								<col style="width:10%;"/>
+								<col style="width:10%;"/>
+								<col style="width:10%;"/>
+								<col style="width:10%;"/>
+							</colgroup>
 							<tbody>
-								<colgroup>
-									<col style="width:10%;"/>
-									<col style="width:10%;"/>
-									<col style="width:10%;"/>
-									<col style="width:10%;"/>
-									<col style="width:10%;"/>
-								</colgroup>
 								<tr>
 									<th scope="col">1</th>
 									<th scope="col">2</th>
