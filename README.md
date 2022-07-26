@@ -10,7 +10,7 @@ Responsive Website Template
 
 - #### 2022-07-26
 
- #### * css 파일
+  #### * css 파일
 	<code> <b>1. /css/animate.css</b></code>
 	* data-scroll Transition duration 변수사용
 	
@@ -59,7 +59,7 @@ Responsive Website Template
 
 - #### 2022-06-15
 
- #### * css 파일
+  #### * css 파일
 	<code> <b>1. /css/default.css</b></code>
 	* select 기본 arrow 배경 삭제 후 svg 삽입
 	
