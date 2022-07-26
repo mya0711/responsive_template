@@ -54,6 +54,7 @@ Responsive Website Template
   #### * js 파일
 	<code> <b>1. /js/common.js</b></code>
 	* data-scroll-offset 사용하여 animated 클래스 붙는시점 조정
+	* smoothScroll(); 주석처리 -> 요청시 주석해제
 
 ***************************
 

@@ -25,7 +25,7 @@ if ( detectBrowser() === "ie") {
 // add
 Splitting();
 setSplitting();
-smoothScroll();
+// smoothScroll();
 if ( $.exists(".footer-sitemap-list-con") ) { cloneFooterSitemap(); }
 if ( $.exists('.footer-partner-list') ) { rollingFooterPartnerList(); }
 
