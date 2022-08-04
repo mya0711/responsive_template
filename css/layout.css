@@ -168,10 +168,10 @@ table, th, td{word-break:break-word;}
 }
 
 /* -------- Header :: GNB(PC) -------- */
-.gnb-overlay-bg{position:fixed; top:0; left:0; width:100%; height:100%; visibility:hidden; opacity:0;filter:Alpha(opacity=0); background:rgba(0,0,0,0.5); z-index:9997;  transition:var(--transition-custom); }	/* gnb overlay BG */
-.gnb-overlay-bg.open{visibility:visible; opacity:1.0;filter:Alpha(opacity=100);}
+.gnb-overlay-bg{position:fixed; top:0; left:0; width:100%; height:100%; visibility:hidden; opacity:0; background:rgba(0,0,0,0.5); z-index:9997;  transition:var(--transition-custom); }	/* gnb overlay BG */
+.gnb-overlay-bg.open{visibility:visible; opacity:1.0;}
 #gnb{position:absolute; text-align:center; top:0; left:0px; width:100%; z-index:99;}
-#gnb > ul{display:inline-block; *display:inline;*zoom:1;}
+#gnb > ul{display:inline-block;}
 #gnb > ul > li{position:relative; float:left; word-break:keep-all;}
 #gnb > ul > li > a{
 	position:relative; z-index:100; display:block; line-height:var(--header-height); padding:0 5rem; text-align:center; color:#333; font-size:2rem; letter-spacing:-0.025em; font-weight:500; transition:var(--transition-custom);

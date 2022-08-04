@@ -3,10 +3,32 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2022-07-26
+* UpDate :  2022-08-04
   
 
 ## 업데이트 내역
+- #### 2022-08-04
+
+  #### * css 파일
+	<code> <b>1. /css/default.css</b></code>
+	* 에디터에서 테이블 가운데정렬시 정렬 안되는 이슈 
+	
+	<code> <b>2. /css/layout.css</b></code>
+	* gnb 영역 css 수정
+
+	<code> <b>3. /css/common/cm_certification.css</b></code>
+	* 5번 인증서 반응형되도록 css 수정
+	
+	<code> <b>4. /css/common/cm_gallery.css</b></code>
+	* 10번 갤러리 css 일부 수정
+  #### * js 파일
+	<code> <b>1. /js/common.js</b></code>
+	* fullpage 가 아닌 페이지에서만 smoothScroll(); 작동되도록 조건문 추가
+
+	<code> <b>2. /js/sub.js</b></code>
+	* iframe이 들어갈 경우 개발쪽 추가소스와 겹치는부분 수정
+
+***************************
 
 - #### 2022-07-26
 

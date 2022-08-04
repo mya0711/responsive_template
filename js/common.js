@@ -1,7 +1,7 @@
 /* *******************************************************
  * filename : common.js
  * description : 전체적으로 사용되는 JS
- * Update : 2022-06-03
+ * Update : 2022-08-04
 ******************************************************** */
 
 var laptopWidth = 1366;
@@ -25,7 +25,7 @@ if ( detectBrowser() === "ie") {
 // add
 Splitting();
 setSplitting();
-// smoothScroll();
+// if ( !$.exists('#fullpage') ){ smoothScroll(); }
 if ( $.exists(".footer-sitemap-list-con") ) { cloneFooterSitemap(); }
 if ( $.exists('.footer-partner-list') ) { rollingFooterPartnerList(); }
 

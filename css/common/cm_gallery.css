@@ -2,7 +2,7 @@
 /* *******************************************************
  * filename : gallery.css
  * description : 갤러리형 게시판 관련 CSS
- * date : 2021-04-21
+ * date : 2022-08-03
 ******************************************************** */
 
 /* ******************   갤러리 게시판 :: 갤러리 기본형 G01 ********************** */
@@ -505,43 +505,30 @@
 .bbs-basic-gallery-con10 .gallery-img-box {position:relative; text-align:center; border:1px solid #ddd;}
 .bbs-basic-gallery-con10 .gallery-img-box .img-wrap {display:block; height:0; padding-top:64%; }
 .bbs-basic-gallery-con10 .gallery-img-box .img-wrap img{position:absolute; top:0px; right:0px; bottom:0px; left:0px; width:100%; height:100%;}
-.bbs-basic-gallery-con10 .gallery-img-box .category {position:absolute; left:0; top:0; display:inline-block; min-width:50px; padding:0 5px; height:30px; line-height: 30px; font-size:13px; letter-spacing: -0.5px; color:#fff; background-color:#AD343F;}
+.bbs-basic-gallery-con10 .gallery-img-box .category {position:absolute; left:0; top:0; display:inline-block; min-width:50px; padding:0 5px; height:30px; line-height: 30px; font-size:13px; letter-spacing: -0.5px; color:#fff; background-color:rgb(0,0,0,0.5)}
 .bbs-basic-gallery-con10 .gallery-img-box .broad-bg {position:absolute; width:100%; height:100%; left:0; top:0; overflow:hidden;}
-.bbs-basic-gallery-con10 .gallery-img-box .broad-bg span{position:relative; display:block; width:0; height:0; left:50%; top:50%; -webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;transition:all 0.3s;  border-radius:100%;}
-.bbs-basic-gallery-con10 .gallery-img-box .gallery-btn {position:absolute; width:45px; height:45px; right:15px; bottom:-22.5px; border-radius:100%; color:#fff;  overflow:hidden; background-color:#d0121b; background-color:rgba(208, 18, 27, 0.81); line-height: 45px; box-shadow:5px 5px 15px rgba(0, 0, 0, 0.2); -webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;transition:all 0.3s;}
-.bbs-basic-gallery-con10 .gallery-img-box .gallery-btn  i{vertical-align:middle; line-height:45px; transition:all 0.5s}
+.bbs-basic-gallery-con10 .gallery-img-box .broad-bg span{position:relative; display:block; width:0; height:0; left:50%; top:50%; transition:all 0.3s; border-radius:100%; background-color:rgb(0,0,0,0.5)}
+.bbs-basic-gallery-con10 .gallery-img-box .gallery-btn {position:absolute; width:45px; height:45px; line-height: 45px; right:15px; bottom:0; transform:translateY(50%); border-radius:100%; color:#fff;  overflow:hidden; background-color:rgb(0,0,0,0.5); box-shadow:5px 5px 15px rgba(0, 0, 0, 0.2); transition:all 0.3s;}
+.bbs-basic-gallery-con10 .gallery-img-box .gallery-btn i{display:none;}
+.bbs-basic-gallery-con10 .gallery-img-box .gallery-btn:before{display:block; font-family:"xeicon"; content: "\e9c5"; font-size:20px; transition:all 0.3s 0.1s;}
 .bbs-basic-gallery-con10 .gallery-info {padding: 30px 0; }
-.bbs-basic-gallery-con10 .gallery-info .gallery-info-tit {font-size:18px; letter-spacing: -0.5px; color:#000; font-weight: 400; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; margin-bottom:20px;}
-.bbs-basic-gallery-con10 .gallery-info p {
-	overflow:hidden;
-	height:2.8em; 
-	font-size:15px; 
-	line-height: 1.4;
-	letter-spacing: -0.25px; 
-	font-weight:300;
-	color:#666; 
-	margin-bottom:20px; 
-	display:block;
-	display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
+.bbs-basic-gallery-con10 .gallery-info .gallery-info-tit {font-size:18px; letter-spacing: -0.5px; color:#000; font-weight: 600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; margin-bottom:20px;}
+.bbs-basic-gallery-con10 .gallery-info p {overflow:hidden; height:2.8em; font-size:15px; line-height: 1.4; letter-spacing: -0.25px; font-weight:400; color:#666; margin-bottom:20px; display:block; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
 .bbs-basic-gallery-con10 .gallery-info .gallery-date {font-size:13px; letter-spacing: -0.5px; color:#aaa; }
  @media all and ( min-width: 801px ){
-    .bbs-basic-gallery-con10 .gallery-over-list-item a:hover .gallery-btn {background-color:transparent; right:50%; margin-right: -22.5px; box-shadow:none; bottom:50%; margin-bottom: -22.5px;}
-    .bbs-basic-gallery-con10 .gallery-over-list-item a:hover .broad-bg span {background-color:#d0121b; width:400px; height:400px; left:50%; top:50%; transform:translate(-50%, -50%); opacity:0.4;filter:Alpha(opacity=40); transition-delay:0.2s;}
-	.bbs-basic-gallery-con10 .gallery-over-list-item a:hover .gallery-img-box .gallery-btn  i{transform:rotate(360deg)}
+    .bbs-basic-gallery-con10 .gallery-over-list-item a:hover .gallery-btn {background-color:transparent; right:50%; bottom:50%; transform:translate(50%,50%); box-shadow:none;}
+    .bbs-basic-gallery-con10 .gallery-over-list-item a:hover .broad-bg span {width:150%; height:230%; left:50%; top:50%; transform:translate(-50%, -50%); opacity:0.4; transition-delay:0.2s;}
+	.bbs-basic-gallery-con10 .gallery-over-list-item a:hover .gallery-img-box .gallery-btn:before{transform:rotate(360deg); font-size:34px}
 }
 @media all and ( max-width: 800px ){
-    .bbs-basic-gallery-con10 .gallery-over-list-item{width:31.33%; margin-bottom:3%}
+    .bbs-basic-gallery-con10 .gallery-over-list-item{width:48%; margin-bottom:3%}
 	.bbs-basic-gallery-con10 .gallery-info p{display:none; font-size:13px;}
 	.bbs-basic-gallery-con10 .gallery-img-box .gallery-btn{right:5px; box-shadow:4px 4px 6px rgba(0, 0, 0, 0.2)}
 }
 @media all and ( max-width: 480px ){
-    .bbs-basic-gallery-con10 .gallery-over-list-item{width:48%; }
     .bbs-basic-gallery-con10 .gallery-img-box .category{font-size:11px;}
-    .bbs-basic-gallery-con10 .gallery-img-box .gallery-btn{right:5px; bottom:-15px;width:30px; height:30px; line-height:30px;}
-    .bbs-basic-gallery-con10 .gallery-img-box .gallery-btn i{font-size:18px; line-height:30px;}
+    .bbs-basic-gallery-con10 .gallery-img-box .gallery-btn{right:5px; width:30px; height:30px; line-height:30px;}
+    .bbs-basic-gallery-con10 .gallery-img-box .gallery-btn:before{font-size:14px; line-height:30px;}
 	.bbs-basic-gallery-con10 .gallery-info{padding:20px 0;}
     .bbs-basic-gallery-con10 .gallery-info .gallery-info-tit{font-size:15px; margin-bottom:10px;}
     .bbs-basic-gallery-con10 .gallery-info p{font-size:12px; margin-bottom:10px}
@@ -859,7 +846,7 @@
 /* 팝업 */
 .gallery-con16-pop {position:relative; max-width:1000px; margin:50px auto; background-color:#fff; width:96%;}
 .gallery-con16-pop h1 {text-align:left; font-size: 24px; color: #060606; background-color: #fff; padding: 35px 40px;}
-.gallery-con16-pop .modal-close-btn  {right:40px; top:27px;}
+.gallery-con16-pop .modal-close-btn  {right:40px; top:14px;}
 .gallery-con16-pop .modal-close-btn i { color: #000 !important;}
 .gallery-con16-pop .inner-box {padding:50px; border-top: 1px solid #000;}
 .gallery-con16-pop .inner {padding:0; height:auto; border:0; margin:auto; }

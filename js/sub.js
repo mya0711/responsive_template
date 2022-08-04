@@ -1,7 +1,7 @@
 /* *******************************************************
  * filename : sub.js
  * description : 서브컨텐츠에만 사용되는 JS
- * date : 2022-03-14
+ * date : 2022-08-04
 ******************************************************** */
 
 
@@ -169,7 +169,7 @@ $(document).ready(function  () {
 		});
 		
 		/* iframe 태그 감싸기 */ 
-		$(".editor iframe").each(function  () {
+		$(".editor *:not('.editor-iframe-box') iframe").each(function  () {
 			var iframeSrc = $(this).attr("src");
 			var findStr = "https://www.youtube.com/embed"; 
 
