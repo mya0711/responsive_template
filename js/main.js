@@ -1,7 +1,7 @@
 /* *******************************************************
  * filename : main.js
  * description : 메인에만 사용되는 JS
- * date : 2022-03-14
+ * date : 2022-08-08
 ******************************************************** */
 
 $(document).ready(function  () {
@@ -55,6 +55,11 @@ $(document).ready(function  () {
 			var visual_height = getWindowHeight()	- $("#header").height();	// header가 fixed or absolute일경우 - $("#header").height() 삭제
 			$("#mainVisual").height(visual_height);
 		}
+	}
+
+	// 메인 비주얼 고정 텍스트 Active
+	if ($.exists('.main-visual-fixed-txt-con')) {
+		addClassName($(".main-visual-fixed-txt-con"), "active-item");
 	}
 
 	// 메인 비주얼 슬라이드

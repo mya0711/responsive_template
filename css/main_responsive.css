@@ -2,7 +2,7 @@
 /* *******************************************************
  * filename : main_responsive.css
  * description : 메인 레이아웃 및 컨텐츠 반응형 CSS
- * date : 2022-07-26
+ * date : 2022-08-08
 ******************************************************** */
 
 /* ******************  메인 비주얼 ********************** */
@@ -16,11 +16,7 @@
 	.main-visual-item .main-visual-pc-img{display:none;}
 	.main-visual-item .main-visual-m-img{display:block;}
 	/* 메인 비주얼 :: 텍스트 */
-	.main-visual-item .main-visual-txt-con{}
-	.main-visual-item .main-visual-txt-con .main-visual-txt1{font-size:18px; margin-bottom:14px}
-	.main-visual-item .main-visual-txt-con .main-visual-txt2{font-size:20px; margin-bottom:14px}
-	.main-visual-item .main-visual-txt-con .main-visual-txt3{display:none; font-size:13px; line-height:18px; margin-bottom:20px; }
-	.main-visual-item .main-visual-txt-con .main-visual-more-btn{font-size:12px; padding:8px 15px;}
+	.main-visual-txt-con .main-visual-txt1{font-size:4rem}
 	/* 메인 비주얼 :: Dots */
 	.main-visual-con .slick-dots-wrapper{text-align:center; bottom:10px;}
 	/* 메인 비주얼 :: 화살표 */

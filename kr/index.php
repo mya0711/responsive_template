@@ -27,7 +27,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					<div class="main-visual-txt-con">
 						<div class="main-visual-txt-box area-box">
 							<div class="main-visual-txt-inner">
-								<strong class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3" translate="no">giantsoft Stand in the world giantsoft Stand in the world  11</strong>
+								<p class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3" translate="no">giantsoft Stand in the world 11</p>
 								<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
 								<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
 								<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
@@ -41,7 +41,7 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					<div class="main-visual-txt-con">
 						<div class="main-visual-txt-box area-box">
 							<div class="main-visual-txt-inner">
-								<strong class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3">giantsoft Stand in the world giantsoft Stand in the world  22</strong>
+								<p class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3" translate="no">giantsoft Stand in the world 22</p>
 								<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
 								<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
 								<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
@@ -50,6 +50,17 @@ include $_SERVER["DOCUMENT_ROOT"].$site_directory."/include/dtd.php";
 					</div>
 				</div>
 			</article>
+			<!-- 비주얼 텍스트 고정일때 -->
+			<!-- <article class="main-visual-txt-con main-visual-fixed-txt-con">
+				<div class="main-visual-txt-box area-box">
+					<div class="main-visual-txt-inner">
+						<h2 class="main-visual-txt1 cm-word-split-JS" data-splitting data-css-property="animation" data-speed="0.03" data-speed-delay="0.3" translate="no">giantsoft Stand in the world 11</h2>
+						<p class="main-visual-txt2"><b>거인소프트</b> 반응형 </p>
+						<p class="main-visual-txt3">언제나 처음 시작하였던 다짐과 포부를 가슴 깊이 되새기고,<br>미래를 열어가겠습니다. </p>
+						<a href="" class="main-visual-more-btn">DETAIL VIEW</a>
+					</div>
+				</div>
+			</article> -->
 			<div class="main-scroll-icon">
 				<span>SCROLL DOWN</span>
 			</div>

@@ -3,10 +3,26 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2022-08-04
+* UpDate :  2022-08-08
   
 
 ## 업데이트 내역
+- #### 2022-08-08
+
+  #### * css 파일
+	<code> <b>1. /css/main.css, /css/main_responsive.css</b></code>
+	* 텍스트 영역 슬라이드 밖으로 뺄 경우 같이 사용할 수 있도록 수정
+
+  #### * js 파일
+	<code> <b>1. /js/main.js</b></code>
+	* 메인 비주얼 고정 텍스트일경우 active-item 클래스 붙도록 추가
+
+  #### * php 파일
+	<code> <b>1. /kr/index.php, /kr/index_fullpage.php</b></code>
+	* 메인 비주얼 고정 텍스트일경우 추가
+
+***************************
+
 - #### 2022-08-04
 
   #### * css 파일

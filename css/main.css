@@ -2,7 +2,7 @@
 /* *******************************************************
  * filename : main.css
  * description : 메인 레이아웃 및 컨텐츠 CSS
- * date : 2022-07-26
+ * date : 2022-08-08
 ******************************************************** */
 
 /* ******************  메인 레이아웃(Fullpage) ********************** */
@@ -16,7 +16,7 @@
 #mainVisual{overflow:hidden; width:100%; height:100vh; height:calc(100vh - var(--header-height)); position:relative; background-color:#000 }
 .main-visual-con .slick-track,
 .main-visual-con .slick-list {
-	 -webkit-perspective: 2000;
+	-webkit-perspective: 2000;
 	-webkit-backface-visibility: hidden;
 }
 .main-visual-con, 
@@ -35,52 +35,43 @@
 	transform: scale(1.08,1.08);
 }
 .main-visual-item .main-visual-m-img{display:none;}
-.main-visual-item.active-item .main-visual-img{
-    animation: image-zoom-out 8s 0s forwards;
-}
+.main-visual-item.active-item .main-visual-img{animation: image-zoom-out 8s 0s forwards;}
 /* 메인 비주얼 :: 텍스트 */
-.main-visual-item .main-visual-txt-con{
+.main-visual-txt-con{
 	position:absolute; 
 	left:0px; top:0;
 	width:100%; 
 	height:100%;
+	z-index:1;
 }
-.main-visual-item .main-visual-txt-box{
+.main-visual-txt-box{
 	display:flex;
 	align-items:center;
 	height:100%;
 }
-.main-visual-item .main-visual-txt-con .main-visual-txt1,
-.main-visual-item .main-visual-txt-con .main-visual-txt2,
-.main-visual-item .main-visual-txt-con .main-visual-txt3,
-.main-visual-item .main-visual-txt-con .main-visual-more-btn{
+.main-visual-txt-con .main-visual-txt1,
+.main-visual-txt-con .main-visual-txt2,
+.main-visual-txt-con .main-visual-txt3,
+.main-visual-txt-con .main-visual-more-btn{
 	opacity:0; 
 }
-.main-visual-item .main-visual-txt-con .main-visual-txt1{display:block; font-size:35px; font-weight:400; letter-spacing:-0.35px; color:#fff; margin-bottom:25px; line-height:1.5}
-.main-visual-item .main-visual-txt-con .main-visual-txt2{font-size:38px; letter-spacing:-0.5px; color:#fff; margin-bottom:25px; }
-.main-visual-item .main-visual-txt-con .main-visual-txt3{font-size:17px; letter-spacing:-0.75px; color:#fff; color:rgba(255,255,255,0.7);  line-height:26px; margin-bottom:35px; }
-.main-visual-item .main-visual-txt-con .main-visual-more-btn{display:inline-block; font-size:16px; font-weight:300; color:#333; padding:15px 30px;  border-radius:30px; background-color:#fff;}
-
+.main-visual-txt-con .main-visual-txt1{font-size:6rem; font-weight:600; letter-spacing:-0.065em; color:#fff; margin-bottom:0.66em;}
+.main-visual-txt-con .main-visual-txt2{font-size:2.4rem; letter-spacing:-0.065em; color:#fff; margin-bottom:1.25em; }
+.main-visual-txt-con .main-visual-txt3{font-size:1.8rem; letter-spacing:-0.025em; color:rgba(255,255,255,0.7); line-height:1.5; margin-bottom:1.66em; }
+.main-visual-txt-con .main-visual-more-btn{display:inline-block; font-size:1.6rem; color:#333; padding:1.5rem 3rem; border-radius:3rem; background-color:#fff;}
 /* 메인 비주얼 :: 텍스트 :: active효과 */
-.main-visual-item.active-item .main-visual-txt1,
-.main-visual-item.active-item .main-visual-txt2,
-.main-visual-item.active-item .main-visual-txt3,
-.main-visual-item.active-item .main-visual-more-btn{
-	-webkit-animation: text-active-animation 1.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+.active-item .main-visual-txt1,
+.active-item .main-visual-txt2,
+.active-item .main-visual-txt3,
+.active-item .main-visual-more-btn{
 	animation: text-active-animation 1.5s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
-.main-visual-item.active-item .main-visual-txt-con .main-visual-txt1{ -webkit-animation-delay:0.1s; animation-delay:0.1s;}
-.main-visual-item.active-item .main-visual-txt-con .main-visual-txt2{ -webkit-animation-delay:0.3s; animation-delay:0.3s;}
-.main-visual-item.active-item .main-visual-txt-con .main-visual-txt3{ -webkit-animation-delay:0.5s; animation-delay:0.5s;}
-.main-visual-item.active-item .main-visual-txt-con .main-visual-more-btn{-webkit-animation-delay:0.8s; animation-delay:0.8s;}
-.main-visual-item .main-visual-txt1.splitting .char{
-	-webkit-animation: text-fade-out 1.5s cubic-bezier(0.4, 0, 0.2, 1) both;
-	animation: text-fade-out 1.5s cubic-bezier(0.4, 0, 0.2, 1) both;
-}
-.main-visual-item.active-item .main-visual-txt1.splitting .char{
-	-webkit-animation: text-active-animation 1.5s cubic-bezier(0.4, 0, 0.2, 1) both;
-	animation: text-active-animation 1.5s cubic-bezier(0.4, 0, 0.2, 1) both;
-}
+.active-item .main-visual-txt1{animation-delay:0.1s;}
+.active-item .main-visual-txt2{animation-delay:0.3s;}
+.active-item .main-visual-txt3{animation-delay:0.5s;}
+.active-item .main-visual-more-btn{animation-delay:0.8s;}
+.cm-word-split-JS.splitting .char{animation: text-fade-out 1.5s cubic-bezier(0.4, 0, 0.2, 1) both;}
+.active-item .cm-word-split-JS.splitting .char{animation: text-active-animation 1.5s cubic-bezier(0.4, 0, 0.2, 1) both;}
 
 /* 메인 비주얼 :: Animation */
 @keyframes image-zoom-out {
