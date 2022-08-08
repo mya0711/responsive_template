@@ -16,7 +16,7 @@
 	.main-visual-item .main-visual-pc-img{display:none;}
 	.main-visual-item .main-visual-m-img{display:block;}
 	/* 메인 비주얼 :: 텍스트 */
-	.main-visual-txt-con .main-visual-txt1{font-size:4rem}
+	.main-visual-txt-box .main-visual-txt1{font-size:4rem}
 	/* 메인 비주얼 :: Dots */
 	.main-visual-con .slick-dots-wrapper{text-align:center; bottom:10px;}
 	/* 메인 비주얼 :: 화살표 */

@@ -49,16 +49,16 @@
 	align-items:center;
 	height:100%;
 }
-.main-visual-txt-con .main-visual-txt1,
-.main-visual-txt-con .main-visual-txt2,
-.main-visual-txt-con .main-visual-txt3,
-.main-visual-txt-con .main-visual-more-btn{
+.main-visual-txt-box .main-visual-txt1,
+.main-visual-txt-box .main-visual-txt2,
+.main-visual-txt-box .main-visual-txt3,
+.main-visual-txt-box .main-visual-more-btn{
 	opacity:0; 
 }
-.main-visual-txt-con .main-visual-txt1{font-size:6rem; font-weight:600; letter-spacing:-0.065em; color:#fff; margin-bottom:0.66em;}
-.main-visual-txt-con .main-visual-txt2{font-size:2.4rem; letter-spacing:-0.065em; color:#fff; margin-bottom:1.25em; }
-.main-visual-txt-con .main-visual-txt3{font-size:1.8rem; letter-spacing:-0.025em; color:rgba(255,255,255,0.7); line-height:1.5; margin-bottom:1.66em; }
-.main-visual-txt-con .main-visual-more-btn{display:inline-block; font-size:1.6rem; color:#333; padding:1.5rem 3rem; border-radius:3rem; background-color:#fff;}
+.main-visual-txt-box .main-visual-txt1{font-size:6rem; font-weight:600; letter-spacing:-0.065em; color:#fff; margin-bottom:0.66em;}
+.main-visual-txt-box .main-visual-txt2{font-size:2.4rem; letter-spacing:-0.065em; color:#fff; margin-bottom:1.25em; }
+.main-visual-txt-box .main-visual-txt3{font-size:1.8rem; letter-spacing:-0.025em; color:rgba(255,255,255,0.7); line-height:1.5; margin-bottom:1.66em; }
+.main-visual-txt-box .main-visual-more-btn{display:inline-block; font-size:1.6rem; color:#333; padding:1.5rem 3rem; border-radius:3rem; background-color:#fff;}
 /* 메인 비주얼 :: 텍스트 :: active효과 */
 .active-item .main-visual-txt1,
 .active-item .main-visual-txt2,
@@ -70,8 +70,8 @@
 .active-item .main-visual-txt2{animation-delay:0.3s;}
 .active-item .main-visual-txt3{animation-delay:0.5s;}
 .active-item .main-visual-more-btn{animation-delay:0.8s;}
-.cm-word-split-JS.splitting .char{animation: text-fade-out 1.5s cubic-bezier(0.4, 0, 0.2, 1) both;}
-.active-item .cm-word-split-JS.splitting .char{animation: text-active-animation 1.5s cubic-bezier(0.4, 0, 0.2, 1) both;}
+.main-visual-txt-box .cm-word-split-JS.splitting .char{animation: text-fade-out 1.5s cubic-bezier(0.4, 0, 0.2, 1) both;}
+.active-item .main-visual-txt-box .cm-word-split-JS.splitting .char{animation: text-active-animation 1.5s cubic-bezier(0.4, 0, 0.2, 1) both;}
 
 /* 메인 비주얼 :: Animation */
 @keyframes image-zoom-out {
