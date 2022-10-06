@@ -19,8 +19,7 @@
 .sub-tab-list-style ul li:first-child{border-left:1px solid #e5e5e5;}
 .sub-tab-list-style ul li a{display:table; height:58px; width:100%; }
 .sub-tab-list-style ul li a em{display:table-cell; vertical-align:middle; color:#494949; font-size:18px; letter-spacing:-0.30px; text-align:center;}
-.sub-tab-list-style ul li.selected{z-index:1; }
-.sub-tab-list-style ul li.selected a{background-color:#333; border-color:#333}
+.sub-tab-list-style ul li.selected{z-index:1; background-color:#333; border-color:#333;}
 .sub-tab-list-style ul li.selected a em{color:#fff; }
 /* Tab Fixed Move*/
 .sub-tab-list-style.top-fixed{position:fixed; top:70px; left:0; width:100%; height:60px;}

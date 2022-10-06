@@ -232,8 +232,19 @@ function customScrollX (scrollObject) {
 function customScrollY (scrollObject) {
 	$(scrollObject).mCustomScrollbar({
 		axis:"y",
-		theme:"dark"
+		theme:"dark",
+		callbacks: {
+				onInit: () => bugFix(scrollObject)
+		}
 	});
+}
+// 최신제이쿼리에서 y축 안되는 오류 해결
+function bugFix(scrollbar) {
+	const draggerRail = $(scrollbar).find(".mCSB_draggerRail");
+	const draggerContainer = $(scrollbar).find(".mCSB_draggerContainer");
+	if (draggerRail.length > 0 && draggerRail.parent().hasClass("mCSB_dragger")) {
+			draggerContainer.append(draggerRail);
+	}
 }
 
 /* ************************

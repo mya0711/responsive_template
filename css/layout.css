@@ -393,7 +393,7 @@ table, th, td{word-break:break-word;}
 	height:100%; 
 	background-size:cover !important; 
 	transform: scale(1.1,1.1); 
-	transition:var(--transition-custom); 
+	transition:transform 5s linear;
 }
 #visual .visual-txt-con{position:relative; z-index:1; text-align:center; display:table; width:100%; height:100%; letter-spacing:-0.5px; color:#fff;}
 #visual .visual-txt-container{position:relative; width:100%; }
@@ -403,7 +403,7 @@ table, th, td{word-break:break-word;}
 	opacity:0;
     transform: translateY(30px);
 	transition:var(--transition-custom2);
-	transition-property: tranform, opacity;
+	transition-property: transform, opacity;
 }
 #visual .visual-tit{
 	font-weight:600; 

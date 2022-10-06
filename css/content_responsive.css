@@ -62,7 +62,7 @@
 	.sub-drop-menu-style ul li:first-child{border-top:0; border-left:0}
 	.sub-drop-menu-style ul li a{display:block; width:auto; height:auto; padding:10px 15px; border:0;}
 	.sub-drop-menu-style ul li a em{font-size:13px;}
-	.sub-drop-menu-style ul li.selected a{background-color:transparent;}
+	.sub-drop-menu-style ul li.selected{background-color:transparent;}
 	.sub-drop-menu-style ul li.selected a em{color:#f57f20; font-weight:600; }
 }
 @media all and (max-width:480px){

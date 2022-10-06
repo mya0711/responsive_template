@@ -3,10 +3,37 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2022-08-08
+* UpDate :  2022-10-06
   
 
 ## 업데이트 내역
+- #### 2022-10-06
+
+  #### * css 파일
+	<code> <b>1. /css/content.css, /css/content_responsive.css</b></code>
+	* 샘플 탭 selected 클래스 붙었을때 색 변경되는 css 수정
+
+	<code> <b>2. /css/layout.css</b></code>
+	* 서브 배경이미지 천천히 줄어들도록 transition 변경
+	* line 405 : 오타수정
+
+	<code> <b>3. /css/common/cm_history.css</b></code>
+	* 연혁 전체적으로 수정(2022-09-23버전)
+
+  #### * js 파일
+	<code> <b>1. /js/functions.js</b></code>
+	* 최신버전 제이쿼리에서 mCustomScrollbar Y축 안되는 오류 해결
+
+  #### * php 파일
+	<code> <b>1. /kr/footer.php</b></code>
+	* area, wide area 관련된 가이드라인 추가
+
+  #### * image 파일
+	<code> <b>1. /images/content/certificate_cover.png, /images/test/certifi_sample.jpg</b></code>
+	* 자주사용하는 인증서 틀 이미지 추가, 인증서 샘플이미지 추가 
+
+***************************
+
 - #### 2022-08-08
 
   #### * css 파일

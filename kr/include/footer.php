@@ -159,3 +159,22 @@
 		</article>
 		<button class="to-top-btn"><em class="blind">TOP</em><i class="xi-arrow-up"></i></button>
 	</footer>
+	<!-- 가이드라인(퍼블리싱 후 삭제) -->
+	<div id="grid">
+		<div class="area-box"></div>
+		<div class="area"></div>
+		<style type="text/css">
+		#grid{position:fixed; top:0; left:0; width:100%; z-index:111;}
+		#grid .area-box,
+		#grid .area{position:relative; }
+		#grid .area-box:before,
+		#grid .area-box:after,
+		#grid .area:before,
+		#grid .area:after{position:absolute; top:0px; left:var(--area-padding); bottom:0px; width:1px; height:100vh; content:""; background-color:#4affff;}
+		#grid .area-box:after,
+		#grid .area:after{left:auto; right:var(--area-padding);}
+		#grid .area:before,
+		#grid .area:after{background-color:#ff00f6}
+		</style>
+	</div>
+	<!-- // -->
