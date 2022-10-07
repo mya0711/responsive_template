@@ -170,9 +170,9 @@
 		#grid .area-box:before,
 		#grid .area-box:after,
 		#grid .area:before,
-		#grid .area:after{position:absolute; top:0px; left:var(--area-padding); bottom:0px; width:1px; height:100vh; content:""; background-color:#4affff;}
+		#grid .area:after{position:absolute; top:0px; left:0; bottom:0px; width:1px; height:100vh; content:""; background-color:#4affff;}
 		#grid .area-box:after,
-		#grid .area:after{left:auto; right:var(--area-padding);}
+		#grid .area:after{left:auto; right:0;}
 		#grid .area:before,
 		#grid .area:after{background-color:#ff00f6}
 		</style>

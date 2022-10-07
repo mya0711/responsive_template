@@ -3,10 +3,18 @@ Responsive Website Template
 
 * Giantsoft Publisher Team
 * Writer : Jang Mi Hwa
-* UpDate :  2022-10-06
+* UpDate :  2022-10-07
   
 
 ## 업데이트 내역
+- #### 2022-10-07
+
+  #### * php 파일
+	<code> <b>1. /kr/footer.php</b></code>
+	* 가이드라인 위치 수정
+
+***************************
+
 - #### 2022-10-06
 
   #### * css 파일
