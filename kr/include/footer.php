@@ -175,6 +175,14 @@
 		#grid .area:after{left:auto; right:0;}
 		#grid .area:before,
 		#grid .area:after{background-color:#ff00f6}
+		@media all and (max-width:1660px){  /* max-width : (area-box width) + 60px */
+			#grid .area-box:before{left:var(--area-padding);}
+			#grid .area-box:after{right:var(--area-padding);}
+		}
+		@media all and (max-width:1360px){  /* max-width : (area width) + 60px */
+			#grid .area:before{left:var(--area-padding);}
+			#grid .area:after{right:var(--area-padding);}
+		}
 		</style>
 	</div>
 	<!-- // -->
